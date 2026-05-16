@@ -17,10 +17,17 @@ export default function Navbar() {
       <div className="mx-auto flex h-14 max-w-page items-center justify-between px-5 sm:px-7">
         <Link
           href="/"
-          className="font-mono text-[13px] font-medium text-ink hover:text-accent-deep"
+          aria-label="What's that command — home"
+          className="group flex items-center gap-2.5"
         >
-          <span className="text-accent">$</span>{' '}
-          <span>what&apos;s-that-command</span>
+          <span aria-hidden="true" className="font-mono text-base font-medium text-accent">
+            $
+          </span>
+          <span className="whitespace-nowrap font-display text-[15px] font-medium tracking-tight text-ink transition-colors group-hover:text-accent-deep sm:text-lg">
+            What&apos;s{' '}
+            <span className="italic text-accent-deep">that</span>{' '}
+            command?
+          </span>
         </Link>
 
         <div className="flex items-center gap-1 sm:gap-2">

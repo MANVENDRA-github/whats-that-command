@@ -16,6 +16,7 @@ Not a generic cheatsheet dump. Curation quality matters more than coverage.
 - **Static export** (`output: 'export'`) — no backend, no runtime, ships as HTML/JS/CSS
 - **Tailwind CSS** for UI
 - **Fuse.js** for client-side fuzzy search
+- **Framer Motion** for the scroll-driven landing demo only (gated behind `useReducedMotion`)
 - Deployed as a static site (Vercel-friendly)
 
 Why static: no server means no server-side attack surface and trivially cheap hosting. The whole point is that everything fits in a JSON file shipped to the browser.
@@ -73,6 +74,9 @@ const fuse = new Fuse(commands, {
 - **Tags are for human intent**, not man-page jargon. If a tag word appears in the command itself, it's the wrong tag.
 - **Mark dangerous commands.** Anything that destroys data, rewrites history irrecoverably, or affects shared state (`rm -rf`, `git push --force`, `git reset --hard`, `docker system prune`, etc.) gets `"danger": true`.
 - **`commands.json` is validated** by `scripts/validate-commands.js`, run automatically on `prebuild`. Every entry must have the required string fields (`id`, `command`, `description`, `tool`, `category`), a non-empty `tags` array, a globally unique `id`, valid `related` ids that resolve to other entries, and a boolean `danger` when the field is present. A failing dataset blocks the build — fix the entry rather than skipping the check.
+- **The search box stays above the fold.** The home page hero is the search input itself — auto-focused, centered, and fully visible without scrolling on a typical laptop AND a typical mobile viewport. Anything that competes with it for the first screen loses. The scroll-driven terminal demo and value section are reward content below the fold; they must never gate access to the search.
+- **Respect `prefers-reduced-motion`.** Any new scroll-linked or auto-playing animation must have a static fallback. Use `useReducedMotion()` from framer-motion for React or media-query guards in CSS. The page must remain fully usable and not janky with motion reduced.
+- **Animation discipline.** Only animate `transform` and `opacity`. Never animate `width`, `height`, `top`, or other layout-triggering properties — they cause jank and break the above-the-fold guarantee.
 - **Keep the site runnable after every step.** No half-finished features merged to main.
 
 ## Build order / status
@@ -84,10 +88,11 @@ const fuse = new Fuse(commands, {
 5. Data validation script for `commands.json` wired to `prebuild` — **done**
 6. Keyboard UX on home page (auto-focus, `/` to focus, Escape to clear, accessible label) — **done**
 7. URL-driven search state (`?q=` is shareable; back/forward works) — **done**
-8. Browse-by-tool view (`/[tool]`), grouped by category — **pending**
-9. Expand dataset across git, docker, bash (hundreds of entries) — **pending**
-10. Per-command static pages (`/c/[id]`) — **pending**
-11. (Later) Semantic search layer behind Fuse — **pending**
+8. Landing page: navbar, search-first hero with example pills, scroll-driven terminal demo, value section + CTA — **done**
+9. Browse-by-tool view (`/[tool]`), grouped by category — **pending**
+10. Expand dataset across git, docker, bash (hundreds of entries) — **pending**
+11. Per-command static pages (`/c/[id]`) — **pending**
+12. (Later) Semantic search layer behind Fuse — **pending**
 
 ## Run locally
 

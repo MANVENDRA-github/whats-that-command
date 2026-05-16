@@ -12,14 +12,14 @@ export default function Navbar() {
   return (
     <nav
       aria-label="Primary"
-      className="sticky top-0 z-20 border-b border-[color:var(--border)] bg-[color:var(--bg)]/85 backdrop-blur supports-[backdrop-filter]:bg-[color:var(--bg)]/70"
+      className="sticky top-0 z-30 border-b border-ink bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85"
     >
-      <div className="mx-auto flex h-12 max-w-5xl items-center justify-between px-5">
+      <div className="mx-auto flex h-14 max-w-page items-center justify-between px-7">
         <Link
           href="/"
-          className="font-mono text-sm tracking-tight text-[color:var(--text)] hover:text-[color:var(--accent)]"
+          className="font-mono text-[13px] font-medium text-ink hover:text-accent-deep"
         >
-          <span className="text-[color:var(--muted)]">$</span>{' '}
+          <span className="text-accent">$</span>{' '}
           <span>what&apos;s-that-command</span>
         </Link>
 
@@ -28,7 +28,7 @@ export default function Navbar() {
             <Link
               key={t.href}
               href={t.href}
-              className="rounded px-2 py-1 font-mono text-xs text-[color:var(--muted)] hover:text-[color:var(--text)] sm:text-sm"
+              className="px-2 py-1 font-mono text-[12px] uppercase tracking-kicker text-muted hover:text-ink sm:text-[13px]"
             >
               {t.label}
             </Link>
@@ -38,7 +38,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View source on GitHub"
-            className="ml-1 rounded p-1.5 text-[color:var(--muted)] hover:text-[color:var(--text)]"
+            className="ml-1 p-1.5 text-muted hover:text-ink"
           >
             <svg
               viewBox="0 0 24 24"

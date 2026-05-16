@@ -46,10 +46,9 @@ const VALUE_PROPS = [
 
 function scrollToSearch() {
   const el = document.getElementById('cmd-search');
-  if (!el) return;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  el.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
-  el.focus();
+  window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+  el?.focus({ preventScroll: true });
 }
 
 function FadeUp({ children, className = '', delay = 0 }) {

@@ -14,7 +14,7 @@ export default function Navbar() {
       aria-label="Primary"
       className="sticky top-0 z-30 border-b border-ink bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85"
     >
-      <div className="mx-auto flex h-14 max-w-page items-center justify-between px-7">
+      <div className="mx-auto flex h-14 max-w-page items-center justify-between px-5 sm:px-7">
         <Link
           href="/"
           className="font-mono text-[13px] font-medium text-ink hover:text-accent-deep"

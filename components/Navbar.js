@@ -2,14 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { TOOLS, toolHref } from '@/lib/tools';
 
 const GITHUB_URL = 'https://github.com/MANVENDRA-github/whats-that-command';
-
-const TOOL_LINKS = [
-  { href: '/git', label: 'git' },
-  { href: '/docker', label: 'docker' },
-  { href: '/bash', label: 'bash' }
-];
 
 export default function Navbar() {
   const pathname = usePathname() ?? '/';
@@ -36,12 +31,13 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center gap-1 sm:gap-2">
-          {TOOL_LINKS.map((t) => {
-            const active = pathname === t.href || pathname.startsWith(t.href + '/');
+          {TOOLS.map((tool) => {
+            const href = toolHref(tool);
+            const active = pathname === href || pathname.startsWith(href + '/');
             return (
               <Link
-                key={t.href}
-                href={t.href}
+                key={tool}
+                href={href}
                 aria-current={active ? 'page' : undefined}
                 className={`relative px-2 py-1 font-mono text-[12px] uppercase tracking-kicker transition-colors sm:text-[13px] ${
                   active
@@ -49,7 +45,7 @@ export default function Navbar() {
                     : 'text-muted hover:text-ink'
                 }`}
               >
-                {t.label}
+                {tool}
                 {active && (
                   <span
                     aria-hidden="true"

@@ -16,12 +16,12 @@ export default function CommandCard({ cmd }) {
   }
 
   return (
-    <article className="group rounded-lg border border-[color:var(--border)] bg-[color:var(--panel)] p-4 transition hover:border-[color:var(--accent)]">
+    <article className="border border-hairline bg-paper-2 p-4 transition-colors hover:border-ink">
       <div className="flex items-start gap-3">
         <button
           onClick={copy}
           title="Copy command"
-          className="flex-1 text-left font-mono text-sm sm:text-base text-[color:var(--accent)] break-all"
+          className="flex-1 break-all text-left font-mono text-sm text-ink hover:text-accent-deep sm:text-base"
         >
           {cmd.command}
         </button>
@@ -29,24 +29,28 @@ export default function CommandCard({ cmd }) {
           {cmd.danger && (
             <span
               title="This command can destroy data — read the description before running"
-              className="rounded border border-[color:var(--danger)] px-2 py-0.5 text-xs font-medium text-[color:var(--danger)]"
+              className="border border-accent-deep px-2 py-0.5 font-mono text-[10px] uppercase tracking-kicker text-accent-deep"
             >
               danger
             </span>
           )}
-          <span className="rounded bg-[color:var(--border)] px-2 py-0.5 text-xs text-[color:var(--muted)]">
+          <span className="bg-hairline px-2 py-0.5 font-mono text-[10px] uppercase tracking-kicker text-ink">
             {cmd.tool}
           </span>
           <button
             onClick={copy}
             aria-label="Copy command"
-            className="rounded border border-[color:var(--border)] px-2 py-1 text-xs text-[color:var(--muted)] hover:text-[color:var(--text)] hover:border-[color:var(--accent)]"
+            className={`border px-2 py-1 font-mono text-[11px] uppercase tracking-kicker transition-colors ${
+              copied
+                ? 'border-moss text-moss'
+                : 'border-hairline text-muted hover:border-ink hover:text-ink'
+            }`}
           >
             {copied ? 'copied' : 'copy'}
           </button>
         </div>
       </div>
-      <p className="mt-2 text-sm text-[color:var(--muted)]">{cmd.description}</p>
+      <p className="mt-2 text-sm text-muted">{cmd.description}</p>
     </article>
   );
 }

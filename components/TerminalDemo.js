@@ -12,15 +12,28 @@ import {
 const EXAMPLES = [
   {
     query: 'how do I undo my last commit?',
-    command: 'git reset --soft HEAD~1'
+    command: 'git reset --soft HEAD~1',
+    meta: 'git · undo'
   },
   {
     query: "what's using port 3000?",
-    command: 'lsof -i :3000'
+    command: 'lsof -i :3000',
+    meta: 'bash · network'
   },
   {
     query: 'extract a tar file',
-    command: 'tar -xzvf <archive>.tar.gz'
+    command: 'tar -xzvf <archive>.tar.gz',
+    meta: 'bash · archive'
+  },
+  {
+    query: 'shell into a running container',
+    command: 'docker exec -it <container> /bin/bash',
+    meta: 'docker · containers'
+  },
+  {
+    query: 'what did I change?',
+    command: 'git diff',
+    meta: 'git · inspect'
   }
 ];
 
@@ -29,7 +42,7 @@ const STEP_MS = 4000;
 function Frame({ children, activeIndex, dotCount = 3 }) {
   return (
     <div className="border-2 border-ink bg-paper-2 shadow-block-sm sm:shadow-block">
-      <div className="flex items-center justify-between border-b-2 border-ink px-4 py-2.5">
+      <div className="flex items-center justify-between gap-3 border-b-2 border-ink px-4 py-2.5">
         <span className="font-mono text-[10px] uppercase tracking-kicker text-ink">
           ~/work · zsh
         </span>
@@ -94,12 +107,15 @@ function ExampleContent({ example }) {
       <motion.p variants={beatVariants}>
         <span className="text-accent">$</span> {example.query}
       </motion.p>
-      <motion.p variants={beatVariants} className="mt-3 break-all">
+      <motion.p variants={beatVariants} className="mt-3 break-words">
         <span className="text-accent">→</span>{' '}
         <span className="font-medium">{example.command}</span>
       </motion.p>
-      <motion.p variants={beatVariants} className="mt-3 text-moss">
-        [copied to clipboard]
+      <motion.p
+        variants={beatVariants}
+        className="mt-4 font-mono text-[10px] uppercase tracking-kicker text-muted"
+      >
+        {example.meta}
       </motion.p>
     </motion.div>
   );
@@ -112,11 +128,13 @@ function StaticDemo() {
         <p>
           <span className="text-accent">$</span> {EXAMPLES[0].query}
         </p>
-        <p className="mt-3 break-all">
+        <p className="mt-3 break-words">
           <span className="text-accent">→</span>{' '}
           <span className="font-medium">{EXAMPLES[0].command}</span>
         </p>
-        <p className="mt-3 text-moss">[copied to clipboard]</p>
+        <p className="mt-4 font-mono text-[10px] uppercase tracking-kicker text-muted">
+          {EXAMPLES[0].meta}
+        </p>
       </Frame>
     </SectionShell>
   );
@@ -157,7 +175,7 @@ function AnimatedDemo() {
     <SectionShell sectionRef={ref}>
       <motion.div style={{ scale, opacity }} className="will-change-transform">
         <Frame activeIndex={index} dotCount={EXAMPLES.length}>
-          <div className="min-h-[8rem] sm:min-h-[6rem]" aria-hidden="true">
+          <div className="min-h-[9.5rem] sm:min-h-[7rem]" aria-hidden="true">
             <AnimatePresence mode="wait">
               <ExampleContent key={index} example={EXAMPLES[index]} />
             </AnimatePresence>

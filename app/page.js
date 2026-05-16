@@ -37,6 +37,30 @@ export default function Home() {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
+  useEffect(() => {
+    const syncFromUrl = () => {
+      const params = new URLSearchParams(window.location.search);
+      setQuery(params.get('q') || '');
+    };
+    syncFromUrl();
+    window.addEventListener('popstate', syncFromUrl);
+    return () => window.removeEventListener('popstate', syncFromUrl);
+  }, []);
+
+  useEffect(() => {
+    const id = setTimeout(() => {
+      const url = new URL(window.location.href);
+      if (query) url.searchParams.set('q', query);
+      else url.searchParams.delete('q');
+      const next = url.pathname + url.search + url.hash;
+      const current = window.location.pathname + window.location.search + window.location.hash;
+      if (next !== current) {
+        window.history.replaceState(null, '', next);
+      }
+    }, 120);
+    return () => clearTimeout(id);
+  }, [query]);
+
   const results = useMemo(() => {
     const q = query.trim();
     if (!q) return commands;

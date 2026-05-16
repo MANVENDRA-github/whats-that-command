@@ -138,8 +138,8 @@ export default function Home() {
                 className="font-display font-medium leading-[1.04] tracking-tight text-ink"
                 style={{ fontSize: 'clamp(2rem, 4.5vw + 1rem, 4.5rem)' }}
               >
-                Find the shell command you{' '}
-                <span className="strike-word">forgot</span>.
+                The shell command on the{' '}
+                <span className="italic text-accent-deep">tip of your tongue</span>.
               </h1>
 
               <p className="mt-4 max-w-xl text-[15px] text-muted sm:mt-5 sm:text-lg">

@@ -1,24 +1,9 @@
 import { notFound } from 'next/navigation';
 import commands from '@/commands.json';
+import { TOOLS, TOOL_META, isValidTool } from '@/lib/tools';
+import { getCommandsByTool, countCategories } from '@/lib/commands';
 import Navbar from '@/components/Navbar';
 import ToolBrowser from '@/components/ToolBrowser';
-
-const TOOLS = ['git', 'docker', 'bash'];
-
-const TOOL_META = {
-  git: {
-    title: 'git',
-    blurb: 'Version control. What changed, what to undo, how to share it.'
-  },
-  docker: {
-    title: 'docker',
-    blurb: 'Containers, images, compose, networks. The everyday lifecycle.'
-  },
-  bash: {
-    title: 'bash',
-    blurb: 'The shell toolbox. Find, grep, processes, ports, archives, text.'
-  }
-};
 
 export function generateStaticParams() {
   return TOOLS.map((tool) => ({ tool }));
@@ -26,7 +11,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { tool } = await params;
-  if (!TOOLS.includes(tool)) return {};
+  if (!isValidTool(tool)) return {};
   const meta = TOOL_META[tool];
   return {
     title: `${meta.title} commands — What's that command?`,
@@ -36,11 +21,11 @@ export async function generateMetadata({ params }) {
 
 export default async function ToolPage({ params }) {
   const { tool } = await params;
-  if (!TOOLS.includes(tool)) notFound();
+  if (!isValidTool(tool)) notFound();
 
   const meta = TOOL_META[tool];
-  const toolCommands = commands.filter((c) => c.tool === tool);
-  const categoryCount = new Set(toolCommands.map((c) => c.category)).size;
+  const toolCommands = getCommandsByTool(commands, tool);
+  const categoryCount = countCategories(toolCommands);
 
   return (
     <>

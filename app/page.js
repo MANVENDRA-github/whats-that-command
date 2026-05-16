@@ -129,80 +129,85 @@ export default function Home() {
       <main>
         <section
           id="hero"
-          className="flex min-h-[calc(100svh-3.5rem)] flex-col justify-center px-7 py-12 sm:py-16"
+          className="px-5 pb-16 pt-12 sm:px-7 sm:pb-20 sm:pt-20 lg:pt-24"
         >
-          <div className="mx-auto w-full max-w-2xl">
-            <p className="kicker mb-5">command search</p>
+          <div className="mx-auto max-w-page">
+            <div className="max-w-3xl">
+              <p className="kicker mb-4 sm:mb-5">command search</p>
 
-            <h1 className="font-display text-[2.5rem] font-medium leading-[1.04] tracking-tight text-ink sm:text-[3.75rem]">
-              Find the shell command you{' '}
-              <span className="strike-word">forgot</span>.
-            </h1>
-
-            <p className="mt-4 max-w-xl text-base text-muted sm:mt-5 sm:text-lg">
-              Search by intent. Not by flag name.
-            </p>
-
-            <div className="relative mt-7 sm:mt-9">
-              <label htmlFor="cmd-search" className="sr-only">Search commands</label>
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 font-mono text-base text-muted sm:text-lg"
+              <h1
+                className="font-display font-medium leading-[1.04] tracking-tight text-ink"
+                style={{ fontSize: 'clamp(2rem, 4.5vw + 1rem, 4.5rem)' }}
               >
-                ›
-              </span>
-              <input
-                id="cmd-search"
-                ref={inputRef}
-                type="text"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Escape') setQuery('');
-                }}
-                placeholder="describe what you want to do…"
-                autoFocus
-                spellCheck={false}
-                autoComplete="off"
-                className="w-full border-2 border-ink bg-paper py-4 pl-10 pr-12 font-mono text-base text-ink shadow-card placeholder:text-muted focus:shadow-[4px_4px_0_var(--accent)] focus:outline-none sm:text-lg"
-              />
-              {query && (
-                <button
-                  onClick={() => setQuery('')}
-                  aria-label="Clear search"
-                  className="absolute right-3 top-1/2 -translate-y-1/2 p-1 font-mono text-xl text-muted hover:text-accent-deep"
-                >
-                  ×
-                </button>
-              )}
-            </div>
+                Find the shell command you{' '}
+                <span className="strike-word">forgot</span>.
+              </h1>
 
-            <div className="mt-5 flex flex-wrap items-center gap-2">
-              <span className="font-mono text-[11px] uppercase tracking-kicker text-muted">
-                try
-              </span>
-              {EXAMPLE_PILLS.map((p) => (
-                <button
-                  key={p}
-                  onClick={() => runPill(p)}
-                  className="rounded-full border border-hairline px-3 py-1 font-mono text-[12px] text-muted transition-colors hover:border-ink hover:text-ink"
+              <p className="mt-4 max-w-xl text-[15px] text-muted sm:mt-5 sm:text-lg">
+                Search by intent. Not by flag name.
+              </p>
+
+              <div className="relative mt-7 max-w-2xl sm:mt-9">
+                <label htmlFor="cmd-search" className="sr-only">Search commands</label>
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 font-mono text-base text-muted sm:left-4 sm:text-lg"
                 >
-                  {p}
-                </button>
-              ))}
-              <span className="hidden font-mono text-[12px] text-muted sm:inline">
-                · press{' '}
-                <kbd className="border border-hairline bg-paper-2 px-1.5 py-0.5 font-mono text-[10px] text-ink">
-                  /
-                </kbd>{' '}
-                anywhere
-              </span>
+                  ›
+                </span>
+                <input
+                  id="cmd-search"
+                  ref={inputRef}
+                  type="text"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Escape') setQuery('');
+                  }}
+                  placeholder="describe what you want to do…"
+                  autoFocus
+                  spellCheck={false}
+                  autoComplete="off"
+                  className="w-full border-2 border-ink bg-paper py-3.5 pl-9 pr-10 font-mono text-[15px] text-ink shadow-card placeholder:text-muted focus:shadow-[4px_4px_0_var(--accent)] focus:outline-none sm:py-4 sm:pl-10 sm:pr-12 sm:text-lg"
+                />
+                {query && (
+                  <button
+                    onClick={() => setQuery('')}
+                    aria-label="Clear search"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 p-1 font-mono text-xl text-muted hover:text-accent-deep sm:right-3"
+                  >
+                    ×
+                  </button>
+                )}
+              </div>
+
+              <div className="mt-4 flex max-w-2xl flex-wrap items-center gap-x-2 gap-y-2 sm:mt-5">
+                <span className="font-mono text-[11px] uppercase tracking-kicker text-muted">
+                  try
+                </span>
+                {EXAMPLE_PILLS.map((p) => (
+                  <button
+                    key={p}
+                    onClick={() => runPill(p)}
+                    className="rounded-full border border-hairline px-3 py-1 font-mono text-[11px] text-muted transition-colors hover:border-ink hover:text-ink sm:text-[12px]"
+                  >
+                    {p}
+                  </button>
+                ))}
+                <span className="hidden font-mono text-[12px] text-muted lg:inline">
+                  · press{' '}
+                  <kbd className="border border-hairline bg-paper-2 px-1.5 py-0.5 font-mono text-[10px] text-ink">
+                    /
+                  </kbd>{' '}
+                  anywhere
+                </span>
+              </div>
             </div>
           </div>
         </section>
 
         {hasQuery ? (
-          <section className="mx-auto max-w-page px-7 pb-24">
+          <section className="mx-auto max-w-page px-5 sm:px-7 pb-24">
             <p className="mb-4 font-mono text-[11px] uppercase tracking-kicker text-muted">
               {`${results.length} match${results.length === 1 ? '' : 'es'} for "${query.trim()}"`}
             </p>
@@ -232,7 +237,7 @@ export default function Home() {
             <hr className="section-rule mx-auto max-w-page" />
 
             <section
-              className="mx-auto max-w-page px-7 py-20 sm:py-28"
+              className="mx-auto max-w-page px-5 py-16 sm:px-7 sm:py-24 lg:py-28"
               aria-label="What you get"
             >
               <FadeUp>
@@ -257,10 +262,10 @@ export default function Home() {
               </ul>
             </section>
 
-            <section className="mx-auto max-w-page px-7 pb-24 sm:pb-32">
+            <section className="mx-auto max-w-page px-5 pb-20 sm:px-7 sm:pb-28 lg:pb-32">
               <FadeUp>
                 <div className="border-2 border-ink bg-ink text-paper shadow-block">
-                  <div className="flex flex-col gap-8 px-8 py-12 sm:flex-row sm:items-center sm:gap-12 sm:px-14 sm:py-16">
+                  <div className="flex flex-col gap-7 px-6 py-10 sm:flex-row sm:items-center sm:gap-12 sm:px-14 sm:py-16">
                     <div className="flex-1">
                       <p className="kicker kicker--invert mb-4">ready?</p>
                       <h3 className="font-display text-3xl font-medium leading-[1.05] tracking-tight sm:text-5xl">

@@ -5,6 +5,7 @@ import Fuse from 'fuse.js';
 import commands from '@/commands.json';
 import CommandCard from '@/components/CommandCard';
 import Navbar from '@/components/Navbar';
+import TerminalDemo from '@/components/TerminalDemo';
 
 const fuseOptions = {
   keys: [
@@ -23,6 +24,32 @@ const EXAMPLE_PILLS = [
   'kill process on a port',
   'extract a tar file'
 ];
+
+const VALUE_PROPS = [
+  {
+    kicker: '01',
+    title: 'Intent, not jargon.',
+    body: 'Type what you want to do. Fuzzy search ranks by human intent — tags that read like English, not man-page flags.'
+  },
+  {
+    kicker: '02',
+    title: 'Static and private.',
+    body: 'No login, no analytics, no server. Your queries never leave the browser tab.'
+  },
+  {
+    kicker: '03',
+    title: 'Copy and go.',
+    body: 'One click puts the command in your clipboard. Destructive commands are flagged so you read before you run.'
+  }
+];
+
+function scrollToSearch() {
+  const el = document.getElementById('cmd-search');
+  if (!el) return;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  el.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
+  el.focus();
+}
 
 export default function Home() {
   const [query, setQuery] = useState('');
@@ -153,8 +180,8 @@ export default function Home() {
           </div>
         </section>
 
-        {hasQuery && (
-          <section className="mx-auto max-w-3xl px-5 pb-10">
+        {hasQuery ? (
+          <section className="mx-auto max-w-3xl px-5 pb-20">
             <div className="mb-3 text-sm text-[color:var(--muted)]">
               {`${results.length} match${results.length === 1 ? '' : 'es'} for "${query.trim()}"`}
             </div>
@@ -172,6 +199,38 @@ export default function Home() {
               </ul>
             )}
           </section>
+        ) : (
+          <>
+            <TerminalDemo />
+
+            <section className="mx-auto max-w-3xl px-5 pb-20 sm:pb-28" aria-label="What you get">
+              <ul className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                {VALUE_PROPS.map((v) => (
+                  <li
+                    key={v.kicker}
+                    className="rounded-lg border border-[color:var(--border)] bg-[color:var(--panel)] p-5"
+                  >
+                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--muted)]">
+                      {v.kicker}
+                    </div>
+                    <h3 className="mt-2 text-base font-semibold">{v.title}</h3>
+                    <p className="mt-1.5 text-sm text-[color:var(--muted)]">{v.body}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-12 text-center">
+                <button
+                  type="button"
+                  onClick={scrollToSearch}
+                  className="inline-flex items-center gap-2 rounded-lg border border-[color:var(--accent)] px-4 py-2 font-mono text-sm text-[color:var(--accent)] transition-colors hover:bg-[color:var(--accent)]/10"
+                >
+                  <span>try the search</span>
+                  <span aria-hidden="true">↑</span>
+                </button>
+              </div>
+            </section>
+          </>
         )}
       </main>
     </>

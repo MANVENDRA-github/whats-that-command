@@ -41,7 +41,7 @@ function SectionShell({ children, sectionRef }) {
     <section
       ref={sectionRef}
       aria-label="Product demo"
-      className="mx-auto max-w-page px-7 py-20 sm:py-28"
+      className="mx-auto max-w-page px-5 py-16 sm:px-7 sm:py-24 lg:py-28"
     >
       <p className="kicker mb-6 justify-self-start">about the search</p>
       {children}

@@ -72,6 +72,7 @@ const fuse = new Fuse(commands, {
 - **One JSON file** for the dataset. Don't shard until it actually causes problems.
 - **Tags are for human intent**, not man-page jargon. If a tag word appears in the command itself, it's the wrong tag.
 - **Mark dangerous commands.** Anything that destroys data, rewrites history irrecoverably, or affects shared state (`rm -rf`, `git push --force`, `git reset --hard`, `docker system prune`, etc.) gets `"danger": true`.
+- **`commands.json` is validated** by `scripts/validate-commands.js`, run automatically on `prebuild`. Every entry must have the required string fields (`id`, `command`, `description`, `tool`, `category`), a non-empty `tags` array, a globally unique `id`, valid `related` ids that resolve to other entries, and a boolean `danger` when the field is present. A failing dataset blocks the build — fix the entry rather than skipping the check.
 - **Keep the site runnable after every step.** No half-finished features merged to main.
 
 ## Build order / status
@@ -80,10 +81,13 @@ const fuse = new Fuse(commands, {
 2. Create CLAUDE.md — **done**
 3. Seed `commands.json` with ~30 git commands — **done** (30 entries)
 4. Build home page: search box + Fuse + results with copy + danger flag — **done**
-5. Browse-by-tool view (`/[tool]`), grouped by category — **pending**
-6. Expand dataset across git, docker, bash (hundreds of entries) — **pending**
-7. Per-command static pages (`/c/[id]`) — **pending**
-8. (Later) Semantic search layer behind Fuse — **pending**
+5. Data validation script for `commands.json` wired to `prebuild` — **done**
+6. Keyboard UX on home page (auto-focus, `/` to focus, Escape to clear, accessible label) — **done**
+7. URL-driven search state (`?q=` is shareable; back/forward works) — **done**
+8. Browse-by-tool view (`/[tool]`), grouped by category — **pending**
+9. Expand dataset across git, docker, bash (hundreds of entries) — **pending**
+10. Per-command static pages (`/c/[id]`) — **pending**
+11. (Later) Semantic search layer behind Fuse — **pending**
 
 ## Run locally
 

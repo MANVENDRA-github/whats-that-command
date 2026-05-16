@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import Fuse from 'fuse.js';
 import commands from '@/commands.json';
 import CommandCard from '@/components/CommandCard';
+import Navbar from '@/components/Navbar';
 
 const fuseOptions = {
   keys: [
@@ -68,7 +69,9 @@ export default function Home() {
   }, [query, fuse]);
 
   return (
-    <main className="mx-auto max-w-3xl px-5 py-10 sm:py-16">
+    <>
+      <Navbar />
+      <main className="mx-auto max-w-3xl px-5 py-10 sm:py-16">
       <header className="mb-8">
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
           What&apos;s that command?
@@ -122,6 +125,7 @@ export default function Home() {
           ))}
         </ul>
       )}
-    </main>
+      </main>
+    </>
   );
 }

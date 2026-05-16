@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Fuse from 'fuse.js';
 import commands from '@/commands.json';
 import CommandCard from '@/components/CommandCard';
@@ -19,8 +19,23 @@ const fuseOptions = {
 
 export default function Home() {
   const [query, setQuery] = useState('');
+  const inputRef = useRef(null);
 
   const fuse = useMemo(() => new Fuse(commands, fuseOptions), []);
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key !== '/') return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      const ae = document.activeElement;
+      const tag = ae?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || ae?.isContentEditable) return;
+      e.preventDefault();
+      inputRef.current?.focus();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
 
   const results = useMemo(() => {
     const q = query.trim();
@@ -40,14 +55,19 @@ export default function Home() {
       </header>
 
       <div className="relative mb-8">
+        <label htmlFor="cmd-search" className="sr-only">Search commands</label>
         <input
+          id="cmd-search"
+          ref={inputRef}
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder='Try "undo last commit" or "delete branch"'
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') setQuery('');
+          }}
+          placeholder='Try "undo last commit" or "delete branch" — press / to focus'
           autoFocus
           spellCheck={false}
-          aria-label="Search commands"
           className="w-full rounded-lg border border-[color:var(--border)] bg-[color:var(--panel)] px-4 py-3 text-base outline-none focus:border-[color:var(--accent)] placeholder:text-[color:var(--muted)]"
         />
         {query && (

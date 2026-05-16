@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import commands from '@/commands.json';
 import Navbar from '@/components/Navbar';
-import CommandCard from '@/components/CommandCard';
+import ToolBrowser from '@/components/ToolBrowser';
 
 const TOOLS = ['git', 'docker', 'bash'];
 
@@ -40,13 +40,7 @@ export default async function ToolPage({ params }) {
 
   const meta = TOOL_META[tool];
   const toolCommands = commands.filter((c) => c.tool === tool);
-
-  const grouped = toolCommands.reduce((acc, cmd) => {
-    (acc[cmd.category] ??= []).push(cmd);
-    return acc;
-  }, {});
-
-  const categories = Object.keys(grouped).sort();
+  const categoryCount = new Set(toolCommands.map((c) => c.category)).size;
 
   return (
     <>
@@ -65,28 +59,15 @@ export default async function ToolPage({ params }) {
               {meta.blurb}
             </p>
             <p className="mt-5 font-mono text-[11px] uppercase tracking-kicker text-muted">
-              {toolCommands.length} commands · {categories.length}{' '}
-              {categories.length === 1 ? 'category' : 'categories'}
+              {toolCommands.length} commands · {categoryCount}{' '}
+              {categoryCount === 1 ? 'category' : 'categories'}
             </p>
           </div>
         </section>
 
         <hr className="section-rule mx-auto max-w-page" />
 
-        <section className="mx-auto max-w-page px-5 py-14 sm:px-7 sm:py-20">
-          {categories.map((cat) => (
-            <div key={cat} className="mb-14 last:mb-0">
-              <p className="kicker mb-5">{cat}</p>
-              <ul className="space-y-3">
-                {grouped[cat].map((cmd) => (
-                  <li key={cmd.id}>
-                    <CommandCard cmd={cmd} />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </section>
+        <ToolBrowser tool={tool} commands={toolCommands} />
       </main>
     </>
   );

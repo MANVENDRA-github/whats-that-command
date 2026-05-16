@@ -2,25 +2,78 @@
 /node_modules
 /.pnp
 .pnp.js
+.pnpm-store/
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
 
 # next.js
 /.next/
 /out/
+next-env.d.ts
+.turbo
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
+._*
 *.pem
 
-# debug
+# windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# debug / logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# local env files
-.env*.local
+# caches
+.eslintcache
+.cache/
+*.tsbuildinfo
+
+# test / coverage
+/coverage
+.nyc_output
+
+# local env files (all env files — never commit secrets)
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
 
 # vercel
 .vercel
+
+# packaging
+*.tgz
+
+# temp
+tmp/
+temp/
+*.tmp
+
+# claude / agent local state
+.claude/settings.local.json

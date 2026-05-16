@@ -1,24 +1,16 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useMemo } from 'react';
 import Fuse from 'fuse.js';
 import { MotionConfig, motion } from 'framer-motion';
 import commands from '@/commands.json';
-import CommandCard from '@/components/CommandCard';
+import { fuseOptions } from '@/lib/searchConfig';
+import useSearchQuery from '@/hooks/useSearchQuery';
 import Navbar from '@/components/Navbar';
 import TerminalDemo from '@/components/TerminalDemo';
-
-const fuseOptions = {
-  keys: [
-    { name: 'tags', weight: 0.4 },
-    { name: 'description', weight: 0.3 },
-    { name: 'command', weight: 0.2 },
-    { name: 'tool', weight: 0.1 }
-  ],
-  threshold: 0.4,
-  ignoreLocation: true,
-  includeScore: true
-};
+import SearchInput from '@/components/SearchInput';
+import CommandList from '@/components/CommandList';
+import NoMatch from '@/components/NoMatch';
 
 const EXAMPLE_PILLS = [
   'undo last commit',
@@ -66,48 +58,9 @@ function FadeUp({ children, className = '', delay = 0 }) {
 }
 
 export default function Home() {
-  const [query, setQuery] = useState('');
-  const inputRef = useRef(null);
+  const { query, setQuery, inputRef, hasQuery } = useSearchQuery();
 
   const fuse = useMemo(() => new Fuse(commands, fuseOptions), []);
-
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.key !== '/') return;
-      if (e.metaKey || e.ctrlKey || e.altKey) return;
-      const ae = document.activeElement;
-      const tag = ae?.tagName;
-      if (tag === 'INPUT' || tag === 'TEXTAREA' || ae?.isContentEditable) return;
-      e.preventDefault();
-      inputRef.current?.focus();
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, []);
-
-  useEffect(() => {
-    const syncFromUrl = () => {
-      const params = new URLSearchParams(window.location.search);
-      setQuery(params.get('q') || '');
-    };
-    syncFromUrl();
-    window.addEventListener('popstate', syncFromUrl);
-    return () => window.removeEventListener('popstate', syncFromUrl);
-  }, []);
-
-  useEffect(() => {
-    const id = setTimeout(() => {
-      const url = new URL(window.location.href);
-      if (query) url.searchParams.set('q', query);
-      else url.searchParams.delete('q');
-      const next = url.pathname + url.search + url.hash;
-      const current = window.location.pathname + window.location.search + window.location.hash;
-      if (next !== current) {
-        window.history.replaceState(null, '', next);
-      }
-    }, 120);
-    return () => clearTimeout(id);
-  }, [query]);
 
   const results = useMemo(() => {
     const q = query.trim();
@@ -119,8 +72,6 @@ export default function Home() {
     setQuery(text);
     inputRef.current?.focus();
   };
-
-  const hasQuery = query.trim().length > 0;
 
   return (
     <MotionConfig reducedMotion="user">
@@ -146,38 +97,18 @@ export default function Home() {
                 Search by intent. Not by flag name.
               </p>
 
-              <div className="relative mt-7 max-w-2xl sm:mt-9">
-                <label htmlFor="cmd-search" className="sr-only">Search commands</label>
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 font-mono text-base text-muted sm:left-4 sm:text-lg"
-                >
-                  ›
-                </span>
-                <input
+              <div className="mt-7 max-w-2xl sm:mt-9">
+                <SearchInput
                   id="cmd-search"
-                  ref={inputRef}
-                  type="text"
+                  inputRef={inputRef}
                   value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Escape') setQuery('');
-                  }}
+                  onChange={setQuery}
+                  onClear={() => setQuery('')}
                   placeholder="describe what you want to do…"
+                  label="Search commands"
+                  size="lg"
                   autoFocus
-                  spellCheck={false}
-                  autoComplete="off"
-                  className="w-full border-2 border-ink bg-paper py-3.5 pl-9 pr-10 font-mono text-[15px] text-ink shadow-card placeholder:text-muted focus:shadow-[4px_4px_0_var(--accent)] focus:outline-none sm:py-4 sm:pl-10 sm:pr-12 sm:text-lg"
                 />
-                {query && (
-                  <button
-                    onClick={() => setQuery('')}
-                    aria-label="Clear search"
-                    className="absolute right-2 top-1/2 -translate-y-1/2 p-1 font-mono text-xl text-muted hover:text-accent-deep sm:right-3"
-                  >
-                    ×
-                  </button>
-                )}
               </div>
 
               <div className="mt-4 flex max-w-2xl flex-wrap items-center gap-x-2 gap-y-2 sm:mt-5">
@@ -211,20 +142,9 @@ export default function Home() {
               {`${results.length} match${results.length === 1 ? '' : 'es'} for "${query.trim()}"`}
             </p>
             {results.length === 0 ? (
-              <div className="border-2 border-ink bg-paper-2 p-8 text-center shadow-card">
-                <p className="font-display text-2xl text-ink">No match.</p>
-                <p className="mt-2 text-muted">
-                  Try different words. Describe what you want to do, not the command name.
-                </p>
-              </div>
+              <NoMatch className="text-center" />
             ) : (
-              <ul className="space-y-3">
-                {results.map((cmd) => (
-                  <li key={cmd.id}>
-                    <CommandCard cmd={cmd} />
-                  </li>
-                ))}
-              </ul>
+              <CommandList commands={results} />
             )}
           </section>
         ) : (

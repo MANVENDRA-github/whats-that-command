@@ -14,8 +14,10 @@ Not a generic cheatsheet dump. Curation quality matters more than coverage.
 
 - **Next.js 16 (App Router)**, JavaScript, no `src/` dir — React 19
 - **Static export** (`output: 'export'`) — no backend, no runtime, ships as HTML/JS/CSS
-- **Tailwind CSS** for UI
+- **Tailwind CSS** for UI, theme extended with the design-system palette (`paper`, `paper-2`, `hairline`, `ink`, `accent`, `accent-deep`, `moss`, `muted`) and shadow utilities (`shadow-block`, `shadow-block-sm`, `shadow-card`). Prefer these tokens over hex literals.
+- **next/font/google** for self-hosted Fraunces (display), Spline Sans (body), and Spline Sans Mono (mono/labels). No runtime font requests.
 - **Fuse.js** for client-side fuzzy search
+- **Framer Motion** for the scroll-driven landing demo and scroll-in fade-ups. Wrap the page in `<MotionConfig reducedMotion="user">` so all motion components respect the OS preference automatically; use `useReducedMotion()` for explicit branching when needed (the terminal demo swaps to a static variant).
 - Deployed as a static site (Vercel-friendly)
 
 Why static: no server means no server-side attack surface and trivially cheap hosting. The whole point is that everything fits in a JSON file shipped to the browser.
@@ -66,12 +68,40 @@ const fuse = new Fuse(commands, {
 });
 ```
 
+## Design system (Editorial Brutalist / Warm Paper)
+
+This is the visual language. Don't substitute your own taste for any specified value.
+
+- **Palette.** Warm light, never inverted to dark. Exact hex (also exposed as CSS vars and Tailwind colors):
+  - Background `--paper #f4efe4`, secondary surface `--paper-2 #ece5d4`
+  - Hairlines `--hairline #d6cdb5`, ink (text + hard borders) `--ink #16140f`
+  - Primary accent `--accent #d8442b` (oxblood), hover/emphasis `--accent-deep #a82e1c`
+  - Success / "done" `--accent-2 #3a4a36` (moss), muted text `--muted #6b6452`
+- **Typography.** Fraunces (display) 500–600 + italic for emphasis in `--accent-deep`. Spline Sans for body (17px, line-height ~1.5). Spline Sans Mono for kicker/eyebrow labels (11–14px, uppercase, `tracking-kicker` = 0.18em), code, file names, tags. Sentence case in prose; uppercase reserved for mono kickers only.
+- **Signature devices** (these make the style recognizable):
+  - Hard offset shadow, no blur — `shadow-block` (18px) on marketing/major blocks, `shadow-block-sm` (12px) on cards inside grids, `shadow-card` (4px) on the search input. Never soft/blurred shadows.
+  - 2px solid `--ink` border on the same major blocks. Borders are structural, not decorative.
+  - Square corners everywhere; the one exception is small mono pill tags (e.g. example queries) which may be fully rounded.
+  - Paper-grain noise applied as a CSS `background-image` on `body` (subtle — felt, not seen).
+  - Kicker labels via `.kicker` (40px solid accent rule + mono uppercase). `.kicker--invert` swaps text color for inverted blocks.
+  - One headline word gets a hand-drawn-looking accent strike-through via `.strike-word` (accent bar, rotated -1.5deg).
+  - Section dividers are 2px hairline rules via `.section-rule`.
+  - Inverted blocks (ink bg, paper text) are used **sparingly** — reserve for the single strongest moment (currently the final CTA).
+- **Utility vs marketing intensity.** The search box and result rows are a utility interface and stay calmer: 1px hairline borders on repeating rows, no shadows on individual results, ink-bordered search field with a 4px ink shadow that becomes a 4px **accent** shadow on focus. Marketing sections (hero copy, terminal demo, value props, CTA) take the full intensity. Same palette and fonts; quieter voice in utility regions.
+- **Layout.** Centered column, `max-w-page` (1080px), 28px side padding (`px-7`). Generous vertical rhythm; let blocks breathe.
+- **Tone of any copy.** Direct, slightly blunt, confident. Short declarative sentences. Name the reader's pain in concrete terms. No marketing fluff, no exclamation marks. Confront the obvious objection head-on (e.g. the inverted CTA tells the reader exactly what to do next rather than restating the value prop).
+- **Motion.** Fade-ups on scroll use Framer Motion with `whileInView` and `viewport={{ once: true }}`, ~0.7s ease-out. The terminal demo's scale+opacity is scroll-linked via `useScroll`+`useTransform`. Hover transforms are short and use only `translate`. All motion respects the reduced-motion preference (see the `MotionConfig` and global CSS guard).
+
 ## Conventions
 
 - **Client-side only.** No backend, no database, no API routes.
 - **One JSON file** for the dataset. Don't shard until it actually causes problems.
 - **Tags are for human intent**, not man-page jargon. If a tag word appears in the command itself, it's the wrong tag.
 - **Mark dangerous commands.** Anything that destroys data, rewrites history irrecoverably, or affects shared state (`rm -rf`, `git push --force`, `git reset --hard`, `docker system prune`, etc.) gets `"danger": true`.
+- **`commands.json` is validated** by `scripts/validate-commands.js`, run automatically on `prebuild`. Every entry must have the required string fields (`id`, `command`, `description`, `tool`, `category`), a non-empty `tags` array, a globally unique `id`, valid `related` ids that resolve to other entries, and a boolean `danger` when the field is present. A failing dataset blocks the build — fix the entry rather than skipping the check.
+- **The search box stays above the fold.** The home page hero is the search input itself — auto-focused, centered, and fully visible without scrolling on a typical laptop AND a typical mobile viewport. Anything that competes with it for the first screen loses. The scroll-driven terminal demo and value section are reward content below the fold; they must never gate access to the search.
+- **Respect `prefers-reduced-motion`.** Any new scroll-linked or auto-playing animation must have a static fallback. Use `useReducedMotion()` from framer-motion for React or media-query guards in CSS. The page must remain fully usable and not janky with motion reduced.
+- **Animation discipline.** Only animate `transform` and `opacity`. Never animate `width`, `height`, `top`, or other layout-triggering properties — they cause jank and break the above-the-fold guarantee.
 - **Keep the site runnable after every step.** No half-finished features merged to main.
 
 ## Build order / status
@@ -80,10 +110,14 @@ const fuse = new Fuse(commands, {
 2. Create CLAUDE.md — **done**
 3. Seed `commands.json` with ~30 git commands — **done** (30 entries)
 4. Build home page: search box + Fuse + results with copy + danger flag — **done**
-5. Browse-by-tool view (`/[tool]`), grouped by category — **pending**
-6. Expand dataset across git, docker, bash (hundreds of entries) — **pending**
-7. Per-command static pages (`/c/[id]`) — **pending**
-8. (Later) Semantic search layer behind Fuse — **pending**
+5. Data validation script for `commands.json` wired to `prebuild` — **done**
+6. Keyboard UX on home page (auto-focus, `/` to focus, Escape to clear, accessible label) — **done**
+7. URL-driven search state (`?q=` is shareable; back/forward works) — **done**
+8. Landing page: navbar, search-first hero with example pills, scroll-driven terminal demo, value section + CTA — **done**
+9. Browse-by-tool view (`/[tool]`), grouped by category — **pending**
+10. Expand dataset across git, docker, bash (hundreds of entries) — **pending**
+11. Per-command static pages (`/c/[id]`) — **pending**
+12. (Later) Semantic search layer behind Fuse — **pending**
 
 ## Run locally
 

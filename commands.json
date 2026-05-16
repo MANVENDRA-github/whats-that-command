@@ -709,7 +709,7 @@
     "description": "Find and force-kill whichever process is holding a TCP port",
     "tool": "bash",
     "category": "process",
-    "tags": ["port already in use", "free up port", "kill server", "address in use"],
+    "tags": ["port already in use", "free up port", "kill server", "address in use", "kill process on a port", "stop process on port"],
     "example": "lsof -ti:3000 | xargs kill -9",
     "danger": true,
     "related": ["bash-list-port", "bash-kill-process"]
@@ -786,7 +786,7 @@
     "description": "Extract the contents of a gzipped tarball into the current directory",
     "tool": "bash",
     "category": "archive",
-    "tags": ["unpack archive", "unzip tarball", "open backup", "uncompress"],
+    "tags": ["unpack archive", "unzip tarball", "open backup", "uncompress", "extract a tar file", "extract files"],
     "example": "tar -xzvf backup.tar.gz",
     "danger": false,
     "related": ["bash-tar-create"]

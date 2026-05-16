@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const GITHUB_URL = 'https://github.com/MANVENDRA-github/whats-that-command';
 
@@ -9,6 +12,8 @@ const TOOL_LINKS = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname() ?? '/';
+
   return (
     <nav
       aria-label="Primary"
@@ -31,15 +36,29 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center gap-1 sm:gap-2">
-          {TOOL_LINKS.map((t) => (
-            <Link
-              key={t.href}
-              href={t.href}
-              className="px-2 py-1 font-mono text-[12px] uppercase tracking-kicker text-muted hover:text-ink sm:text-[13px]"
-            >
-              {t.label}
-            </Link>
-          ))}
+          {TOOL_LINKS.map((t) => {
+            const active = pathname === t.href || pathname.startsWith(t.href + '/');
+            return (
+              <Link
+                key={t.href}
+                href={t.href}
+                aria-current={active ? 'page' : undefined}
+                className={`relative px-2 py-1 font-mono text-[12px] uppercase tracking-kicker transition-colors sm:text-[13px] ${
+                  active
+                    ? 'text-accent-deep'
+                    : 'text-muted hover:text-ink'
+                }`}
+              >
+                {t.label}
+                {active && (
+                  <span
+                    aria-hidden="true"
+                    className="absolute -bottom-[15px] left-2 right-2 h-[2px] bg-accent"
+                  />
+                )}
+              </Link>
+            );
+          })}
           <a
             href={GITHUB_URL}
             target="_blank"

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Fuse from 'fuse.js';
+import { MotionConfig, motion } from 'framer-motion';
 import commands from '@/commands.json';
 import CommandCard from '@/components/CommandCard';
 import Navbar from '@/components/Navbar';
@@ -27,19 +28,19 @@ const EXAMPLE_PILLS = [
 
 const VALUE_PROPS = [
   {
-    kicker: '01',
+    kicker: '01 / search',
     title: 'Intent, not jargon.',
-    body: 'Type what you want to do. Fuzzy search ranks by human intent — tags that read like English, not man-page flags.'
+    body: 'Type what you want to do. Results rank against human-readable tags, not man-page flags.'
   },
   {
-    kicker: '02',
-    title: 'Static and private.',
-    body: 'No login, no analytics, no server. Your queries never leave the browser tab.'
+    kicker: '02 / privacy',
+    title: 'Stays in your tab.',
+    body: 'No login. No analytics. No server. Your queries never leave the browser.'
   },
   {
-    kicker: '03',
-    title: 'Copy and go.',
-    body: 'One click puts the command in your clipboard. Destructive commands are flagged so you read before you run.'
+    kicker: '03 / safety',
+    title: 'Read before you run.',
+    body: 'One click copies the command. Anything destructive is flagged in red — you see it before you paste it.'
   }
 ];
 
@@ -49,6 +50,20 @@ function scrollToSearch() {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   el.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
   el.focus();
+}
+
+function FadeUp({ children, className = '', delay = 0 }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-10% 0px' }}
+      transition={{ duration: 0.7, ease: [0.22, 0.61, 0.36, 1], delay }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
 }
 
 export default function Home() {
@@ -109,26 +124,30 @@ export default function Home() {
   const hasQuery = query.trim().length > 0;
 
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       <Navbar />
       <main>
         <section
           id="hero"
-          className="flex min-h-[calc(100svh-3rem)] flex-col items-center justify-center px-5 py-8 sm:py-12"
+          className="flex min-h-[calc(100svh-3.5rem)] flex-col justify-center px-7 py-12 sm:py-16"
         >
-          <div className="w-full max-w-2xl">
-            <h1 className="text-center text-3xl font-semibold tracking-tight sm:text-5xl">
-              Find the shell command you forgot.
+          <div className="mx-auto w-full max-w-2xl">
+            <p className="kicker mb-5">command search</p>
+
+            <h1 className="font-display text-[2.5rem] font-medium leading-[1.04] tracking-tight text-ink sm:text-[3.75rem]">
+              Find the shell command you{' '}
+              <span className="strike-word">forgot</span>.
             </h1>
-            <p className="mt-3 text-center text-sm text-[color:var(--muted)] sm:mt-4 sm:text-base">
-              Search by what you want to do — not what it&apos;s called.
+
+            <p className="mt-4 max-w-xl text-base text-muted sm:mt-5 sm:text-lg">
+              Search by intent. Not by flag name.
             </p>
 
-            <div className="relative mt-7 sm:mt-10">
+            <div className="relative mt-7 sm:mt-9">
               <label htmlFor="cmd-search" className="sr-only">Search commands</label>
               <span
                 aria-hidden="true"
-                className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-[color:var(--muted)] sm:text-base"
+                className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 font-mono text-base text-muted sm:text-lg"
               >
                 ›
               </span>
@@ -141,53 +160,58 @@ export default function Home() {
                 onKeyDown={(e) => {
                   if (e.key === 'Escape') setQuery('');
                 }}
-                placeholder='describe what you want to do…'
+                placeholder="describe what you want to do…"
                 autoFocus
                 spellCheck={false}
                 autoComplete="off"
-                className="w-full rounded-lg border border-[color:var(--border)] bg-[color:var(--panel)] py-3.5 pl-9 pr-10 font-mono text-base outline-none transition-colors focus:border-[color:var(--accent)] placeholder:text-[color:var(--muted)] sm:py-4 sm:text-lg"
+                className="w-full border-2 border-ink bg-paper py-4 pl-10 pr-12 font-mono text-base text-ink shadow-card placeholder:text-muted focus:shadow-[4px_4px_0_var(--accent)] focus:outline-none sm:text-lg"
               />
               {query && (
                 <button
                   onClick={() => setQuery('')}
                   aria-label="Clear search"
-                  className="absolute right-3 top-1/2 -translate-y-1/2 rounded p-1 text-[color:var(--muted)] hover:text-[color:var(--text)]"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 p-1 font-mono text-xl text-muted hover:text-accent-deep"
                 >
                   ×
                 </button>
               )}
             </div>
 
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs">
-              <span className="text-[color:var(--muted)]">try</span>
+            <div className="mt-5 flex flex-wrap items-center gap-2">
+              <span className="font-mono text-[11px] uppercase tracking-kicker text-muted">
+                try
+              </span>
               {EXAMPLE_PILLS.map((p) => (
                 <button
                   key={p}
                   onClick={() => runPill(p)}
-                  className="rounded-full border border-[color:var(--border)] px-3 py-1 font-mono text-[color:var(--muted)] transition-colors hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"
+                  className="rounded-full border border-hairline px-3 py-1 font-mono text-[12px] text-muted transition-colors hover:border-ink hover:text-ink"
                 >
                   {p}
                 </button>
               ))}
-              <span className="hidden text-[color:var(--muted)] sm:inline">
+              <span className="hidden font-mono text-[12px] text-muted sm:inline">
                 · press{' '}
-                <kbd className="rounded border border-[color:var(--border)] bg-[color:var(--panel)] px-1.5 py-0.5 font-mono text-[10px]">
+                <kbd className="border border-hairline bg-paper-2 px-1.5 py-0.5 font-mono text-[10px] text-ink">
                   /
                 </kbd>{' '}
-                anywhere to focus
+                anywhere
               </span>
             </div>
           </div>
         </section>
 
         {hasQuery ? (
-          <section className="mx-auto max-w-3xl px-5 pb-20">
-            <div className="mb-3 text-sm text-[color:var(--muted)]">
+          <section className="mx-auto max-w-page px-7 pb-24">
+            <p className="mb-4 font-mono text-[11px] uppercase tracking-kicker text-muted">
               {`${results.length} match${results.length === 1 ? '' : 'es'} for "${query.trim()}"`}
-            </div>
+            </p>
             {results.length === 0 ? (
-              <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--panel)] p-6 text-center text-[color:var(--muted)]">
-                No match. Try different words — describe what you want to do, not the command name.
+              <div className="border-2 border-ink bg-paper-2 p-8 text-center shadow-card">
+                <p className="font-display text-2xl text-ink">No match.</p>
+                <p className="mt-2 text-muted">
+                  Try different words. Describe what you want to do, not the command name.
+                </p>
               </div>
             ) : (
               <ul className="space-y-3">
@@ -201,38 +225,69 @@ export default function Home() {
           </section>
         ) : (
           <>
+            <hr className="section-rule mx-auto max-w-page" />
+
             <TerminalDemo />
 
-            <section className="mx-auto max-w-3xl px-5 pb-20 sm:pb-28" aria-label="What you get">
-              <ul className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                {VALUE_PROPS.map((v) => (
-                  <li
-                    key={v.kicker}
-                    className="rounded-lg border border-[color:var(--border)] bg-[color:var(--panel)] p-5"
-                  >
-                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--muted)]">
-                      {v.kicker}
-                    </div>
-                    <h3 className="mt-2 text-base font-semibold">{v.title}</h3>
-                    <p className="mt-1.5 text-sm text-[color:var(--muted)]">{v.body}</p>
+            <hr className="section-rule mx-auto max-w-page" />
+
+            <section
+              className="mx-auto max-w-page px-7 py-20 sm:py-28"
+              aria-label="What you get"
+            >
+              <FadeUp>
+                <p className="kicker mb-8">what you get</p>
+              </FadeUp>
+              <ul className="grid grid-cols-1 gap-7 sm:grid-cols-3 sm:gap-10">
+                {VALUE_PROPS.map((v, i) => (
+                  <li key={v.kicker}>
+                    <FadeUp delay={i * 0.08}>
+                      <div className="h-full border-2 border-ink bg-paper-2 p-6 shadow-block-sm">
+                        <p className="font-mono text-[11px] uppercase tracking-kicker text-accent-deep">
+                          {v.kicker}
+                        </p>
+                        <h3 className="mt-3 font-display text-2xl font-medium leading-snug tracking-tight text-ink">
+                          {v.title}
+                        </h3>
+                        <p className="mt-3 text-[15px] text-muted">{v.body}</p>
+                      </div>
+                    </FadeUp>
                   </li>
                 ))}
               </ul>
+            </section>
 
-              <div className="mt-12 text-center">
-                <button
-                  type="button"
-                  onClick={scrollToSearch}
-                  className="inline-flex items-center gap-2 rounded-lg border border-[color:var(--accent)] px-4 py-2 font-mono text-sm text-[color:var(--accent)] transition-colors hover:bg-[color:var(--accent)]/10"
-                >
-                  <span>try the search</span>
-                  <span aria-hidden="true">↑</span>
-                </button>
-              </div>
+            <section className="mx-auto max-w-page px-7 pb-24 sm:pb-32">
+              <FadeUp>
+                <div className="border-2 border-ink bg-ink text-paper shadow-block">
+                  <div className="flex flex-col gap-8 px-8 py-12 sm:flex-row sm:items-center sm:gap-12 sm:px-14 sm:py-16">
+                    <div className="flex-1">
+                      <p className="kicker kicker--invert mb-4">ready?</p>
+                      <h3 className="font-display text-3xl font-medium leading-[1.05] tracking-tight sm:text-5xl">
+                        The box is already focused.
+                      </h3>
+                      <p className="mt-4 text-[15px] text-hairline">
+                        Press{' '}
+                        <kbd className="border border-hairline bg-transparent px-1.5 py-0.5 font-mono text-[11px] text-paper">
+                          /
+                        </kbd>{' '}
+                        anywhere. Or scroll up.
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={scrollToSearch}
+                      className="self-start border-2 border-accent bg-accent px-6 py-3 font-mono text-sm uppercase tracking-kicker text-paper transition-[transform,background-color,color,border-color] duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:border-paper hover:bg-paper hover:text-accent-deep sm:self-auto"
+                    >
+                      Try the search ↑
+                    </button>
+                  </div>
+                </div>
+              </FadeUp>
             </section>
           </>
         )}
       </main>
-    </>
+    </MotionConfig>
   );
 }

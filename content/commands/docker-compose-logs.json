@@ -1,0 +1,19 @@
+{
+  "id": "docker-compose-logs",
+  "command": "docker compose logs -f <service>",
+  "description": "Stream logs from one service in a compose stack",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "watch service output",
+    "tail one service",
+    "see live logs",
+    "follow service"
+  ],
+  "example": "docker compose logs -f web",
+  "danger": false,
+  "related": [
+    "docker-logs-follow",
+    "docker-compose-up"
+  ]
+}

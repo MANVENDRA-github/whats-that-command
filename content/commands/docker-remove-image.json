@@ -1,0 +1,19 @@
+{
+  "id": "docker-remove-image",
+  "command": "docker rmi <image>",
+  "description": "Delete a locally cached image to free disk space",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "delete image",
+    "free space",
+    "remove from cache",
+    "clean up image"
+  ],
+  "example": "docker rmi node:18-old",
+  "danger": false,
+  "related": [
+    "docker-list-images",
+    "docker-prune-system"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "docker-remove-container",
+  "command": "docker rm <container>",
+  "description": "Delete a stopped container",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "delete container",
+    "clean up",
+    "throw away container"
+  ],
+  "example": "docker rm old-build",
+  "danger": false,
+  "related": [
+    "docker-stop-container",
+    "docker-remove-all-containers"
+  ]
+}

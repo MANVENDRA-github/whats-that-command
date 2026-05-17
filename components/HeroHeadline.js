@@ -9,6 +9,15 @@ import {
 
 const HEADLINES = [
   {
+    id: 'whats-that-command',
+    render: () => (
+      <>
+        What&apos;s{' '}
+        <span className="italic text-accent-deep">that</span> command?
+      </>
+    )
+  },
+  {
     id: 'almost-know',
     render: () => (
       <>
@@ -26,6 +35,16 @@ const HEADLINES = [
           --help
         </code>{' '}
         <span className="italic text-accent-deep">isn&apos;t</span> helping.
+      </>
+    )
+  },
+  {
+    id: 'shell-history',
+    render: () => (
+      <>
+        It&apos;s{' '}
+        <span className="italic text-accent-deep">somewhere</span> in your
+        shell history.
       </>
     )
   }

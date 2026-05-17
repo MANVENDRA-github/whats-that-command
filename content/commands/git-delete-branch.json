@@ -1,0 +1,19 @@
+{
+  "id": "git-delete-branch",
+  "command": "git branch -d <name>",
+  "description": "Delete a local branch that has been merged",
+  "tool": "git",
+  "category": "branch",
+  "tags": [
+    "remove branch",
+    "clean up",
+    "done with feature",
+    "drop branch"
+  ],
+  "example": "git branch -d feature/login",
+  "danger": false,
+  "related": [
+    "git-force-delete-branch",
+    "git-fetch-prune"
+  ]
+}

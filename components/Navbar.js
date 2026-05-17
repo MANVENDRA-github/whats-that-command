@@ -3,8 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { TOOLS, toolHref } from '@/lib/tools';
-
-const GITHUB_URL = 'https://github.com/MANVENDRA-github/whats-that-command';
+import { SITE } from '@/lib/site';
 
 export default function Navbar() {
   const pathname = usePathname() ?? '/';
@@ -56,7 +55,7 @@ export default function Navbar() {
             );
           })}
           <a
-            href={GITHUB_URL}
+            href={SITE.repoUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View source on GitHub"

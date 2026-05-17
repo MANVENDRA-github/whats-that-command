@@ -1,0 +1,20 @@
+{
+  "id": "git-tag-create",
+  "command": "git tag -a <name> -m \"<message>\"",
+  "description": "Create an annotated tag at the current commit to mark a release or milestone",
+  "tool": "git",
+  "category": "tags",
+  "tags": [
+    "mark release",
+    "version label",
+    "milestone",
+    "snapshot point",
+    "release marker"
+  ],
+  "example": "git tag -a v1.0.0 -m \"first stable release\"",
+  "danger": false,
+  "related": [
+    "git-push-tags",
+    "git-list-tags"
+  ]
+}

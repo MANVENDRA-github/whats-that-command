@@ -1,0 +1,19 @@
+{
+  "id": "bash-kill-process",
+  "command": "kill -9 <pid>",
+  "description": "Force-kill a process by its process ID",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "force quit",
+    "stop process",
+    "terminate",
+    "not responding"
+  ],
+  "example": "kill -9 12345",
+  "danger": true,
+  "related": [
+    "bash-top-processes",
+    "bash-kill-port"
+  ]
+}

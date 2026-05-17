@@ -1,0 +1,18 @@
+{
+  "id": "bash-disk-usage",
+  "command": "du -sh *",
+  "description": "Show the size of each item in the current directory in human-readable units",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "how big is this folder",
+    "what's taking space",
+    "size of each",
+    "directory sizes"
+  ],
+  "example": "du -sh *",
+  "danger": false,
+  "related": [
+    "bash-disk-free"
+  ]
+}

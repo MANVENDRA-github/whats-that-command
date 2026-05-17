@@ -1,0 +1,17 @@
+{
+  "id": "git-rename-branch",
+  "command": "git branch -m <new>",
+  "description": "Rename the current branch",
+  "tool": "git",
+  "category": "branch",
+  "tags": [
+    "change branch name",
+    "fix typo in branch",
+    "relabel"
+  ],
+  "example": "git branch -m feature/login-v2",
+  "danger": false,
+  "related": [
+    "git-new-branch"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "docker-list-running",
+  "command": "docker ps",
+  "description": "Show currently running containers",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "what's running",
+    "active containers",
+    "currently up",
+    "live"
+  ],
+  "example": "docker ps",
+  "danger": false,
+  "related": [
+    "docker-list-all-containers",
+    "docker-stats"
+  ]
+}

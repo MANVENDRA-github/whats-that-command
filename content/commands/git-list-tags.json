@@ -1,0 +1,19 @@
+{
+  "id": "git-list-tags",
+  "command": "git tag",
+  "description": "List every tag in the repository",
+  "tool": "git",
+  "category": "tags",
+  "tags": [
+    "see releases",
+    "what versions exist",
+    "available milestones",
+    "list markers"
+  ],
+  "example": "git tag",
+  "danger": false,
+  "related": [
+    "git-tag-create",
+    "git-push-tags"
+  ]
+}

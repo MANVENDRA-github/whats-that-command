@@ -1,6 +1,7 @@
 'use client';
 
 import SearchInput from './SearchInput';
+import HeroHeadline from './HeroHeadline';
 
 const EXAMPLE_PILLS = [
   'undo last commit',
@@ -18,13 +19,7 @@ export default function HomeHero({ query, setQuery, inputRef, onPillClick }) {
         <div className="max-w-3xl">
           <p className="kicker mb-4 sm:mb-5">command search</p>
 
-          <h1
-            className="font-display font-medium leading-[1.04] tracking-tight text-ink"
-            style={{ fontSize: 'clamp(2rem, 4.5vw + 1rem, 4.5rem)' }}
-          >
-            The shell command on the{' '}
-            <span className="italic text-accent-deep">tip of your tongue</span>.
-          </h1>
+          <HeroHeadline />
 
           <p className="mt-4 max-w-xl text-[15px] text-muted sm:mt-5 sm:text-lg">
             Search by intent. Not by flag name.

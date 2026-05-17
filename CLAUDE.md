@@ -114,7 +114,7 @@ This is the visual language. Don't substitute your own taste for any specified v
 6. Keyboard UX on home page (auto-focus, `/` to focus, Escape to clear, accessible label) — **done**
 7. URL-driven search state (`?q=` is shareable; back/forward works) — **done**
 8. Landing page: navbar, search-first hero with example pills, scroll-driven terminal demo, value section + CTA — **done**
-9. Browse-by-tool view (`/[tool]`), grouped by category — **pending**
+9. Browse-by-tool view (`/[tool]`), grouped by category — **done** (`app/[tool]/page.js` with `generateStaticParams` emits `/git/`, `/docker/`, `/bash/`)
 10. Expand dataset across git, docker, bash (hundreds of entries) — **pending**
 11. Per-command static pages (`/c/[id]`) — **pending**
 12. (Later) Semantic search layer behind Fuse — **pending**

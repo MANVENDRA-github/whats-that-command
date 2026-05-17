@@ -1,24 +1,64 @@
 'use client';
 
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
+  AnimatePresence,
   motion,
   useScroll,
   useTransform,
   useReducedMotion
 } from 'framer-motion';
 
-function Frame({ children }) {
+const EXAMPLES = [
+  {
+    query: 'how do I undo my last commit?',
+    command: 'git reset --soft HEAD~1',
+    meta: 'git · undo'
+  },
+  {
+    query: "what's using port 3000?",
+    command: 'lsof -i :3000',
+    meta: 'bash · network'
+  },
+  {
+    query: 'extract a tar file',
+    command: 'tar -xzvf <archive>.tar.gz',
+    meta: 'bash · archive'
+  },
+  {
+    query: 'shell into a running container',
+    command: 'docker exec -it <container> /bin/bash',
+    meta: 'docker · containers'
+  },
+  {
+    query: 'what did I change?',
+    command: 'git diff',
+    meta: 'git · inspect'
+  }
+];
+
+const STEP_MS = 4000;
+
+function Frame({ children, activeIndex, dotCount = 3 }) {
   return (
     <div className="border-2 border-ink bg-paper-2 shadow-block-sm sm:shadow-block">
-      <div className="flex items-center justify-between border-b-2 border-ink px-4 py-2.5">
+      <div className="flex items-center justify-between gap-3 border-b-2 border-ink px-4 py-2.5">
         <span className="font-mono text-[10px] uppercase tracking-kicker text-ink">
           ~/work · zsh
         </span>
         <div className="flex gap-1.5" aria-hidden="true">
-          <span className="h-2 w-2 bg-ink" />
-          <span className="h-2 w-2 bg-ink" />
-          <span className="h-2 w-2 bg-ink" />
+          {Array.from({ length: dotCount }).map((_, i) => (
+            <span
+              key={i}
+              className={`h-2 w-2 transition-colors duration-300 ${
+                activeIndex === undefined
+                  ? 'bg-ink'
+                  : i === activeIndex
+                    ? 'bg-accent'
+                    : 'bg-hairline'
+              }`}
+            />
+          ))}
         </div>
       </div>
       <div className="px-6 py-8 font-mono text-sm leading-relaxed text-ink sm:px-10 sm:py-10 sm:text-base">
@@ -28,24 +68,56 @@ function Frame({ children }) {
   );
 }
 
-function Beats() {
-  return (
-    <>
-      <span className="text-accent">$</span> how do I undo my last commit?
-    </>
-  );
-}
-
 function SectionShell({ children, sectionRef }) {
   return (
     <section
       ref={sectionRef}
       aria-label="Product demo"
-      className="mx-auto max-w-page px-7 py-20 sm:py-28"
+      className="mx-auto max-w-page px-5 py-16 sm:px-7 sm:py-24 lg:py-28"
     >
-      <p className="kicker mb-6 justify-self-start">about the search</p>
+      <p className="kicker mb-6">about the search</p>
       {children}
     </section>
+  );
+}
+
+const beatVariants = {
+  hidden: { opacity: 0, y: 4 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: [0.22, 0.61, 0.36, 1] }
+  }
+};
+
+function ExampleContent({ example }) {
+  return (
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      exit={{ opacity: 0, transition: { duration: 0.3 } }}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: { staggerChildren: 0.55, delayChildren: 0.15 }
+        }
+      }}
+    >
+      <motion.p variants={beatVariants}>
+        <span className="text-accent">$</span> {example.query}
+      </motion.p>
+      <motion.p variants={beatVariants} className="mt-3 break-words">
+        <span className="text-accent">→</span>{' '}
+        <span className="font-medium">{example.command}</span>
+      </motion.p>
+      <motion.p
+        variants={beatVariants}
+        className="mt-4 font-mono text-[10px] uppercase tracking-kicker text-muted"
+      >
+        {example.meta}
+      </motion.p>
+    </motion.div>
   );
 }
 
@@ -54,13 +126,15 @@ function StaticDemo() {
     <SectionShell>
       <Frame>
         <p>
-          <span className="text-accent">$</span> how do I undo my last commit?
+          <span className="text-accent">$</span> {EXAMPLES[0].query}
         </p>
-        <p className="mt-3">
+        <p className="mt-3 break-words">
           <span className="text-accent">→</span>{' '}
-          <span className="font-medium">git reset --soft HEAD~1</span>
+          <span className="font-medium">{EXAMPLES[0].command}</span>
         </p>
-        <p className="mt-3 text-moss">[copied to clipboard]</p>
+        <p className="mt-4 font-mono text-[10px] uppercase tracking-kicker text-muted">
+          {EXAMPLES[0].meta}
+        </p>
       </Frame>
     </SectionShell>
   );
@@ -68,32 +142,44 @@ function StaticDemo() {
 
 function AnimatedDemo() {
   const ref = useRef(null);
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(true);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start end', 'end start']
   });
-
   const scale = useTransform(scrollYProgress, [0, 0.35, 0.75, 1], [0.94, 1, 1, 0.97]);
   const opacity = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [0.4, 1, 1, 0.55]);
 
-  const beat1 = useTransform(scrollYProgress, [0.28, 0.36], [0, 1]);
-  const beat2 = useTransform(scrollYProgress, [0.46, 0.54], [0, 1]);
-  const beat3 = useTransform(scrollYProgress, [0.64, 0.72], [0, 1]);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => setPaused(!entry.isIntersecting),
+      { threshold: 0.15 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (paused) return;
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % EXAMPLES.length);
+    }, STEP_MS);
+    return () => clearInterval(id);
+  }, [paused]);
 
   return (
     <SectionShell sectionRef={ref}>
       <motion.div style={{ scale, opacity }} className="will-change-transform">
-        <Frame>
-          <motion.p style={{ opacity: beat1 }}>
-            <span className="text-accent">$</span> how do I undo my last commit?
-          </motion.p>
-          <motion.p style={{ opacity: beat2 }} className="mt-3">
-            <span className="text-accent">→</span>{' '}
-            <span className="font-medium">git reset --soft HEAD~1</span>
-          </motion.p>
-          <motion.p style={{ opacity: beat3 }} className="mt-3 text-moss">
-            [copied to clipboard]
-          </motion.p>
+        <Frame activeIndex={index} dotCount={EXAMPLES.length}>
+          <div className="min-h-[9.5rem] sm:min-h-[7rem]" aria-hidden="true">
+            <AnimatePresence mode="wait">
+              <ExampleContent key={index} example={EXAMPLES[index]} />
+            </AnimatePresence>
+          </div>
         </Frame>
       </motion.div>
     </SectionShell>

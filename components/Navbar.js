@@ -1,40 +1,61 @@
+'use client';
+
 import Link from 'next/link';
-
-const GITHUB_URL = 'https://github.com/MANVENDRA-github/whats-that-command';
-
-const TOOL_LINKS = [
-  { href: '/git', label: 'git' },
-  { href: '/docker', label: 'docker' },
-  { href: '/bash', label: 'bash' }
-];
+import { usePathname } from 'next/navigation';
+import { TOOLS, toolHref } from '@/lib/tools';
+import { SITE } from '@/lib/site';
 
 export default function Navbar() {
+  const pathname = usePathname() ?? '/';
+
   return (
     <nav
       aria-label="Primary"
       className="sticky top-0 z-30 border-b border-ink bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85"
     >
-      <div className="mx-auto flex h-14 max-w-page items-center justify-between px-7">
+      <div className="mx-auto flex h-14 max-w-page items-center justify-between px-5 sm:px-7">
         <Link
           href="/"
-          className="font-mono text-[13px] font-medium text-ink hover:text-accent-deep"
+          aria-label="What's that command — home"
+          className="group flex items-center gap-2.5"
         >
-          <span className="text-accent">$</span>{' '}
-          <span>what&apos;s-that-command</span>
+          <span aria-hidden="true" className="font-mono text-base font-medium text-accent">
+            $
+          </span>
+          <span className="whitespace-nowrap font-display text-[15px] font-medium tracking-tight text-ink transition-colors group-hover:text-accent-deep sm:text-lg">
+            What&apos;s{' '}
+            <span className="italic text-accent-deep">that</span>{' '}
+            command?
+          </span>
         </Link>
 
         <div className="flex items-center gap-1 sm:gap-2">
-          {TOOL_LINKS.map((t) => (
-            <Link
-              key={t.href}
-              href={t.href}
-              className="px-2 py-1 font-mono text-[12px] uppercase tracking-kicker text-muted hover:text-ink sm:text-[13px]"
-            >
-              {t.label}
-            </Link>
-          ))}
+          {TOOLS.map((tool) => {
+            const href = toolHref(tool);
+            const active = pathname === href || pathname.startsWith(href + '/');
+            return (
+              <Link
+                key={tool}
+                href={href}
+                aria-current={active ? 'page' : undefined}
+                className={`relative px-2 py-1 font-mono text-[12px] uppercase tracking-kicker transition-colors sm:text-[13px] ${
+                  active
+                    ? 'text-accent-deep'
+                    : 'text-muted hover:text-ink'
+                }`}
+              >
+                {tool}
+                {active && (
+                  <span
+                    aria-hidden="true"
+                    className="absolute -bottom-[15px] left-2 right-2 h-[2px] bg-accent"
+                  />
+                )}
+              </Link>
+            );
+          })}
           <a
-            href={GITHUB_URL}
+            href={SITE.repoUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View source on GitHub"

@@ -1,0 +1,19 @@
+{
+  "id": "docker-remove-all-containers",
+  "command": "docker rm -f $(docker ps -aq)",
+  "description": "Force-remove every container on the system, running or not",
+  "tool": "docker",
+  "category": "cleanup",
+  "tags": [
+    "delete all containers",
+    "wipe containers",
+    "fresh start",
+    "nuke everything"
+  ],
+  "example": "docker rm -f $(docker ps -aq)",
+  "danger": true,
+  "related": [
+    "docker-remove-container",
+    "docker-prune-system"
+  ]
+}

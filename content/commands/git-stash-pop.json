@@ -1,0 +1,19 @@
+{
+  "id": "git-stash-pop",
+  "command": "git stash pop",
+  "description": "Reapply your most recent stash and remove it from the stash list",
+  "tool": "git",
+  "category": "stash",
+  "tags": [
+    "bring back changes",
+    "restore shelved",
+    "unshelve",
+    "recover stash"
+  ],
+  "example": "git stash pop",
+  "danger": false,
+  "related": [
+    "git-stash",
+    "git-stash-list"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "git-fetch-prune",
+  "command": "git fetch --prune",
+  "description": "Fetch from the remote and delete local tracking refs for branches that no longer exist there",
+  "tool": "git",
+  "category": "sync",
+  "tags": [
+    "clean up remotes",
+    "remove dead branches",
+    "tidy tracking refs",
+    "stale branches"
+  ],
+  "example": "git fetch --prune",
+  "danger": false,
+  "related": [
+    "git-pull-rebase",
+    "git-delete-branch"
+  ]
+}

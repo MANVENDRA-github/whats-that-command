@@ -1,0 +1,19 @@
+{
+  "id": "git-undo-merge",
+  "command": "git merge --abort",
+  "description": "Cancel a merge that's in progress and return to the pre-merge state",
+  "tool": "git",
+  "category": "undo",
+  "tags": [
+    "cancel merge",
+    "back out",
+    "merge gone wrong",
+    "exit conflict"
+  ],
+  "example": "git merge --abort",
+  "danger": false,
+  "related": [
+    "git-revert-commit",
+    "git-hard-reset"
+  ]
+}

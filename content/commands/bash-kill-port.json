@@ -1,0 +1,21 @@
+{
+  "id": "bash-kill-port",
+  "command": "lsof -ti:<port> | xargs kill -9",
+  "description": "Find and force-kill whichever process is holding a TCP port",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "port already in use",
+    "free up port",
+    "kill server",
+    "address in use",
+    "kill process on a port",
+    "stop process on port"
+  ],
+  "example": "lsof -ti:3000 | xargs kill -9",
+  "danger": true,
+  "related": [
+    "bash-list-port",
+    "bash-kill-process"
+  ]
+}

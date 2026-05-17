@@ -1,0 +1,18 @@
+{
+  "id": "bash-tail-follow",
+  "command": "tail -f <file>",
+  "description": "Stream the end of a file as new lines are appended",
+  "tool": "bash",
+  "category": "logs",
+  "tags": [
+    "follow log",
+    "live log",
+    "watch file grow",
+    "stream log"
+  ],
+  "example": "tail -f /var/log/nginx/access.log",
+  "danger": false,
+  "related": [
+    "bash-watch-command"
+  ]
+}

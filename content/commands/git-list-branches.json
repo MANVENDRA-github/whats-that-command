@@ -1,0 +1,19 @@
+{
+  "id": "git-list-branches",
+  "command": "git branch -a",
+  "description": "List every branch, including ones from remotes",
+  "tool": "git",
+  "category": "branch",
+  "tags": [
+    "see all branches",
+    "what branches exist",
+    "remote branches",
+    "inventory"
+  ],
+  "example": "git branch -a",
+  "danger": false,
+  "related": [
+    "git-recent-branches",
+    "git-switch-branch"
+  ]
+}

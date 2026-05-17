@@ -1,0 +1,18 @@
+{
+  "id": "bash-watch-command",
+  "command": "watch -n <seconds> '<command>'",
+  "description": "Re-run a command at a fixed interval and show the latest output",
+  "tool": "bash",
+  "category": "monitor",
+  "tags": [
+    "repeat every second",
+    "live refresh",
+    "keep checking",
+    "auto re-run"
+  ],
+  "example": "watch -n 1 'kubectl get pods'",
+  "danger": false,
+  "related": [
+    "bash-tail-follow"
+  ]
+}

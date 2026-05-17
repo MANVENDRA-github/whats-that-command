@@ -1,0 +1,18 @@
+{
+  "id": "docker-compose-down",
+  "command": "docker compose down",
+  "description": "Stop and remove all containers and networks started by compose",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "shut down stack",
+    "tear down",
+    "stop services",
+    "bring down app"
+  ],
+  "example": "docker compose down",
+  "danger": false,
+  "related": [
+    "docker-compose-up"
+  ]
+}

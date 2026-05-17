@@ -1,0 +1,19 @@
+{
+  "id": "git-push-upstream",
+  "command": "git push -u origin <branch>",
+  "description": "Push a new branch to the remote and set it as the upstream for future pushes and pulls",
+  "tool": "git",
+  "category": "sync",
+  "tags": [
+    "first push",
+    "publish branch",
+    "set tracking",
+    "share branch"
+  ],
+  "example": "git push -u origin feature/login",
+  "danger": false,
+  "related": [
+    "git-pull-rebase",
+    "git-force-push-safe"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "bash-symlink",
+  "command": "ln -s <target> <link>",
+  "description": "Create a symbolic link pointing to another file or directory",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "shortcut",
+    "alias path",
+    "pointer file",
+    "make link"
+  ],
+  "example": "ln -s /usr/local/bin/node ./node",
+  "danger": false,
+  "related": []
+}

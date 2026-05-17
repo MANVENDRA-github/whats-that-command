@@ -1,0 +1,16 @@
+{
+  "id": "bash-make-dirs",
+  "command": "mkdir -p <path>",
+  "description": "Create a directory along with any missing parent directories",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "create nested folders",
+    "make path",
+    "build directory tree",
+    "ensure folder exists"
+  ],
+  "example": "mkdir -p src/components/ui",
+  "danger": false,
+  "related": []
+}

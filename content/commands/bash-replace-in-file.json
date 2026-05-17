@@ -1,0 +1,18 @@
+{
+  "id": "bash-replace-in-file",
+  "command": "sed -i 's/<old>/<new>/g' <file>",
+  "description": "Find-and-replace text inside a file in place",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "bulk rename string",
+    "search and replace",
+    "swap text",
+    "edit file in place"
+  ],
+  "example": "sed -i 's/foo/bar/g' config.yml",
+  "danger": true,
+  "related": [
+    "bash-grep-recursive"
+  ]
+}

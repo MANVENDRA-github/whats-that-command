@@ -1,11 +1,13 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Fuse from 'fuse.js';
 import { MotionConfig } from 'framer-motion';
 import commands from '@/commands.json';
 import { fuseOptions } from '@/lib/searchConfig';
+import { mergeResults } from '@/lib/mergeSearch';
 import useSearchQuery from '@/hooks/useSearchQuery';
+import useSemanticSearch from '@/hooks/useSemanticSearch';
 import Navbar from '@/components/Navbar';
 import HomeHero from '@/components/HomeHero';
 import TerminalDemo from '@/components/TerminalDemo';
@@ -16,14 +18,36 @@ import CallToAction from '@/components/CallToAction';
 
 export default function Home() {
   const { query, setQuery, inputRef, hasQuery } = useSearchQuery();
+  const { status: semStatus, search: runSemantic } = useSemanticSearch();
+  const [semanticRanked, setSemanticRanked] = useState([]);
 
   const fuse = useMemo(() => new Fuse(commands, fuseOptions), []);
 
-  const results = useMemo(() => {
+  const fuseRanked = useMemo(() => {
     const q = query.trim();
     if (!q) return [];
-    return fuse.search(q).map((r) => r.item);
+    return fuse.search(q);
   }, [query, fuse]);
+
+  useEffect(() => {
+    const q = query.trim();
+    if (!q || semStatus !== 'ready') {
+      setSemanticRanked([]);
+      return;
+    }
+    let cancelled = false;
+    runSemantic(q).then((r) => {
+      if (!cancelled) setSemanticRanked(r);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [query, semStatus, runSemantic]);
+
+  const results = useMemo(
+    () => mergeResults(fuseRanked, semanticRanked, commands),
+    [fuseRanked, semanticRanked]
+  );
 
   const handlePillClick = (text) => {
     setQuery(text);

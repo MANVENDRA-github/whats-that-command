@@ -1,0 +1,19 @@
+{
+  "id": "docker-compose-up",
+  "command": "docker compose up -d",
+  "description": "Start all services defined in docker-compose.yml in the background",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "start stack",
+    "bring up services",
+    "launch app",
+    "spin up"
+  ],
+  "example": "docker compose up -d",
+  "danger": false,
+  "related": [
+    "docker-compose-down",
+    "docker-compose-logs"
+  ]
+}

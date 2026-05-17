@@ -1,0 +1,18 @@
+{
+  "id": "bash-find-and-delete",
+  "command": "find . -name \"<pattern>\" -delete",
+  "description": "Find files matching a pattern and delete them in one pass",
+  "tool": "bash",
+  "category": "search",
+  "tags": [
+    "bulk delete",
+    "wipe matching files",
+    "remove all of type",
+    "purge"
+  ],
+  "example": "find . -name \"*.tmp\" -delete",
+  "danger": true,
+  "related": [
+    "bash-find-file"
+  ]
+}

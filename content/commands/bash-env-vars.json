@@ -1,0 +1,16 @@
+{
+  "id": "bash-env-vars",
+  "command": "printenv | grep <pattern>",
+  "description": "Show environment variables, optionally filtered by a pattern",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "see env",
+    "check variables",
+    "is variable set",
+    "environment dump"
+  ],
+  "example": "printenv | grep PATH",
+  "danger": false,
+  "related": []
+}

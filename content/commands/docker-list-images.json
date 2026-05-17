@@ -1,0 +1,19 @@
+{
+  "id": "docker-list-images",
+  "command": "docker images",
+  "description": "List all locally cached images",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "what images do i have",
+    "downloaded images",
+    "image inventory",
+    "local cache"
+  ],
+  "example": "docker images",
+  "danger": false,
+  "related": [
+    "docker-pull",
+    "docker-remove-image"
+  ]
+}

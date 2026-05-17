@@ -1,0 +1,19 @@
+{
+  "id": "git-cherry-pick",
+  "command": "git cherry-pick <hash>",
+  "description": "Apply a single commit from another branch onto your current branch",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "copy commit",
+    "port change",
+    "apply elsewhere",
+    "grab one commit"
+  ],
+  "example": "git cherry-pick 1a2b3c4",
+  "danger": false,
+  "related": [
+    "git-revert-commit",
+    "git-rebase-interactive"
+  ]
+}

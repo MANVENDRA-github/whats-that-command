@@ -1,0 +1,18 @@
+{
+  "id": "bash-top-processes",
+  "command": "ps aux --sort=-%cpu | head",
+  "description": "Show the top processes consuming CPU right now",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "what's eating cpu",
+    "heavy processes",
+    "slow computer",
+    "biggest hogs"
+  ],
+  "example": "ps aux --sort=-%cpu | head",
+  "danger": false,
+  "related": [
+    "bash-kill-process"
+  ]
+}

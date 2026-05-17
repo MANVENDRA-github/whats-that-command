@@ -1,0 +1,20 @@
+{
+  "id": "git-stash",
+  "command": "git stash",
+  "description": "Shelve your current uncommitted changes so you can switch branches with a clean tree",
+  "tool": "git",
+  "category": "stash",
+  "tags": [
+    "save for later",
+    "set aside",
+    "switch branches quickly",
+    "shelve work",
+    "park"
+  ],
+  "example": "git stash",
+  "danger": false,
+  "related": [
+    "git-stash-pop",
+    "git-stash-list"
+  ]
+}

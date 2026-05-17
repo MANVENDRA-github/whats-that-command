@@ -1,0 +1,19 @@
+{
+  "id": "git-shortlog-authors",
+  "command": "git shortlog -sn",
+  "description": "Count commits per author, sorted by number of commits",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "who contributed most",
+    "commits per person",
+    "team activity",
+    "leaderboard"
+  ],
+  "example": "git shortlog -sn",
+  "danger": false,
+  "related": [
+    "git-blame",
+    "git-log-graph"
+  ]
+}

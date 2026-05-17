@@ -1,0 +1,19 @@
+{
+  "id": "bash-find-file",
+  "command": "find . -name \"<pattern>\"",
+  "description": "Search for files matching a name pattern recursively from the current directory",
+  "tool": "bash",
+  "category": "search",
+  "tags": [
+    "locate file",
+    "where is",
+    "search by name",
+    "look for file"
+  ],
+  "example": "find . -name \"*.log\"",
+  "danger": false,
+  "related": [
+    "bash-grep-recursive",
+    "bash-which"
+  ]
+}

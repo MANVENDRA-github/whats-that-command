@@ -11,7 +11,13 @@
   --accent-deep: #a82e1c;
   --accent-2: #3a4a36;
   --muted: #6b6452;
+  --page-max: 1080px;
 }
+
+@media (min-width: 1280px) { :root { --page-max: 1200px; } }
+@media (min-width: 1536px) { :root { --page-max: 1360px; } }
+@media (min-width: 1920px) { :root { --page-max: 1560px; } }
+@media (min-width: 2400px) { :root { --page-max: 1760px; } }
 
 html,
 body {

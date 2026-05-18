@@ -111,7 +111,7 @@ This is the visual language. Don't substitute your own taste for any specified v
   - Section dividers are 2px hairline rules via `.section-rule`.
   - Inverted blocks (ink bg, paper text) are used **sparingly** — reserve for the single strongest moment (currently the final CTA).
 - **Utility vs marketing intensity.** The search box and result rows are a utility interface and stay calmer: 1px hairline borders on repeating rows, no shadows on individual results, ink-bordered search field with a 4px ink shadow that becomes a 4px **accent** shadow on focus. Marketing sections (hero copy, terminal demo, value props, CTA) take the full intensity. Same palette and fonts; quieter voice in utility regions.
-- **Layout.** Centered column, `max-w-page` (1080px), 28px side padding (`px-7`). Generous vertical rhythm; let blocks breathe.
+- **Layout.** Centered column, `max-w-page` (responsive via `--page-max` CSS var: 1080px default, 1200px at ≥1280, 1360px at ≥1536, 1560px at ≥1920, 1760px at ≥2400), 28px side padding (`px-7`). Generous vertical rhythm; let blocks breathe.
 - **Tone of any copy.** Direct, slightly blunt, confident. Short declarative sentences. Name the reader's pain in concrete terms. No marketing fluff, no exclamation marks. Confront the obvious objection head-on (e.g. the inverted CTA tells the reader exactly what to do next rather than restating the value prop).
 - **Motion.** Fade-ups on scroll use Framer Motion with `whileInView` and `viewport={{ once: true }}`, ~0.7s ease-out. The terminal demo's scale+opacity is scroll-linked via `useScroll`+`useTransform`. Hover transforms are short and use only `translate`. All motion respects the reduced-motion preference (see the `MotionConfig` and global CSS guard).
 

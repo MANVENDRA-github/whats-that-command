@@ -29,7 +29,7 @@ module.exports = {
         card: '4px 4px 0 rgba(22, 20, 15, 0.9)'
       },
       maxWidth: {
-        page: '1080px'
+        page: 'var(--page-max)'
       },
       letterSpacing: {
         kicker: '0.18em'

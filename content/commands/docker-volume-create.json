@@ -1,0 +1,19 @@
+{
+  "id": "docker-volume-create",
+  "command": "docker volume create <name>",
+  "description": "Create a named volume for data that should persist across container restarts",
+  "tool": "docker",
+  "category": "volumes",
+  "tags": [
+    "persistent storage",
+    "named data",
+    "survive restart",
+    "keep database files"
+  ],
+  "example": "docker volume create postgres-data",
+  "danger": false,
+  "related": [
+    "docker-volume-list",
+    "docker-volume-inspect"
+  ]
+}

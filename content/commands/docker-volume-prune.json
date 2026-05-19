@@ -1,0 +1,19 @@
+{
+  "id": "docker-volume-prune",
+  "command": "docker volume prune",
+  "description": "Remove unused volumes to reclaim disk space (anonymous only by default; add --all for named too)",
+  "tool": "docker",
+  "category": "volumes",
+  "tags": [
+    "clean unused",
+    "free disk space",
+    "reclaim storage",
+    "sweep dangling"
+  ],
+  "example": "docker volume prune",
+  "danger": true,
+  "related": [
+    "docker-prune-system",
+    "docker-volume-remove"
+  ]
+}

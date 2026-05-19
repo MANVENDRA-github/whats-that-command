@@ -1,0 +1,19 @@
+{
+  "id": "docker-network-prune",
+  "command": "docker network prune",
+  "description": "Remove all networks not used by at least one container",
+  "tool": "docker",
+  "category": "networks",
+  "tags": [
+    "clean unused bridges",
+    "tidy up",
+    "sweep orphans",
+    "free dangling"
+  ],
+  "example": "docker network prune",
+  "danger": true,
+  "related": [
+    "docker-prune-system",
+    "docker-network-list"
+  ]
+}

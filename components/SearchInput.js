@@ -27,13 +27,17 @@ export default function SearchInput({
   const sizes = SIZE_CLASSES[size] ?? SIZE_CLASSES.md;
 
   return (
-    <div className="relative">
+    <div className="relative mt-6">
       <label htmlFor={id} className="sr-only">
         {label}
       </label>
+      {/* drawer label */}
+      <span className="absolute -top-[18px] left-5 z-10 flex items-center rounded-t-[3px] border border-b-0 border-ink bg-ink px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-kicker text-paper">
+        search
+      </span>
       <span
         aria-hidden="true"
-        className={`pointer-events-none absolute top-1/2 -translate-y-1/2 font-mono text-muted ${sizes.prompt}`}
+        className={`pointer-events-none absolute top-1/2 z-10 -translate-y-1/2 font-mono text-muted ${sizes.prompt}`}
       >
         ›
       </span>
@@ -50,7 +54,7 @@ export default function SearchInput({
         autoFocus={autoFocus}
         spellCheck={false}
         autoComplete="off"
-        className={`w-full border-2 border-ink bg-paper font-mono text-ink shadow-card placeholder:text-muted focus:shadow-[4px_4px_0_var(--accent)] focus:outline-none ${sizes.input}`}
+        className={`w-full border border-ink bg-paper font-mono text-ink shadow-stack placeholder:text-muted focus:shadow-[5px_5px_0_var(--accent)] focus:outline-none ${sizes.input}`}
       />
       {value && (
         <button

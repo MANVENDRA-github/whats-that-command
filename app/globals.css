@@ -3,14 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --paper: #f4efe4;
-  --paper-2: #ece5d4;
-  --hairline: #d6cdb5;
+  --paper: #dfe2e3;
+  --paper-2: #e8eaeb;
+  --hairline: #c3c9cb;
   --ink: #16140f;
   --accent: #d8442b;
   --accent-deep: #a82e1c;
   --accent-2: #3a4a36;
-  --muted: #6b6452;
+  --muted: #646a6c;
+  --git: #8a5e12;
+  --docker: #3a6a85;
+  --bash: #46683b;
   --page-max: 1080px;
 }
 
@@ -22,7 +25,7 @@
 html,
 body {
   background-color: var(--paper);
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.14 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
   background-repeat: repeat;
   color: var(--ink);
 }

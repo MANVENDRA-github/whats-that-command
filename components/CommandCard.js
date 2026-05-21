@@ -2,6 +2,18 @@
 
 import { useState } from 'react';
 
+// Color coding by tool — the folder tab carries the hue.
+const TOOL_TAB = {
+  git: 'bg-git',
+  docker: 'bg-docker',
+  bash: 'bg-bash'
+};
+const TOOL_MARK = {
+  git: 'text-git',
+  docker: 'text-docker',
+  bash: 'text-bash'
+};
+
 export default function CommandCard({ cmd }) {
   const [copied, setCopied] = useState(false);
 
@@ -16,41 +28,68 @@ export default function CommandCard({ cmd }) {
   }
 
   return (
-    <article className="border border-hairline bg-paper-2 p-4 transition-colors hover:border-ink">
-      <div className="flex items-start gap-3">
+    <article className="relative mt-6 border border-ink bg-paper-2 shadow-stack transition-shadow hover:shadow-[7px_7px_0_var(--hairline)]">
+      {/* folder tab — tool name, color-coded */}
+      <span
+        className={`absolute -top-[18px] left-5 flex items-center rounded-t-[3px] border border-b-0 border-ink px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-kicker text-paper ${
+          TOOL_TAB[cmd.tool] ?? 'bg-ink'
+        }`}
+      >
+        {cmd.tool}
+      </span>
+
+      <div className="p-4 pt-5">
+        {/* catalog number + actions */}
+        <div className="flex items-start justify-between gap-3">
+          <span className="break-all font-mono text-[11px] text-muted">
+            <span className={TOOL_MARK[cmd.tool] ?? 'text-ink'}>№</span>{' '}
+            {cmd.id}
+          </span>
+          <div className="flex shrink-0 items-center gap-2">
+            {cmd.danger && (
+              <span
+                title="This command can destroy data — read the description before running"
+                className="-rotate-3 border border-accent-deep px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-kicker text-accent-deep"
+              >
+                danger
+              </span>
+            )}
+            <button
+              onClick={copy}
+              aria-label="Copy command"
+              className={`border px-2 py-1 font-mono text-[10px] uppercase tracking-kicker transition-colors ${
+                copied
+                  ? 'border-moss text-moss'
+                  : 'border-ink text-ink hover:bg-ink hover:text-paper'
+              }`}
+            >
+              {copied ? 'copied' : 'copy'}
+            </button>
+          </div>
+        </div>
+
+        {/* the command */}
         <button
           onClick={copy}
           title="Copy command"
-          className="flex-1 break-all text-left font-mono text-sm text-ink hover:text-accent-deep sm:text-base"
+          className="mt-2 block w-full break-all text-left font-mono text-[15px] text-ink transition-colors hover:text-accent-deep sm:text-base"
         >
           {cmd.command}
         </button>
-        <div className="flex shrink-0 items-center gap-2">
-          {cmd.danger && (
-            <span
-              title="This command can destroy data — read the description before running"
-              className="border border-accent-deep px-2 py-0.5 font-mono text-[10px] uppercase tracking-kicker text-accent-deep"
-            >
-              danger
-            </span>
+
+        {/* description on catalog ruling */}
+        <p className="mt-3 border-y border-dotted border-hairline py-2.5 text-sm text-muted">
+          {cmd.description}
+        </p>
+
+        {/* footer meta */}
+        <div className="mt-2.5 flex items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-kicker text-muted">
+          <span>{cmd.category}</span>
+          {Array.isArray(cmd.related) && cmd.related.length > 0 && (
+            <span>related · {cmd.related.length}</span>
           )}
-          <span className="bg-hairline px-2 py-0.5 font-mono text-[10px] uppercase tracking-kicker text-ink">
-            {cmd.tool}
-          </span>
-          <button
-            onClick={copy}
-            aria-label="Copy command"
-            className={`border px-2 py-1 font-mono text-[11px] uppercase tracking-kicker transition-colors ${
-              copied
-                ? 'border-moss text-moss'
-                : 'border-hairline text-muted hover:border-ink hover:text-ink'
-            }`}
-          >
-            {copied ? 'copied' : 'copy'}
-          </button>
         </div>
       </div>
-      <p className="mt-2 text-sm text-muted">{cmd.description}</p>
     </article>
   );
 }

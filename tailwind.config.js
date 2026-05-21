@@ -16,7 +16,10 @@ module.exports = {
           deep: 'var(--accent-deep)'
         },
         moss: 'var(--accent-2)',
-        muted: 'var(--muted)'
+        muted: 'var(--muted)',
+        git: 'var(--git)',
+        docker: 'var(--docker)',
+        bash: 'var(--bash)'
       },
       fontFamily: {
         sans: ['var(--font-spline-sans)', 'system-ui', 'sans-serif'],
@@ -26,7 +29,8 @@ module.exports = {
       boxShadow: {
         block: '18px 18px 0 rgba(22, 20, 15, 0.9)',
         'block-sm': '12px 12px 0 rgba(22, 20, 15, 0.9)',
-        card: '4px 4px 0 rgba(22, 20, 15, 0.9)'
+        card: '4px 4px 0 rgba(22, 20, 15, 0.9)',
+        stack: '5px 5px 0 var(--hairline)'
       },
       maxWidth: {
         page: 'var(--page-max)'

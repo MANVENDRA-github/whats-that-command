@@ -33,7 +33,7 @@ export default function ValueProps() {
         {VALUE_PROPS.map((v, i) => (
           <li key={v.kicker}>
             <FadeUp delay={i * 0.08}>
-              <div className="h-full border-2 border-ink bg-paper-2 p-6 shadow-block-sm">
+              <div className="h-full border border-ink bg-paper-2 p-6 shadow-stack">
                 <p className="font-mono text-[11px] uppercase tracking-kicker text-accent-deep">
                   {v.kicker}
                 </p>

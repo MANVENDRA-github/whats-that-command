@@ -47,7 +47,7 @@ export default function HomeHero({ query, setQuery, inputRef, onPillClick }) {
               <button
                 key={p}
                 onClick={() => onPillClick(p)}
-                className="rounded-full border border-hairline px-3 py-1 font-mono text-[11px] text-muted transition-colors hover:border-ink hover:text-ink sm:text-[12px]"
+                className="border border-hairline px-3 py-1 font-mono text-[11px] text-muted transition-colors hover:border-ink hover:text-ink sm:text-[12px]"
               >
                 {p}
               </button>

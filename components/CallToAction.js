@@ -13,7 +13,7 @@ export default function CallToAction() {
   return (
     <section className="mx-auto max-w-page px-5 pb-20 sm:px-7 sm:pb-28 lg:pb-32">
       <FadeUp>
-        <div className="border-2 border-ink bg-ink text-paper shadow-block">
+        <div className="border border-ink bg-ink text-paper shadow-stack">
           <div className="flex flex-col gap-7 px-6 py-10 sm:flex-row sm:items-center sm:gap-12 sm:px-14 sm:py-16">
             <div className="flex-1">
               <p className="kicker kicker--invert mb-4">ready?</p>

@@ -4,13 +4,15 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { TOOLS, toolHref } from '@/lib/tools';
 
+const TOOL_DOT = { git: 'bg-git', docker: 'bg-docker', bash: 'bg-bash' };
+
 export default function Navbar() {
   const pathname = usePathname() ?? '/';
 
   return (
     <nav
       aria-label="Primary"
-      className="sticky top-0 z-30 border-b border-ink bg-paper/95 backdrop-blur supports-[backdrop-filter]:bg-paper/85"
+      className="sticky top-0 z-30 border-b border-ink bg-paper"
     >
       <div className="mx-auto flex h-14 max-w-page items-center justify-between px-5 sm:px-7">
         <Link
@@ -37,17 +39,19 @@ export default function Navbar() {
                 key={tool}
                 href={href}
                 aria-current={active ? 'page' : undefined}
-                className={`relative px-2 py-1 font-mono text-[12px] uppercase tracking-kicker transition-colors sm:text-[13px] ${
-                  active
-                    ? 'text-accent-deep'
-                    : 'text-muted hover:text-ink'
+                className={`relative flex items-center gap-1.5 px-2 py-1 font-mono text-[12px] uppercase tracking-kicker transition-colors sm:text-[13px] ${
+                  active ? 'text-ink' : 'text-muted hover:text-ink'
                 }`}
               >
+                <span
+                  aria-hidden="true"
+                  className={`h-1.5 w-1.5 ${active ? TOOL_DOT[tool] : 'bg-hairline'}`}
+                />
                 {tool}
                 {active && (
                   <span
                     aria-hidden="true"
-                    className="absolute -bottom-[15px] left-2 right-2 h-[2px] bg-accent"
+                    className={`absolute -bottom-[15px] left-2 right-2 h-[2px] ${TOOL_DOT[tool]}`}
                   />
                 )}
               </Link>

@@ -41,8 +41,8 @@ const STEP_MS = 4000;
 
 function Frame({ children, activeIndex, dotCount = 3 }) {
   return (
-    <div className="border-2 border-ink bg-paper-2 shadow-block-sm sm:shadow-block">
-      <div className="flex items-center justify-between gap-3 border-b-2 border-ink px-4 py-2.5">
+    <div className="border border-ink bg-paper-2 shadow-stack">
+      <div className="flex items-center justify-between gap-3 border-b border-ink px-4 py-2.5">
         <span className="font-mono text-[10px] uppercase tracking-kicker text-ink">
           ~/work · zsh
         </span>

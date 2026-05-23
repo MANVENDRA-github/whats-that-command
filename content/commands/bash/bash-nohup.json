@@ -1,0 +1,19 @@
+{
+  "id": "bash-nohup",
+  "command": "nohup <command> &",
+  "description": "Run a command immune to hangups, so it survives terminal close",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "detach process",
+    "survive logout",
+    "background forever"
+  ],
+  "intents": [
+    "run a command that keeps running after i close the terminal",
+    "detach a long-running job from this shell"
+  ],
+  "example": "nohup ./worker.sh > out.log 2>&1 &",
+  "danger": false,
+  "related": []
+}

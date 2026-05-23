@@ -1,0 +1,17 @@
+{
+  "id": "docker-node-ps",
+  "command": "docker node ps <node>",
+  "description": "List tasks running on a swarm node",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "node tasks",
+    "whats on this node"
+  ],
+  "intents": [
+    "see which swarm tasks are running on a specific node"
+  ],
+  "example": "docker node ps self",
+  "danger": false,
+  "related": []
+}

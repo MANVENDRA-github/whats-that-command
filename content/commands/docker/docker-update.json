@@ -1,0 +1,19 @@
+{
+  "id": "docker-update",
+  "command": "docker update <opts> <container>",
+  "description": "Change runtime resource limits or restart policy of a running container",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "change limits",
+    "update container resources",
+    "set restart policy"
+  ],
+  "intents": [
+    "change cpu or memory limits on a running container",
+    "update the restart policy without recreating"
+  ],
+  "example": "docker update --memory 512m web",
+  "danger": false,
+  "related": []
+}

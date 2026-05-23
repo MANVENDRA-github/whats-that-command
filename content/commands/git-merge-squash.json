@@ -13,7 +13,10 @@
     "merge a branch but keep all changes as one commit",
     "i dont want all those small commits in main",
     "squash a feature branch into one commit",
-    "merge cleanly without preserving commit history"
+    "merge cleanly without preserving commit history",
+    "fold a branches commits into one staged change before committing",
+    "i want one clean commit on main from a messy feature branch",
+    "merge a branch and squash everything into a single commit"
   ],
   "example": "git merge --squash feature/login",
   "danger": false,

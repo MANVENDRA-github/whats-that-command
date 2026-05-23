@@ -10,6 +10,14 @@
     "stop services",
     "bring down app"
   ],
+  "intents": [
+    "stop everything in my compose stack",
+    "tear down the whole docker compose setup",
+    "shut down all the services i started with compose",
+    "clean up the containers and networks compose created",
+    "bring my local docker stack down for the day",
+    "i ran compose up earlier, now stop it all"
+  ],
   "example": "docker compose down",
   "danger": false,
   "related": [

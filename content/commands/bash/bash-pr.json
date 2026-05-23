@@ -1,0 +1,19 @@
+{
+  "id": "bash-pr",
+  "command": "pr <file>",
+  "description": "Paginate or columnize a file for printing",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "paginate for print",
+    "columnize text",
+    "print formatting"
+  ],
+  "intents": [
+    "format a file for printing with page headers",
+    "paginate text for hardcopy"
+  ],
+  "example": "pr -h \"Report\" data.txt",
+  "danger": false,
+  "related": []
+}

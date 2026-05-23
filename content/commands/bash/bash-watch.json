@@ -1,0 +1,21 @@
+{
+  "id": "bash-watch",
+  "command": "watch -n <s> \"<command>\"",
+  "description": "Run a command repeatedly at an interval and show its output",
+  "tool": "bash",
+  "category": "monitor",
+  "tags": [
+    "poll command",
+    "repeat output",
+    "live refresh"
+  ],
+  "intents": [
+    "run a command every few seconds and show the changing output",
+    "poll something on an interval"
+  ],
+  "example": "watch -n 2 \"df -h\"",
+  "danger": false,
+  "related": [
+    "bash-watch-command"
+  ]
+}

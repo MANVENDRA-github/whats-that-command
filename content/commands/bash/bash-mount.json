@@ -1,0 +1,20 @@
+{
+  "id": "bash-mount",
+  "command": "mount <device> <mountpoint>",
+  "description": "Attach a filesystem to a directory in the tree",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "mount drive",
+    "attach filesystem",
+    "mount usb"
+  ],
+  "intents": [
+    "mount a disk or partition",
+    "attach a usb drive to a folder",
+    "mount a network share"
+  ],
+  "example": "sudo mount /dev/sdb1 /mnt/usb",
+  "danger": true,
+  "related": []
+}

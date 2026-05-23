@@ -10,6 +10,14 @@
     "sweep orphans",
     "free dangling"
   ],
+  "intents": [
+    "clean up unused docker networks",
+    "remove networks no container is using anymore",
+    "delete orphaned bridge networks",
+    "tidy up dangling networks taking up names",
+    "free up unused docker networks to reset state",
+    "wipe leftover networks from old compose runs"
+  ],
   "example": "docker network prune",
   "danger": true,
   "related": [

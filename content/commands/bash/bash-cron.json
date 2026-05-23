@@ -1,0 +1,17 @@
+{
+  "id": "bash-cron",
+  "command": "cron",
+  "description": "The system daemon that runs scheduled jobs from crontabs",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "cron daemon",
+    "scheduled jobs"
+  ],
+  "intents": [
+    "the daemon that runs scheduled jobs from crontabs"
+  ],
+  "example": "systemctl status cron",
+  "danger": false,
+  "related": []
+}

@@ -10,6 +10,15 @@
     "move to branch",
     "jump"
   ],
+  "intents": [
+    "switch to a different branch",
+    "move to the main branch",
+    "go to an existing branch",
+    "change branches in my repo",
+    "jump over to another branch i made earlier",
+    "check out a branch i created before",
+    "hop onto a different branch"
+  ],
   "example": "git switch main",
   "danger": false,
   "related": [

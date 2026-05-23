@@ -1,0 +1,19 @@
+{
+  "id": "docker-attach",
+  "command": "docker attach <container>",
+  "description": "Attach your terminal to a running container's stdin/stdout/stderr",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "attach to container",
+    "connect to running",
+    "see container output"
+  ],
+  "intents": [
+    "attach to a running container's output stream",
+    "connect my terminal to a running container"
+  ],
+  "example": "docker attach web",
+  "danger": false,
+  "related": []
+}

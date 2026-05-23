@@ -10,6 +10,15 @@
     "set tracking",
     "share branch"
   ],
+  "intents": [
+    "first time pushing a new branch to the remote",
+    "push my new branch and set it to track the remote",
+    "publish a new branch to the remote",
+    "set up tracking so future pushes know where to go",
+    "send a brand new branch to github for the first time",
+    "i created a branch locally and want to share it",
+    "make a new local branch available on origin"
+  ],
   "example": "git push -u origin feature/login",
   "danger": false,
   "related": [

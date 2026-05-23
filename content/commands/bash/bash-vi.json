@@ -1,0 +1,20 @@
+{
+  "id": "bash-vi",
+  "command": "vi <file>",
+  "description": "Modal text editor available on almost every Unix system",
+  "tool": "bash",
+  "category": "editor",
+  "tags": [
+    "edit file",
+    "modal editor",
+    "classic editor"
+  ],
+  "intents": [
+    "edit a file in the terminal",
+    "open a file in vi",
+    "modal text editor"
+  ],
+  "example": "vi /etc/hosts",
+  "danger": false,
+  "related": []
+}

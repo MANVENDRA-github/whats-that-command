@@ -1,0 +1,20 @@
+{
+  "id": "bash-ln",
+  "command": "ln <target> <link>",
+  "description": "Create a hard link to a file",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "hard link",
+    "link file"
+  ],
+  "intents": [
+    "make a hard link to a file",
+    "create a second name for the same file"
+  ],
+  "example": "ln data.bin data.bak",
+  "danger": false,
+  "related": [
+    "bash-symlink"
+  ]
+}

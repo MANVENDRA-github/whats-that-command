@@ -1,0 +1,19 @@
+{
+  "id": "docker-port",
+  "command": "docker port <container>",
+  "description": "List the port mappings of a container",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "show port mapping",
+    "which host port",
+    "forwarded ports"
+  ],
+  "intents": [
+    "show which host port a container is mapped to",
+    "list port forwards for a container"
+  ],
+  "example": "docker port web",
+  "danger": false,
+  "related": []
+}

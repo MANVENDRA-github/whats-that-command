@@ -10,6 +10,15 @@
     "apply elsewhere",
     "grab one commit"
   ],
+  "intents": [
+    "i need one commit from another branch on my branch",
+    "copy a specific commit onto my current branch",
+    "apply a hotfix from main to my feature branch",
+    "grab just one commit from another branch",
+    "port a single change between branches",
+    "bring over a fix without merging the whole branch",
+    "replay one commit from elsewhere here"
+  ],
   "example": "git cherry-pick 1a2b3c4",
   "danger": false,
   "related": [

@@ -10,6 +10,15 @@
     "driver info",
     "host location"
   ],
+  "intents": [
+    "where does docker actually store a volume on my host",
+    "find the mountpoint path for a volume on disk",
+    "show details and host location of a named volume",
+    "what driver is a docker volume using",
+    "see when a volume was created and where it lives",
+    "i need the host path of my docker volume to back it up",
+    "look at the labels and metadata of a docker volume"
+  ],
   "example": "docker volume inspect postgres-data",
   "danger": false,
   "related": [

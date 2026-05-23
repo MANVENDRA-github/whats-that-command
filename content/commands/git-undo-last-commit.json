@@ -12,6 +12,15 @@
     "rollback",
     "redo commit"
   ],
+  "intents": [
+    "undo my last commit but keep what i committed staged",
+    "take back my most recent commit so i can recommit it",
+    "soft reset the previous commit",
+    "uncommit but leave everything in the index",
+    "i committed too soon, undo it and let me redo it",
+    "rollback last commit without losing changes",
+    "remove the most recent commit but keep its contents staged"
+  ],
   "example": "git reset --soft HEAD~1",
   "danger": false,
   "related": [

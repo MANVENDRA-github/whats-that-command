@@ -10,6 +10,15 @@
     "see live logs",
     "follow service"
   ],
+  "intents": [
+    "see what one service is logging in my compose stack",
+    "tail the logs of just the web container in compose",
+    "follow output from a single compose service",
+    "debug one service in a multi-service compose setup",
+    "watch a specific service's stdout live",
+    "live logs for a named compose service",
+    "stream logs from only one service, not all of them"
+  ],
   "example": "docker compose logs -f web",
   "danger": false,
   "related": [

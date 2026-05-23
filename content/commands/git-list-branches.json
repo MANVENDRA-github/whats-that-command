@@ -10,6 +10,15 @@
     "remote branches",
     "inventory"
   ],
+  "intents": [
+    "list all the branches including remote ones",
+    "see every branch local and remote",
+    "what branches exist in this repo",
+    "show all branches that exist anywhere",
+    "inventory of branches across local and remote",
+    "see remote branches too not just local",
+    "list every available branch"
+  ],
   "example": "git branch -a",
   "danger": false,
   "related": [

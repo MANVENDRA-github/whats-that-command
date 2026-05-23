@@ -1,0 +1,17 @@
+{
+  "id": "bash-cfdisk",
+  "command": "cfdisk <device>",
+  "description": "Curses-based interactive partition editor",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "partition tool",
+    "tui partition editor"
+  ],
+  "intents": [
+    "edit disk partitions with a friendlier text ui"
+  ],
+  "example": "sudo cfdisk /dev/sdb",
+  "danger": true,
+  "related": []
+}

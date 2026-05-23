@@ -9,13 +9,13 @@ import { mergeResults } from '@/lib/mergeSearch';
 import useSearchQuery from '@/hooks/useSearchQuery';
 import useSemanticSearch from '@/hooks/useSemanticSearch';
 import useDebouncedValue from '@/hooks/useDebouncedValue';
-import Navbar from '@/components/Navbar';
-import HomeHero from '@/components/HomeHero';
-import TerminalDemo from '@/components/TerminalDemo';
-import CommandList from '@/components/CommandList';
-import NoMatch from '@/components/NoMatch';
-import ValueProps from '@/components/ValueProps';
-import CallToAction from '@/components/CallToAction';
+import Navbar from '@/components/nav/Navbar';
+import HomeHero from '@/components/landing/HomeHero';
+import TerminalDemo from '@/components/landing/TerminalDemo';
+import CommandList from '@/components/search/CommandList';
+import NoMatch from '@/components/search/NoMatch';
+import ValueProps from '@/components/landing/ValueProps';
+import CallToAction from '@/components/landing/CallToAction';
 
 export default function Home() {
   const { query, setQuery, inputRef, hasQuery } = useSearchQuery();

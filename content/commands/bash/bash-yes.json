@@ -1,0 +1,19 @@
+{
+  "id": "bash-yes",
+  "command": "yes <text>",
+  "description": "Repeatedly print a string until killed — useful for auto-answering prompts",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "auto answer prompt",
+    "repeat string",
+    "feed yes"
+  ],
+  "intents": [
+    "auto-answer yes to a prompt",
+    "feed yes into a command that keeps asking for confirmation"
+  ],
+  "example": "yes | sudo apt remove old-pkg",
+  "danger": false,
+  "related": []
+}

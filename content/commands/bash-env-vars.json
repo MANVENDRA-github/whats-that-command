@@ -10,6 +10,15 @@
     "is variable set",
     "environment dump"
   ],
+  "intents": [
+    "is my PATH set correctly",
+    "check whether an env var is exported",
+    "what is the value of NODE_ENV right now",
+    "show env variables whose name matches a pattern",
+    "did my .env file actually get loaded into the shell",
+    "see the environment in this terminal session",
+    "find a specific environment variable quickly"
+  ],
   "example": "printenv | grep PATH",
   "danger": false,
   "related": []

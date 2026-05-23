@@ -1,0 +1,19 @@
+{
+  "id": "bash-pgrep",
+  "command": "pgrep <pattern>",
+  "description": "Find PIDs of processes matching a name or pattern",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "find pid",
+    "list matching pids",
+    "lookup process id"
+  ],
+  "intents": [
+    "find the pid of a running program by name",
+    "list pids matching a pattern"
+  ],
+  "example": "pgrep nginx",
+  "danger": false,
+  "related": []
+}

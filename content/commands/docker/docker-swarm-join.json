@@ -1,0 +1,19 @@
+{
+  "id": "docker-swarm-join",
+  "command": "docker swarm join --token <token> <ip>:<port>",
+  "description": "Join the current node to an existing swarm",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "join swarm",
+    "add worker",
+    "swarm token"
+  ],
+  "intents": [
+    "join this node to an existing swarm",
+    "add a worker to a docker swarm"
+  ],
+  "example": "docker swarm join --token SWMTKN-... 10.0.0.1:2377",
+  "danger": false,
+  "related": []
+}

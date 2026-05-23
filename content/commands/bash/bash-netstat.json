@@ -1,0 +1,19 @@
+{
+  "id": "bash-netstat",
+  "command": "netstat -tulnp",
+  "description": "Show network connections, listening sockets, and routing (legacy; use ss instead)",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "network connections",
+    "listening ports",
+    "sockets"
+  ],
+  "intents": [
+    "show listening ports and active connections",
+    "see network sockets on this machine"
+  ],
+  "example": "netstat -tulnp",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": "bash-id",
+  "command": "id",
+  "description": "Show user and group IDs for the current or specified user",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "user id",
+    "group id",
+    "uid gid"
+  ],
+  "intents": [
+    "show my user id and group ids",
+    "what groups am i in",
+    "print uid and gid"
+  ],
+  "example": "id alice",
+  "danger": false,
+  "related": []
+}

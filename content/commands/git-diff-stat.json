@@ -15,7 +15,10 @@
     "just show me which files changed",
     "quick summary of changes",
     "how many lines did i add and remove",
-    "i dont want the full diff just a summary"
+    "i dont want the full diff just a summary",
+    "summary of what files changed and by how much",
+    "stat view of a diff instead of the full content",
+    "see how many lines changed per file"
   ],
   "example": "git diff --stat HEAD",
   "danger": false,

@@ -1,0 +1,17 @@
+{
+  "id": "bash-lpc",
+  "command": "lpc",
+  "description": "Line printer control program (manage print queues)",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "printer control",
+    "print queue management"
+  ],
+  "intents": [
+    "control and check printer queues"
+  ],
+  "example": "lpc status",
+  "danger": false,
+  "related": []
+}

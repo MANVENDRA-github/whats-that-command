@@ -1,0 +1,19 @@
+{
+  "id": "bash-apropos",
+  "command": "apropos <keyword>",
+  "description": "Search man page names and descriptions for a keyword",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "search man pages",
+    "find command by topic",
+    "whatis"
+  ],
+  "intents": [
+    "find a command related to a topic",
+    "search man pages by keyword"
+  ],
+  "example": "apropos compress",
+  "danger": false,
+  "related": []
+}

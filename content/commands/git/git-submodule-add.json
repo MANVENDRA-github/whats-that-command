@@ -1,0 +1,27 @@
+{
+  "id": "git-submodule-add",
+  "command": "git submodule add <repository-url> <path>",
+  "description": "Add another git repository as a submodule of this one",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "include external repo",
+    "nest a repo",
+    "vendor a library",
+    "link another repo"
+  ],
+  "intents": [
+    "include another git repo inside my project",
+    "add a library as a submodule",
+    "link an external repo into a folder in mine",
+    "vendor a third-party repo into my project",
+    "nest one git repository inside another",
+    "add a shared dependency repo as a submodule"
+  ],
+  "example": "git submodule add https://github.com/user/lib.git vendor/lib",
+  "danger": false,
+  "related": [
+    "git-submodule-update",
+    "git-clone"
+  ]
+}

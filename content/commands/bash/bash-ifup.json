@@ -1,0 +1,17 @@
+{
+  "id": "bash-ifup",
+  "command": "ifup <iface>",
+  "description": "Bring a network interface up",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "enable interface",
+    "bring nic up"
+  ],
+  "intents": [
+    "bring a network interface up"
+  ],
+  "example": "sudo ifup eth0",
+  "danger": false,
+  "related": []
+}

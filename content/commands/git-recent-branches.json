@@ -10,6 +10,15 @@
     "recent work",
     "where did i leave off"
   ],
+  "intents": [
+    "what was i working on last week",
+    "show me my most recently used branches",
+    "list branches by most recent activity",
+    "what branches did i touch lately",
+    "find the feature branch i was on yesterday",
+    "see which branches i've been working on recently",
+    "sort my local branches by last commit time"
+  ],
   "example": "git for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short)' | head -10",
   "danger": false,
   "related": [

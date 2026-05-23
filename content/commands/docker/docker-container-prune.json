@@ -1,0 +1,19 @@
+{
+  "id": "docker-container-prune",
+  "command": "docker container prune",
+  "description": "Remove all stopped containers in one command",
+  "tool": "docker",
+  "category": "cleanup",
+  "tags": [
+    "cleanup stopped",
+    "remove dead containers",
+    "reclaim space"
+  ],
+  "intents": [
+    "delete every stopped container",
+    "clean up stopped containers in bulk"
+  ],
+  "example": "docker container prune -f",
+  "danger": true,
+  "related": []
+}

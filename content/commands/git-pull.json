@@ -1,0 +1,26 @@
+{
+  "id": "git-pull",
+  "command": "git pull",
+  "description": "Fetch new commits from the upstream branch and merge them into your current branch",
+  "tool": "git",
+  "category": "sync",
+  "tags": [
+    "update branch",
+    "get latest",
+    "sync from remote",
+    "fetch and merge"
+  ],
+  "intents": [
+    "get the latest changes from the remote",
+    "update my branch with new commits from upstream",
+    "bring my code up to date with what teammates pushed",
+    "sync my branch with the server"
+  ],
+  "example": "git pull",
+  "danger": false,
+  "related": [
+    "git-pull-rebase",
+    "git-fetch",
+    "git-push"
+  ]
+}

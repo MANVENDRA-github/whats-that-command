@@ -10,6 +10,15 @@
     "back out commit",
     "reverse change"
   ],
+  "intents": [
+    "undo a bad commit on main safely",
+    "back out a commit without rewriting history",
+    "reverse a change that was already pushed",
+    "create a new commit that undoes an old one",
+    "safe way to undo something already in shared history",
+    "i need to undo a commit thats already public",
+    "revert a bad commit that landed on main"
+  ],
   "example": "git revert 1a2b3c4",
   "danger": false,
   "related": [

@@ -1,0 +1,28 @@
+{
+  "id": "git-tag-delete",
+  "command": "git tag -d <name>",
+  "description": "Delete a local tag",
+  "tool": "git",
+  "category": "tags",
+  "tags": [
+    "remove tag",
+    "undo tag",
+    "delete release marker",
+    "drop a tag"
+  ],
+  "intents": [
+    "delete a tag i made by mistake",
+    "remove a local tag",
+    "undo a release tag",
+    "drop a version tag from my repo",
+    "get rid of a tag locally",
+    "i tagged the wrong commit, take it back"
+  ],
+  "example": "git tag -d v1.0.0",
+  "danger": true,
+  "related": [
+    "git-tag-create",
+    "git-list-tags",
+    "git-push-tags"
+  ]
+}

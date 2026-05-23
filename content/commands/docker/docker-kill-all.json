@@ -1,0 +1,18 @@
+{
+  "id": "docker-kill-all",
+  "command": "docker kill $(docker ps -q)",
+  "description": "Force-kill every running container",
+  "tool": "docker",
+  "category": "cleanup",
+  "tags": [
+    "kill all",
+    "force stop everything",
+    "sigkill all"
+  ],
+  "intents": [
+    "force-kill every running container immediately"
+  ],
+  "example": "docker kill $(docker ps -q)",
+  "danger": true,
+  "related": []
+}

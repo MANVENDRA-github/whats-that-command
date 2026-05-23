@@ -10,6 +10,15 @@
     "build directory tree",
     "ensure folder exists"
   ],
+  "intents": [
+    "create a folder and all its parent folders at once",
+    "make a deep directory path in one shot",
+    "create intermediate directories that dont exist yet",
+    "build a nested folder structure several levels deep",
+    "i dont want the command to fail if part of the path exists",
+    "make a folder tree quickly without erroring on existing paths",
+    "set up a nested directory in one command"
+  ],
   "example": "mkdir -p src/components/ui",
   "danger": false,
   "related": []

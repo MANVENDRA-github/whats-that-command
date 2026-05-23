@@ -1,0 +1,17 @@
+{
+  "id": "docker-node-ls",
+  "command": "docker node ls",
+  "description": "List nodes in the swarm",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "list swarm nodes",
+    "show cluster nodes"
+  ],
+  "intents": [
+    "list nodes in the docker swarm cluster"
+  ],
+  "example": "docker node ls",
+  "danger": false,
+  "related": []
+}

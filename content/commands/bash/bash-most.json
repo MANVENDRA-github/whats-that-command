@@ -1,0 +1,18 @@
+{
+  "id": "bash-most",
+  "command": "most <file>",
+  "description": "Pager that can scroll multiple files at once and supports horizontal scrolling",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "advanced pager",
+    "multi-file pager",
+    "horizontal scroll"
+  ],
+  "intents": [
+    "page through a file with multi-file and horizontal scroll support"
+  ],
+  "example": "most big.csv",
+  "danger": false,
+  "related": []
+}

@@ -10,6 +10,15 @@
     "fresh start",
     "nuke everything"
   ],
+  "intents": [
+    "delete every container on my machine for a fresh start",
+    "wipe all docker containers at once",
+    "remove all containers including running ones",
+    "nuke every container, running or stopped",
+    "clean slate for docker, drop all containers",
+    "remove everything from docker ps -a in one command",
+    "i want zero containers on this system right now"
+  ],
   "example": "docker rm -f $(docker ps -aq)",
   "danger": true,
   "related": [

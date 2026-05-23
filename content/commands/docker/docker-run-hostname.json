@@ -1,0 +1,17 @@
+{
+  "id": "docker-run-hostname",
+  "command": "docker run -h <hostname> <image>",
+  "description": "Set the hostname of a container",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "container hostname",
+    "set host name"
+  ],
+  "intents": [
+    "give a container a specific hostname inside the namespace"
+  ],
+  "example": "docker run -h app-server nginx",
+  "danger": false,
+  "related": []
+}

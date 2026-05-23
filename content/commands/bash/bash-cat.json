@@ -1,0 +1,20 @@
+{
+  "id": "bash-cat",
+  "command": "cat <file>",
+  "description": "Print a file's contents to standard output",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "print file",
+    "show file content",
+    "dump file"
+  ],
+  "intents": [
+    "print the contents of a file",
+    "show what is in a file",
+    "dump a file to the terminal"
+  ],
+  "example": "cat readme.md",
+  "danger": false,
+  "related": []
+}

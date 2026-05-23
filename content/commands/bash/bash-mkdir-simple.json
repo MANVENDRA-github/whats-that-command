@@ -1,0 +1,21 @@
+{
+  "id": "bash-mkdir-simple",
+  "command": "mkdir <name>",
+  "description": "Create a new directory",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "new folder",
+    "create directory",
+    "make dir"
+  ],
+  "intents": [
+    "create a folder",
+    "make a new directory"
+  ],
+  "example": "mkdir project",
+  "danger": false,
+  "related": [
+    "bash-make-dirs"
+  ]
+}

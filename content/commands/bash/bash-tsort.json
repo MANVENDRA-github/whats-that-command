@@ -1,0 +1,17 @@
+{
+  "id": "bash-tsort",
+  "command": "tsort <file>",
+  "description": "Topological sort of dependency pairs",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "topological sort",
+    "dependency order"
+  ],
+  "intents": [
+    "topologically sort a list of dependencies"
+  ],
+  "example": "tsort deps.txt",
+  "danger": false,
+  "related": []
+}

@@ -11,6 +11,15 @@
     "performance",
     "live metrics"
   ],
+  "intents": [
+    "see how much cpu and memory each container is using",
+    "live resource usage per container",
+    "find which container is hogging memory",
+    "monitor docker performance in real time",
+    "see cpu, ram, and network across all containers",
+    "is one of my containers eating all the cpu",
+    "which container is causing the load"
+  ],
   "example": "docker stats",
   "danger": false,
   "related": [

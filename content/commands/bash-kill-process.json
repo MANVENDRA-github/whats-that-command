@@ -10,6 +10,15 @@
     "terminate",
     "not responding"
   ],
+  "intents": [
+    "force quit a frozen app from the terminal",
+    "stop a process that wont die normally",
+    "kill a hung process by its id",
+    "the process is not responding, end it forcibly",
+    "make a runaway process stop right now",
+    "ctrl-c isnt working, kill it the hard way",
+    "i have the pid, just kill it"
+  ],
   "example": "kill -9 12345",
   "danger": true,
   "related": [

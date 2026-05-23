@@ -1,0 +1,17 @@
+{
+  "id": "docker-node-rm",
+  "command": "docker node rm <node>",
+  "description": "Remove a node from the swarm",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "remove node",
+    "drop node from cluster"
+  ],
+  "intents": [
+    "remove a node from the swarm cluster"
+  ],
+  "example": "docker node rm worker-2",
+  "danger": true,
+  "related": []
+}

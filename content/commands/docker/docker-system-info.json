@@ -1,0 +1,17 @@
+{
+  "id": "docker-system-info",
+  "command": "docker system info",
+  "description": "Show system-wide Docker info (alias for docker info)",
+  "tool": "docker",
+  "category": "system",
+  "tags": [
+    "docker info modern",
+    "system info"
+  ],
+  "intents": [
+    "get docker system information using the system subcommand"
+  ],
+  "example": "docker system info",
+  "danger": false,
+  "related": []
+}

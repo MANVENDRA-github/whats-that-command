@@ -1,0 +1,30 @@
+{
+  "id": "git-checkout-commit",
+  "command": "git checkout <commit>",
+  "description": "Switch to a specific commit in detached-HEAD mode to inspect the code at that point",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "go back in time",
+    "look at old version",
+    "time travel",
+    "view past state",
+    "detached head"
+  ],
+  "intents": [
+    "see what the code looked like at a specific commit",
+    "check out an old commit to inspect the working tree",
+    "go back to a past commit temporarily",
+    "view the project at an old point in history",
+    "time travel to a previous commit",
+    "look at how things were before a certain change",
+    "switch to a commit hash to test something"
+  ],
+  "example": "git checkout abc123",
+  "danger": false,
+  "related": [
+    "git-checkout-branch",
+    "git-switch-branch",
+    "git-restore-from-commit"
+  ]
+}

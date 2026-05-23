@@ -10,6 +10,15 @@
     "available milestones",
     "list markers"
   ],
+  "intents": [
+    "list all the tags in this repo",
+    "see what versions or releases exist",
+    "what tags have been created",
+    "show me the release tags",
+    "browse existing version markers",
+    "see all the git tags on this project",
+    "what versions has this project shipped"
+  ],
   "example": "git tag",
   "danger": false,
   "related": [

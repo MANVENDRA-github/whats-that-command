@@ -1,0 +1,19 @@
+{
+  "id": "docker-tag",
+  "command": "docker tag <source> <target>",
+  "description": "Create a new tag (alias) pointing to an existing image",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "retag image",
+    "alias image",
+    "rename image tag"
+  ],
+  "intents": [
+    "add a new tag to an existing image",
+    "retag a local image for a different registry"
+  ],
+  "example": "docker tag myapp:latest myorg/myapp:1.0",
+  "danger": false,
+  "related": []
+}

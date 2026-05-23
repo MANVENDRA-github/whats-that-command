@@ -1,0 +1,17 @@
+{
+  "id": "docker-service-logs",
+  "command": "docker service logs <service>",
+  "description": "Fetch logs from all tasks of a swarm service",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "service logs",
+    "aggregate task logs"
+  ],
+  "intents": [
+    "fetch logs from a swarm service across all its replicas"
+  ],
+  "example": "docker service logs web",
+  "danger": false,
+  "related": []
+}

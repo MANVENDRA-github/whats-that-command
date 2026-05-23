@@ -1,0 +1,17 @@
+{
+  "id": "bash-tar-bzip2",
+  "command": "tar -cjf <out>.tar.bz2 <files>",
+  "description": "Create a bzip2-compressed tar archive",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "tar with bzip2",
+    "tar.bz2"
+  ],
+  "intents": [
+    "create a bzip2 compressed tarball"
+  ],
+  "example": "tar -cjf project.tar.bz2 project/",
+  "danger": false,
+  "related": []
+}

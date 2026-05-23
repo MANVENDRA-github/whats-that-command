@@ -1,0 +1,22 @@
+{
+  "id": "bash-sed",
+  "command": "sed -e <script> <file>",
+  "description": "Stream editor for substitution and line-based text transformation",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "stream edit",
+    "substitute text",
+    "transform lines"
+  ],
+  "intents": [
+    "edit a file in place with a regex substitution",
+    "transform text from a stream",
+    "replace text with a regex"
+  ],
+  "example": "sed \"s/foo/bar/g\" file.txt",
+  "danger": false,
+  "related": [
+    "bash-replace-in-file"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "bash-grep",
+  "command": "grep <pattern> <file>",
+  "description": "Search inside files for lines matching a regex pattern",
+  "tool": "bash",
+  "category": "search",
+  "tags": [
+    "search text",
+    "find string",
+    "pattern match"
+  ],
+  "intents": [
+    "find lines containing a pattern in a file",
+    "search files for a string"
+  ],
+  "example": "grep \"error\" app.log",
+  "danger": false,
+  "related": [
+    "bash-grep-recursive"
+  ]
+}

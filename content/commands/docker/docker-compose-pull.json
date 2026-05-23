@@ -1,0 +1,18 @@
+{
+  "id": "docker-compose-pull",
+  "command": "docker compose pull",
+  "description": "Pull the latest images for all services in the compose file",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "compose pull",
+    "fetch latest images"
+  ],
+  "intents": [
+    "pull the latest images for every service in compose",
+    "refresh compose images from the registry"
+  ],
+  "example": "docker compose pull",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "docker-commit",
+  "command": "docker commit <container> <image>",
+  "description": "Create a new image from a container's current filesystem",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "snapshot container",
+    "container to image",
+    "save changes as image"
+  ],
+  "intents": [
+    "save a container's current state as a new image",
+    "turn a running container into an image"
+  ],
+  "example": "docker commit myapp myorg/myapp:v2",
+  "danger": false,
+  "related": []
+}

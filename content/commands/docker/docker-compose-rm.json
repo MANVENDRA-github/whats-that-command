@@ -1,0 +1,17 @@
+{
+  "id": "docker-compose-rm",
+  "command": "docker compose rm",
+  "description": "Remove stopped service containers from the compose project",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "remove compose containers",
+    "cleanup compose"
+  ],
+  "intents": [
+    "remove stopped containers from a compose project"
+  ],
+  "example": "docker compose rm -f",
+  "danger": true,
+  "related": []
+}

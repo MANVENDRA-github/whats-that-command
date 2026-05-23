@@ -16,7 +16,10 @@
     "what commits have been made",
     "see the recent commit log",
     "browse all past commits",
-    "who committed what and when"
+    "who committed what and when",
+    "list the past commits on this branch",
+    "show the full commit history with messages and authors",
+    "what work has been done on this branch"
   ],
   "example": "git log",
   "danger": false,

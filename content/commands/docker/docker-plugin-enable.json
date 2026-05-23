@@ -1,0 +1,17 @@
+{
+  "id": "docker-plugin-enable",
+  "command": "docker plugin enable <plugin>",
+  "description": "Enable an installed plugin",
+  "tool": "docker",
+  "category": "plugin",
+  "tags": [
+    "enable plugin",
+    "turn on plugin"
+  ],
+  "intents": [
+    "enable an installed docker plugin"
+  ],
+  "example": "docker plugin enable myplugin",
+  "danger": false,
+  "related": []
+}

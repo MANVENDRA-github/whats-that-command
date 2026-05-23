@@ -1,0 +1,19 @@
+{
+  "id": "bash-eject",
+  "command": "eject <device>",
+  "description": "Eject removable media (CD/DVD/USB)",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "eject disk",
+    "pop cd tray",
+    "remove media"
+  ],
+  "intents": [
+    "eject a cd or dvd",
+    "pop out removable media"
+  ],
+  "example": "eject /dev/sr0",
+  "danger": false,
+  "related": []
+}

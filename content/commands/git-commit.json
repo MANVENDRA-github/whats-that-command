@@ -14,7 +14,10 @@
     "create a commit with a detailed message",
     "open my editor to write a longer commit message",
     "i want a multi line commit message",
-    "commit with a body explanation"
+    "commit with a body explanation",
+    "make a commit and write a long descriptive message",
+    "open the commit editor for a detailed message",
+    "commit my staged changes with a longer explanation"
   ],
   "example": "git commit",
   "danger": false,

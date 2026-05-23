@@ -14,7 +14,10 @@
     "stage all my changes at once",
     "add all the new and modified files",
     "prepare everything for commit",
-    "include all my work in the next commit"
+    "include all my work in the next commit",
+    "i'm ready to commit, stage everything",
+    "include every modification in this folder at once",
+    "stage all tracked and untracked files in one command"
   ],
   "example": "git add .",
   "danger": false,

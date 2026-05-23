@@ -1,0 +1,31 @@
+{
+  "id": "git-log-since",
+  "command": "git log --since=\"<when>\"",
+  "description": "Show only commits made after a given date or relative time",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "recent commits",
+    "commits after date",
+    "last week",
+    "time filter",
+    "filter by date range"
+  ],
+  "intents": [
+    "show me commits from the last two weeks",
+    "what has been committed since monday",
+    "filter git log to recent activity only",
+    "see commits since a specific date",
+    "history from the past few days",
+    "what happened in this repo since last release",
+    "list commits made after a certain time",
+    "i only want to see this weeks commits"
+  ],
+  "example": "git log --since=\"2 weeks ago\"",
+  "danger": false,
+  "related": [
+    "git-log",
+    "git-log-oneline",
+    "git-log-graph"
+  ]
+}

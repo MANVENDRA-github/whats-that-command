@@ -218,7 +218,17 @@ async function main() {
     'something is using my port',
     'see whats running in docker',
     'throw away all my changes',
-    'download a file from a url'
+    'download a file from a url',
+    // intent-tightening targets (these four should land #1)
+    'i accidentally committed my secrets file',
+    'i want to commit only some of my edits in this file',
+    'i dont want this file in my next commit anymore',
+    'see what teammates pushed without changing anything',
+    // regression guards (must NOT be displaced by the changes above)
+    'stage this one file',
+    'include this file in my commit',
+    'get the latest from main',
+    'undo a bad commit on main safely'
   ];
   console.log('\n--- smoke test (cosine similarity) ---');
   for (const q of probes) {

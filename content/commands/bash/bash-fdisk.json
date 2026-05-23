@@ -1,0 +1,19 @@
+{
+  "id": "bash-fdisk",
+  "command": "fdisk <device>",
+  "description": "Manipulate partition tables on a disk (interactive)",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "partition disk",
+    "edit partitions",
+    "mbr partitions"
+  ],
+  "intents": [
+    "partition a disk",
+    "edit partition table on a drive"
+  ],
+  "example": "sudo fdisk /dev/sdb",
+  "danger": true,
+  "related": []
+}

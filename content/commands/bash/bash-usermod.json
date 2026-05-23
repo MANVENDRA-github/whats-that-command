@@ -1,0 +1,20 @@
+{
+  "id": "bash-usermod",
+  "command": "usermod <opts> <user>",
+  "description": "Modify an existing user account (groups, shell, home directory, etc.)",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "edit user",
+    "change user shell",
+    "modify account"
+  ],
+  "intents": [
+    "change a user's shell or home directory",
+    "add a user to a group",
+    "modify user account settings"
+  ],
+  "example": "sudo usermod -aG docker alice",
+  "danger": false,
+  "related": []
+}

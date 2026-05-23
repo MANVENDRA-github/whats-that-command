@@ -1,0 +1,19 @@
+{
+  "id": "bash-nice",
+  "command": "nice -n <value> <command>",
+  "description": "Run a command with a modified scheduling priority",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "lower priority",
+    "change niceness",
+    "cpu priority"
+  ],
+  "intents": [
+    "run a command at a lower cpu priority",
+    "change the niceness of a command"
+  ],
+  "example": "nice -n 10 ./long-task.sh",
+  "danger": false,
+  "related": []
+}

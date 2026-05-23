@@ -1,0 +1,17 @@
+{
+  "id": "bash-login",
+  "command": "login",
+  "description": "Begin a new login session",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "start session",
+    "log in"
+  ],
+  "intents": [
+    "start a new login session at the console"
+  ],
+  "example": "login",
+  "danger": false,
+  "related": []
+}

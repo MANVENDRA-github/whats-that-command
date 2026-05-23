@@ -1,0 +1,16 @@
+{
+  "id": "docker-config-rm",
+  "command": "docker config rm <name>",
+  "description": "Remove a swarm config object",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "delete swarm config"
+  ],
+  "intents": [
+    "remove a swarm config object"
+  ],
+  "example": "docker config rm app_conf",
+  "danger": true,
+  "related": []
+}

@@ -1,0 +1,29 @@
+{
+  "id": "git-status",
+  "command": "git status",
+  "description": "Show what files are modified, staged, or untracked in the working tree",
+  "tool": "git",
+  "category": "inspect",
+  "tags": [
+    "what changed",
+    "current state",
+    "modified files",
+    "working tree",
+    "where am i"
+  ],
+  "intents": [
+    "what is the state of my repo right now",
+    "see what files have changed",
+    "show modified and untracked files",
+    "what am i in the middle of",
+    "current state of my working tree",
+    "what files are dirty or untracked",
+    "where am i in this repo"
+  ],
+  "example": "git status",
+  "danger": false,
+  "related": [
+    "git-show-changes",
+    "git-show-staged"
+  ]
+}

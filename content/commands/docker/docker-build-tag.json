@@ -1,0 +1,28 @@
+{
+  "id": "docker-build-tag",
+  "command": "docker build -t <name>:<tag> .",
+  "description": "Build an image from the Dockerfile in the current directory and give it a name and tag",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "create image",
+    "make image from dockerfile",
+    "package app",
+    "build container"
+  ],
+  "intents": [
+    "build a docker image from my dockerfile",
+    "create an image and give it a version tag",
+    "package my app into a container image",
+    "build and label an image so i can push it to a registry",
+    "make a docker image from the current directory",
+    "i just wrote a dockerfile, build it into an image",
+    "tag my image with a version when building"
+  ],
+  "example": "docker build -t my-app:1.0 .",
+  "danger": false,
+  "related": [
+    "docker-pull",
+    "docker-run-interactive"
+  ]
+}

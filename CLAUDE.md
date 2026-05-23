@@ -32,7 +32,7 @@ Why static: no server means no server-side attack surface and trivially cheap ho
 
 ## Data model
 
-Each command lives in its own file under `content/commands/<id>.json`. One entry per file. The filename must match the `id`. Example `content/commands/git-undo-last-commit.json`:
+Each command lives in its own file under `content/commands/<tool>/<id>.json`. One entry per file. The filename must match the `id`, and the parent folder must match the entry's `tool` field. Example `content/commands/git/git-undo-last-commit.json`:
 
 ```json
 {
@@ -55,13 +55,13 @@ The `tags` field is the most important field. It encodes how a **human** describ
 
 `id` convention: `<tool>-<kebab-case-action>`.
 
-The runtime `commands.json` at the repo root is a **generated build artifact** — concatenated from `content/commands/*.json` by `scripts/build-commands.mjs`. It is gitignored. Do not edit it directly; edit the per-command files and re-run `npm run validate`.
+The runtime `commands.json` at the repo root is a **generated build artifact** — concatenated from every `content/commands/<tool>/*.json` (the build walks tool subfolders recursively) by `scripts/build-commands.mjs`. It is gitignored. Do not edit it directly; edit the per-command files and re-run `npm run validate`.
 
 ## Build pipeline
 
 Two scripts run on `predev` and `prebuild`:
 
-- `scripts/build-commands.mjs` — reads `content/commands/*.json`, validates each entry (required string fields, non-empty `tags`, boolean `danger`, unique `id`, resolvable `related` refs, filename-matches-id), and writes the concatenated `commands.json`. A failing entry blocks the build — fix the entry rather than skipping the check.
+- `scripts/build-commands.mjs` — recursively reads `content/commands/<tool>/*.json`, validates each entry (required string fields, non-empty `tags`, boolean `danger`, unique `id`, resolvable `related` refs, filename-matches-id, and parent-folder-matches-`tool`), and writes the concatenated `commands.json`. A failing entry blocks the build — fix the entry rather than skipping the check.
 - `scripts/build-static-embeddings.mjs` — downloads the `potion-base-8M` model once (cached under `.cache/`, ~29MB, gitignored), prunes its vocab to ASCII and int8-quantizes the token table, and writes the runtime embedder (`public/token-table.bin` + `public/token-vocab.json`, ~7.5MB total). It then embeds `description + tags + intents` for every command and writes `public/embeddings.json`. Ends with a smoke test that prints cosine scores for a few intent-style probe queries — the quickest way to re-check `SEM_FLOOR`.
 
 `npm run validate` runs just the dataset build. `npm run embed` runs just the embedding build. `prebuild` runs both.
@@ -125,7 +125,7 @@ This is the visual language. Don't substitute your own taste for any specified v
 ## Conventions
 
 - **Client-side only.** No backend, no database, no API routes. The semantic search layer is heavy but still 100% static — no server, no API keys, no per-query cost.
-- **Edit dataset files individually under `content/commands/`.** Never hand-edit the generated `commands.json` or `public/embeddings.json` — they're build artifacts. Filename must match `id`.
+- **Edit dataset files individually under `content/commands/<tool>/`.** Never hand-edit the generated `commands.json` or `public/embeddings.json` — they're build artifacts. Filename must match `id`, and the parent folder must match the entry's `tool`.
 - **Tags are for human intent**, not man-page jargon. If a tag word appears in the command itself, it's the wrong tag. Tags also flow into the embedded text, so they help semantic matches too.
 - **Mark dangerous commands.** Anything that destroys data, rewrites history irrecoverably, or affects shared state (`rm -rf`, `git push --force`, `git reset --hard`, `docker system prune`, etc.) gets `"danger": true`.
 - **When a command's `description`, `tags`, or `intents` change, embeddings need a refresh.** Just run `npm run embed` (or any build) — static embedding is instant, so it always re-embeds every command. The output files (`public/embeddings.json`, `public/token-table.bin`, `public/token-vocab.json`) are gitignored build artifacts; never commit or hand-edit them.

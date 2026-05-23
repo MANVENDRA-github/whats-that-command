@@ -1,0 +1,29 @@
+{
+  "id": "git-stash-drop",
+  "command": "git stash drop",
+  "description": "Discard the most recent stash without reapplying it",
+  "tool": "git",
+  "category": "stash",
+  "tags": [
+    "delete stash",
+    "throw away stash",
+    "remove top stash",
+    "forget stash"
+  ],
+  "intents": [
+    "delete the top stash without bringing back its changes",
+    "throw away a stash i no longer want",
+    "remove the most recent stash entry",
+    "discard a stash without applying it",
+    "i stashed something and want to forget it ever existed",
+    "drop the latest stash from the stack",
+    "get rid of a stash without restoring its contents"
+  ],
+  "example": "git stash drop",
+  "danger": true,
+  "related": [
+    "git-stash",
+    "git-stash-pop",
+    "git-stash-list"
+  ]
+}

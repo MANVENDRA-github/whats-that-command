@@ -1,0 +1,31 @@
+{
+  "id": "git-config-list",
+  "command": "git config --list",
+  "description": "Print every Git configuration value currently in effect",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "see all settings",
+    "dump configuration",
+    "what is configured",
+    "review setup",
+    "audit git settings"
+  ],
+  "intents": [
+    "see all my git settings at once",
+    "what is configured in git on this machine",
+    "list every git configuration value",
+    "show me my full git config",
+    "dump all git settings so i can check them",
+    "review my entire git configuration",
+    "see which options are set across global and local",
+    "audit how git is configured here"
+  ],
+  "example": "git config --list",
+  "danger": false,
+  "related": [
+    "git-config-user",
+    "git-config-get",
+    "git-config-alias"
+  ]
+}

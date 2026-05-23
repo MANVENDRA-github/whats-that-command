@@ -1,0 +1,28 @@
+{
+  "id": "docker-volume-inspect",
+  "command": "docker volume inspect <name>",
+  "description": "Show a volume's mountpoint on the host, driver, labels, and creation time",
+  "tool": "docker",
+  "category": "volumes",
+  "tags": [
+    "where stored on host",
+    "mountpoint path",
+    "driver info",
+    "host location"
+  ],
+  "intents": [
+    "where does docker actually store a volume on my host",
+    "find the mountpoint path for a volume on disk",
+    "show details and host location of a named volume",
+    "what driver is a docker volume using",
+    "see when a volume was created and where it lives",
+    "i need the host path of my docker volume to back it up",
+    "look at the labels and metadata of a docker volume"
+  ],
+  "example": "docker volume inspect postgres-data",
+  "danger": false,
+  "related": [
+    "docker-volume-list",
+    "docker-inspect"
+  ]
+}

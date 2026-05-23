@@ -1,0 +1,29 @@
+{
+  "id": "git-remote-list",
+  "command": "git remote -v",
+  "description": "List every remote this repository is connected to, with their URLs",
+  "tool": "git",
+  "category": "sync",
+  "tags": [
+    "see remotes",
+    "which urls am i pushing to",
+    "where is origin pointing",
+    "what remotes exist"
+  ],
+  "intents": [
+    "where is this repo pushing to",
+    "show me which remotes are configured",
+    "what url does origin point at",
+    "list every remote connected to this repo",
+    "see all the remote urls for this repository",
+    "check which remotes are set up for fetch and push",
+    "find the github url this clone came from"
+  ],
+  "example": "git remote -v",
+  "danger": false,
+  "related": [
+    "git-remote-add",
+    "git-remote-remove",
+    "git-remote-rename"
+  ]
+}

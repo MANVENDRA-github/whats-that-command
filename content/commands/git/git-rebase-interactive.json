@@ -1,0 +1,31 @@
+{
+  "id": "git-rebase-interactive",
+  "command": "git rebase -i HEAD~<N>",
+  "description": "Interactively squash, reorder, edit, or drop the last N commits before pushing",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "clean up commits",
+    "squash",
+    "reorder",
+    "edit history",
+    "tidy before pr"
+  ],
+  "intents": [
+    "squash my last several commits into one",
+    "clean up my commits before opening a pr",
+    "reorder some commits before pushing",
+    "edit commit messages in bulk for the last few commits",
+    "drop a commit from my branch history",
+    "fix up my messy local commits before sharing",
+    "combine wip commits into one nice commit",
+    "interactive rebase to tidy commits"
+  ],
+  "example": "git rebase -i HEAD~5",
+  "danger": true,
+  "related": [
+    "git-cherry-pick",
+    "git-force-push-safe",
+    "git-amend-commit"
+  ]
+}

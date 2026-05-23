@@ -1,0 +1,34 @@
+{
+  "id": "git-unstage-file",
+  "command": "git reset <file>",
+  "description": "Remove one file from the staging area without changing it on disk",
+  "tool": "git",
+  "category": "staging",
+  "tags": [
+    "unstage",
+    "remove from index",
+    "take out of commit"
+  ],
+  "intents": [
+    "i staged a file by mistake and want to take it out",
+    "remove a file from the staging area",
+    "unstage just one file without losing my edits",
+    "i dont want this file in my next commit anymore",
+    "i changed my mind about staging this file and want to drop it",
+    "take a file back out of the index after git add",
+    "undo a git add for one specific file",
+    "exclude a file from the commit i am about to make",
+    "drop a file from staging while keeping the edits on disk",
+    "take a file out of what i am about to commit",
+    "i staged a file i didnt want, remove just that one from staging",
+    "i dont want this file in my next commit",
+    "remove this file from my next commit",
+    "take this file out of my next commit"
+  ],
+  "example": "git reset src/secrets.js",
+  "danger": false,
+  "related": [
+    "git-unstage-all",
+    "git-add-file"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "git-log-graph",
+  "command": "git log --oneline --graph --all --decorate",
+  "description": "Visualize commit history as a compact graph across all branches",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "see history",
+    "visualize commits",
+    "branch graph",
+    "recent activity",
+    "pretty log"
+  ],
+  "intents": [
+    "visualize the commit history as a graph",
+    "see all branches and merges as a tree",
+    "pretty branch graph in the terminal",
+    "show me a compact history view of all branches",
+    "graphical log across every branch",
+    "see how branches diverged and merged over time",
+    "ascii graph of commits across branches"
+  ],
+  "example": "git log --oneline --graph --all --decorate",
+  "danger": false,
+  "related": [
+    "git-show-commit",
+    "git-recent-branches"
+  ]
+}

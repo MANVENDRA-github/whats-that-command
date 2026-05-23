@@ -1,0 +1,29 @@
+{
+  "id": "docker-logs-follow",
+  "command": "docker logs -f <container>",
+  "description": "Stream a container's stdout/stderr live as it runs",
+  "tool": "docker",
+  "category": "debug",
+  "tags": [
+    "see output",
+    "tail container",
+    "watch logs",
+    "what's happening inside",
+    "live output"
+  ],
+  "intents": [
+    "tail logs from a container as it runs",
+    "stream a docker containers output live",
+    "watch what my container is printing in real time",
+    "see live stdout and stderr from a container",
+    "follow logs of one container to debug what is happening",
+    "monitor a container's output without restarting it",
+    "show me what my container is doing live"
+  ],
+  "example": "docker logs -f api-server",
+  "danger": false,
+  "related": [
+    "docker-exec-shell",
+    "docker-stats"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "git-show-staged",
+  "command": "git diff --staged",
+  "description": "Show changes that are staged and about to be committed",
+  "tool": "git",
+  "category": "inspect",
+  "tags": [
+    "what am i committing",
+    "review staged",
+    "before commit",
+    "index"
+  ],
+  "intents": [
+    "what am i about to commit",
+    "show me what's staged before i commit",
+    "review the staged diff",
+    "see only what i added with git add",
+    "preview my next commit before making it",
+    "show changes in the index",
+    "double check what's going into my next commit"
+  ],
+  "example": "git diff --staged",
+  "danger": false,
+  "related": [
+    "git-show-changes",
+    "git-status"
+  ]
+}

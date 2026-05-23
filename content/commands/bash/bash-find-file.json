@@ -1,0 +1,28 @@
+{
+  "id": "bash-find-file",
+  "command": "find . -name \"<pattern>\"",
+  "description": "Search for files matching a name pattern recursively from the current directory",
+  "tool": "bash",
+  "category": "search",
+  "tags": [
+    "locate file",
+    "where is",
+    "search by name",
+    "look for file"
+  ],
+  "intents": [
+    "where is a file with this name somewhere in my project",
+    "find every file named foo across all folders",
+    "search for files by extension recursively",
+    "locate a config file when i dont remember which folder",
+    "list all files matching a wildcard under the current dir",
+    "i know the filename but not the path",
+    "search the whole tree for a file"
+  ],
+  "example": "find . -name \"*.log\"",
+  "danger": false,
+  "related": [
+    "bash-grep-recursive",
+    "bash-which"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "bash-find-and-delete",
+  "command": "find . -name \"<pattern>\" -delete",
+  "description": "Find files matching a pattern and delete them in one pass",
+  "tool": "bash",
+  "category": "search",
+  "tags": [
+    "bulk delete",
+    "wipe matching files",
+    "remove all of type",
+    "purge"
+  ],
+  "intents": [
+    "delete every .pyc or .tmp file in my project",
+    "wipe out all node_modules folders under here",
+    "clean up temp files recursively",
+    "remove every file of a given extension under this folder",
+    "bulk delete files by name pattern in one pass",
+    "i want to nuke a bunch of generated files at once",
+    "find files matching a wildcard and delete them all"
+  ],
+  "example": "find . -name \"*.tmp\" -delete",
+  "danger": true,
+  "related": [
+    "bash-find-file"
+  ]
+}

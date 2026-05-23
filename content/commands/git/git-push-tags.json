@@ -1,0 +1,28 @@
+{
+  "id": "git-push-tags",
+  "command": "git push origin --tags",
+  "description": "Upload all local tags to the remote so others can see your releases",
+  "tool": "git",
+  "category": "tags",
+  "tags": [
+    "publish releases",
+    "share versions",
+    "ship tags",
+    "send markers"
+  ],
+  "intents": [
+    "push my local tags to the remote",
+    "publish a release i tagged locally",
+    "share version tags with the team",
+    "send my new tags up to github",
+    "upload tags so others can see the release",
+    "my tag isnt on the remote, push it",
+    "make a new tag available to everyone"
+  ],
+  "example": "git push origin --tags",
+  "danger": false,
+  "related": [
+    "git-tag-create",
+    "git-list-tags"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "git-create-branch",
+  "command": "git branch <name>",
+  "description": "Create a new branch at the current commit without switching to it",
+  "tool": "git",
+  "category": "branch",
+  "tags": [
+    "create without switching",
+    "make branch but stay",
+    "new branch stay here",
+    "mark a commit with a branch"
+  ],
+  "intents": [
+    "make a new branch but stay on the current one",
+    "create a branch without checking it out",
+    "set up a branch for later without switching to it",
+    "branch off here but keep working on the current branch",
+    "mark this commit with a new branch name",
+    "create a branch that points to here, dont move me",
+    "i want to save my current spot as a branch and keep going"
+  ],
+  "example": "git branch hotfix/v1.2",
+  "danger": false,
+  "related": [
+    "git-new-branch",
+    "git-switch-branch"
+  ]
+}

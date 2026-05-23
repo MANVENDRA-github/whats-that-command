@@ -1,0 +1,28 @@
+{
+  "id": "docker-network-inspect",
+  "command": "docker network inspect <name>",
+  "description": "Show a network's subnet, gateway, driver, and the containers attached to it",
+  "tool": "docker",
+  "category": "networks",
+  "tags": [
+    "subnet details",
+    "gateway address",
+    "ip range",
+    "what's attached"
+  ],
+  "intents": [
+    "what subnet is my docker network on",
+    "show the gateway and ip range of a docker network",
+    "see which containers are attached to a network",
+    "dump details of a specific docker network",
+    "find a containers ip inside a custom network",
+    "details about a user defined bridge network",
+    "what is the cidr of this docker network"
+  ],
+  "example": "docker network inspect app-net",
+  "danger": false,
+  "related": [
+    "docker-network-list",
+    "docker-inspect"
+  ]
+}

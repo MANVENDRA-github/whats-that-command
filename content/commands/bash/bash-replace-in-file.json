@@ -1,0 +1,27 @@
+{
+  "id": "bash-replace-in-file",
+  "command": "sed -i 's/<old>/<new>/g' <file>",
+  "description": "Find-and-replace text inside a file in place",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "bulk rename string",
+    "search and replace",
+    "swap text",
+    "edit file in place"
+  ],
+  "intents": [
+    "find and replace text inside a file",
+    "rename a string everywhere in one file",
+    "swap one piece of text for another in a config",
+    "edit a file without opening an editor",
+    "bulk update a value across a file from the terminal",
+    "do a regex replace inside a file in one command",
+    "change every occurrence of a string in a file"
+  ],
+  "example": "sed -i 's/foo/bar/g' config.yml",
+  "danger": true,
+  "related": [
+    "bash-grep-recursive"
+  ]
+}

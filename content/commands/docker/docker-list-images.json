@@ -1,0 +1,28 @@
+{
+  "id": "docker-list-images",
+  "command": "docker images",
+  "description": "List all locally cached images",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "what images do i have",
+    "downloaded images",
+    "image inventory",
+    "local cache"
+  ],
+  "intents": [
+    "what images do i have locally",
+    "list all docker images on my machine",
+    "see images i have already pulled or built",
+    "check what is in my local image cache",
+    "show every image i can run right now",
+    "find an image i pulled earlier",
+    "list cached images before deciding what to clean up"
+  ],
+  "example": "docker images",
+  "danger": false,
+  "related": [
+    "docker-pull",
+    "docker-remove-image"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "git-rebase",
+  "command": "git rebase <branch>",
+  "description": "Replay your current branch's commits on top of another branch's tip",
+  "tool": "git",
+  "category": "merge",
+  "tags": [
+    "rebase",
+    "replay commits",
+    "update branch on top of",
+    "linear history"
+  ],
+  "intents": [
+    "bring my branch up to date with main without merging",
+    "put my commits on top of the latest main",
+    "rebase my feature branch onto main",
+    "get rid of the merge commit",
+    "keep a linear history when updating my branch",
+    "move my branch on top of another branch",
+    "replay my commits on top of a different base",
+    "update my feature branch by rebasing onto main"
+  ],
+  "example": "git rebase main",
+  "danger": true,
+  "related": [
+    "git-merge",
+    "git-rebase-interactive",
+    "git-pull-rebase"
+  ]
+}

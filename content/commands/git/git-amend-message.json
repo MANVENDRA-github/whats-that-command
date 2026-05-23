@@ -1,0 +1,27 @@
+{
+  "id": "git-amend-message",
+  "command": "git commit --amend -m \"new message\"",
+  "description": "Rewrite the message of the previous commit",
+  "tool": "git",
+  "category": "undo",
+  "tags": [
+    "fix typo in commit",
+    "rename commit",
+    "change message",
+    "rewrite message"
+  ],
+  "intents": [
+    "fix a typo in my last commit message",
+    "rewrite the message of the commit i just made",
+    "i used the wrong wording in my commit message",
+    "change my last commit message without changing the code",
+    "rename my previous commit",
+    "i made a commit with a bad message, fix it",
+    "edit the message of the most recent commit"
+  ],
+  "example": "git commit --amend -m \"fix: correct payment rounding\"",
+  "danger": false,
+  "related": [
+    "git-amend-commit"
+  ]
+}

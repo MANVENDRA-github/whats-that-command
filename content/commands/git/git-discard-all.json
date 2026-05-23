@@ -1,0 +1,29 @@
+{
+  "id": "git-discard-all",
+  "command": "git restore .",
+  "description": "Throw away all unstaged changes in the working tree",
+  "tool": "git",
+  "category": "undo",
+  "tags": [
+    "throw away everything",
+    "wipe edits",
+    "start over",
+    "abandon all changes"
+  ],
+  "intents": [
+    "throw away all my uncommitted changes",
+    "wipe every unstaged edit i have",
+    "reset my working tree to whatever was last committed",
+    "abandon all current edits and start fresh",
+    "revert everything i havent committed yet",
+    "discard all the changes in my working directory",
+    "give up on my edits and go back to clean"
+  ],
+  "example": "git restore .",
+  "danger": true,
+  "related": [
+    "git-discard-file",
+    "git-hard-reset",
+    "git-clean"
+  ]
+}

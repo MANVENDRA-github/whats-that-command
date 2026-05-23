@@ -1,0 +1,28 @@
+{
+  "id": "git-clone-shallow",
+  "command": "git clone --depth=1 <url>",
+  "description": "Clone only the latest commit instead of the full history — much faster for large repos",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "quick clone",
+    "skip history",
+    "fast download",
+    "minimal copy",
+    "just the latest"
+  ],
+  "intents": [
+    "clone only the latest commit not the whole history",
+    "fast clone of a huge repo without years of history",
+    "shallow clone to save bandwidth and time",
+    "download just the current state of a repo",
+    "clone without grabbing the full git history",
+    "quick clone for ci or a one off use",
+    "speed up cloning a big repository"
+  ],
+  "example": "git clone --depth=1 https://github.com/user/repo.git",
+  "danger": false,
+  "related": [
+    "git-submodule-update"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "docker-compose-up",
+  "command": "docker compose up -d",
+  "description": "Start all services defined in docker-compose.yml in the background",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "start stack",
+    "bring up services",
+    "launch app",
+    "spin up"
+  ],
+  "intents": [
+    "start my docker compose stack in the background",
+    "bring up all services from my compose file",
+    "spin up the whole multi-container app",
+    "launch my dev stack from docker-compose.yml",
+    "start all the containers defined in compose detached",
+    "fire up the local stack so i can develop against it",
+    "run the whole compose setup without blocking my terminal"
+  ],
+  "example": "docker compose up -d",
+  "danger": false,
+  "related": [
+    "docker-compose-down",
+    "docker-compose-logs"
+  ]
+}

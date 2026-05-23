@@ -1,0 +1,28 @@
+{
+  "id": "git-show-commit",
+  "command": "git show <hash>",
+  "description": "Show the message and full diff of a single commit",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "inspect commit",
+    "what did that change",
+    "view commit",
+    "details"
+  ],
+  "intents": [
+    "show me what was in this commit",
+    "see the diff of a specific commit",
+    "inspect a single commit by hash",
+    "what changed in this commit",
+    "see message and code changes for one commit",
+    "view the contents of a particular commit",
+    "look at what a commit actually did"
+  ],
+  "example": "git show 1a2b3c4",
+  "danger": false,
+  "related": [
+    "git-log-graph",
+    "git-blame"
+  ]
+}

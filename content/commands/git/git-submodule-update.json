@@ -1,0 +1,28 @@
+{
+  "id": "git-submodule-update",
+  "command": "git submodule update --init --recursive",
+  "description": "Fetch and initialize nested repositories declared as submodules",
+  "tool": "git",
+  "category": "sync",
+  "tags": [
+    "pull nested repos",
+    "init submodules",
+    "fetch dependencies",
+    "after clone"
+  ],
+  "intents": [
+    "fetch all submodules after cloning a repo",
+    "initialize submodules in a repo i just cloned",
+    "i cloned a repo but the submodule folders are empty",
+    "pull nested repos referenced as submodules",
+    "set up submodules properly on first checkout",
+    "make sure submodules are in sync recursively",
+    "submodule directory is empty, fix it"
+  ],
+  "example": "git submodule update --init --recursive",
+  "danger": false,
+  "related": [
+    "git-clone-shallow",
+    "git-fetch-prune"
+  ]
+}

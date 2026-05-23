@@ -1,0 +1,29 @@
+{
+  "id": "git-uncommit-keep-changes",
+  "command": "git reset HEAD~1",
+  "description": "Undo the last commit and put its changes back as unstaged edits",
+  "tool": "git",
+  "category": "undo",
+  "tags": [
+    "undo commit but keep work",
+    "redo commit",
+    "split last commit",
+    "mixed reset"
+  ],
+  "intents": [
+    "i committed too early and want to redo it",
+    "undo my last commit but keep my changes so i can restage",
+    "i need to break my last commit into smaller ones",
+    "take back my commit so i can recommit differently",
+    "uncommit the last commit but leave the changes in my working tree",
+    "redo my last commit but with the edits unstaged",
+    "split my last commit into smaller pieces"
+  ],
+  "example": "git reset HEAD~1",
+  "danger": false,
+  "related": [
+    "git-undo-last-commit",
+    "git-hard-reset",
+    "git-amend-commit"
+  ]
+}

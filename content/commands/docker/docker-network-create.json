@@ -1,0 +1,28 @@
+{
+  "id": "docker-network-create",
+  "command": "docker network create <name>",
+  "description": "Create a new user-defined bridge network so containers can talk to each other by name",
+  "tool": "docker",
+  "category": "networks",
+  "tags": [
+    "new bridge",
+    "isolate containers",
+    "containers talk by name",
+    "service discovery"
+  ],
+  "intents": [
+    "create a new bridge network for my containers",
+    "make a custom docker network so containers find each other by name",
+    "set up a private network between two containers",
+    "give my containers their own network for service discovery",
+    "isolate a group of containers on their own network",
+    "build a user defined bridge network",
+    "i want my web and db containers to talk to each other"
+  ],
+  "example": "docker network create app-net",
+  "danger": false,
+  "related": [
+    "docker-network-list",
+    "docker-network-inspect"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "docker-list-all-containers",
+  "command": "docker ps -a",
+  "description": "Show every container, including stopped and exited ones",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "all containers",
+    "stopped containers",
+    "history of containers",
+    "everything ever ran"
+  ],
+  "intents": [
+    "show every container including stopped ones",
+    "see containers that exited or crashed",
+    "list all containers ever created on this machine",
+    "find the id of a container that already stopped",
+    "include stopped containers in the listing",
+    "browse the history of containers, not just running ones",
+    "i need to see exited containers too"
+  ],
+  "example": "docker ps -a",
+  "danger": false,
+  "related": [
+    "docker-list-running",
+    "docker-remove-container"
+  ]
+}

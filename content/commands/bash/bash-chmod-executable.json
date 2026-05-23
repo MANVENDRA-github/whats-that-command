@@ -1,0 +1,25 @@
+{
+  "id": "bash-chmod-executable",
+  "command": "chmod +x <file>",
+  "description": "Make a file executable so you can run it as a script",
+  "tool": "bash",
+  "category": "permissions",
+  "tags": [
+    "make runnable",
+    "permission denied",
+    "script won't run",
+    "allow execute"
+  ],
+  "intents": [
+    "i wrote a shell script but it wont run",
+    "i get permission denied when i try to run my script",
+    "let me actually run this .sh file",
+    "mark a file as runnable from the terminal",
+    "my script exists but bash says it cant be executed",
+    "turn a downloaded binary into something i can run",
+    "give a file the right to execute"
+  ],
+  "example": "chmod +x deploy.sh",
+  "danger": false,
+  "related": []
+}

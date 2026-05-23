@@ -1,0 +1,28 @@
+{
+  "id": "git-notes-add",
+  "command": "git notes add -m \"<message>\" <commit>",
+  "description": "Attach a note to a commit without rewriting it",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "annotate commit",
+    "leave a comment on a commit",
+    "extra context",
+    "after-the-fact metadata"
+  ],
+  "intents": [
+    "add a note to an existing commit without changing it",
+    "annotate a commit with extra information",
+    "attach a comment to a past commit",
+    "leave a side note on a commit",
+    "add metadata to a commit without rewriting history",
+    "tag a commit with extra context after the fact",
+    "record a review note against a specific commit"
+  ],
+  "example": "git notes add -m \"reviewed by qa\" abc123",
+  "danger": false,
+  "related": [
+    "git-amend-message",
+    "git-show-commit"
+  ]
+}

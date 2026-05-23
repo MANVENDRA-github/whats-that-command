@@ -1,0 +1,27 @@
+{
+  "id": "bash-grep-recursive",
+  "command": "grep -rni \"<pattern>\" .",
+  "description": "Search file contents recursively, ignoring case, with line numbers",
+  "tool": "bash",
+  "category": "search",
+  "tags": [
+    "search inside files",
+    "find text in code",
+    "where is this string used",
+    "code search"
+  ],
+  "intents": [
+    "find every place a function is used in the codebase",
+    "search all files for a piece of text",
+    "where is this variable referenced",
+    "look for a string in any file under this folder",
+    "grep across the entire project for a term",
+    "find all TODO comments in my code",
+    "case insensitive search inside files"
+  ],
+  "example": "grep -rni \"TODO\" .",
+  "danger": false,
+  "related": [
+    "bash-find-file"
+  ]
+}

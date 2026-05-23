@@ -1,0 +1,28 @@
+{
+  "id": "git-bisect-start",
+  "command": "git bisect start <bad> <good>",
+  "description": "Start a binary search through commits to find the one that introduced a bug",
+  "tool": "git",
+  "category": "debug",
+  "tags": [
+    "find broken commit",
+    "track down regression",
+    "which commit broke this",
+    "binary search history"
+  ],
+  "intents": [
+    "find which commit introduced this bug",
+    "track down the commit that broke the build",
+    "binary search through history to find a regression",
+    "figure out when something stopped working",
+    "the tests pass at v1.0 but fail now, find the bad commit",
+    "use git to narrow down where a bug was introduced",
+    "git assisted hunt for a regression commit"
+  ],
+  "example": "git bisect start HEAD v1.0.0",
+  "danger": false,
+  "related": [
+    "git-show-commit",
+    "git-log-graph"
+  ]
+}

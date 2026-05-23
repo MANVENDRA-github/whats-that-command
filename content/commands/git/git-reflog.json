@@ -1,0 +1,30 @@
+{
+  "id": "git-reflog",
+  "command": "git reflog",
+  "description": "Show the history of where HEAD has been — your last resort to recover lost commits",
+  "tool": "git",
+  "category": "undo",
+  "tags": [
+    "recover lost work",
+    "find dropped commits",
+    "i deleted everything",
+    "rescue",
+    "where did it go"
+  ],
+  "intents": [
+    "i lost commits after a bad reset, can i get them back",
+    "recover work after a hard reset",
+    "find a commit i thought was deleted",
+    "rescue my changes after rebase or reset went wrong",
+    "where did my commits go after that reset",
+    "i need to undo a reset i shouldnt have done",
+    "history of where head pointed to find lost work",
+    "git ate my changes, help me get them back"
+  ],
+  "example": "git reflog",
+  "danger": false,
+  "related": [
+    "git-hard-reset",
+    "git-undo-last-commit"
+  ]
+}

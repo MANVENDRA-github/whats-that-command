@@ -1,0 +1,29 @@
+{
+  "id": "git-status-ignored",
+  "command": "git status --ignored",
+  "description": "Show working-tree status including files that .gitignore is excluding",
+  "tool": "git",
+  "category": "inspect",
+  "tags": [
+    "see ignored files",
+    "what is gitignore hiding",
+    "verify ignore rules",
+    "show excluded files"
+  ],
+  "intents": [
+    "show me which files are being ignored by gitignore",
+    "verify my gitignore rules are working",
+    "see status including ignored files",
+    "what files is git ignoring in this repo",
+    "check that gitignore is excluding what i expect",
+    "list ignored files alongside untracked ones",
+    "debug why a file is not showing up in git status"
+  ],
+  "example": "git status --ignored",
+  "danger": false,
+  "related": [
+    "git-status",
+    "git-untrack-file",
+    "git-config-global-ignore"
+  ]
+}

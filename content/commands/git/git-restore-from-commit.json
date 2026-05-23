@@ -1,0 +1,30 @@
+{
+  "id": "git-restore-from-commit",
+  "command": "git restore <file> --source <commit>",
+  "description": "Replace a file with its version from a specific past commit",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "restore old version",
+    "recover file",
+    "get file from past commit",
+    "rewind a file"
+  ],
+  "intents": [
+    "i deleted something and want to bring it back",
+    "get an old version of a single file",
+    "i want this one file back the way it was last week",
+    "restore a file from a previous commit",
+    "go back to an earlier version of one file",
+    "pull a file from an old commit into my working tree",
+    "rewind one file to its state at a past commit",
+    "i need an older version of a file but only that file"
+  ],
+  "example": "git restore src/config.js --source abc123",
+  "danger": false,
+  "related": [
+    "git-discard-file",
+    "git-log-file",
+    "git-reflog"
+  ]
+}

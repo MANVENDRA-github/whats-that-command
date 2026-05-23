@@ -1,0 +1,29 @@
+{
+  "id": "docker-prune-system",
+  "command": "docker system prune -a",
+  "description": "Delete all stopped containers, unused networks, dangling images, and the build cache",
+  "tool": "docker",
+  "category": "cleanup",
+  "tags": [
+    "free disk space",
+    "clean everything",
+    "nuke unused",
+    "reclaim space",
+    "tidy up"
+  ],
+  "intents": [
+    "free up disk space taken by docker",
+    "clean up everything docker isnt actively using",
+    "my docker is taking up tons of disk, clean it",
+    "wipe stopped containers and unused images at once",
+    "reclaim space from old containers, images, and build cache",
+    "purge all dangling docker stuff in one shot",
+    "docker filled my disk, sweep everything unused"
+  ],
+  "example": "docker system prune -a",
+  "danger": true,
+  "related": [
+    "docker-remove-all-containers",
+    "docker-remove-image"
+  ]
+}

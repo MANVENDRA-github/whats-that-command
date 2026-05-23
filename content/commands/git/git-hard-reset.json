@@ -1,0 +1,30 @@
+{
+  "id": "git-hard-reset",
+  "command": "git reset --hard <ref>",
+  "description": "Force the branch and working tree back to a specific commit, destroying all local changes",
+  "tool": "git",
+  "category": "undo",
+  "tags": [
+    "nuke changes",
+    "wipe to commit",
+    "throw away everything",
+    "back in time",
+    "destroy"
+  ],
+  "intents": [
+    "wipe everything and go back to a specific commit",
+    "reset my branch to match origin and lose local changes",
+    "throw away everything and start from a clean commit",
+    "destroy all local work and match the remote exactly",
+    "i want my branch to be exactly like main right now",
+    "nuke my changes and go back in time to a commit",
+    "blow away my branch state and reset to a known good commit"
+  ],
+  "example": "git reset --hard origin/main",
+  "danger": true,
+  "related": [
+    "git-undo-last-commit",
+    "git-clean",
+    "git-revert-commit"
+  ]
+}

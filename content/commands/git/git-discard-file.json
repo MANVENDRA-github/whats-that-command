@@ -1,0 +1,28 @@
+{
+  "id": "git-discard-file",
+  "command": "git restore <file>",
+  "description": "Throw away unstaged changes in one file and restore it to the last committed version",
+  "tool": "git",
+  "category": "undo",
+  "tags": [
+    "throw away changes",
+    "revert file",
+    "abandon edits",
+    "back to last commit"
+  ],
+  "intents": [
+    "throw away changes in one file",
+    "reset a single file to the last committed version",
+    "undo my edits to just this one file",
+    "abandon changes in a specific file but keep the rest",
+    "revert one file without losing other edits",
+    "discard edits to a single file",
+    "i messed up one file, restore it from the last commit"
+  ],
+  "example": "git restore src/app.js",
+  "danger": false,
+  "related": [
+    "git-discard-all",
+    "git-hard-reset"
+  ]
+}

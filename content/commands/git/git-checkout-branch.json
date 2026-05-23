@@ -1,0 +1,28 @@
+{
+  "id": "git-checkout-branch",
+  "command": "git checkout <name>",
+  "description": "Switch to an existing branch using the classic checkout command",
+  "tool": "git",
+  "category": "branch",
+  "tags": [
+    "switch branch",
+    "go to branch",
+    "classic switch",
+    "old way to change branch"
+  ],
+  "intents": [
+    "switch to a different branch using git checkout",
+    "move to another branch with the older checkout command",
+    "i learned git with checkout, use that to switch branches",
+    "use git checkout to change branches",
+    "go to a branch the classic way",
+    "checkout an existing branch by name",
+    "switch branches the way the old tutorials show"
+  ],
+  "example": "git checkout main",
+  "danger": false,
+  "related": [
+    "git-switch-branch",
+    "git-new-branch"
+  ]
+}

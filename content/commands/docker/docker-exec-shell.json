@@ -1,0 +1,29 @@
+{
+  "id": "docker-exec-shell",
+  "command": "docker exec -it <container> /bin/bash",
+  "description": "Open an interactive shell inside an already-running container",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "get inside container",
+    "shell in",
+    "debug container",
+    "poke around",
+    "ssh-like"
+  ],
+  "intents": [
+    "shell into a running container to debug",
+    "get a bash prompt inside a container",
+    "ssh-like access into a docker container",
+    "open a terminal inside a container that is already running",
+    "poke around inside my running container",
+    "run interactive commands inside a live container",
+    "i need to look at files inside the container while it runs"
+  ],
+  "example": "docker exec -it api-server /bin/bash",
+  "danger": false,
+  "related": [
+    "docker-run-interactive",
+    "docker-logs-follow"
+  ]
+}

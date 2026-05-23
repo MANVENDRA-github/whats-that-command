@@ -1,0 +1,28 @@
+{
+  "id": "git-config-global-ignore",
+  "command": "git config --global core.excludesfile <file>",
+  "description": "Set a global gitignore file that applies to every repo on your machine",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "global gitignore",
+    "ignore across repos",
+    "system wide ignore",
+    "personal ignore file"
+  ],
+  "intents": [
+    "set up a global gitignore for all my repos",
+    "ignore files everywhere without putting them in every .gitignore",
+    "tell git to ignore my editor backup files in every repo",
+    "system wide ignore pattern across all projects",
+    "ignore .DS_Store in every repo without committing a .gitignore",
+    "personal ignore file that applies to every clone",
+    "stop tracking my swap files in every project at once"
+  ],
+  "example": "git config --global core.excludesfile ~/.gitignore_global",
+  "danger": false,
+  "related": [
+    "git-config-user",
+    "git-untrack-file"
+  ]
+}

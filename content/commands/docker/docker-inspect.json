@@ -1,0 +1,29 @@
+{
+  "id": "docker-inspect",
+  "command": "docker inspect <container>",
+  "description": "Show low-level details about a container — network, env vars, mounts, config",
+  "tool": "docker",
+  "category": "debug",
+  "tags": [
+    "container details",
+    "ip address",
+    "environment",
+    "config dump",
+    "everything about"
+  ],
+  "intents": [
+    "show full details about a container",
+    "what is the ip address of my container",
+    "see every environment variable a container has",
+    "dump everything about a container including mounts, network, env",
+    "get the json config of a running container",
+    "find what volumes are mounted inside this container",
+    "low level details about a docker container"
+  ],
+  "example": "docker inspect api-server",
+  "danger": false,
+  "related": [
+    "docker-logs-follow",
+    "docker-stats"
+  ]
+}

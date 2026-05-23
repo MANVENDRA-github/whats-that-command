@@ -1,0 +1,28 @@
+{
+  "id": "git-amend-commit",
+  "command": "git commit --amend --no-edit",
+  "description": "Add currently staged changes into the previous commit without changing its message",
+  "tool": "git",
+  "category": "undo",
+  "tags": [
+    "fix last commit",
+    "forgot to add",
+    "tack on",
+    "edit previous"
+  ],
+  "intents": [
+    "i forgot to stage a file in my last commit",
+    "add this fix into the previous commit without touching the message",
+    "stick a missed file onto my most recent commit",
+    "tack on changes to the commit i just made",
+    "amend the last commit to include extra changes",
+    "amend the previous commit with a forgotten change",
+    "fold a small fix into the commit right before this one"
+  ],
+  "example": "git add forgotten.js && git commit --amend --no-edit",
+  "danger": false,
+  "related": [
+    "git-amend-message",
+    "git-undo-last-commit"
+  ]
+}

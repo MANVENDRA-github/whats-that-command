@@ -1,0 +1,25 @@
+{
+  "id": "bash-history-search",
+  "command": "history | grep \"<pattern>\"",
+  "description": "Search your shell command history for a previous command",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "find previous command",
+    "what did i run",
+    "recall command",
+    "command i used"
+  ],
+  "intents": [
+    "what was that command i ran yesterday",
+    "find a command i typed last week",
+    "look up an old command from shell history",
+    "i forgot the exact flags i used last time",
+    "search through my terminal history for a previous command",
+    "recall something i ran in this shell earlier",
+    "find a previously used command containing a keyword"
+  ],
+  "example": "history | grep ssh",
+  "danger": false,
+  "related": []
+}

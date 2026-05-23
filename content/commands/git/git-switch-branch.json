@@ -1,0 +1,28 @@
+{
+  "id": "git-switch-branch",
+  "command": "git switch <name>",
+  "description": "Move to an existing branch",
+  "tool": "git",
+  "category": "branch",
+  "tags": [
+    "change branch",
+    "go to branch",
+    "move to branch",
+    "jump"
+  ],
+  "intents": [
+    "switch to a different branch",
+    "move to the main branch",
+    "go to an existing branch",
+    "change branches in my repo",
+    "jump over to another branch i made earlier",
+    "check out a branch i created before",
+    "hop onto a different branch"
+  ],
+  "example": "git switch main",
+  "danger": false,
+  "related": [
+    "git-new-branch",
+    "git-recent-branches"
+  ]
+}

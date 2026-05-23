@@ -1,0 +1,27 @@
+{
+  "id": "bash-tail-follow",
+  "command": "tail -f <file>",
+  "description": "Stream the end of a file as new lines are appended",
+  "tool": "bash",
+  "category": "logs",
+  "tags": [
+    "follow log",
+    "live log",
+    "watch file grow",
+    "stream log"
+  ],
+  "intents": [
+    "watch a log file as new lines come in",
+    "stream a logfile live while my app runs",
+    "follow a log to debug as it happens",
+    "show me what gets written to this file from now on",
+    "monitor a log without reopening it",
+    "see new entries appear in a log in real time",
+    "tail my server log while it is running"
+  ],
+  "example": "tail -f /var/log/nginx/access.log",
+  "danger": false,
+  "related": [
+    "bash-watch-command"
+  ]
+}

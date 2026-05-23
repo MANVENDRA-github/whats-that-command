@@ -1,0 +1,30 @@
+{
+  "id": "git-config-user",
+  "command": "git config --global user.name \"<name>\"",
+  "description": "Set the name (or email) that Git records on your commits",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "set name",
+    "set email",
+    "identity",
+    "author info",
+    "first time setup"
+  ],
+  "intents": [
+    "set up my git name and email",
+    "make my commits show the right author",
+    "configure who i am for git",
+    "change the email git uses for commits",
+    "first time git setup on a new machine",
+    "tell git what name to put on my commits",
+    "set my author identity for git globally",
+    "fix the wrong name showing up on my commits"
+  ],
+  "example": "git config --global user.name \"Your Name\"",
+  "danger": false,
+  "related": [
+    "git-config-alias",
+    "git-init"
+  ]
+}

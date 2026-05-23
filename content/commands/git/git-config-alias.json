@@ -1,0 +1,27 @@
+{
+  "id": "git-config-alias",
+  "command": "git config --global alias.<short> \"<command>\"",
+  "description": "Create a personal shortcut for a long or frequently-used git command",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "custom shortcut",
+    "shorthand",
+    "save typing",
+    "personal abbreviation"
+  ],
+  "intents": [
+    "set up a personal shortcut for a long git command",
+    "create a git alias for a command i type a lot",
+    "make a git shorthand i can reuse",
+    "add a custom git subcommand to my config",
+    "abbreviate a frequently used git command",
+    "save typing with a git alias",
+    "define my own git command"
+  ],
+  "example": "git config --global alias.lg \"log --oneline --graph --all\"",
+  "danger": false,
+  "related": [
+    "git-log-graph"
+  ]
+}

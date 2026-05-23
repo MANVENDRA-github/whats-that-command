@@ -1,0 +1,29 @@
+{
+  "id": "git-clone-branch",
+  "command": "git clone --branch <name> <url>",
+  "description": "Clone a repository and check out a specific branch instead of the default",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "checkout other branch on clone",
+    "download a specific branch",
+    "skip the default branch",
+    "start from a branch"
+  ],
+  "intents": [
+    "clone a repo but start on a different branch",
+    "download just one branch of a repository",
+    "get a copy of a repo already checked out to a feature branch",
+    "i want to clone a project and immediately be on a non-default branch",
+    "checkout a specific branch right after cloning",
+    "clone and switch to a branch in one step",
+    "grab a repo on the develop branch instead of main"
+  ],
+  "example": "git clone --branch develop https://github.com/user/repo.git",
+  "danger": false,
+  "related": [
+    "git-clone",
+    "git-clone-shallow",
+    "git-checkout-branch"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "git-log-author",
+  "command": "git log --author=\"<name>\"",
+  "description": "Show only commits made by a specific person",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "commits by person",
+    "what did teammate work on",
+    "filter by author",
+    "one persons commits"
+  ],
+  "intents": [
+    "show me only my own commits",
+    "what has alice been working on",
+    "filter git history to one author",
+    "see every commit from a specific teammate",
+    "list commits made by a particular person",
+    "find what someone has contributed to this repo",
+    "search history for commits by a given author"
+  ],
+  "example": "git log --author=\"Alice\"",
+  "danger": false,
+  "related": [
+    "git-log",
+    "git-shortlog-authors",
+    "git-log-search"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "git-log",
+  "command": "git log",
+  "description": "Show the commit history of the current branch",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "commit history",
+    "see commits",
+    "browse log",
+    "past commits",
+    "who did what"
+  ],
+  "intents": [
+    "show me the history of this branch",
+    "what commits have been made",
+    "see the recent commit log",
+    "browse all past commits",
+    "who committed what and when",
+    "list the past commits on this branch",
+    "show the full commit history with messages and authors",
+    "what work has been done on this branch"
+  ],
+  "example": "git log",
+  "danger": false,
+  "related": [
+    "git-log-oneline",
+    "git-log-graph",
+    "git-log-file"
+  ]
+}

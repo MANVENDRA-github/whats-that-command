@@ -1,0 +1,28 @@
+{
+  "id": "git-blame",
+  "command": "git blame <file>",
+  "description": "Show which commit and author last touched each line of a file",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "who wrote this",
+    "when was this changed",
+    "whodunit",
+    "author per line"
+  ],
+  "intents": [
+    "who wrote this line of code",
+    "who is responsible for this part of the file",
+    "find out who changed this section",
+    "see the author of each line in a file",
+    "when was this line last modified and by whom",
+    "trace authorship for each line in a file",
+    "blame this line on a commit and author"
+  ],
+  "example": "git blame README.md",
+  "danger": false,
+  "related": [
+    "git-show-commit",
+    "git-log-graph"
+  ]
+}

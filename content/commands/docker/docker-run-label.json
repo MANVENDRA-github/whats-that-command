@@ -1,0 +1,18 @@
+{
+  "id": "docker-run-label",
+  "command": "docker run --label <k>=<v> <image>",
+  "description": "Attach metadata labels to a container",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "container labels",
+    "metadata",
+    "tag container"
+  ],
+  "intents": [
+    "attach labels to a container for filtering or organization"
+  ],
+  "example": "docker run --label env=prod nginx",
+  "danger": false,
+  "related": []
+}

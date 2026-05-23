@@ -1,0 +1,19 @@
+{
+  "id": "bash-tac",
+  "command": "tac <file>",
+  "description": "Print a file in reverse line order (cat backwards)",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "reverse file",
+    "last line first",
+    "reverse cat"
+  ],
+  "intents": [
+    "print a file with lines in reverse order",
+    "reverse the lines of a file"
+  ],
+  "example": "tac log.txt",
+  "danger": false,
+  "related": []
+}

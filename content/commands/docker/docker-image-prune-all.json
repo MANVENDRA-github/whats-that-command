@@ -1,0 +1,19 @@
+{
+  "id": "docker-image-prune-all",
+  "command": "docker image prune -a",
+  "description": "Remove all images not currently used by any container",
+  "tool": "docker",
+  "category": "cleanup",
+  "tags": [
+    "nuke unused images",
+    "aggressive image cleanup",
+    "remove all unused"
+  ],
+  "intents": [
+    "remove every image not used by a running container",
+    "aggressively clean up images i no longer need"
+  ],
+  "example": "docker image prune -af",
+  "danger": true,
+  "related": []
+}

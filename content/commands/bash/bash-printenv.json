@@ -1,0 +1,20 @@
+{
+  "id": "bash-printenv",
+  "command": "printenv",
+  "description": "Print all environment variables (or one named one)",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "list env vars",
+    "show environment"
+  ],
+  "intents": [
+    "list all environment variables",
+    "print the value of an environment variable"
+  ],
+  "example": "printenv PATH",
+  "danger": false,
+  "related": [
+    "bash-env-vars"
+  ]
+}

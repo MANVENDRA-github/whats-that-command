@@ -1,0 +1,29 @@
+{
+  "id": "git-log-stat",
+  "command": "git log --stat -M",
+  "description": "Show commit history with per-commit file change stats and rename detection",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "log with file changes",
+    "stats per commit",
+    "history with changed files",
+    "detect renames in log"
+  ],
+  "intents": [
+    "see which files each commit touched",
+    "history showing how many lines each commit added and removed per file",
+    "log with a stat summary for every commit",
+    "find commits that moved files around",
+    "show commit history annotated with file change counts",
+    "spot renames in the commit history",
+    "which files did each past commit modify"
+  ],
+  "example": "git log --stat -M",
+  "danger": false,
+  "related": [
+    "git-log",
+    "git-diff-stat",
+    "git-log-file"
+  ]
+}

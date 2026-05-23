@@ -1,0 +1,17 @@
+{
+  "id": "bash-sum",
+  "command": "sum <file>",
+  "description": "Compute a simple BSD or SysV checksum for a file (legacy)",
+  "tool": "bash",
+  "category": "encoding",
+  "tags": [
+    "legacy checksum",
+    "simple file sum"
+  ],
+  "intents": [
+    "compute a legacy checksum for a file"
+  ],
+  "example": "sum file.txt",
+  "danger": false,
+  "related": []
+}

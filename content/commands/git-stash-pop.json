@@ -10,6 +10,15 @@
     "unshelve",
     "recover stash"
   ],
+  "intents": [
+    "bring back my stashed changes",
+    "reapply what i stashed earlier",
+    "restore the work i set aside",
+    "put my saved changes back into my working tree",
+    "unstash my most recent stash",
+    "get my shelved work back",
+    "reapply the stash and remove it from the list"
+  ],
   "example": "git stash pop",
   "danger": false,
   "related": [

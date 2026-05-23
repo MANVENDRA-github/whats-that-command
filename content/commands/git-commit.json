@@ -1,0 +1,26 @@
+{
+  "id": "git-commit",
+  "command": "git commit",
+  "description": "Open your editor to write a commit message and finalize the commit",
+  "tool": "git",
+  "category": "commit",
+  "tags": [
+    "save changes",
+    "make commit",
+    "open editor for message",
+    "write commit"
+  ],
+  "intents": [
+    "create a commit with a detailed message",
+    "open my editor to write a longer commit message",
+    "i want a multi line commit message",
+    "commit with a body explanation"
+  ],
+  "example": "git commit",
+  "danger": false,
+  "related": [
+    "git-commit-message",
+    "git-commit-all",
+    "git-amend-commit"
+  ]
+}

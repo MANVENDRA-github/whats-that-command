@@ -1,0 +1,25 @@
+{
+  "id": "git-cherry-pick-continue",
+  "command": "git cherry-pick --continue",
+  "description": "Resume a cherry-pick after resolving conflicts",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "carry on cherry-pick",
+    "after conflict resolved",
+    "resume cherry-pick"
+  ],
+  "intents": [
+    "continue a cherry-pick after fixing conflicts",
+    "i resolved the conflicts during cherry-pick now what",
+    "resume a paused cherry-pick",
+    "move forward with the cherry-pick",
+    "finish the cherry-pick i started after sorting out conflicts"
+  ],
+  "example": "git cherry-pick --continue",
+  "danger": false,
+  "related": [
+    "git-cherry-pick",
+    "git-cherry-pick-abort"
+  ]
+}

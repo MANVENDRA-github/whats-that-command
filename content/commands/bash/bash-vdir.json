@@ -1,0 +1,19 @@
+{
+  "id": "bash-vdir",
+  "command": "vdir",
+  "description": "List directory contents in long format, similar to ls -l",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "detailed listing",
+    "long format",
+    "verbose ls"
+  ],
+  "intents": [
+    "list files with full details",
+    "long-form directory listing"
+  ],
+  "example": "vdir",
+  "danger": false,
+  "related": []
+}

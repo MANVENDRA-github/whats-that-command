@@ -1,0 +1,18 @@
+{
+  "id": "bash-rmmod",
+  "command": "rmmod <module>",
+  "description": "Remove a loaded kernel module",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "unload kernel module",
+    "remove driver"
+  ],
+  "intents": [
+    "unload a kernel module",
+    "remove a loaded driver"
+  ],
+  "example": "sudo rmmod cdc_acm",
+  "danger": true,
+  "related": []
+}

@@ -1,0 +1,18 @@
+{
+  "id": "bash-logout",
+  "command": "logout",
+  "description": "End the current login shell session",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "end session",
+    "log out",
+    "exit shell"
+  ],
+  "intents": [
+    "log out of the current shell session"
+  ],
+  "example": "logout",
+  "danger": false,
+  "related": []
+}

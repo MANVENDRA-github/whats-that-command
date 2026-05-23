@@ -1,0 +1,19 @@
+{
+  "id": "bash-getfacl",
+  "command": "getfacl <file>",
+  "description": "Read the access control list (ACL) of a file",
+  "tool": "bash",
+  "category": "permissions",
+  "tags": [
+    "view acl",
+    "inspect file acl",
+    "show permissions detail"
+  ],
+  "intents": [
+    "show the ACL on a file",
+    "view per-user permissions beyond owner/group/other"
+  ],
+  "example": "getfacl shared.txt",
+  "danger": false,
+  "related": []
+}

@@ -10,6 +10,15 @@
     "size of each",
     "directory sizes"
   ],
+  "intents": [
+    "what is taking up all my disk space",
+    "which folder is the biggest",
+    "find the largest directories in here",
+    "i need to clean up storage, show me the heavy folders",
+    "see how big each subfolder is",
+    "size of every folder in the current directory",
+    "rank folders by size to find the bloat"
+  ],
   "example": "du -sh *",
   "danger": false,
   "related": [

@@ -1,0 +1,17 @@
+{
+  "id": "bash-dc",
+  "command": "dc",
+  "description": "Reverse-Polish-notation desk calculator",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "rpn calculator",
+    "stack calc"
+  ],
+  "intents": [
+    "use a reverse polish notation calculator in the shell"
+  ],
+  "example": "echo \"5 4 + p\" | dc",
+  "danger": false,
+  "related": []
+}

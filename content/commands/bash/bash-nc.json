@@ -1,0 +1,20 @@
+{
+  "id": "bash-nc",
+  "command": "nc <host> <port>",
+  "description": "Netcat — read, write, and listen on TCP/UDP connections",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "raw tcp",
+    "port testing",
+    "swiss army knife of networking"
+  ],
+  "intents": [
+    "open a raw tcp connection to a port",
+    "test if a port is open and listening",
+    "send and receive on a tcp socket"
+  ],
+  "example": "nc -zv example.com 443",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-declare",
+  "command": "declare <opts> <var>",
+  "description": "Declare a shell variable with optional attributes (integer, array, readonly, etc.)",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "typed variable",
+    "declare array",
+    "integer variable"
+  ],
+  "intents": [
+    "declare a variable with a specific type in bash",
+    "create an array variable"
+  ],
+  "example": "declare -i count=0",
+  "danger": false,
+  "related": []
+}

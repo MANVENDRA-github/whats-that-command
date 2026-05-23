@@ -1,0 +1,29 @@
+{
+  "id": "git-push-all-branches",
+  "command": "git push --all <remote>",
+  "description": "Push every local branch to the remote in one command",
+  "tool": "git",
+  "category": "sync",
+  "tags": [
+    "push everything",
+    "upload all branches",
+    "publish all work",
+    "sync every branch"
+  ],
+  "intents": [
+    "push all my local branches at once",
+    "upload every branch to the remote in one go",
+    "send all branches to origin",
+    "sync every branch i have locally with the remote",
+    "publish all the branches in my repo to github",
+    "push not just the current branch but all of them",
+    "back up every branch to the remote"
+  ],
+  "example": "git push --all origin",
+  "danger": false,
+  "related": [
+    "git-push",
+    "git-push-upstream",
+    "git-push-tags"
+  ]
+}

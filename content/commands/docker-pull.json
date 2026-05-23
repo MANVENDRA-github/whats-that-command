@@ -10,6 +10,15 @@
     "get image",
     "grab from hub"
   ],
+  "intents": [
+    "download a docker image from docker hub",
+    "fetch an image from a registry locally",
+    "get the postgres image cached on my machine",
+    "pull a specific tag of an image before running it",
+    "i need this image available before i can run it",
+    "cache an image locally without running it",
+    "make sure the latest version of an image is on this machine"
+  ],
   "example": "docker pull postgres:16",
   "danger": false,
   "related": [

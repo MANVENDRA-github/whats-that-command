@@ -13,7 +13,10 @@
     "delete a file from my repo",
     "remove a file and tell git about it",
     "i want to stop committing this file and also delete it",
-    "permanently remove a file from version control"
+    "permanently remove a file from version control",
+    "remove a tracked file and stage the deletion",
+    "delete a file in git and on disk in one step",
+    "drop a file from the repo and from my working tree"
   ],
   "example": "git rm src/old-module.js",
   "danger": true,

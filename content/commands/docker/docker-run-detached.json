@@ -1,0 +1,20 @@
+{
+  "id": "docker-run-detached",
+  "command": "docker run -d <image>",
+  "description": "Run a container in the background (detached mode)",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "background container",
+    "detached run",
+    "run as daemon"
+  ],
+  "intents": [
+    "run a container in the background",
+    "start a container detached from my terminal",
+    "run as a daemon"
+  ],
+  "example": "docker run -d nginx",
+  "danger": false,
+  "related": []
+}

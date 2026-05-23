@@ -1,0 +1,18 @@
+{
+  "id": "docker-network-connect",
+  "command": "docker network connect <network> <container>",
+  "description": "Attach a running container to a network",
+  "tool": "docker",
+  "category": "networks",
+  "tags": [
+    "attach container to network",
+    "add to network"
+  ],
+  "intents": [
+    "connect a running container to an existing network",
+    "attach a container to another docker network"
+  ],
+  "example": "docker network connect mynet web",
+  "danger": false,
+  "related": []
+}

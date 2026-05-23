@@ -1,0 +1,19 @@
+{
+  "id": "bash-unset",
+  "command": "unset <var>",
+  "description": "Remove a shell variable, function, or environment variable",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "remove variable",
+    "delete env var",
+    "unset var"
+  ],
+  "intents": [
+    "remove a shell variable",
+    "delete an environment variable"
+  ],
+  "example": "unset DEBUG",
+  "danger": false,
+  "related": []
+}

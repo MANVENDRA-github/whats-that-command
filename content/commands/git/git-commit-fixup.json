@@ -1,0 +1,28 @@
+{
+  "id": "git-commit-fixup",
+  "command": "git commit --fixup <commit>",
+  "description": "Create a fixup commit that will auto-squash into the target during an interactive rebase",
+  "tool": "git",
+  "category": "commit",
+  "tags": [
+    "fix an earlier commit",
+    "prep for autosquash",
+    "tweak previous commit",
+    "amend non-latest commit"
+  ],
+  "intents": [
+    "fix an earlier commit without amending it directly",
+    "add a small fix that should fold into a previous commit",
+    "prep a commit to be auto-squashed during rebase",
+    "tweak a commit that is not the latest one",
+    "create a fixup commit for an older commit in the branch",
+    "make a follow-up to a specific past commit for autosquash"
+  ],
+  "example": "git commit --fixup abc123",
+  "danger": false,
+  "related": [
+    "git-amend-commit",
+    "git-rebase-autosquash",
+    "git-rebase-interactive"
+  ]
+}

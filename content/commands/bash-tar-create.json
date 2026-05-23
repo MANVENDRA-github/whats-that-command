@@ -11,6 +11,15 @@
     "package files",
     "zip up"
   ],
+  "intents": [
+    "compress a folder into a single archive file",
+    "make a backup of a directory before i change things",
+    "bundle a project into one file to send",
+    "create a .tar.gz from a folder",
+    "package a directory so i can transfer it over scp",
+    "i want to send a whole folder as one downloadable file",
+    "archive a directory with gzip compression"
+  ],
   "example": "tar -czvf backup.tar.gz ./project",
   "danger": false,
   "related": [

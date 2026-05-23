@@ -1,0 +1,17 @@
+{
+  "id": "docker-plugin-ls",
+  "command": "docker plugin ls",
+  "description": "List installed Docker plugins",
+  "tool": "docker",
+  "category": "plugin",
+  "tags": [
+    "list plugins",
+    "show plugins"
+  ],
+  "intents": [
+    "list installed docker plugins"
+  ],
+  "example": "docker plugin ls",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-let",
+  "command": "let <expression>",
+  "description": "Evaluate arithmetic expressions on shell variables",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "arithmetic assignment",
+    "integer math",
+    "increment variable"
+  ],
+  "intents": [
+    "do integer arithmetic on shell variables",
+    "increment a counter variable"
+  ],
+  "example": "let \"count = count + 1\"",
+  "danger": false,
+  "related": []
+}

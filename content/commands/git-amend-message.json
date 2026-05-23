@@ -10,6 +10,15 @@
     "change message",
     "rewrite message"
   ],
+  "intents": [
+    "fix a typo in my last commit message",
+    "rewrite the message of the commit i just made",
+    "i used the wrong wording in my commit message",
+    "change my last commit message without changing the code",
+    "rename my previous commit",
+    "i made a commit with a bad message, fix it",
+    "edit the message of the most recent commit"
+  ],
   "example": "git commit --amend -m \"fix: correct payment rounding\"",
   "danger": false,
   "related": [

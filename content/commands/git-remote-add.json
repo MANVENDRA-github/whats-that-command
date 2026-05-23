@@ -15,7 +15,10 @@
     "connect this repo to a remote url",
     "add a github remote called origin",
     "link my local repo to an upstream",
-    "set up where my pushes go"
+    "set up where my pushes go",
+    "tell git about a remote called origin",
+    "add a new remote to push to",
+    "link a fresh local repo to a github repository"
   ],
   "example": "git remote add origin https://github.com/me/repo.git",
   "danger": false,

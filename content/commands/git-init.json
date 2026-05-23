@@ -16,7 +16,10 @@
     "make this directory a git repo",
     "i just made a project and want git on it",
     "set up version control here",
-    "begin a new git project from scratch"
+    "begin a new git project from scratch",
+    "initialize git in this directory",
+    "turn an existing folder into a git repository",
+    "start version control on a brand new project"
   ],
   "example": "git init",
   "danger": false,

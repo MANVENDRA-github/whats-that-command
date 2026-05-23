@@ -1,0 +1,26 @@
+{
+  "id": "git-log-oneline",
+  "command": "git log --oneline",
+  "description": "Show the commit history as one line per commit",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "compact history",
+    "short log",
+    "summary log",
+    "condensed commits"
+  ],
+  "intents": [
+    "show a condensed commit history",
+    "give me a short log",
+    "see commits in a compact format",
+    "fit more history on screen",
+    "i want a one line per commit view"
+  ],
+  "example": "git log --oneline",
+  "danger": false,
+  "related": [
+    "git-log",
+    "git-log-graph"
+  ]
+}

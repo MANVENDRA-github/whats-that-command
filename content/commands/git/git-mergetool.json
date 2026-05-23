@@ -1,0 +1,28 @@
+{
+  "id": "git-mergetool",
+  "command": "git mergetool",
+  "description": "Open a configured external tool to walk through merge conflicts",
+  "tool": "git",
+  "category": "merge",
+  "tags": [
+    "fix conflicts visually",
+    "open merge gui",
+    "use external merge tool",
+    "resolve conflicts in app"
+  ],
+  "intents": [
+    "open a visual tool to resolve merge conflicts",
+    "use a gui to fix merge conflicts",
+    "launch my configured merge tool",
+    "i prefer a 3-way merge tool over editing by hand",
+    "open vscode or meld to handle conflicts",
+    "resolve conflicts with a visual diff app"
+  ],
+  "example": "git mergetool",
+  "danger": false,
+  "related": [
+    "git-merge",
+    "git-merge-abort",
+    "git-difftool"
+  ]
+}

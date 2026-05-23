@@ -1,0 +1,19 @@
+{
+  "id": "docker-logs",
+  "command": "docker logs <container>",
+  "description": "Print the logs from a container",
+  "tool": "docker",
+  "category": "debug",
+  "tags": [
+    "container logs",
+    "see output",
+    "print stdout"
+  ],
+  "intents": [
+    "view logs from a container",
+    "print everything a container has written to stdout"
+  ],
+  "example": "docker logs web",
+  "danger": false,
+  "related": []
+}

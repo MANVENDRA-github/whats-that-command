@@ -1,0 +1,20 @@
+{
+  "id": "bash-file",
+  "command": "file <path>",
+  "description": "Detect the type of a file by inspecting its contents",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "identify file type",
+    "mime type",
+    "what kind of file"
+  ],
+  "intents": [
+    "what type of file is this",
+    "identify a file with unknown extension",
+    "detect the mime type"
+  ],
+  "example": "file image.bin",
+  "danger": false,
+  "related": []
+}

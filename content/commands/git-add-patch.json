@@ -19,7 +19,10 @@
     "pick which lines to stage interactively",
     "review my changes one by one before staging",
     "stage hunks line by line",
-    "partial commit of a file where i have multiple unrelated edits"
+    "partial commit of a file where i have multiple unrelated edits",
+    "commit only a subset of the changes in one file",
+    "stage just a portion of my edits in a single file",
+    "i have two unrelated edits in one file and only want to commit some"
   ],
   "example": "git add -p src/utils.js",
   "danger": false,

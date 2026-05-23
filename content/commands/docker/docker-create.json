@@ -1,0 +1,19 @@
+{
+  "id": "docker-create",
+  "command": "docker create <image>",
+  "description": "Create a container from an image without starting it",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "prepare container",
+    "create without run",
+    "staged container"
+  ],
+  "intents": [
+    "create a container but dont start it yet",
+    "pre-create a container to start later"
+  ],
+  "example": "docker create --name web nginx",
+  "danger": false,
+  "related": []
+}

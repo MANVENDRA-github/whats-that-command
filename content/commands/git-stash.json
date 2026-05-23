@@ -11,6 +11,15 @@
     "shelve work",
     "park"
   ],
+  "intents": [
+    "save my work for later without committing",
+    "set aside my changes to switch branches",
+    "i need to switch branches but i have uncommitted changes",
+    "shelve my edits temporarily",
+    "park my work so i can deal with something else",
+    "stash my changes so i can pull cleanly",
+    "tuck away my edits to come back to later"
+  ],
   "example": "git stash",
   "danger": false,
   "related": [

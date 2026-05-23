@@ -1,0 +1,17 @@
+{
+  "id": "docker-compose-kill",
+  "command": "docker compose kill",
+  "description": "Force-kill all containers in the compose stack",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "kill compose",
+    "sigkill stack"
+  ],
+  "intents": [
+    "hard-kill all compose containers immediately"
+  ],
+  "example": "docker compose kill",
+  "danger": true,
+  "related": []
+}

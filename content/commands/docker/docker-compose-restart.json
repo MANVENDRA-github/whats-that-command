@@ -1,0 +1,17 @@
+{
+  "id": "docker-compose-restart",
+  "command": "docker compose restart",
+  "description": "Restart all services in a compose stack",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "restart compose",
+    "bounce stack"
+  ],
+  "intents": [
+    "restart every service in a compose stack at once"
+  ],
+  "example": "docker compose restart",
+  "danger": false,
+  "related": []
+}

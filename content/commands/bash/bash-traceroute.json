@@ -1,0 +1,20 @@
+{
+  "id": "bash-traceroute",
+  "command": "traceroute <host>",
+  "description": "Show the network path packets take to reach a host",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "network path",
+    "hop by hop",
+    "route to host"
+  ],
+  "intents": [
+    "see the network path to a server",
+    "trace each hop to a destination",
+    "find where my connection is breaking"
+  ],
+  "example": "traceroute google.com",
+  "danger": false,
+  "related": []
+}

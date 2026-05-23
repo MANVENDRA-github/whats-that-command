@@ -1,0 +1,17 @@
+{
+  "id": "bash-factor",
+  "command": "factor <number>",
+  "description": "Print the prime factorization of a number",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "prime factors",
+    "factor number"
+  ],
+  "intents": [
+    "print the prime factorization of a number"
+  ],
+  "example": "factor 360",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-ethtool",
+  "command": "ethtool <iface>",
+  "description": "Query or change settings of an Ethernet network interface",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "nic settings",
+    "link speed",
+    "duplex"
+  ],
+  "intents": [
+    "check the link speed of a network card",
+    "change ethernet interface settings"
+  ],
+  "example": "ethtool eth0",
+  "danger": false,
+  "related": []
+}

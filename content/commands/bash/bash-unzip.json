@@ -1,0 +1,19 @@
+{
+  "id": "bash-unzip",
+  "command": "unzip <file>.zip",
+  "description": "Extract files from a zip archive",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "extract zip",
+    "unpack zip",
+    "open zip"
+  ],
+  "intents": [
+    "extract a zip archive",
+    "unpack a zip file"
+  ],
+  "example": "unzip archive.zip -d out/",
+  "danger": false,
+  "related": []
+}

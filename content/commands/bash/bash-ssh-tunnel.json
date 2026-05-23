@@ -1,0 +1,19 @@
+{
+  "id": "bash-ssh-tunnel",
+  "command": "ssh -L <local-port>:<host>:<port> <user>@<gateway>",
+  "description": "Set up an SSH local port-forwarding tunnel",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "port forward",
+    "ssh tunnel",
+    "bypass firewall"
+  ],
+  "intents": [
+    "tunnel a remote service through ssh to my local machine",
+    "forward a port over ssh"
+  ],
+  "example": "ssh -L 5432:db.internal:5432 user@gateway",
+  "danger": false,
+  "related": []
+}

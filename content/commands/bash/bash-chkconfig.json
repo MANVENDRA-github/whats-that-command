@@ -1,0 +1,18 @@
+{
+  "id": "bash-chkconfig",
+  "command": "chkconfig <service> <on|off>",
+  "description": "Enable or disable system services at boot (RedHat-derived distros)",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "enable service at boot",
+    "startup services",
+    "sysv init"
+  ],
+  "intents": [
+    "enable a service to start at boot on redhat-style systems"
+  ],
+  "example": "sudo chkconfig httpd on",
+  "danger": false,
+  "related": []
+}

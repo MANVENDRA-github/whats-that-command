@@ -1,0 +1,19 @@
+{
+  "id": "bash-fmt",
+  "command": "fmt <file>",
+  "description": "Simple text formatter that re-flows paragraphs to a target width",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "reflow text",
+    "format paragraphs",
+    "word wrap"
+  ],
+  "intents": [
+    "reflow paragraphs to a target line width",
+    "simple word-wrap formatter"
+  ],
+  "example": "fmt -w 72 essay.txt",
+  "danger": false,
+  "related": []
+}

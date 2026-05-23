@@ -1,0 +1,19 @@
+{
+  "id": "bash-lsblk",
+  "command": "lsblk",
+  "description": "List information about block devices like disks and partitions",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "list disks",
+    "show partitions",
+    "block devices"
+  ],
+  "intents": [
+    "list all disks and partitions",
+    "see attached block devices"
+  ],
+  "example": "lsblk",
+  "danger": false,
+  "related": []
+}

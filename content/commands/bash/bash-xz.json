@@ -1,0 +1,18 @@
+{
+  "id": "bash-xz",
+  "command": "xz <file>",
+  "description": "Compress a file with xz (very high compression, slower)",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "xz compress",
+    "high compression",
+    "lzma"
+  ],
+  "intents": [
+    "compress a file with xz for maximum compression ratio"
+  ],
+  "example": "xz large.tar",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "bash-printcap",
+  "command": "printcap",
+  "description": "Printer capability database file (/etc/printcap)",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "printer database",
+    "printer config"
+  ],
+  "intents": [
+    "inspect the system's printer capability database"
+  ],
+  "example": "cat /etc/printcap",
+  "danger": false,
+  "related": []
+}

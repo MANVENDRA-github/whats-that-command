@@ -1,0 +1,19 @@
+{
+  "id": "bash-gzip",
+  "command": "gzip <file>",
+  "description": "Compress a file with gzip (replaces the file with file.gz)",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "compress file",
+    "gzip",
+    "shrink file"
+  ],
+  "intents": [
+    "compress a file with gzip",
+    "shrink a file to save space"
+  ],
+  "example": "gzip large.log",
+  "danger": false,
+  "related": []
+}

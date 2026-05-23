@@ -1,0 +1,21 @@
+{
+  "id": "bash-rsync",
+  "command": "rsync -av <src> <dest>",
+  "description": "Efficient file copy/sync that only transfers changed parts",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "sync folders",
+    "incremental copy",
+    "mirror directories",
+    "backup"
+  ],
+  "intents": [
+    "sync two folders efficiently",
+    "back up a directory to another machine",
+    "copy only changed files"
+  ],
+  "example": "rsync -av --delete src/ alice@server:/backup/",
+  "danger": false,
+  "related": []
+}

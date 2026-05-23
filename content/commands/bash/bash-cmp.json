@@ -1,0 +1,19 @@
+{
+  "id": "bash-cmp",
+  "command": "cmp <file1> <file2>",
+  "description": "Compare two files byte by byte and report the first difference",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "byte compare",
+    "are files identical",
+    "binary diff"
+  ],
+  "intents": [
+    "check if two binary files are identical",
+    "find the first byte where two files differ"
+  ],
+  "example": "cmp a.bin b.bin",
+  "danger": false,
+  "related": []
+}

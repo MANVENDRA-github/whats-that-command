@@ -1,0 +1,17 @@
+{
+  "id": "bash-chgrp",
+  "command": "chgrp <group> <file>",
+  "description": "Change just the group ownership of a file",
+  "tool": "bash",
+  "category": "permissions",
+  "tags": [
+    "change group",
+    "set file group"
+  ],
+  "intents": [
+    "change the group owner of a file"
+  ],
+  "example": "chgrp staff report.txt",
+  "danger": false,
+  "related": []
+}

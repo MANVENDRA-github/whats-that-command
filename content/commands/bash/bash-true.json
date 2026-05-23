@@ -1,0 +1,19 @@
+{
+  "id": "bash-true",
+  "command": "true",
+  "description": "Do nothing and return success (exit status 0)",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "always succeed",
+    "noop true",
+    "exit 0"
+  ],
+  "intents": [
+    "return success from a script",
+    "placeholder command that always succeeds"
+  ],
+  "example": "while true; do echo tick; sleep 1; done",
+  "danger": false,
+  "related": []
+}

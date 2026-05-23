@@ -1,0 +1,19 @@
+{
+  "id": "bash-chattr",
+  "command": "chattr +<attr> <file>",
+  "description": "Change extended attributes on an ext-family filesystem (e.g. make a file immutable)",
+  "tool": "bash",
+  "category": "permissions",
+  "tags": [
+    "immutable file",
+    "extended attributes",
+    "lock file"
+  ],
+  "intents": [
+    "make a file immutable so even root cannot change it",
+    "set extended file attributes"
+  ],
+  "example": "chattr +i important.conf",
+  "danger": true,
+  "related": []
+}

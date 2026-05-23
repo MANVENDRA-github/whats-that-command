@@ -1,0 +1,17 @@
+{
+  "id": "bash-users",
+  "command": "users",
+  "description": "Print the usernames of currently logged-in users in one line",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "logged-in users",
+    "one-line who"
+  ],
+  "intents": [
+    "list currently logged-in usernames"
+  ],
+  "example": "users",
+  "danger": false,
+  "related": []
+}

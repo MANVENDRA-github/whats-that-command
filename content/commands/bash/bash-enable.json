@@ -1,0 +1,17 @@
+{
+  "id": "bash-enable",
+  "command": "enable <name>",
+  "description": "Enable or disable shell builtins",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "toggle builtin",
+    "disable builtin"
+  ],
+  "intents": [
+    "disable a bash builtin so the external command is used instead"
+  ],
+  "example": "enable -n echo",
+  "danger": false,
+  "related": []
+}

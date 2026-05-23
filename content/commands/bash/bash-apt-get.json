@@ -1,0 +1,18 @@
+{
+  "id": "bash-apt-get",
+  "command": "apt-get <subcommand>",
+  "description": "Lower-level package management front-end for Debian/Ubuntu, suitable for scripts",
+  "tool": "bash",
+  "category": "package",
+  "tags": [
+    "install package",
+    "scriptable apt",
+    "debian ubuntu"
+  ],
+  "intents": [
+    "install or update packages from a script on debian or ubuntu"
+  ],
+  "example": "sudo apt-get install -y curl",
+  "danger": false,
+  "related": []
+}

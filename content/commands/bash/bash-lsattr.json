@@ -1,0 +1,19 @@
+{
+  "id": "bash-lsattr",
+  "command": "lsattr <file>",
+  "description": "List extended attributes set on files in an ext-family filesystem",
+  "tool": "bash",
+  "category": "permissions",
+  "tags": [
+    "view extended attributes",
+    "is immutable",
+    "check attrs"
+  ],
+  "intents": [
+    "check if a file is immutable",
+    "list extended attributes on files"
+  ],
+  "example": "lsattr file.conf",
+  "danger": false,
+  "related": []
+}

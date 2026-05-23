@@ -1,0 +1,19 @@
+{
+  "id": "bash-nslookup",
+  "command": "nslookup <domain>",
+  "description": "Look up DNS records for a domain (simpler alternative to dig)",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "dns lookup",
+    "resolve domain",
+    "simple dns"
+  ],
+  "intents": [
+    "quickly resolve a hostname to an ip",
+    "lookup dns for a domain"
+  ],
+  "example": "nslookup example.com",
+  "danger": false,
+  "related": []
+}

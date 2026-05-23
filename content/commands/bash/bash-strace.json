@@ -1,0 +1,19 @@
+{
+  "id": "bash-strace",
+  "command": "strace <command>",
+  "description": "Trace system calls and signals made by a program",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "trace syscalls",
+    "debug program",
+    "see kernel calls"
+  ],
+  "intents": [
+    "trace what system calls a program makes",
+    "debug why a program is failing by watching syscalls"
+  ],
+  "example": "strace -f ./mybin",
+  "danger": false,
+  "related": []
+}

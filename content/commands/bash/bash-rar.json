@@ -1,0 +1,17 @@
+{
+  "id": "bash-rar",
+  "command": "rar a <out>.rar <files>",
+  "description": "Create a RAR archive (requires the proprietary rar tool)",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "create rar",
+    "rar archive"
+  ],
+  "intents": [
+    "create a rar archive from files"
+  ],
+  "example": "rar a project.rar project/",
+  "danger": false,
+  "related": []
+}

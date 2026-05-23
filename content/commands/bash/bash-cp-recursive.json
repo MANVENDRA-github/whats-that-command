@@ -1,0 +1,19 @@
+{
+  "id": "bash-cp-recursive",
+  "command": "cp -r <src-dir> <dest-dir>",
+  "description": "Copy an entire directory tree to another location",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "copy folder",
+    "recursive copy",
+    "duplicate directory"
+  ],
+  "intents": [
+    "copy a whole folder including subfolders",
+    "recursively copy a directory"
+  ],
+  "example": "cp -r src/ backup/",
+  "danger": false,
+  "related": []
+}

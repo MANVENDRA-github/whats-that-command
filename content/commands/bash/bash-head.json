@@ -1,0 +1,20 @@
+{
+  "id": "bash-head",
+  "command": "head <file>",
+  "description": "Show the first lines of a file (default 10)",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "first lines",
+    "top of file",
+    "sample beginning"
+  ],
+  "intents": [
+    "see the first few lines of a file",
+    "sample the beginning of a file",
+    "show the top of a file"
+  ],
+  "example": "head -n 20 access.log",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-whereis",
+  "command": "whereis <name>",
+  "description": "Locate the binary, source, and manual page of a command",
+  "tool": "bash",
+  "category": "search",
+  "tags": [
+    "find binary and man",
+    "locate command",
+    "binary source manpage"
+  ],
+  "intents": [
+    "find the binary and the man page for a command",
+    "where are all the files for this command"
+  ],
+  "example": "whereis gcc",
+  "danger": false,
+  "related": []
+}

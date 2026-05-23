@@ -1,0 +1,19 @@
+{
+  "id": "bash-pv",
+  "command": "pv <file>",
+  "description": "Show a progress bar for data going through a pipeline",
+  "tool": "bash",
+  "category": "monitor",
+  "tags": [
+    "pipe progress",
+    "progress bar",
+    "monitor pipe"
+  ],
+  "intents": [
+    "show a progress bar while a file is being processed in a pipe",
+    "monitor data going through a pipeline"
+  ],
+  "example": "pv big.iso | gzip > big.iso.gz",
+  "danger": false,
+  "related": []
+}

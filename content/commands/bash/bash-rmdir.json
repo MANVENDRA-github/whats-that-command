@@ -1,0 +1,19 @@
+{
+  "id": "bash-rmdir",
+  "command": "rmdir <dir>",
+  "description": "Remove an empty directory",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "delete empty folder",
+    "remove dir",
+    "cleanup"
+  ],
+  "intents": [
+    "delete an empty directory",
+    "remove a folder that has nothing in it"
+  ],
+  "example": "rmdir old/",
+  "danger": true,
+  "related": []
+}

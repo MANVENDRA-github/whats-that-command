@@ -1,0 +1,17 @@
+{
+  "id": "bash-unalias",
+  "command": "unalias <name>",
+  "description": "Remove a previously defined alias",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "remove alias",
+    "delete shortcut"
+  ],
+  "intents": [
+    "delete a shell alias"
+  ],
+  "example": "unalias ll",
+  "danger": false,
+  "related": []
+}

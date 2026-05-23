@@ -1,0 +1,28 @@
+{
+  "id": "git-log-no-merges",
+  "command": "git log --no-merges",
+  "description": "Show commit history excluding merge commits",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "hide merge commits",
+    "real work only",
+    "exclude merges",
+    "linear history view"
+  ],
+  "intents": [
+    "show history but skip the merge commits",
+    "hide merges from the log",
+    "see only real commits not merges",
+    "exclude merge commits from git log",
+    "history without all the merge noise",
+    "view a cleaner log without merges"
+  ],
+  "example": "git log --no-merges",
+  "danger": false,
+  "related": [
+    "git-log",
+    "git-log-oneline",
+    "git-log-graph"
+  ]
+}

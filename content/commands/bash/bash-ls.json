@@ -1,0 +1,22 @@
+{
+  "id": "bash-ls",
+  "command": "ls",
+  "description": "List files and folders in the current directory",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "list files",
+    "show contents",
+    "what is here",
+    "dir listing"
+  ],
+  "intents": [
+    "list files in this folder",
+    "show me what is in this directory",
+    "see whats in the current folder",
+    "display files and folders here"
+  ],
+  "example": "ls -lah",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,28 @@
+{
+  "id": "git-stash-show",
+  "command": "git stash show -p",
+  "description": "Show the diff of what is in a stash",
+  "tool": "git",
+  "category": "stash",
+  "tags": [
+    "peek at stash",
+    "see stash contents",
+    "preview stash",
+    "what is in the stash"
+  ],
+  "intents": [
+    "see what is inside a stash without applying it",
+    "preview the changes in a stash entry",
+    "peek at the diff for a stashed change",
+    "what did i save in that stash",
+    "inspect a stash before deciding to pop it",
+    "view the contents of the top stash"
+  ],
+  "example": "git stash show -p",
+  "danger": false,
+  "related": [
+    "git-stash-list",
+    "git-stash-pop",
+    "git-stash-apply"
+  ]
+}

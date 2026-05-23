@@ -1,0 +1,19 @@
+{
+  "id": "bash-readonly",
+  "command": "readonly <var>=<value>",
+  "description": "Mark a variable so it cannot be modified or unset",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "immutable variable",
+    "constant",
+    "lock variable"
+  ],
+  "intents": [
+    "make a variable read-only",
+    "declare a constant in a bash script"
+  ],
+  "example": "readonly MAX=100",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-ssh",
+  "command": "ssh <user>@<host>",
+  "description": "Open an encrypted shell on a remote machine",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "remote shell",
+    "connect to server",
+    "login to remote"
+  ],
+  "intents": [
+    "log into a remote server over ssh",
+    "open a shell on another machine"
+  ],
+  "example": "ssh alice@server.example.com",
+  "danger": false,
+  "related": []
+}

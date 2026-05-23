@@ -1,0 +1,17 @@
+{
+  "id": "bash-fdformat",
+  "command": "fdformat <device>",
+  "description": "Low-level format a floppy disk",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "format floppy",
+    "low-level format"
+  ],
+  "intents": [
+    "low-level format a floppy disk"
+  ],
+  "example": "fdformat /dev/fd0",
+  "danger": true,
+  "related": []
+}

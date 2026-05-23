@@ -1,0 +1,17 @@
+{
+  "id": "bash-lprm",
+  "command": "lprm <job>",
+  "description": "Remove a print job from the print queue",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "cancel print job",
+    "remove from queue"
+  ],
+  "intents": [
+    "cancel a print job from the queue"
+  ],
+  "example": "lprm 42",
+  "danger": false,
+  "related": []
+}

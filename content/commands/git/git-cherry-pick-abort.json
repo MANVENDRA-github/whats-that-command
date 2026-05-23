@@ -1,0 +1,27 @@
+{
+  "id": "git-cherry-pick-abort",
+  "command": "git cherry-pick --abort",
+  "description": "Cancel an in-progress cherry-pick and return to the pre-cherry-pick state",
+  "tool": "git",
+  "category": "undo",
+  "tags": [
+    "stop cherry-pick",
+    "bail out",
+    "undo cherry-pick attempt",
+    "escape cherry-pick"
+  ],
+  "intents": [
+    "abort a cherry-pick that hit conflicts",
+    "cancel a cherry-pick in progress",
+    "get out of a cherry-pick gone wrong",
+    "stop cherry-picking and undo",
+    "bail out of a cherry-pick i started",
+    "i started a cherry-pick and want to back out"
+  ],
+  "example": "git cherry-pick --abort",
+  "danger": false,
+  "related": [
+    "git-cherry-pick",
+    "git-cherry-pick-continue"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "bash-tr",
+  "command": "tr <set1> <set2>",
+  "description": "Translate, squeeze, or delete characters from input",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "replace characters",
+    "uppercase to lowercase",
+    "character substitution"
+  ],
+  "intents": [
+    "convert all uppercase to lowercase",
+    "replace one character with another",
+    "delete specific characters from text"
+  ],
+  "example": "echo \"Hello\" | tr A-Z a-z",
+  "danger": false,
+  "related": []
+}

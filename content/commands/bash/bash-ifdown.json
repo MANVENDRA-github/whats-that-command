@@ -1,0 +1,17 @@
+{
+  "id": "bash-ifdown",
+  "command": "ifdown <iface>",
+  "description": "Bring a network interface down",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "disable interface",
+    "bring nic down"
+  ],
+  "intents": [
+    "bring a network interface down"
+  ],
+  "example": "sudo ifdown eth0",
+  "danger": false,
+  "related": []
+}

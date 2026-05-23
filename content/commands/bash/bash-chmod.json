@@ -1,0 +1,22 @@
+{
+  "id": "bash-chmod",
+  "command": "chmod <mode> <file>",
+  "description": "Change the permission bits on a file or directory",
+  "tool": "bash",
+  "category": "permissions",
+  "tags": [
+    "change permissions",
+    "file mode",
+    "octal perms"
+  ],
+  "intents": [
+    "change permissions on a file",
+    "make a file readable by everyone",
+    "set octal permissions"
+  ],
+  "example": "chmod 644 file.txt",
+  "danger": false,
+  "related": [
+    "bash-chmod-executable"
+  ]
+}

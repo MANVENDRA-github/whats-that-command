@@ -1,0 +1,18 @@
+{
+  "id": "bash-diff3",
+  "command": "diff3 <a> <b> <c>",
+  "description": "Compare three files at once and highlight three-way differences",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "three-way diff",
+    "merge comparison"
+  ],
+  "intents": [
+    "three-way diff between three files",
+    "compare three versions of a file"
+  ],
+  "example": "diff3 mine.txt base.txt theirs.txt",
+  "danger": false,
+  "related": []
+}

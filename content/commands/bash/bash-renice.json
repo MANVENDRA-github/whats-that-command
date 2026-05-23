@@ -1,0 +1,19 @@
+{
+  "id": "bash-renice",
+  "command": "renice <value> -p <pid>",
+  "description": "Change the scheduling priority of a running process",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "change priority",
+    "reprioritize",
+    "reduce cpu usage"
+  ],
+  "intents": [
+    "change the priority of a running process",
+    "make a running process less cpu-greedy"
+  ],
+  "example": "renice 10 -p 1234",
+  "danger": false,
+  "related": []
+}

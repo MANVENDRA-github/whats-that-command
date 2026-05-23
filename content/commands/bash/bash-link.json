@@ -1,0 +1,17 @@
+{
+  "id": "bash-link",
+  "command": "link <target> <newname>",
+  "description": "Low-level call to create a hard link, similar to ln",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "hard link",
+    "low-level link"
+  ],
+  "intents": [
+    "raw link syscall to create a hard link"
+  ],
+  "example": "link a.txt b.txt",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-export",
+  "command": "export <var>=<value>",
+  "description": "Set an environment variable that child processes will inherit",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "set env var",
+    "export variable",
+    "environment"
+  ],
+  "intents": [
+    "set an environment variable for this shell and child processes",
+    "export a variable for child commands to see"
+  ],
+  "example": "export PATH=$PATH:/opt/bin",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-modprobe",
+  "command": "modprobe <module>",
+  "description": "Load or unload a Linux kernel module",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "load kernel module",
+    "driver",
+    "kmod"
+  ],
+  "intents": [
+    "load a kernel module",
+    "enable a driver"
+  ],
+  "example": "sudo modprobe nvme",
+  "danger": false,
+  "related": []
+}

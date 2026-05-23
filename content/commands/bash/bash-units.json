@@ -1,0 +1,18 @@
+{
+  "id": "bash-units",
+  "command": "units",
+  "description": "Convert between different units of measurement",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "unit conversion",
+    "convert measurements"
+  ],
+  "intents": [
+    "convert between units of measurement",
+    "convert miles to kilometers from the terminal"
+  ],
+  "example": "units \"1 mile\" \"km\"",
+  "danger": false,
+  "related": []
+}

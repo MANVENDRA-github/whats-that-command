@@ -1,0 +1,18 @@
+{
+  "id": "bash-rcp",
+  "command": "rcp <src> <user>@<host>:<dest>",
+  "description": "Legacy unencrypted remote copy — use scp or rsync instead",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "legacy remote copy",
+    "unencrypted copy",
+    "old rsh"
+  ],
+  "intents": [
+    "legacy unencrypted remote copy via rsh"
+  ],
+  "example": "rcp file alice@host:/tmp/",
+  "danger": true,
+  "related": []
+}

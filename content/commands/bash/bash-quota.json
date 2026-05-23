@@ -1,0 +1,17 @@
+{
+  "id": "bash-quota",
+  "command": "quota",
+  "description": "Show disk usage and limits for a user",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "disk quota",
+    "user storage limit"
+  ],
+  "intents": [
+    "check disk quota for a user"
+  ],
+  "example": "quota -u alice",
+  "danger": false,
+  "related": []
+}

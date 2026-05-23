@@ -1,0 +1,20 @@
+{
+  "id": "bash-dmesg",
+  "command": "dmesg",
+  "description": "Print kernel ring buffer messages — boot logs, hardware events",
+  "tool": "bash",
+  "category": "logs",
+  "tags": [
+    "kernel messages",
+    "boot log",
+    "hardware events"
+  ],
+  "intents": [
+    "see kernel messages and boot log",
+    "check why hardware was disconnected",
+    "see what the kernel logged recently"
+  ],
+  "example": "dmesg -T | tail",
+  "danger": false,
+  "related": []
+}

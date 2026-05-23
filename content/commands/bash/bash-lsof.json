@@ -1,0 +1,22 @@
+{
+  "id": "bash-lsof",
+  "command": "lsof <opts>",
+  "description": "List open files (including network sockets) by process",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "list open files",
+    "open sockets",
+    "find file handles"
+  ],
+  "intents": [
+    "list every file a process has open",
+    "see open network sockets"
+  ],
+  "example": "lsof -i -P -n",
+  "danger": false,
+  "related": [
+    "bash-list-port",
+    "bash-kill-port"
+  ]
+}

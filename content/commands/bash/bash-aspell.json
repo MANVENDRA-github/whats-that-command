@@ -1,0 +1,19 @@
+{
+  "id": "bash-aspell",
+  "command": "aspell check <file>",
+  "description": "Interactive spell checker",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "spell check",
+    "spelling",
+    "check spelling"
+  ],
+  "intents": [
+    "spell-check a file",
+    "check spelling in a text file"
+  ],
+  "example": "aspell check letter.txt",
+  "danger": false,
+  "related": []
+}

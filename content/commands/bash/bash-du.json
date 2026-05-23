@@ -1,0 +1,22 @@
+{
+  "id": "bash-du",
+  "command": "du -sh <path>",
+  "description": "Show the total size used by a file or directory",
+  "tool": "bash",
+  "category": "monitor",
+  "tags": [
+    "folder size",
+    "disk usage",
+    "how big"
+  ],
+  "intents": [
+    "how big is this folder",
+    "measure disk usage of a directory",
+    "see folder sizes"
+  ],
+  "example": "du -sh /var/log/*",
+  "danger": false,
+  "related": [
+    "bash-disk-usage"
+  ]
+}

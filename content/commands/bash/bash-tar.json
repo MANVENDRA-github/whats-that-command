@@ -1,0 +1,22 @@
+{
+  "id": "bash-tar",
+  "command": "tar -cf <out>.tar <files>",
+  "description": "Bundle files into a tar archive (uncompressed)",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "create archive",
+    "bundle files",
+    "tarball"
+  ],
+  "intents": [
+    "bundle multiple files into one archive",
+    "create a tar file"
+  ],
+  "example": "tar -cf project.tar project/",
+  "danger": false,
+  "related": [
+    "bash-tar-create",
+    "bash-tar-extract"
+  ]
+}

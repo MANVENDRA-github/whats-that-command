@@ -1,0 +1,19 @@
+{
+  "id": "bash-timeout",
+  "command": "timeout <duration> <command>",
+  "description": "Run a command but kill it if it runs longer than the given duration",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "limit runtime",
+    "kill after time",
+    "bounded execution"
+  ],
+  "intents": [
+    "run a command but kill it if it hangs",
+    "limit how long a command can run"
+  ],
+  "example": "timeout 30s ./flaky.sh",
+  "danger": false,
+  "related": []
+}

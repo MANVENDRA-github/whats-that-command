@@ -1,0 +1,19 @@
+{
+  "id": "bash-hash",
+  "command": "hash",
+  "description": "Manage the shell's command-path cache",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "command cache",
+    "rehash path",
+    "forget cached path"
+  ],
+  "intents": [
+    "tell bash to forget cached command locations after a path change",
+    "inspect the command hash table"
+  ],
+  "example": "hash -r",
+  "danger": false,
+  "related": []
+}

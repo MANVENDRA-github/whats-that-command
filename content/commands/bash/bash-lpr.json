@@ -1,0 +1,17 @@
+{
+  "id": "bash-lpr",
+  "command": "lpr <file>",
+  "description": "Send a file to the default printer",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "print file",
+    "send to printer"
+  ],
+  "intents": [
+    "print a file from the command line"
+  ],
+  "example": "lpr report.pdf",
+  "danger": false,
+  "related": []
+}

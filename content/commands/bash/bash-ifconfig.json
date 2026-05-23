@@ -1,0 +1,19 @@
+{
+  "id": "bash-ifconfig",
+  "command": "ifconfig",
+  "description": "Show or configure network interfaces (legacy; use ip instead on modern Linux)",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "network interfaces",
+    "show ip address",
+    "configure nic"
+  ],
+  "intents": [
+    "show my network interfaces and ip addresses",
+    "configure a network interface"
+  ],
+  "example": "ifconfig eth0",
+  "danger": false,
+  "related": []
+}

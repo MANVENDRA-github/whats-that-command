@@ -1,0 +1,19 @@
+{
+  "id": "bash-printf",
+  "command": "printf <format> <args>",
+  "description": "Print formatted output, like C's printf",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "formatted output",
+    "printf format",
+    "precise print"
+  ],
+  "intents": [
+    "print formatted output with control over spacing",
+    "use printf to format numbers and strings"
+  ],
+  "example": "printf \"%-10s %5d\\n\" \"items\" 42",
+  "danger": false,
+  "related": []
+}

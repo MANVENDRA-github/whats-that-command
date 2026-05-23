@@ -1,0 +1,19 @@
+{
+  "id": "bash-strings",
+  "command": "strings <file>",
+  "description": "Extract printable strings from a binary file",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "extract text from binary",
+    "find strings",
+    "readable bytes"
+  ],
+  "intents": [
+    "extract readable text from a binary",
+    "find printable strings inside an executable"
+  ],
+  "example": "strings /bin/ls | grep usage",
+  "danger": false,
+  "related": []
+}

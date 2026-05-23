@@ -1,0 +1,17 @@
+{
+  "id": "bash-caller",
+  "command": "caller",
+  "description": "Print info about the call stack from a shell function",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "call stack",
+    "who called me"
+  ],
+  "intents": [
+    "print the call stack inside a bash function"
+  ],
+  "example": "caller 0",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-mkfile",
+  "command": "mkfile <size> <name>",
+  "description": "Create a file of a given size, padded with zeros (Solaris/macOS)",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "allocate file",
+    "zero-filled file",
+    "fixed-size file"
+  ],
+  "intents": [
+    "create a file of a specific size",
+    "allocate a zero-padded file"
+  ],
+  "example": "mkfile 10m big.bin",
+  "danger": false,
+  "related": []
+}

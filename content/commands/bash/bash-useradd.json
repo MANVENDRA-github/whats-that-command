@@ -1,0 +1,19 @@
+{
+  "id": "bash-useradd",
+  "command": "useradd <name>",
+  "description": "Create a new user account",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "create user",
+    "add account",
+    "new user"
+  ],
+  "intents": [
+    "create a new user on the system",
+    "add a user account"
+  ],
+  "example": "sudo useradd -m alice",
+  "danger": false,
+  "related": []
+}

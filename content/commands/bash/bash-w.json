@@ -1,0 +1,17 @@
+{
+  "id": "bash-w",
+  "command": "w",
+  "description": "Show who is logged in and what they are doing",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "who and what",
+    "logged-in activity"
+  ],
+  "intents": [
+    "see who is logged in and what command they are running"
+  ],
+  "example": "w",
+  "danger": false,
+  "related": []
+}

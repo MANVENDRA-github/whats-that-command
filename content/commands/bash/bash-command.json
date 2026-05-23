@@ -1,0 +1,19 @@
+{
+  "id": "bash-command",
+  "command": "command <name>",
+  "description": "Run a command bypassing shell functions and aliases",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "skip alias",
+    "run real binary",
+    "bypass alias"
+  ],
+  "intents": [
+    "run a command ignoring any alias for it",
+    "bypass shell functions and run the real binary"
+  ],
+  "example": "command ls",
+  "danger": false,
+  "related": []
+}

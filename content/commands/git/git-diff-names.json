@@ -1,0 +1,28 @@
+{
+  "id": "git-diff-names",
+  "command": "git diff --name-only",
+  "description": "List only the names of files that have changed, with no diff content",
+  "tool": "git",
+  "category": "inspect",
+  "tags": [
+    "which files changed",
+    "list changed files",
+    "file names only",
+    "what did i touch"
+  ],
+  "intents": [
+    "show me only the names of files i have changed",
+    "list which files were modified without showing the diff",
+    "i just want the file names that changed",
+    "what files did i edit since last commit",
+    "quick list of changed file paths",
+    "names of files that differ from the last commit"
+  ],
+  "example": "git diff --name-only",
+  "danger": false,
+  "related": [
+    "git-diff-all",
+    "git-diff-stat",
+    "git-status"
+  ]
+}

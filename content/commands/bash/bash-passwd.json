@@ -1,0 +1,19 @@
+{
+  "id": "bash-passwd",
+  "command": "passwd <user>",
+  "description": "Change a user's password",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "change password",
+    "set password",
+    "reset password"
+  ],
+  "intents": [
+    "change my password",
+    "reset another user's password"
+  ],
+  "example": "passwd",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-join",
+  "command": "join <file1> <file2>",
+  "description": "Join two files on a common field, like a SQL join",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "join files",
+    "sql-like join",
+    "merge on key"
+  ],
+  "intents": [
+    "join two sorted files on a common field",
+    "sql-style join in the shell"
+  ],
+  "example": "join -t, sorted1.csv sorted2.csv",
+  "danger": false,
+  "related": []
+}

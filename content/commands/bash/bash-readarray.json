@@ -1,0 +1,18 @@
+{
+  "id": "bash-readarray",
+  "command": "readarray <var>",
+  "description": "Read lines from stdin into an array variable",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "read lines into array",
+    "slurp file",
+    "mapfile alias"
+  ],
+  "intents": [
+    "read every line of a file into a bash array"
+  ],
+  "example": "readarray -t lines < file.txt",
+  "danger": false,
+  "related": []
+}

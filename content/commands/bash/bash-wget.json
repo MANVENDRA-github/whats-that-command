@@ -1,0 +1,20 @@
+{
+  "id": "bash-wget",
+  "command": "wget <url>",
+  "description": "Download files from the web, supports resume and recursive download",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "download file",
+    "fetch from web",
+    "recursive download"
+  ],
+  "intents": [
+    "download a file from a url",
+    "mirror a website",
+    "resume a failed download"
+  ],
+  "example": "wget https://example.com/file.tar.gz",
+  "danger": false,
+  "related": []
+}

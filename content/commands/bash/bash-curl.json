@@ -1,0 +1,22 @@
+{
+  "id": "bash-curl",
+  "command": "curl <url>",
+  "description": "Transfer data to or from a URL — HTTP, FTP, and many others",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "http request",
+    "fetch url",
+    "api call"
+  ],
+  "intents": [
+    "make an http request from the terminal",
+    "fetch a url",
+    "call a rest api"
+  ],
+  "example": "curl -i https://api.example.com",
+  "danger": false,
+  "related": [
+    "bash-curl-download"
+  ]
+}

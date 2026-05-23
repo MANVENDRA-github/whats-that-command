@@ -1,0 +1,19 @@
+{
+  "id": "bash-read",
+  "command": "read <var>",
+  "description": "Read a line from stdin into one or more variables",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "read input",
+    "prompt user",
+    "stdin to variable"
+  ],
+  "intents": [
+    "prompt the user for input in a script",
+    "read a line from stdin into a variable"
+  ],
+  "example": "read -p \"Name: \" name",
+  "danger": false,
+  "related": []
+}

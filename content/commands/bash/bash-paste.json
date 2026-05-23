@@ -1,0 +1,19 @@
+{
+  "id": "bash-paste",
+  "command": "paste <file1> <file2>",
+  "description": "Merge corresponding lines of files side-by-side",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "merge files",
+    "side-by-side",
+    "horizontal join"
+  ],
+  "intents": [
+    "combine two files line by line side by side",
+    "merge files horizontally"
+  ],
+  "example": "paste names.txt scores.txt",
+  "danger": false,
+  "related": []
+}

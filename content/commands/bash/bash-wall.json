@@ -1,0 +1,17 @@
+{
+  "id": "bash-wall",
+  "command": "wall <message>",
+  "description": "Broadcast a message to all logged-in users",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "broadcast message",
+    "all users"
+  ],
+  "intents": [
+    "broadcast a message to every user on the system"
+  ],
+  "example": "echo \"rebooting in 5 minutes\" | wall",
+  "danger": false,
+  "related": []
+}

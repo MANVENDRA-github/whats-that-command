@@ -1,0 +1,20 @@
+{
+  "id": "bash-dig",
+  "command": "dig <domain>",
+  "description": "Query DNS servers for records of a domain",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "dns lookup",
+    "resolve domain",
+    "query nameserver"
+  ],
+  "intents": [
+    "look up dns records for a domain",
+    "query a specific dns server",
+    "see the ip a domain resolves to"
+  ],
+  "example": "dig example.com",
+  "danger": false,
+  "related": []
+}

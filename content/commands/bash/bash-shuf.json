@@ -1,0 +1,19 @@
+{
+  "id": "bash-shuf",
+  "command": "shuf <file>",
+  "description": "Randomly shuffle the lines of a file",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "random order",
+    "shuffle lines",
+    "randomize"
+  ],
+  "intents": [
+    "shuffle the lines of a file randomly",
+    "pick a random line from a file"
+  ],
+  "example": "shuf -n 1 names.txt",
+  "danger": false,
+  "related": []
+}

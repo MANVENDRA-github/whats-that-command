@@ -1,0 +1,19 @@
+{
+  "id": "bash-fsck",
+  "command": "fsck <device>",
+  "description": "Check and optionally repair a filesystem",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "filesystem check",
+    "repair disk",
+    "fix filesystem"
+  ],
+  "intents": [
+    "check a filesystem for errors",
+    "repair a corrupted filesystem"
+  ],
+  "example": "sudo fsck /dev/sdb1",
+  "danger": true,
+  "related": []
+}

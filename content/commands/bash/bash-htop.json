@@ -1,0 +1,19 @@
+{
+  "id": "bash-htop",
+  "command": "htop",
+  "description": "Interactive process viewer with color, scrolling, and tree view",
+  "tool": "bash",
+  "category": "monitor",
+  "tags": [
+    "nicer top",
+    "colored process viewer",
+    "interactive monitor"
+  ],
+  "intents": [
+    "use a friendlier interactive process viewer",
+    "monitor processes with a colorful ui"
+  ],
+  "example": "htop",
+  "danger": false,
+  "related": []
+}

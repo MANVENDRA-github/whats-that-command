@@ -1,0 +1,21 @@
+{
+  "id": "bash-cd",
+  "command": "cd",
+  "description": "Change the current working directory",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "change directory",
+    "move to folder",
+    "navigate"
+  ],
+  "intents": [
+    "go into a folder",
+    "change to a different directory",
+    "navigate to a path",
+    "enter a directory"
+  ],
+  "example": "cd /etc",
+  "danger": false,
+  "related": []
+}

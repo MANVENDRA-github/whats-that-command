@@ -1,0 +1,17 @@
+{
+  "id": "bash-tar-list",
+  "command": "tar -tf <file>.tar",
+  "description": "List the contents of a tar archive without extracting it",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "inspect tarball",
+    "list tar contents"
+  ],
+  "intents": [
+    "see what is inside a tar archive without extracting"
+  ],
+  "example": "tar -tzf archive.tar.gz",
+  "danger": false,
+  "related": []
+}

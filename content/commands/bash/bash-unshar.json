@@ -1,0 +1,17 @@
+{
+  "id": "bash-unshar",
+  "command": "unshar <file>.shar",
+  "description": "Extract a shell archive (.shar) by executing it",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "extract shar",
+    "shell archive"
+  ],
+  "intents": [
+    "extract a shell archive file"
+  ],
+  "example": "unshar bundle.shar",
+  "danger": false,
+  "related": []
+}

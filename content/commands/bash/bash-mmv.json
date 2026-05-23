@@ -1,0 +1,19 @@
+{
+  "id": "bash-mmv",
+  "command": "mmv <pattern> <target>",
+  "description": "Move or rename many files in a single command using wildcards",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "bulk rename",
+    "mass move",
+    "pattern rename"
+  ],
+  "intents": [
+    "rename a batch of files using a pattern",
+    "mass-move many files in one go"
+  ],
+  "example": "mmv \"*.txt\" \"#1.bak\"",
+  "danger": false,
+  "related": []
+}

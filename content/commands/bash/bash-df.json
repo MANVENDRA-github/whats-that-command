@@ -1,0 +1,21 @@
+{
+  "id": "bash-df",
+  "command": "df -h",
+  "description": "Show how much disk space is used and available per filesystem",
+  "tool": "bash",
+  "category": "monitor",
+  "tags": [
+    "disk free",
+    "storage usage",
+    "free space"
+  ],
+  "intents": [
+    "how much free disk space do i have",
+    "show disk usage per filesystem"
+  ],
+  "example": "df -h",
+  "danger": false,
+  "related": [
+    "bash-disk-free"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-make",
+  "command": "make <target>",
+  "description": "Build software from a Makefile that declares dependencies and recipes",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "build project",
+    "run makefile target",
+    "compile"
+  ],
+  "intents": [
+    "build a project using a makefile",
+    "run a target in a makefile"
+  ],
+  "example": "make all",
+  "danger": false,
+  "related": []
+}

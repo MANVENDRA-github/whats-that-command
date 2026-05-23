@@ -1,0 +1,17 @@
+{
+  "id": "bash-cron-table",
+  "command": "crontab -l",
+  "description": "List the current user's scheduled cron jobs",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "list cron jobs",
+    "show schedule"
+  ],
+  "intents": [
+    "show my scheduled cron jobs"
+  ],
+  "example": "crontab -l",
+  "danger": false,
+  "related": []
+}

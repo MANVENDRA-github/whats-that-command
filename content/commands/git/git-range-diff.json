@@ -1,0 +1,28 @@
+{
+  "id": "git-range-diff",
+  "command": "git range-diff <range1> <range2>",
+  "description": "Compare two ranges of commits to see how they differ — useful for reviewing a force-pushed rebase",
+  "tool": "git",
+  "category": "inspect",
+  "tags": [
+    "compare commit ranges",
+    "diff two rebases",
+    "see what changed in a rebase",
+    "review a force-push"
+  ],
+  "intents": [
+    "compare what changed between two rebased versions of a branch",
+    "see how a force-push rewrote my commits",
+    "diff two ranges of commits side by side",
+    "review what changed across a rebase",
+    "compare an old branch tip with the rebased one",
+    "verify a rebase only reordered commits and did not change content"
+  ],
+  "example": "git range-diff main..feature@{1} main..feature",
+  "danger": false,
+  "related": [
+    "git-diff-branches",
+    "git-rebase",
+    "git-log"
+  ]
+}

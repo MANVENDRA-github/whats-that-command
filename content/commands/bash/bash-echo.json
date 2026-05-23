@@ -1,0 +1,19 @@
+{
+  "id": "bash-echo",
+  "command": "echo <text>",
+  "description": "Print text to standard output",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "print text",
+    "output string",
+    "display message"
+  ],
+  "intents": [
+    "print a message",
+    "echo a value to the terminal"
+  ],
+  "example": "echo \"Hello, world\"",
+  "danger": false,
+  "related": []
+}

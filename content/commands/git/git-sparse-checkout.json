@@ -1,0 +1,28 @@
+{
+  "id": "git-sparse-checkout",
+  "command": "git sparse-checkout set <path>...",
+  "description": "Check out only specific folders of a repository to keep your working tree small",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "partial checkout",
+    "monorepo subset",
+    "only some folders",
+    "shrink working tree",
+    "narrow checkout"
+  ],
+  "intents": [
+    "only check out a few folders of this huge repo",
+    "sparse checkout for a monorepo",
+    "work on just one subfolder of a large repository",
+    "skip cloning files i dont care about",
+    "narrow my working tree to specific directories",
+    "shrink a giant repo by only checking out parts of it"
+  ],
+  "example": "git sparse-checkout set frontend/ shared/",
+  "danger": false,
+  "related": [
+    "git-clone",
+    "git-clone-shallow"
+  ]
+}

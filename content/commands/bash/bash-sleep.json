@@ -1,0 +1,19 @@
+{
+  "id": "bash-sleep",
+  "command": "sleep <duration>",
+  "description": "Pause for a given amount of time",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "pause script",
+    "wait",
+    "delay"
+  ],
+  "intents": [
+    "pause a script for a few seconds",
+    "wait before the next command"
+  ],
+  "example": "sleep 5",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "bash-lprint",
+  "command": "lprint <file>",
+  "description": "Print a file (variant on older systems)",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "print file",
+    "legacy print"
+  ],
+  "intents": [
+    "print a file on legacy systems"
+  ],
+  "example": "lprint file.txt",
+  "danger": false,
+  "related": []
+}

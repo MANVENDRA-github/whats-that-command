@@ -1,0 +1,19 @@
+{
+  "id": "bash-7z",
+  "command": "7z a <out>.7z <files>",
+  "description": "Create a 7-Zip archive with strong compression",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "7zip archive",
+    "strong compression",
+    "create 7z"
+  ],
+  "intents": [
+    "create a 7zip archive",
+    "package files with strong compression"
+  ],
+  "example": "7z a project.7z project/",
+  "danger": false,
+  "related": []
+}

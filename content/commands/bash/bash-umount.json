@@ -1,0 +1,19 @@
+{
+  "id": "bash-umount",
+  "command": "umount <mountpoint>",
+  "description": "Detach a mounted filesystem from the directory tree",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "unmount drive",
+    "detach filesystem",
+    "unmount usb"
+  ],
+  "intents": [
+    "unmount a usb drive",
+    "detach a mounted filesystem before unplugging"
+  ],
+  "example": "sudo umount /mnt/usb",
+  "danger": false,
+  "related": []
+}

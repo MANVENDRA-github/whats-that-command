@@ -1,0 +1,19 @@
+{
+  "id": "bash-look",
+  "command": "look <prefix>",
+  "description": "Show lines beginning with a given prefix (works on sorted files; useful with /usr/share/dict)",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "prefix search",
+    "dictionary lookup",
+    "word lookup"
+  ],
+  "intents": [
+    "find words starting with a prefix in the system dictionary",
+    "prefix lookup in a sorted file"
+  ],
+  "example": "look pre",
+  "danger": false,
+  "related": []
+}

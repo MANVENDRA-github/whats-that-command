@@ -1,0 +1,19 @@
+{
+  "id": "bash-dir",
+  "command": "dir",
+  "description": "List directory contents in a brief, column-formatted form",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "list files",
+    "dos-style listing",
+    "brief listing"
+  ],
+  "intents": [
+    "list files like the old dos dir command",
+    "see directory contents in columns"
+  ],
+  "example": "dir",
+  "danger": false,
+  "related": []
+}

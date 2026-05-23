@@ -1,0 +1,19 @@
+{
+  "id": "bash-bc",
+  "command": "bc",
+  "description": "Arbitrary-precision calculator language",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "calculator",
+    "arbitrary precision math",
+    "shell math"
+  ],
+  "intents": [
+    "do floating-point math in the shell",
+    "use a precise calculator from the terminal"
+  ],
+  "example": "echo \"scale=4; 1/3\" | bc",
+  "danger": false,
+  "related": []
+}

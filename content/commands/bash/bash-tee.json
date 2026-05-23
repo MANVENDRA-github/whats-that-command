@@ -1,0 +1,19 @@
+{
+  "id": "bash-tee",
+  "command": "tee <file>",
+  "description": "Read from stdin and write to both stdout and one or more files",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "split output",
+    "write and print",
+    "log and show"
+  ],
+  "intents": [
+    "save output to a file while also showing it",
+    "send a command's output to both a file and the screen"
+  ],
+  "example": "ls -la | tee out.txt",
+  "danger": false,
+  "related": []
+}

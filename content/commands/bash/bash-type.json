@@ -1,0 +1,19 @@
+{
+  "id": "bash-type",
+  "command": "type <name>",
+  "description": "Tell what a shell command really is: alias, builtin, function, or external binary",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "what is this command",
+    "alias or builtin",
+    "classify command"
+  ],
+  "intents": [
+    "is this an alias or a real command",
+    "classify a shell command"
+  ],
+  "example": "type ll",
+  "danger": false,
+  "related": []
+}

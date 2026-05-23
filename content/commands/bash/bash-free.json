@@ -1,0 +1,19 @@
+{
+  "id": "bash-free",
+  "command": "free -h",
+  "description": "Show free and used memory and swap",
+  "tool": "bash",
+  "category": "monitor",
+  "tags": [
+    "memory usage",
+    "free ram",
+    "check memory"
+  ],
+  "intents": [
+    "how much free memory do i have",
+    "show ram and swap usage"
+  ],
+  "example": "free -h",
+  "danger": false,
+  "related": []
+}

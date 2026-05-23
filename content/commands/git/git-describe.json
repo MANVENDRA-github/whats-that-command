@@ -1,0 +1,28 @@
+{
+  "id": "git-describe",
+  "command": "git describe",
+  "description": "Produce a human-readable name for the current commit based on the most recent reachable tag",
+  "tool": "git",
+  "category": "tags",
+  "tags": [
+    "version string",
+    "name a commit",
+    "release identifier",
+    "build version",
+    "tag-based name"
+  ],
+  "intents": [
+    "what is the current version based on tags",
+    "generate a version string for the build",
+    "get a human-friendly name for this commit",
+    "describe the current commit by nearest tag",
+    "show how far ahead i am of the last release tag",
+    "build a release identifier from git tags"
+  ],
+  "example": "git describe",
+  "danger": false,
+  "related": [
+    "git-tag-create",
+    "git-list-tags"
+  ]
+}

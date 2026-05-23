@@ -1,0 +1,17 @@
+{
+  "id": "bash-groupmod",
+  "command": "groupmod <opts> <group>",
+  "description": "Modify an existing group",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "edit group",
+    "rename group"
+  ],
+  "intents": [
+    "rename a group or change its gid"
+  ],
+  "example": "sudo groupmod -n newname oldname",
+  "danger": false,
+  "related": []
+}

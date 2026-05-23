@@ -1,0 +1,19 @@
+{
+  "id": "bash-dpkg",
+  "command": "dpkg <opts> <package>.deb",
+  "description": "Low-level package manager for installing/removing .deb files directly",
+  "tool": "bash",
+  "category": "package",
+  "tags": [
+    "install deb file",
+    "low-level package",
+    "remove deb"
+  ],
+  "intents": [
+    "install a downloaded .deb package",
+    "list installed packages on debian"
+  ],
+  "example": "sudo dpkg -i package.deb",
+  "danger": false,
+  "related": []
+}

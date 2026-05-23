@@ -1,0 +1,18 @@
+{
+  "id": "bash-mtools",
+  "command": "mtools",
+  "description": "Collection of tools to access MS-DOS filesystems without mounting",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "dos filesystem",
+    "fat access",
+    "msdos tools"
+  ],
+  "intents": [
+    "access a dos formatted disk without mounting it"
+  ],
+  "example": "mdir A:",
+  "danger": false,
+  "related": []
+}

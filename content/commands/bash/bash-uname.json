@@ -1,0 +1,19 @@
+{
+  "id": "bash-uname",
+  "command": "uname -a",
+  "description": "Print system information: kernel, hostname, architecture, OS",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "system info",
+    "kernel version",
+    "os and arch"
+  ],
+  "intents": [
+    "what os and kernel am i running",
+    "show system architecture and kernel version"
+  ],
+  "example": "uname -a",
+  "danger": false,
+  "related": []
+}

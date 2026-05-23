@@ -1,0 +1,20 @@
+{
+  "id": "bash-set",
+  "command": "set <options>",
+  "description": "Set shell options and positional parameters; without args, list all shell variables",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "shell options",
+    "set flags",
+    "list variables"
+  ],
+  "intents": [
+    "enable strict mode in a bash script",
+    "list all shell variables",
+    "set shell behavior flags"
+  ],
+  "example": "set -euo pipefail",
+  "danger": false,
+  "related": []
+}

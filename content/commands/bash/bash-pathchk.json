@@ -1,0 +1,17 @@
+{
+  "id": "bash-pathchk",
+  "command": "pathchk <path>",
+  "description": "Check whether a path name is valid and portable",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "validate path",
+    "portable filename"
+  ],
+  "intents": [
+    "validate that a filename is portable across systems"
+  ],
+  "example": "pathchk -p file.txt",
+  "danger": false,
+  "related": []
+}

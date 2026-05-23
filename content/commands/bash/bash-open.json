@@ -1,0 +1,19 @@
+{
+  "id": "bash-open",
+  "command": "open <file>",
+  "description": "Open a file, folder, or URL with the default application (macOS)",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "open with default app",
+    "launch file",
+    "macos open"
+  ],
+  "intents": [
+    "open a file in its default application on macos",
+    "open a folder in finder"
+  ],
+  "example": "open report.pdf",
+  "danger": false,
+  "related": []
+}

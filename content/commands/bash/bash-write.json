@@ -1,0 +1,17 @@
+{
+  "id": "bash-write",
+  "command": "write <user>",
+  "description": "Send a message to another logged-in user's terminal",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "message user",
+    "terminal message"
+  ],
+  "intents": [
+    "send a message to another logged-in user"
+  ],
+  "example": "write alice",
+  "danger": false,
+  "related": []
+}

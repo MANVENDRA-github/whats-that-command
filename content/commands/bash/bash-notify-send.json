@@ -1,0 +1,19 @@
+{
+  "id": "bash-notify-send",
+  "command": "notify-send <title> <body>",
+  "description": "Send a desktop notification (Linux/freedesktop)",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "desktop notification",
+    "popup alert",
+    "toast"
+  ],
+  "intents": [
+    "send a desktop notification from a script",
+    "pop up an alert on the linux desktop"
+  ],
+  "example": "notify-send \"Done\" \"Build finished\"",
+  "danger": false,
+  "related": []
+}

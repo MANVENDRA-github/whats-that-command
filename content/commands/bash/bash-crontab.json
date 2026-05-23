@@ -1,0 +1,20 @@
+{
+  "id": "bash-crontab",
+  "command": "crontab -e",
+  "description": "Edit the current user's crontab to schedule recurring jobs",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "schedule job",
+    "recurring task",
+    "edit crontab"
+  ],
+  "intents": [
+    "schedule a recurring job",
+    "edit my crontab",
+    "set up a cron job"
+  ],
+  "example": "crontab -e",
+  "danger": false,
+  "related": []
+}

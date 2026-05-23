@@ -1,0 +1,20 @@
+{
+  "id": "bash-tput",
+  "command": "tput <capability>",
+  "description": "Query the terminal capabilities database for things like colors and cursor moves",
+  "tool": "bash",
+  "category": "terminal",
+  "tags": [
+    "terminal control",
+    "colors and cursor",
+    "ansi capabilities"
+  ],
+  "intents": [
+    "change terminal colors from a script",
+    "get the number of columns of the terminal",
+    "query terminal capabilities"
+  ],
+  "example": "tput colors",
+  "danger": false,
+  "related": []
+}

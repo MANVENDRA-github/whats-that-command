@@ -1,0 +1,19 @@
+{
+  "id": "bash-alias",
+  "command": "alias <name>='<command>'",
+  "description": "Create a shorthand name for a longer command",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "command shortcut",
+    "create alias",
+    "shorten command"
+  ],
+  "intents": [
+    "create a shortcut for a long command",
+    "add a shell alias"
+  ],
+  "example": "alias ll=\"ls -lah\"",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "bash-uudecode",
+  "command": "uudecode <file>",
+  "description": "Decode a file that was encoded with uuencode",
+  "tool": "bash",
+  "category": "encoding",
+  "tags": [
+    "decode uuencoded",
+    "restore binary"
+  ],
+  "intents": [
+    "decode a uuencoded file back to binary"
+  ],
+  "example": "uudecode photo.uu",
+  "danger": false,
+  "related": []
+}

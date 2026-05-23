@@ -1,0 +1,28 @@
+{
+  "id": "git-difftool",
+  "command": "git difftool",
+  "description": "Open a configured external diff tool to view changes",
+  "tool": "git",
+  "category": "inspect",
+  "tags": [
+    "visual diff",
+    "external diff tool",
+    "gui diff",
+    "compare in app"
+  ],
+  "intents": [
+    "open my visual diff tool",
+    "view changes in a gui instead of the terminal",
+    "use vscode or beyond compare to view diffs",
+    "open an external app to inspect changes",
+    "see file differences side-by-side in a gui",
+    "compare my changes in a graphical tool"
+  ],
+  "example": "git difftool",
+  "danger": false,
+  "related": [
+    "git-diff-all",
+    "git-diff-stat",
+    "git-mergetool"
+  ]
+}

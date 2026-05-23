@@ -1,0 +1,20 @@
+{
+  "id": "bash-ping",
+  "command": "ping <host>",
+  "description": "Test reachability of a host by sending ICMP echo packets",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "test connectivity",
+    "check host alive",
+    "ping host"
+  ],
+  "intents": [
+    "check if a server is reachable",
+    "test network connectivity to a host",
+    "is this host up"
+  ],
+  "example": "ping -c 4 google.com",
+  "danger": false,
+  "related": []
+}

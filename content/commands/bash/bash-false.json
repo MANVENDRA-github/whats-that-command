@@ -1,0 +1,19 @@
+{
+  "id": "bash-false",
+  "command": "false",
+  "description": "Do nothing and return failure (exit status 1)",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "always fail",
+    "noop false",
+    "exit 1"
+  ],
+  "intents": [
+    "return failure from a script",
+    "placeholder that always fails for testing"
+  ],
+  "example": "false || echo \"failed\"",
+  "danger": false,
+  "related": []
+}

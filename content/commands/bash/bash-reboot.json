@@ -1,0 +1,18 @@
+{
+  "id": "bash-reboot",
+  "command": "reboot",
+  "description": "Reboot the machine",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "restart system",
+    "reboot machine"
+  ],
+  "intents": [
+    "reboot this server",
+    "restart the machine"
+  ],
+  "example": "sudo reboot",
+  "danger": true,
+  "related": []
+}

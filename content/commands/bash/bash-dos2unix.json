@@ -1,0 +1,20 @@
+{
+  "id": "bash-dos2unix",
+  "command": "dos2unix <file>",
+  "description": "Convert text file line endings from Windows (CRLF) to Unix (LF)",
+  "tool": "bash",
+  "category": "encoding",
+  "tags": [
+    "fix line endings",
+    "crlf to lf",
+    "convert from dos"
+  ],
+  "intents": [
+    "fix windows line endings in a file",
+    "convert crlf to lf",
+    "strip carriage returns from a text file"
+  ],
+  "example": "dos2unix script.sh",
+  "danger": false,
+  "related": []
+}

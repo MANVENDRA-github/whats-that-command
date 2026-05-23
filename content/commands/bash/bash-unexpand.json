@@ -1,0 +1,19 @@
+{
+  "id": "bash-unexpand",
+  "command": "unexpand <file>",
+  "description": "Convert leading spaces in a file to tabs",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "spaces to tabs",
+    "entab",
+    "unexpand tabs"
+  ],
+  "intents": [
+    "replace leading spaces with tabs",
+    "convert space indentation back to tabs"
+  ],
+  "example": "unexpand -t 4 src.py",
+  "danger": false,
+  "related": []
+}

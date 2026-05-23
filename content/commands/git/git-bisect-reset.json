@@ -1,0 +1,28 @@
+{
+  "id": "git-bisect-reset",
+  "command": "git bisect reset",
+  "description": "End a bisect session and return to the branch you started from",
+  "tool": "git",
+  "category": "debug",
+  "tags": [
+    "finish bisect",
+    "stop hunting",
+    "exit bisect mode",
+    "back to my branch"
+  ],
+  "intents": [
+    "i found the bad commit, end the bisect",
+    "stop bisecting and go back to my branch",
+    "exit bisect mode after finding the issue",
+    "finish the bisect session and return to normal",
+    "im done bisecting, clean up and return",
+    "abort a bisect i no longer want to continue"
+  ],
+  "example": "git bisect reset",
+  "danger": false,
+  "related": [
+    "git-bisect-start",
+    "git-bisect-good",
+    "git-bisect-bad"
+  ]
+}

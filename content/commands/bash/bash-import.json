@@ -1,0 +1,19 @@
+{
+  "id": "bash-import",
+  "command": "import <file>",
+  "description": "Capture an X server screenshot to an image file (ImageMagick)",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "screenshot",
+    "capture screen",
+    "screen grab"
+  ],
+  "intents": [
+    "take a screenshot from the command line",
+    "capture part of the screen to an image file"
+  ],
+  "example": "import screenshot.png",
+  "danger": false,
+  "related": []
+}

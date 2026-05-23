@@ -1,0 +1,30 @@
+{
+  "id": "git-switch-previous",
+  "command": "git switch -",
+  "description": "Switch back to the branch you were on just before this one",
+  "tool": "git",
+  "category": "branch",
+  "tags": [
+    "toggle branch",
+    "previous branch",
+    "go back to last branch",
+    "swap between two branches",
+    "flip branches"
+  ],
+  "intents": [
+    "switch back to the branch i was just on",
+    "go to the previous branch",
+    "toggle between two branches quickly",
+    "swap to the last branch i had checked out",
+    "flip back to where i was before switching",
+    "shortcut to jump between two branches",
+    "i keep going back and forth between two branches"
+  ],
+  "example": "git switch -",
+  "danger": false,
+  "related": [
+    "git-switch-branch",
+    "git-checkout-branch",
+    "git-recent-branches"
+  ]
+}

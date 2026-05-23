@@ -1,0 +1,19 @@
+{
+  "id": "bash-iostat",
+  "command": "iostat",
+  "description": "Report cpu and storage device I/O statistics",
+  "tool": "bash",
+  "category": "monitor",
+  "tags": [
+    "disk io stats",
+    "cpu and io",
+    "storage performance"
+  ],
+  "intents": [
+    "see how busy each disk is",
+    "report disk i/o per device"
+  ],
+  "example": "iostat -xm 2",
+  "danger": false,
+  "related": []
+}

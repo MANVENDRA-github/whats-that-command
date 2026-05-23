@@ -1,0 +1,19 @@
+{
+  "id": "bash-ulimit",
+  "command": "ulimit <opts>",
+  "description": "Get or set resource limits for processes (open files, memory, etc.)",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "resource limits",
+    "open files limit",
+    "rlimit"
+  ],
+  "intents": [
+    "raise the open files limit",
+    "check or set process resource limits"
+  ],
+  "example": "ulimit -n 65535",
+  "danger": false,
+  "related": []
+}

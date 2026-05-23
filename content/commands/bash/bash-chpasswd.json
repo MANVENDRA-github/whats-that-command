@@ -1,0 +1,17 @@
+{
+  "id": "bash-chpasswd",
+  "command": "chpasswd",
+  "description": "Change passwords in bulk by reading user:password pairs on stdin",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "bulk password change",
+    "batch password update"
+  ],
+  "intents": [
+    "change many passwords at once from a script"
+  ],
+  "example": "echo \"alice:newpass\" | sudo chpasswd",
+  "danger": false,
+  "related": []
+}

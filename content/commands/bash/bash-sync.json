@@ -1,0 +1,19 @@
+{
+  "id": "bash-sync",
+  "command": "sync",
+  "description": "Flush filesystem buffers — write all cached data to disk",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "flush to disk",
+    "commit buffers",
+    "safe before unplug"
+  ],
+  "intents": [
+    "flush filesystem caches to disk before unplugging a drive",
+    "force pending writes to actually hit the disk"
+  ],
+  "example": "sync",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": "bash-cp",
+  "command": "cp <src> <dest>",
+  "description": "Copy a file from one location to another",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "copy file",
+    "duplicate",
+    "clone file"
+  ],
+  "intents": [
+    "copy a file to another place",
+    "duplicate a file",
+    "make a copy of a file"
+  ],
+  "example": "cp src.txt backup.txt",
+  "danger": false,
+  "related": []
+}

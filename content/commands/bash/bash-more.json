@@ -1,0 +1,19 @@
+{
+  "id": "bash-more",
+  "command": "more <file>",
+  "description": "Simpler pager: view a file one screen at a time",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "page through file",
+    "simple pager",
+    "view file"
+  ],
+  "intents": [
+    "page through a file with a simple pager",
+    "view file content one screen at a time"
+  ],
+  "example": "more notes.txt",
+  "danger": false,
+  "related": []
+}

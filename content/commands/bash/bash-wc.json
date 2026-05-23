@@ -1,0 +1,20 @@
+{
+  "id": "bash-wc",
+  "command": "wc <file>",
+  "description": "Count lines, words, and bytes in a file",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "count lines",
+    "word count",
+    "byte count"
+  ],
+  "intents": [
+    "count the number of lines in a file",
+    "how many words are in this file",
+    "get a line count"
+  ],
+  "example": "wc -l app.log",
+  "danger": false,
+  "related": []
+}

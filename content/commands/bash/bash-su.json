@@ -1,0 +1,20 @@
+{
+  "id": "bash-su",
+  "command": "su - <user>",
+  "description": "Switch to another user account, defaulting to root",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "switch user",
+    "become root",
+    "change account"
+  ],
+  "intents": [
+    "become another user in this shell",
+    "switch to the root user",
+    "change user account"
+  ],
+  "example": "su - alice",
+  "danger": false,
+  "related": []
+}

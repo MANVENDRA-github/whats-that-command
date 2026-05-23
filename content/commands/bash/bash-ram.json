@@ -1,0 +1,17 @@
+{
+  "id": "bash-ram",
+  "command": "ram",
+  "description": "Show RAM usage (varies by distribution; often a script around free)",
+  "tool": "bash",
+  "category": "monitor",
+  "tags": [
+    "ram usage",
+    "memory check"
+  ],
+  "intents": [
+    "show ram usage on this machine"
+  ],
+  "example": "ram",
+  "danger": false,
+  "related": []
+}

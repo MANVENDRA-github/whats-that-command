@@ -1,0 +1,22 @@
+{
+  "id": "bash-ps",
+  "command": "ps aux",
+  "description": "Snapshot of currently running processes",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "list processes",
+    "running tasks",
+    "process snapshot"
+  ],
+  "intents": [
+    "list all running processes",
+    "see what processes are running",
+    "snapshot of processes"
+  ],
+  "example": "ps aux | grep node",
+  "danger": false,
+  "related": [
+    "bash-top-processes"
+  ]
+}

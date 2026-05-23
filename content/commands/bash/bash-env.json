@@ -1,0 +1,19 @@
+{
+  "id": "bash-env",
+  "command": "env",
+  "description": "Print the environment, or run a command in a modified environment",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "show environment",
+    "run with env",
+    "env vars"
+  ],
+  "intents": [
+    "show all environment variables",
+    "run a command with specific environment variables set"
+  ],
+  "example": "env DEBUG=1 ./script.sh",
+  "danger": false,
+  "related": []
+}

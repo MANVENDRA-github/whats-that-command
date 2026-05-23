@@ -1,0 +1,17 @@
+{
+  "id": "bash-groupdel",
+  "command": "groupdel <name>",
+  "description": "Delete a group",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "delete group",
+    "remove group"
+  ],
+  "intents": [
+    "delete a group from the system"
+  ],
+  "example": "sudo groupdel devs",
+  "danger": true,
+  "related": []
+}

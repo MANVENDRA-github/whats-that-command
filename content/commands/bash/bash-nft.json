@@ -1,0 +1,19 @@
+{
+  "id": "bash-nft",
+  "command": "nft <subcommand>",
+  "description": "Manage nftables firewall rules (modern replacement for iptables)",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "firewall rules",
+    "nftables",
+    "packet filter"
+  ],
+  "intents": [
+    "manage firewall rules with nftables",
+    "modern replacement for iptables"
+  ],
+  "example": "sudo nft list ruleset",
+  "danger": true,
+  "related": []
+}

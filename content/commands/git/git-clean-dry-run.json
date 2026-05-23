@@ -1,0 +1,30 @@
+{
+  "id": "git-clean-dry-run",
+  "command": "git clean -nd",
+  "description": "Preview which untracked files and directories git clean would delete, without removing anything",
+  "tool": "git",
+  "category": "inspect",
+  "tags": [
+    "preview clean",
+    "what would be deleted",
+    "dry run before destructive",
+    "safety check",
+    "test before clean"
+  ],
+  "intents": [
+    "show me what git clean would delete before i actually run it",
+    "preview untracked files that would be removed",
+    "dry run for git clean so i dont lose work",
+    "what files would disappear if i clean the working tree",
+    "safety check before deleting untracked files",
+    "list what git clean is about to throw away",
+    "test git clean without actually deleting anything"
+  ],
+  "example": "git clean -nd",
+  "danger": false,
+  "related": [
+    "git-clean",
+    "git-status-ignored",
+    "git-discard-all"
+  ]
+}

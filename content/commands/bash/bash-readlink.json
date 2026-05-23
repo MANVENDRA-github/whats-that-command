@@ -1,0 +1,19 @@
+{
+  "id": "bash-readlink",
+  "command": "readlink -f <path>",
+  "description": "Resolve and print the absolute path that a symlink ultimately points to",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "resolve symlink",
+    "real path",
+    "follow link"
+  ],
+  "intents": [
+    "resolve a symbolic link to its real path",
+    "get the absolute path a symlink points to"
+  ],
+  "example": "readlink -f /etc/alternatives/editor",
+  "danger": false,
+  "related": []
+}

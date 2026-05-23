@@ -1,0 +1,19 @@
+{
+  "id": "bash-csplit",
+  "command": "csplit <file> <pattern>",
+  "description": "Split a file at lines matching a pattern",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "split by pattern",
+    "context split",
+    "pattern-based split"
+  ],
+  "intents": [
+    "split a file at lines matching a pattern",
+    "break a file into sections by regex"
+  ],
+  "example": "csplit input.txt \"/^---$/\" \"{*}\"",
+  "danger": false,
+  "related": []
+}

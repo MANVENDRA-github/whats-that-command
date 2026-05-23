@@ -1,0 +1,20 @@
+{
+  "id": "bash-base64",
+  "command": "base64 <file>",
+  "description": "Encode or decode data in base64",
+  "tool": "bash",
+  "category": "encoding",
+  "tags": [
+    "base64 encode",
+    "binary to text",
+    "decode base64"
+  ],
+  "intents": [
+    "encode a file as base64",
+    "decode a base64 string",
+    "convert binary to text-safe encoding"
+  ],
+  "example": "base64 image.png > image.b64",
+  "danger": false,
+  "related": []
+}

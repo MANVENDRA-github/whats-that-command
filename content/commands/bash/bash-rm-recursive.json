@@ -1,0 +1,21 @@
+{
+  "id": "bash-rm-recursive",
+  "command": "rm -rf <dir>",
+  "description": "Recursively delete a directory and everything in it",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "delete folder",
+    "recursive remove",
+    "wipe directory",
+    "nuke folder"
+  ],
+  "intents": [
+    "delete a folder and all its contents",
+    "wipe an entire directory",
+    "recursively remove a folder"
+  ],
+  "example": "rm -rf node_modules",
+  "danger": true,
+  "related": []
+}

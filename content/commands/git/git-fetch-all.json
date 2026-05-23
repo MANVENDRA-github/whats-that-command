@@ -1,0 +1,28 @@
+{
+  "id": "git-fetch-all",
+  "command": "git fetch --all",
+  "description": "Fetch updates from every configured remote in one go",
+  "tool": "git",
+  "category": "sync",
+  "tags": [
+    "update all remotes",
+    "fetch every remote",
+    "sync from upstream and fork",
+    "refresh all"
+  ],
+  "intents": [
+    "fetch from every remote at once",
+    "update all remotes in one command",
+    "sync changes from upstream and origin together",
+    "refresh all remote-tracking branches",
+    "pull down updates from every remote i have configured",
+    "get latest from all remotes without merging"
+  ],
+  "example": "git fetch --all",
+  "danger": false,
+  "related": [
+    "git-fetch",
+    "git-fetch-prune",
+    "git-pull"
+  ]
+}

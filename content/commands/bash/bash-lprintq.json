@@ -1,0 +1,17 @@
+{
+  "id": "bash-lprintq",
+  "command": "lprintq",
+  "description": "List the print queue (legacy)",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "print queue",
+    "list jobs"
+  ],
+  "intents": [
+    "list jobs in the print queue on legacy systems"
+  ],
+  "example": "lprintq",
+  "danger": false,
+  "related": []
+}

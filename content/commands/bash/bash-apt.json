@@ -1,0 +1,20 @@
+{
+  "id": "bash-apt",
+  "command": "apt <subcommand>",
+  "description": "Modern friendly front-end for Debian/Ubuntu package management",
+  "tool": "bash",
+  "category": "package",
+  "tags": [
+    "install package",
+    "update packages",
+    "debian ubuntu"
+  ],
+  "intents": [
+    "install a package on ubuntu",
+    "update package lists",
+    "upgrade installed packages"
+  ],
+  "example": "sudo apt install nginx",
+  "danger": false,
+  "related": []
+}

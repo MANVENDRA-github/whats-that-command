@@ -1,0 +1,28 @@
+{
+  "id": "git-stash-branch",
+  "command": "git stash branch <branch-name>",
+  "description": "Create a new branch from a stash, useful when the stash conflicts with current work",
+  "tool": "git",
+  "category": "stash",
+  "tags": [
+    "branch off a stash",
+    "stash to branch",
+    "save stash as branch",
+    "rescue stash"
+  ],
+  "intents": [
+    "turn my stash into a new branch",
+    "create a branch from a stashed change",
+    "my stash wont apply cleanly, branch from it instead",
+    "save a stash as a branch so i can work on it",
+    "make a branch off of a stash entry",
+    "the stash conflicts with my current branch, give it its own branch"
+  ],
+  "example": "git stash branch fix-the-thing",
+  "danger": false,
+  "related": [
+    "git-stash",
+    "git-stash-pop",
+    "git-stash-apply"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-script",
+  "command": "script <file>",
+  "description": "Record a transcript of a terminal session to a file",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "record session",
+    "transcript",
+    "log shell"
+  ],
+  "intents": [
+    "record everything i do in this terminal to a file",
+    "capture a transcript of a shell session"
+  ],
+  "example": "script session.log",
+  "danger": false,
+  "related": []
+}

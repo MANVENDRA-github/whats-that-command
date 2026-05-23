@@ -1,0 +1,20 @@
+{
+  "id": "bash-xxd",
+  "command": "xxd <file>",
+  "description": "Create a hex dump of a file or convert hex back to binary",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "hex dump",
+    "inspect binary",
+    "reverse hex"
+  ],
+  "intents": [
+    "see the bytes of a file in hex",
+    "create a hex dump for debugging",
+    "convert hex back into binary"
+  ],
+  "example": "xxd file.bin | head",
+  "danger": false,
+  "related": []
+}

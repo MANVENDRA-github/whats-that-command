@@ -1,0 +1,20 @@
+{
+  "id": "bash-sudo",
+  "command": "sudo <command>",
+  "description": "Run a command as another user, typically root",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "run as root",
+    "elevate privileges",
+    "admin command"
+  ],
+  "intents": [
+    "run a command as root",
+    "execute something with admin rights",
+    "do something that needs sudo"
+  ],
+  "example": "sudo apt update",
+  "danger": false,
+  "related": []
+}

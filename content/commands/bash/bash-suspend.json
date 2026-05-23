@@ -1,0 +1,17 @@
+{
+  "id": "bash-suspend",
+  "command": "suspend",
+  "description": "Suspend the current shell until it is resumed with SIGCONT",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "suspend shell",
+    "pause shell"
+  ],
+  "intents": [
+    "suspend the current shell session"
+  ],
+  "example": "suspend",
+  "danger": false,
+  "related": []
+}

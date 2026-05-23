@@ -1,0 +1,19 @@
+{
+  "id": "bash-umask",
+  "command": "umask <mode>",
+  "description": "Set or view the default permission mask for newly created files",
+  "tool": "bash",
+  "category": "permissions",
+  "tags": [
+    "default permissions",
+    "permission mask",
+    "new file mode"
+  ],
+  "intents": [
+    "set the default permissions for new files",
+    "view the current umask"
+  ],
+  "example": "umask 022",
+  "danger": false,
+  "related": []
+}

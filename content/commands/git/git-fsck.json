@@ -1,0 +1,28 @@
+{
+  "id": "git-fsck",
+  "command": "git fsck",
+  "description": "Check the repository for corruption and report dangling commits or trees",
+  "tool": "git",
+  "category": "debug",
+  "tags": [
+    "check repo integrity",
+    "find dangling commits",
+    "verify objects",
+    "diagnose corruption",
+    "repo health check"
+  ],
+  "intents": [
+    "check if my git repo is corrupted",
+    "verify the integrity of the git database",
+    "find dangling commits that nothing points to",
+    "diagnose strange git errors with a health check",
+    "is something wrong with my repository",
+    "recover from suspected git corruption by listing what is broken"
+  ],
+  "example": "git fsck",
+  "danger": false,
+  "related": [
+    "git-reflog",
+    "git-gc"
+  ]
+}

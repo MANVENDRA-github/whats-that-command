@@ -1,0 +1,18 @@
+{
+  "id": "bash-ftp",
+  "command": "ftp <host>",
+  "description": "Interactive (insecure) File Transfer Protocol client",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "ftp client",
+    "legacy file transfer"
+  ],
+  "intents": [
+    "connect to an ftp server",
+    "transfer files via ftp"
+  ],
+  "example": "ftp ftp.example.com",
+  "danger": false,
+  "related": []
+}

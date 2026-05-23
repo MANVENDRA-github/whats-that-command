@@ -1,0 +1,21 @@
+{
+  "id": "bash-dd",
+  "command": "dd if=<src> of=<dest>",
+  "description": "Copy and convert raw bytes between files or devices, byte-exact",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "raw disk copy",
+    "write iso to usb",
+    "byte-level copy",
+    "disk imaging"
+  ],
+  "intents": [
+    "write an iso image to a usb drive",
+    "make a byte-exact copy of a disk",
+    "clone a disk image"
+  ],
+  "example": "dd if=image.iso of=/dev/sdb bs=4M status=progress",
+  "danger": true,
+  "related": []
+}

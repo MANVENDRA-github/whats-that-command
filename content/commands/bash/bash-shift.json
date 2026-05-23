@@ -1,0 +1,19 @@
+{
+  "id": "bash-shift",
+  "command": "shift <n>",
+  "description": "Shift positional parameters left by N, dropping the first ones",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "drop args",
+    "shift parameters",
+    "consume args"
+  ],
+  "intents": [
+    "process script arguments one at a time",
+    "drop the first n positional parameters"
+  ],
+  "example": "shift 2",
+  "danger": false,
+  "related": []
+}

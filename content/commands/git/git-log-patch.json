@@ -1,0 +1,28 @@
+{
+  "id": "git-log-patch",
+  "command": "git log -p",
+  "description": "Show commit history with the full diff for each commit",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "history with diffs",
+    "see what changed in each commit",
+    "full commit details",
+    "patch view"
+  ],
+  "intents": [
+    "show me history with the actual changes for every commit",
+    "see what was changed in each past commit",
+    "log with diffs included",
+    "view full patches as i scroll through commit history",
+    "see every change made in every commit",
+    "browse history with the line changes shown"
+  ],
+  "example": "git log -p",
+  "danger": false,
+  "related": [
+    "git-log",
+    "git-log-oneline",
+    "git-show-commit"
+  ]
+}

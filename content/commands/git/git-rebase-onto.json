@@ -1,0 +1,28 @@
+{
+  "id": "git-rebase-onto",
+  "command": "git rebase --onto <new-base> <old-base> <branch>",
+  "description": "Transplant a range of commits onto a different base commit",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "move commits to new base",
+    "transplant commits",
+    "rebase off a different branch",
+    "graft commits"
+  ],
+  "intents": [
+    "move my commits onto a different branch as their new base",
+    "transplant a range of commits to a new base commit",
+    "i branched off the wrong branch, fix the base",
+    "graft commits onto a different parent",
+    "redirect a feature branch to fork from somewhere else",
+    "change the base of a branch to a different commit"
+  ],
+  "example": "git rebase --onto main feature-old feature-new",
+  "danger": true,
+  "related": [
+    "git-rebase",
+    "git-rebase-interactive",
+    "git-rebase-abort"
+  ]
+}

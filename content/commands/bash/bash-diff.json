@@ -1,0 +1,19 @@
+{
+  "id": "bash-diff",
+  "command": "diff <file1> <file2>",
+  "description": "Show line-by-line differences between two files",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "compare files",
+    "show changes",
+    "file differences"
+  ],
+  "intents": [
+    "compare two files line by line",
+    "see what differs between two files"
+  ],
+  "example": "diff -u old.txt new.txt",
+  "danger": false,
+  "related": []
+}

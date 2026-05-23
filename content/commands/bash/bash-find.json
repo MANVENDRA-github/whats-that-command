@@ -1,0 +1,22 @@
+{
+  "id": "bash-find",
+  "command": "find <path> -name <pattern>",
+  "description": "Recursively search a directory tree for files matching criteria",
+  "tool": "bash",
+  "category": "search",
+  "tags": [
+    "search files",
+    "recursive search",
+    "locate by name"
+  ],
+  "intents": [
+    "search for files by name across folders",
+    "find files matching a pattern recursively"
+  ],
+  "example": "find /var/log -name \"*.log\"",
+  "danger": false,
+  "related": [
+    "bash-find-file",
+    "bash-find-and-delete"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "bash-rev",
+  "command": "rev <file>",
+  "description": "Reverse the characters in each line",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "reverse line",
+    "flip characters",
+    "mirror text"
+  ],
+  "intents": [
+    "reverse the characters in each line of a file"
+  ],
+  "example": "echo \"hello\" | rev",
+  "danger": false,
+  "related": []
+}

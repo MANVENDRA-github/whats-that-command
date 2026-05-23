@@ -1,0 +1,21 @@
+{
+  "id": "bash-kill",
+  "command": "kill <pid>",
+  "description": "Send a signal to a process by PID (default TERM)",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "signal process",
+    "stop process",
+    "terminate by pid"
+  ],
+  "intents": [
+    "send a signal to a process by its pid",
+    "gracefully stop a process"
+  ],
+  "example": "kill 1234",
+  "danger": true,
+  "related": [
+    "bash-kill-process"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "bash-lprintd",
+  "command": "lprintd <job>",
+  "description": "Abort a print job (legacy)",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "abort print job",
+    "cancel printing"
+  ],
+  "intents": [
+    "abort a queued print job on legacy systems"
+  ],
+  "example": "lprintd 42",
+  "danger": false,
+  "related": []
+}

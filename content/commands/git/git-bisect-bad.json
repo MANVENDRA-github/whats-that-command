@@ -1,0 +1,28 @@
+{
+  "id": "git-bisect-bad",
+  "command": "git bisect bad",
+  "description": "Mark the current commit as broken during a bisect session",
+  "tool": "git",
+  "category": "debug",
+  "tags": [
+    "mark broken version",
+    "bug is here",
+    "this build has the bug",
+    "narrow the hunt"
+  ],
+  "intents": [
+    "this commit has the bug, keep bisecting backward",
+    "mark the current version as broken during bisect",
+    "tell git this commit reproduces the issue",
+    "bisect narrows toward older commits after this",
+    "the bug is present here, look further back in time",
+    "confirm this build is broken so bisect can keep going"
+  ],
+  "example": "git bisect bad",
+  "danger": false,
+  "related": [
+    "git-bisect-start",
+    "git-bisect-good",
+    "git-bisect-reset"
+  ]
+}

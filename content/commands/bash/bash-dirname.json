@@ -1,0 +1,19 @@
+{
+  "id": "bash-dirname",
+  "command": "dirname <path>",
+  "description": "Strip the filename off a path, leaving just the directory",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "directory from path",
+    "parent folder",
+    "strip filename"
+  ],
+  "intents": [
+    "get the directory part of a path",
+    "strip the filename and keep the folder"
+  ],
+  "example": "dirname /etc/nginx/nginx.conf",
+  "danger": false,
+  "related": []
+}

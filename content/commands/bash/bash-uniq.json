@@ -1,0 +1,20 @@
+{
+  "id": "bash-uniq",
+  "command": "uniq <file>",
+  "description": "Filter out adjacent duplicate lines (usually piped after sort)",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "remove duplicates",
+    "unique lines",
+    "dedupe"
+  ],
+  "intents": [
+    "remove duplicate lines",
+    "deduplicate sorted output",
+    "keep only unique lines"
+  ],
+  "example": "sort names.txt | uniq",
+  "danger": false,
+  "related": []
+}

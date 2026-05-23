@@ -1,0 +1,20 @@
+{
+  "id": "bash-md5sum",
+  "command": "md5sum <file>",
+  "description": "Compute the MD5 checksum of a file",
+  "tool": "bash",
+  "category": "encoding",
+  "tags": [
+    "file checksum",
+    "md5 hash",
+    "verify file integrity"
+  ],
+  "intents": [
+    "get the md5 hash of a file",
+    "compute a file checksum",
+    "verify a download with md5"
+  ],
+  "example": "md5sum installer.iso",
+  "danger": false,
+  "related": []
+}

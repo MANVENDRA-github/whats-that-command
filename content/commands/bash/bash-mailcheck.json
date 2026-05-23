@@ -1,0 +1,17 @@
+{
+  "id": "bash-mailcheck",
+  "command": "mailcheck",
+  "description": "Check for new mail in local mail spool (legacy)",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "check mail",
+    "local mail"
+  ],
+  "intents": [
+    "check for new mail in the local spool"
+  ],
+  "example": "mailcheck",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "bash-ddrescuelog",
+  "command": "ddrescuelog <log>",
+  "description": "Inspect, transform, or compare ddrescue logfiles",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "ddrescue log",
+    "rescue progress"
+  ],
+  "intents": [
+    "inspect a ddrescue log to see what was recovered"
+  ],
+  "example": "ddrescuelog -t rescue.log",
+  "danger": false,
+  "related": []
+}

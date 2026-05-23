@@ -1,0 +1,19 @@
+{
+  "id": "bash-xargs",
+  "command": "xargs <command>",
+  "description": "Build and execute commands from items provided on stdin",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "pipe to command",
+    "turn input into args",
+    "batch arguments"
+  ],
+  "intents": [
+    "feed a list of files into a command as arguments",
+    "run a command for each line of input"
+  ],
+  "example": "find . -name \"*.tmp\" | xargs rm",
+  "danger": false,
+  "related": []
+}

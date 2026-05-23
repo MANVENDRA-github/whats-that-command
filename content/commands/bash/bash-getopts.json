@@ -1,0 +1,19 @@
+{
+  "id": "bash-getopts",
+  "command": "getopts <optstring> <var>",
+  "description": "Parse short command-line options in a shell script",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "parse flags",
+    "script arguments",
+    "option parser"
+  ],
+  "intents": [
+    "parse command line options in a bash script",
+    "handle -v and -f style flags"
+  ],
+  "example": "while getopts \":vf:\" opt; do ...; done",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": "bash-touch",
+  "command": "touch <file>",
+  "description": "Create an empty file, or update an existing file's timestamp",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "create empty file",
+    "update timestamp",
+    "make file"
+  ],
+  "intents": [
+    "create a new empty file",
+    "update the modified time of a file",
+    "make a placeholder file"
+  ],
+  "example": "touch new.txt",
+  "danger": false,
+  "related": []
+}

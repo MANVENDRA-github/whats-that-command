@@ -1,0 +1,20 @@
+{
+  "id": "bash-tmux",
+  "command": "tmux",
+  "description": "Modern terminal multiplexer with windows, panes, and persistent sessions",
+  "tool": "bash",
+  "category": "terminal",
+  "tags": [
+    "terminal multiplexer",
+    "panes and windows",
+    "session manager"
+  ],
+  "intents": [
+    "split a terminal into panes",
+    "keep terminal sessions alive after disconnecting",
+    "use tmux to manage multiple shells"
+  ],
+  "example": "tmux new -s dev",
+  "danger": false,
+  "related": []
+}

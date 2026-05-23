@@ -1,0 +1,19 @@
+{
+  "id": "bash-mkisofs",
+  "command": "mkisofs -o <out>.iso <dir>",
+  "description": "Create an ISO 9660 filesystem image from a directory",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "make iso",
+    "create cd image",
+    "iso 9660"
+  ],
+  "intents": [
+    "create an iso image from a folder",
+    "make a bootable cd image"
+  ],
+  "example": "mkisofs -o image.iso src/",
+  "danger": false,
+  "related": []
+}

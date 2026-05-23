@@ -1,0 +1,28 @@
+{
+  "id": "git-worktree-list",
+  "command": "git worktree list",
+  "description": "List every worktree linked to this repository, with their paths and branches",
+  "tool": "git",
+  "category": "branch",
+  "tags": [
+    "see my worktrees",
+    "what worktrees exist",
+    "where are my checkouts",
+    "inventory worktrees"
+  ],
+  "intents": [
+    "show me every worktree i have set up",
+    "list all worktrees attached to this repo",
+    "where did i put my other worktrees",
+    "see the paths and branches of every worktree",
+    "inventory of worktrees across the repo",
+    "what worktrees are currently linked to this repository"
+  ],
+  "example": "git worktree list",
+  "danger": false,
+  "related": [
+    "git-worktree-add",
+    "git-worktree-remove",
+    "git-list-branches"
+  ]
+}

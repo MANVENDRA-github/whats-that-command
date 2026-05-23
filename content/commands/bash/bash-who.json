@@ -1,0 +1,19 @@
+{
+  "id": "bash-who",
+  "command": "who",
+  "description": "List users currently logged into the system",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "who is logged in",
+    "active sessions",
+    "current users"
+  ],
+  "intents": [
+    "who is logged into this machine right now",
+    "see active terminal sessions"
+  ],
+  "example": "who",
+  "danger": false,
+  "related": []
+}

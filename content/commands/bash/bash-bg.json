@@ -1,0 +1,19 @@
+{
+  "id": "bash-bg",
+  "command": "bg",
+  "description": "Resume a stopped job in the background",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "background job",
+    "continue in background",
+    "send to bg"
+  ],
+  "intents": [
+    "resume a paused job in the background",
+    "send a stopped job to the background"
+  ],
+  "example": "bg %1",
+  "danger": false,
+  "related": []
+}

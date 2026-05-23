@@ -1,0 +1,19 @@
+{
+  "id": "bash-popd",
+  "command": "popd",
+  "description": "Return to the previous directory saved on the directory stack",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "previous directory",
+    "pop directory stack",
+    "go back"
+  ],
+  "intents": [
+    "go back to the directory i pushd from",
+    "return to my previous directory"
+  ],
+  "example": "popd",
+  "danger": false,
+  "related": []
+}

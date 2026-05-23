@@ -1,0 +1,19 @@
+{
+  "id": "bash-killall",
+  "command": "killall <name>",
+  "description": "Kill all processes matching a given name",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "kill by name",
+    "stop all matching",
+    "mass terminate"
+  ],
+  "intents": [
+    "kill every process with a given name",
+    "stop all instances of a program by name"
+  ],
+  "example": "killall node",
+  "danger": true,
+  "related": []
+}

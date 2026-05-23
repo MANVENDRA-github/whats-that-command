@@ -1,0 +1,19 @@
+{
+  "id": "bash-exit",
+  "command": "exit <code>",
+  "description": "Exit the shell or script with a status code",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "quit shell",
+    "end script",
+    "exit code"
+  ],
+  "intents": [
+    "exit a script with a status code",
+    "quit the current shell"
+  ],
+  "example": "exit 1",
+  "danger": false,
+  "related": []
+}

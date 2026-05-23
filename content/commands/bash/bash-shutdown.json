@@ -1,0 +1,20 @@
+{
+  "id": "bash-shutdown",
+  "command": "shutdown <when>",
+  "description": "Power off or reboot the system, optionally at a scheduled time",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "power off",
+    "shut down",
+    "scheduled poweroff"
+  ],
+  "intents": [
+    "shut the machine down now",
+    "schedule a shutdown",
+    "power off the server"
+  ],
+  "example": "sudo shutdown -h now",
+  "danger": true,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-fg",
+  "command": "fg",
+  "description": "Bring a background job to the foreground",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "resume job",
+    "foreground job",
+    "bring to front"
+  ],
+  "intents": [
+    "bring a backgrounded job back to the foreground",
+    "resume a stopped job in the foreground"
+  ],
+  "example": "fg %1",
+  "danger": false,
+  "related": []
+}

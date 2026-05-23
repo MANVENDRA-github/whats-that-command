@@ -1,0 +1,17 @@
+{
+  "id": "bash-sdiff",
+  "command": "sdiff <file1> <file2>",
+  "description": "Show differences between two files side by side",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "side-by-side diff",
+    "visual diff"
+  ],
+  "intents": [
+    "show differences between two files side by side"
+  ],
+  "example": "sdiff a.txt b.txt",
+  "danger": false,
+  "related": []
+}

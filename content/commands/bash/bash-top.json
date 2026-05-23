@@ -1,0 +1,19 @@
+{
+  "id": "bash-top",
+  "command": "top",
+  "description": "Live, sortable view of running processes and resource usage",
+  "tool": "bash",
+  "category": "monitor",
+  "tags": [
+    "live process view",
+    "cpu usage",
+    "monitor processes"
+  ],
+  "intents": [
+    "see live cpu and memory usage by process",
+    "monitor processes interactively"
+  ],
+  "example": "top",
+  "danger": false,
+  "related": []
+}

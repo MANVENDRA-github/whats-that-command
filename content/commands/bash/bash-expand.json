@@ -1,0 +1,19 @@
+{
+  "id": "bash-expand",
+  "command": "expand <file>",
+  "description": "Convert tabs in a file to spaces",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "tabs to spaces",
+    "detab",
+    "expand tabs"
+  ],
+  "intents": [
+    "replace tabs with spaces in a file",
+    "convert tab indentation to spaces"
+  ],
+  "example": "expand -t 4 src.py",
+  "danger": false,
+  "related": []
+}

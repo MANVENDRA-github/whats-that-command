@@ -1,0 +1,20 @@
+{
+  "id": "bash-rm",
+  "command": "rm <file>",
+  "description": "Delete a file",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "delete file",
+    "remove file",
+    "erase"
+  ],
+  "intents": [
+    "delete a file",
+    "remove a file from disk",
+    "get rid of a file"
+  ],
+  "example": "rm temp.txt",
+  "danger": true,
+  "related": []
+}

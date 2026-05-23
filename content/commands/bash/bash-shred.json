@@ -1,0 +1,19 @@
+{
+  "id": "bash-shred",
+  "command": "shred -u <file>",
+  "description": "Overwrite a file repeatedly to make recovery harder, then optionally delete it",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "secure delete",
+    "overwrite file",
+    "wipe data"
+  ],
+  "intents": [
+    "securely delete a file so it cannot be recovered",
+    "overwrite a file before deleting it"
+  ],
+  "example": "shred -u secrets.txt",
+  "danger": true,
+  "related": []
+}

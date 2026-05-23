@@ -1,0 +1,19 @@
+{
+  "id": "bash-mknod",
+  "command": "mknod <name> <type>",
+  "description": "Create a special file (block device, character device, or FIFO)",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "device file",
+    "special file",
+    "block device"
+  ],
+  "intents": [
+    "create a device file",
+    "make a character or block special file"
+  ],
+  "example": "mknod mypipe p",
+  "danger": true,
+  "related": []
+}

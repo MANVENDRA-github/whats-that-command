@@ -1,0 +1,18 @@
+{
+  "id": "bash-xdg-open",
+  "command": "xdg-open <file-or-url>",
+  "description": "Open a file or URL with the system's preferred application (Linux/freedesktop)",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "open with default app",
+    "xdg open",
+    "linux open"
+  ],
+  "intents": [
+    "open a url or file in the default desktop app on linux"
+  ],
+  "example": "xdg-open https://example.com",
+  "danger": false,
+  "related": []
+}

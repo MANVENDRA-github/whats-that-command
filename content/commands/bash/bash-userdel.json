@@ -1,0 +1,18 @@
+{
+  "id": "bash-userdel",
+  "command": "userdel <name>",
+  "description": "Delete a user account",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "delete user",
+    "remove account"
+  ],
+  "intents": [
+    "delete a user account from the system",
+    "remove a user"
+  ],
+  "example": "sudo userdel alice",
+  "danger": true,
+  "related": []
+}

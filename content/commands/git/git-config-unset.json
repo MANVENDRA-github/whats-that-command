@@ -1,0 +1,28 @@
+{
+  "id": "git-config-unset",
+  "command": "git config --unset <key>",
+  "description": "Remove a configured git setting",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "remove config",
+    "delete setting",
+    "undo a config",
+    "clear a value"
+  ],
+  "intents": [
+    "remove a git config i set by mistake",
+    "delete a configured value",
+    "undo a git config command",
+    "clear a setting from git config",
+    "unset a git configuration key",
+    "get rid of a git setting i no longer want"
+  ],
+  "example": "git config --unset user.email",
+  "danger": true,
+  "related": [
+    "git-config-user",
+    "git-config-list",
+    "git-config-get"
+  ]
+}

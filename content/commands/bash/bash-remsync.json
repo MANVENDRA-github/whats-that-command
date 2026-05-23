@@ -1,0 +1,17 @@
+{
+  "id": "bash-remsync",
+  "command": "remsync <src> <dest>",
+  "description": "Synchronise files between machines using compressed differences",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "remote sync",
+    "compressed diff sync"
+  ],
+  "intents": [
+    "sync files between machines using compressed diffs"
+  ],
+  "example": "remsync local/ remote/",
+  "danger": false,
+  "related": []
+}

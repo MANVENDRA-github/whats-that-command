@@ -1,0 +1,19 @@
+{
+  "id": "bash-od",
+  "command": "od <file>",
+  "description": "Dump a file in octal, hex, or other numeric formats",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "octal dump",
+    "binary inspector",
+    "numeric dump"
+  ],
+  "intents": [
+    "dump a file in octal or hex",
+    "inspect raw bytes of a binary"
+  ],
+  "example": "od -c file.bin",
+  "danger": false,
+  "related": []
+}

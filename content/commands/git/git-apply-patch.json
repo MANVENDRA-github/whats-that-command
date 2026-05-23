@@ -1,0 +1,27 @@
+{
+  "id": "git-apply-patch",
+  "command": "git apply <patch-file>",
+  "description": "Apply a patch file to the working tree without creating a commit",
+  "tool": "git",
+  "category": "staging",
+  "tags": [
+    "apply diff file",
+    "patch from email",
+    "use a .patch file",
+    "load changes from patch"
+  ],
+  "intents": [
+    "apply a patch someone sent me",
+    "use a .patch file to update my code",
+    "apply changes from a diff file",
+    "load a patch into my working tree",
+    "take a patch file and apply it locally",
+    "i have a diff i need to apply to my repo"
+  ],
+  "example": "git apply changes.patch",
+  "danger": false,
+  "related": [
+    "git-cherry-pick",
+    "git-add-patch"
+  ]
+}

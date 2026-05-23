@@ -1,0 +1,18 @@
+{
+  "id": "bash-sftp",
+  "command": "sftp <user>@<host>",
+  "description": "Interactive secure file transfer session over SSH",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "secure ftp",
+    "interactive ssh file transfer"
+  ],
+  "intents": [
+    "start an interactive secure file transfer session",
+    "sftp into a server to upload and download files"
+  ],
+  "example": "sftp alice@server",
+  "danger": false,
+  "related": []
+}

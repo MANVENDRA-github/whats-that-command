@@ -1,0 +1,28 @@
+{
+  "id": "git-log-grep",
+  "command": "git log --grep=\"<pattern>\"",
+  "description": "Find commits whose commit message matches a pattern",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "search commit messages",
+    "find commit by message",
+    "filter by message text",
+    "match commit subjects"
+  ],
+  "intents": [
+    "find commits with a specific word in their message",
+    "search commit messages for a keyword",
+    "show commits that mention a ticket number",
+    "filter history by commit message text",
+    "locate a commit by what was written in its message",
+    "find every commit that mentions a jira ticket"
+  ],
+  "example": "git log --grep=\"fix\"",
+  "danger": false,
+  "related": [
+    "git-log",
+    "git-log-search",
+    "git-log-author"
+  ]
+}

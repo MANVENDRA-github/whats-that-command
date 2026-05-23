@@ -1,0 +1,19 @@
+{
+  "id": "docker-run-user",
+  "command": "docker run -u <user> <image>",
+  "description": "Run a container as a specific user instead of root",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "non-root user",
+    "run as user",
+    "container uid"
+  ],
+  "intents": [
+    "run a container as a non-root user",
+    "set the uid the container processes run under"
+  ],
+  "example": "docker run -u 1000 alpine id",
+  "danger": false,
+  "related": []
+}

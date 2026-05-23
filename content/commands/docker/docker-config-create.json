@@ -1,0 +1,17 @@
+{
+  "id": "docker-config-create",
+  "command": "docker config create <name> <file>",
+  "description": "Create a swarm config object from a file or stdin",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "create swarm config",
+    "config object"
+  ],
+  "intents": [
+    "create a swarm config object from a file"
+  ],
+  "example": "docker config create app_conf ./app.conf",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "docker-compose-start",
+  "command": "docker compose start",
+  "description": "Start existing stopped services in a compose stack",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "start compose services",
+    "resume stack"
+  ],
+  "intents": [
+    "start existing compose services without recreating them"
+  ],
+  "example": "docker compose start",
+  "danger": false,
+  "related": []
+}

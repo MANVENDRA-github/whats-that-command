@@ -1,0 +1,28 @@
+{
+  "id": "git-blame-lines",
+  "command": "git blame -L <start>,<end> <file>",
+  "description": "Blame only a specific line range of a file instead of the entire file",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "who wrote these lines",
+    "blame a range",
+    "limit blame to lines",
+    "history of one section"
+  ],
+  "intents": [
+    "who wrote these specific lines",
+    "blame only a range of lines, not the whole file",
+    "find the author of a particular function",
+    "limit git blame to certain line numbers",
+    "history of just this section of a file",
+    "who last changed lines 40 through 60"
+  ],
+  "example": "git blame -L 40,60 src/app.js",
+  "danger": false,
+  "related": [
+    "git-blame",
+    "git-log-file",
+    "git-log-search"
+  ]
+}

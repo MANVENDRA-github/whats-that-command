@@ -1,0 +1,17 @@
+{
+  "id": "bash-groupadd",
+  "command": "groupadd <name>",
+  "description": "Create a new group",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "create group",
+    "new group"
+  ],
+  "intents": [
+    "create a new group on the system"
+  ],
+  "example": "sudo groupadd devs",
+  "danger": false,
+  "related": []
+}

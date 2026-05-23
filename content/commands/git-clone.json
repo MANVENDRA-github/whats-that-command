@@ -16,7 +16,10 @@
     "get a copy of a remote repo onto my computer",
     "grab the source code from a url",
     "start working on someone elses project",
-    "pull down a repository to my machine"
+    "pull down a repository to my machine",
+    "clone a repo to start contributing",
+    "set up a github project on my laptop",
+    "make a local checkout of a remote repository"
   ],
   "example": "git clone https://github.com/user/repo.git",
   "danger": false,

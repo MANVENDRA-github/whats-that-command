@@ -1,0 +1,28 @@
+{
+  "id": "git-stash-push-files",
+  "command": "git stash push -m \"<message>\" -- <file>...",
+  "description": "Stash changes to specific files only, leaving the rest of your work untouched",
+  "tool": "git",
+  "category": "stash",
+  "tags": [
+    "partial stash",
+    "stash some files only",
+    "stash by path",
+    "selective stash"
+  ],
+  "intents": [
+    "stash only one or two files",
+    "stash specific files instead of everything",
+    "partial stash by path",
+    "save changes for these files but keep my other edits",
+    "i want to stash some files and keep working on others",
+    "selectively stash certain files only"
+  ],
+  "example": "git stash push -m \"wip config\" -- src/config.js",
+  "danger": false,
+  "related": [
+    "git-stash",
+    "git-stash-pop",
+    "git-stash-apply"
+  ]
+}

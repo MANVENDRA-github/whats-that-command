@@ -2,9 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { TOOLS, toolHref } from '@/lib/tools';
-
-const TOOL_DOT = { git: 'bg-git', docker: 'bg-docker', bash: 'bg-bash' };
+import { TOOLS, toolHref, toolBgClass } from '@/lib/tools';
 
 export default function Navbar() {
   const pathname = usePathname() ?? '/';
@@ -34,6 +32,7 @@ export default function Navbar() {
           {TOOLS.map((tool) => {
             const href = toolHref(tool);
             const active = pathname === href || pathname.startsWith(href + '/');
+            const bg = toolBgClass(tool);
             return (
               <Link
                 key={tool}
@@ -45,13 +44,13 @@ export default function Navbar() {
               >
                 <span
                   aria-hidden="true"
-                  className={`h-1.5 w-1.5 ${active ? TOOL_DOT[tool] : 'bg-hairline'}`}
+                  className={`h-1.5 w-1.5 ${active ? bg : 'bg-hairline'}`}
                 />
                 {tool}
                 {active && (
                   <span
                     aria-hidden="true"
-                    className={`absolute -bottom-[15px] left-2 right-2 h-[2px] ${TOOL_DOT[tool]}`}
+                    className={`absolute -bottom-[15px] left-2 right-2 h-[2px] ${bg}`}
                   />
                 )}
               </Link>

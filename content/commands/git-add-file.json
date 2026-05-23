@@ -1,0 +1,26 @@
+{
+  "id": "git-add-file",
+  "command": "git add <file>",
+  "description": "Stage a specific file for the next commit",
+  "tool": "git",
+  "category": "staging",
+  "tags": [
+    "track changes",
+    "prepare commit",
+    "stage one file",
+    "add specific file"
+  ],
+  "intents": [
+    "i want to commit just this one file",
+    "include this file in my next commit",
+    "stage a particular file but not others",
+    "prepare a single file to be committed"
+  ],
+  "example": "git add src/index.js",
+  "danger": false,
+  "related": [
+    "git-add-all",
+    "git-add-patch",
+    "git-unstage-file"
+  ]
+}

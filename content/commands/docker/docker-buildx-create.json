@@ -1,0 +1,18 @@
+{
+  "id": "docker-buildx-create",
+  "command": "docker buildx create --use",
+  "description": "Create a new buildx builder instance and switch to it",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "new buildx builder",
+    "setup buildx",
+    "create builder"
+  ],
+  "intents": [
+    "create a new buildx builder for multi-platform builds"
+  ],
+  "example": "docker buildx create --use --name multi",
+  "danger": false,
+  "related": []
+}

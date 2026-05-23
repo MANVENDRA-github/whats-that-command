@@ -1,0 +1,28 @@
+{
+  "id": "git-pull-ff-only",
+  "command": "git pull --ff-only",
+  "description": "Pull only if it can be a fast-forward, refuse to create a merge commit",
+  "tool": "git",
+  "category": "sync",
+  "tags": [
+    "safe pull",
+    "no merge commit on pull",
+    "refuse to merge",
+    "only fast-forward"
+  ],
+  "intents": [
+    "pull but dont create a merge commit",
+    "only fast-forward on pull, fail otherwise",
+    "safe pull that refuses to merge",
+    "i want to pull but never auto-merge",
+    "fast-forward only pull",
+    "avoid surprise merge commits when pulling"
+  ],
+  "example": "git pull --ff-only",
+  "danger": false,
+  "related": [
+    "git-pull",
+    "git-pull-rebase",
+    "git-fetch"
+  ]
+}

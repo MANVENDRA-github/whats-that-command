@@ -1,0 +1,18 @@
+{
+  "id": "bash-builtin",
+  "command": "builtin <name>",
+  "description": "Run a shell builtin directly, bypassing functions of the same name",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "call builtin",
+    "skip function",
+    "force builtin"
+  ],
+  "intents": [
+    "force the use of a shell builtin instead of a function or alias of the same name"
+  ],
+  "example": "builtin echo hi",
+  "danger": false,
+  "related": []
+}

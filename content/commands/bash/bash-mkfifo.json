@@ -1,0 +1,19 @@
+{
+  "id": "bash-mkfifo",
+  "command": "mkfifo <name>",
+  "description": "Create a named pipe (FIFO) for inter-process communication",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "named pipe",
+    "fifo",
+    "ipc"
+  ],
+  "intents": [
+    "create a named pipe for two processes to communicate",
+    "make a fifo for ipc"
+  ],
+  "example": "mkfifo mypipe",
+  "danger": false,
+  "related": []
+}

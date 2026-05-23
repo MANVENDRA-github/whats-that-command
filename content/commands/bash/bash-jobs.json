@@ -1,0 +1,19 @@
+{
+  "id": "bash-jobs",
+  "command": "jobs",
+  "description": "List the shell's active background and stopped jobs",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "list jobs",
+    "background jobs",
+    "shell jobs"
+  ],
+  "intents": [
+    "list my background and stopped jobs",
+    "see jobs running in the current shell"
+  ],
+  "example": "jobs -l",
+  "danger": false,
+  "related": []
+}

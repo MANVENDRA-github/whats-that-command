@@ -14,7 +14,10 @@
     "send my commits to the remote",
     "push my work up to github",
     "upload my changes to the server",
-    "share my commits with the team"
+    "share my commits with the team",
+    "send my latest commits to github",
+    "publish my commits to the remote",
+    "ship what i committed locally to origin"
   ],
   "example": "git push",
   "danger": false,

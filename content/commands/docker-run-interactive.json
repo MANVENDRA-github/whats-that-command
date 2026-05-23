@@ -11,6 +11,15 @@
     "quick test",
     "ephemeral"
   ],
+  "intents": [
+    "try out an image with a shell quickly",
+    "spin up a throwaway container to experiment in",
+    "run a one-off container that cleans up after itself",
+    "get a shell in an image without keeping the container around",
+    "ephemeral container i can play in then drop",
+    "test an image interactively without leaving cruft behind",
+    "i want to try a linux image and have it disappear when i exit"
+  ],
   "example": "docker run -it --rm ubuntu:22.04",
   "danger": false,
   "related": [

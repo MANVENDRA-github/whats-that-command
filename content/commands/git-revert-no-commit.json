@@ -1,0 +1,28 @@
+{
+  "id": "git-revert-no-commit",
+  "command": "git revert --no-commit <commit>",
+  "description": "Apply the inverse of a commit to the working tree without creating a new commit",
+  "tool": "git",
+  "category": "undo",
+  "tags": [
+    "undo without committing",
+    "stage the revert",
+    "review before commit",
+    "batch reverts together"
+  ],
+  "intents": [
+    "undo a commit but let me review before committing the revert",
+    "apply the revert changes without making a new commit yet",
+    "revert several commits and bundle them into one commit",
+    "stage the inverse of a commit so i can edit it first",
+    "do a revert but hold off on the commit",
+    "combine multiple reverts into one commit",
+    "preview what a revert would do before locking it in"
+  ],
+  "example": "git revert --no-commit abc123",
+  "danger": false,
+  "related": [
+    "git-revert-commit",
+    "git-undo-last-commit"
+  ]
+}

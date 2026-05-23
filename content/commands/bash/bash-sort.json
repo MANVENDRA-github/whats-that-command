@@ -1,0 +1,20 @@
+{
+  "id": "bash-sort",
+  "command": "sort <file>",
+  "description": "Sort the lines of a file alphabetically or numerically",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "order lines",
+    "sort text",
+    "alphabetize"
+  ],
+  "intents": [
+    "sort lines of a file",
+    "order text lines alphabetically",
+    "sort numerically"
+  ],
+  "example": "sort -n numbers.txt",
+  "danger": false,
+  "related": []
+}

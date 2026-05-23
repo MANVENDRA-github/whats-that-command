@@ -1,0 +1,19 @@
+{
+  "id": "docker-compose-up-build",
+  "command": "docker compose up --build",
+  "description": "Bring up the compose stack and rebuild images before starting",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "rebuild and start",
+    "up with build",
+    "compose up build"
+  ],
+  "intents": [
+    "rebuild images and start the compose stack in one step",
+    "force a rebuild when bringing up compose"
+  ],
+  "example": "docker compose up -d --build",
+  "danger": false,
+  "related": []
+}

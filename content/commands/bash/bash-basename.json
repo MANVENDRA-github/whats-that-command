@@ -1,0 +1,19 @@
+{
+  "id": "bash-basename",
+  "command": "basename <path>",
+  "description": "Strip the directory portion off a path, leaving just the filename",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "filename from path",
+    "strip directory",
+    "last component"
+  ],
+  "intents": [
+    "get just the filename from a full path",
+    "strip the directory part of a path"
+  ],
+  "example": "basename /etc/nginx/nginx.conf",
+  "danger": false,
+  "related": []
+}

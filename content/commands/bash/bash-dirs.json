@@ -1,0 +1,19 @@
+{
+  "id": "bash-dirs",
+  "command": "dirs",
+  "description": "List the directories currently on the directory stack",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "show stack",
+    "pushd history",
+    "directory stack"
+  ],
+  "intents": [
+    "show me my directory stack",
+    "what directories are on the pushd stack"
+  ],
+  "example": "dirs -v",
+  "danger": false,
+  "related": []
+}

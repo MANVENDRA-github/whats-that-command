@@ -1,0 +1,28 @@
+{
+  "id": "git-config-get",
+  "command": "git config --get <key>",
+  "description": "Read the value of a single Git configuration key",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "look up one setting",
+    "what is the value of",
+    "check a config",
+    "read setting"
+  ],
+  "intents": [
+    "what is my configured user email",
+    "look up one specific git setting",
+    "check the value of a particular git config key",
+    "what value does git have for this option",
+    "read a single git configuration entry",
+    "see what one config is set to without dumping everything",
+    "find the current value of a git setting"
+  ],
+  "example": "git config --get user.email",
+  "danger": false,
+  "related": [
+    "git-config-list",
+    "git-config-user"
+  ]
+}

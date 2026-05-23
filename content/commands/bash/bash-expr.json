@@ -1,0 +1,19 @@
+{
+  "id": "bash-expr",
+  "command": "expr <expression>",
+  "description": "Evaluate a simple arithmetic or string expression",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "arithmetic",
+    "evaluate expression",
+    "math in shell"
+  ],
+  "intents": [
+    "do arithmetic in a shell script",
+    "evaluate a simple expression"
+  ],
+  "example": "expr 7 \\* 6",
+  "danger": false,
+  "related": []
+}

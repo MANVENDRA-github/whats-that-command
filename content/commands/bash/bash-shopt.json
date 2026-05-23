@@ -1,0 +1,19 @@
+{
+  "id": "bash-shopt",
+  "command": "shopt -s <option>",
+  "description": "Toggle bash-specific shell options (different from set)",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "bash options",
+    "shell behavior",
+    "globstar"
+  ],
+  "intents": [
+    "enable bash-specific shell options",
+    "turn on globstar for ** patterns"
+  ],
+  "example": "shopt -s globstar",
+  "danger": false,
+  "related": []
+}

@@ -18,18 +18,29 @@ const OUTPUT_FILE = path.join(REPO_ROOT, 'commands.json');
 
 const REQUIRED_STRING_FIELDS = ['id', 'command', 'description', 'tool', 'category'];
 
+async function walkJson(dir) {
+  const out = [];
+  for (const ent of await readdir(dir, { withFileTypes: true })) {
+    const full = path.join(dir, ent.name);
+    if (ent.isDirectory()) {
+      out.push(...(await walkJson(full)));
+    } else if (ent.isFile() && ent.name.endsWith('.json')) {
+      out.push(full);
+    }
+  }
+  return out;
+}
+
 async function main() {
   if (!existsSync(SOURCE_DIR)) {
     console.error(`Source directory missing: ${SOURCE_DIR}`);
     process.exit(1);
   }
 
-  const files = (await readdir(SOURCE_DIR))
-    .filter((f) => f.endsWith('.json'))
-    .sort();
+  const fullPaths = (await walkJson(SOURCE_DIR)).sort();
 
-  if (files.length === 0) {
-    console.error(`No command files found in ${SOURCE_DIR}`);
+  if (fullPaths.length === 0) {
+    console.error(`No command files found under ${SOURCE_DIR}`);
     process.exit(1);
   }
 
@@ -37,13 +48,17 @@ async function main() {
   const entries = [];
   const seenIds = new Map();
 
-  for (const file of files) {
-    const full = path.join(SOURCE_DIR, file);
+  for (const full of fullPaths) {
+    const relPath = path.relative(SOURCE_DIR, full).split(path.sep).join('/');
+    const basename = path.basename(full);
+    const parentDir = path.basename(path.dirname(full));
+    const inToolFolder = path.dirname(full) !== SOURCE_DIR;
+
     let raw;
     try {
       raw = await readFile(full, 'utf8');
     } catch (err) {
-      errors.push(`${file}: cannot read (${err.message})`);
+      errors.push(`${relPath}: cannot read (${err.message})`);
       continue;
     }
 
@@ -51,16 +66,16 @@ async function main() {
     try {
       entry = JSON.parse(raw);
     } catch (err) {
-      errors.push(`${file}: invalid JSON (${err.message})`);
+      errors.push(`${relPath}: invalid JSON (${err.message})`);
       continue;
     }
 
     if (entry === null || typeof entry !== 'object' || Array.isArray(entry)) {
-      errors.push(`${file}: must be a single JSON object`);
+      errors.push(`${relPath}: must be a single JSON object`);
       continue;
     }
 
-    const label = typeof entry.id === 'string' && entry.id.trim() !== '' ? entry.id : file;
+    const label = typeof entry.id === 'string' && entry.id.trim() !== '' ? entry.id : relPath;
 
     for (const field of REQUIRED_STRING_FIELDS) {
       const v = entry[field];
@@ -91,23 +106,29 @@ async function main() {
 
     if (typeof entry.id === 'string' && entry.id.trim() !== '') {
       const expectedFile = `${entry.id}.json`;
-      if (file !== expectedFile) {
-        errors.push(`${file}: filename should match id (expected ${expectedFile})`);
+      if (basename !== expectedFile) {
+        errors.push(`${relPath}: filename should match id (expected ${expectedFile})`);
       }
       if (seenIds.has(entry.id)) {
         errors.push(`${entry.id}: duplicate id (also in ${seenIds.get(entry.id)})`);
       } else {
-        seenIds.set(entry.id, file);
+        seenIds.set(entry.id, relPath);
       }
     }
 
-    entries.push({ file, entry });
+    if (!inToolFolder) {
+      errors.push(`${relPath}: must live under a tool subfolder (content/commands/<tool>/)`);
+    } else if (typeof entry.tool === 'string' && entry.tool.trim() !== '' && parentDir !== entry.tool) {
+      errors.push(`${relPath}: parent folder "${parentDir}" must match tool "${entry.tool}"`);
+    }
+
+    entries.push({ relPath, entry });
   }
 
   const allIds = new Set(entries.map(({ entry }) => entry.id).filter(Boolean));
-  for (const { file, entry } of entries) {
+  for (const { relPath, entry } of entries) {
     if (entry.related === undefined) continue;
-    const label = typeof entry.id === 'string' ? entry.id : file;
+    const label = typeof entry.id === 'string' ? entry.id : relPath;
     if (!Array.isArray(entry.related)) {
       errors.push(`${label}: "related" must be an array when present`);
       continue;
@@ -136,7 +157,7 @@ async function main() {
   mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
   await writeFile(OUTPUT_FILE, JSON.stringify(commands, null, 2) + '\n', 'utf8');
 
-  console.log(`commands.json built — ${commands.length} entries from ${files.length} files.`);
+  console.log(`commands.json built — ${commands.length} entries from ${fullPaths.length} files.`);
 }
 
 main().catch((err) => {

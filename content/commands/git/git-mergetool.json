@@ -22,7 +22,7 @@
   "danger": false,
   "related": [
     "git-merge",
-    "git-merge-abort",
+    "git-undo-merge",
     "git-difftool"
   ]
 }

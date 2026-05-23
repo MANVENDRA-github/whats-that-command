@@ -1,0 +1,19 @@
+{
+  "id": "bash-bind",
+  "command": "bind '<binding>'",
+  "description": "Bind a key sequence to a readline function in bash",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "key binding",
+    "readline binding",
+    "shortcut key"
+  ],
+  "intents": [
+    "add a custom keyboard shortcut to my bash prompt",
+    "bind a key to a readline action"
+  ],
+  "example": "bind '\"\\C-l\": clear-screen'",
+  "danger": false,
+  "related": []
+}

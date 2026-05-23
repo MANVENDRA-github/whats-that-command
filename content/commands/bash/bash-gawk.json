@@ -1,0 +1,18 @@
+{
+  "id": "bash-gawk",
+  "command": "gawk '<program>' <file>",
+  "description": "GNU awk implementation with extensions over standard awk",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "gnu awk",
+    "text processing",
+    "extended awk"
+  ],
+  "intents": [
+    "use gnu awk with extra features beyond standard awk"
+  ],
+  "example": "gawk \"{print $2}\" file.txt",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": "docker-login",
+  "command": "docker login <registry>",
+  "description": "Log in to a Docker registry so you can push/pull private images",
+  "tool": "docker",
+  "category": "registry",
+  "tags": [
+    "authenticate registry",
+    "log into docker hub",
+    "registry creds"
+  ],
+  "intents": [
+    "log in to docker hub",
+    "authenticate to a private docker registry",
+    "set credentials for a registry"
+  ],
+  "example": "docker login ghcr.io",
+  "danger": false,
+  "related": []
+}

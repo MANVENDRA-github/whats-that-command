@@ -12,6 +12,15 @@
     "extract a tar file",
     "extract files"
   ],
+  "intents": [
+    "open a .tar.gz file someone sent me",
+    "extract a tarball into the current folder",
+    "unpack a downloaded archive",
+    "decompress a gz archive",
+    "i downloaded a tar.gz, get the contents out",
+    "uncompress and extract in one step",
+    "pull the files out of a tarred and gzipped archive"
+  ],
   "example": "tar -xzvf backup.tar.gz",
   "danger": false,
   "related": [

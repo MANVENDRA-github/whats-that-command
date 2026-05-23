@@ -6,14 +6,13 @@
     "predev": "npm run validate",
     "dev": "next dev",
     "validate": "node scripts/build-commands.mjs",
-    "embed": "node scripts/generate-embeddings.mjs",
+    "embed": "node scripts/build-static-embeddings.mjs",
     "prebuild": "npm run validate && npm run embed",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@huggingface/transformers": "^4.2.0",
     "framer-motion": "^12.38.0",
     "fuse.js": "^7.0.0",
     "next": "^16.2.6",

@@ -16,7 +16,10 @@
     "make my commits show the right author",
     "configure who i am for git",
     "change the email git uses for commits",
-    "first time git setup on a new machine"
+    "first time git setup on a new machine",
+    "tell git what name to put on my commits",
+    "set my author identity for git globally",
+    "fix the wrong name showing up on my commits"
   ],
   "example": "git config --global user.name \"Your Name\"",
   "danger": false,

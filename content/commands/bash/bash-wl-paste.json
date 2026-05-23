@@ -1,0 +1,17 @@
+{
+  "id": "bash-wl-paste",
+  "command": "wl-paste",
+  "description": "Paste from the Wayland clipboard",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "paste from clipboard",
+    "wayland clipboard"
+  ],
+  "intents": [
+    "paste the wayland clipboard contents into a command"
+  ],
+  "example": "wl-paste > clipboard.txt",
+  "danger": false,
+  "related": []
+}

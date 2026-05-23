@@ -10,6 +10,15 @@
     "find listener",
     "process on port"
   ],
+  "intents": [
+    "what is running on port 8080",
+    "who is listening on this port",
+    "find the pid of whatever owns a port",
+    "which process is bound to port 3000",
+    "is anything actually using a port right now",
+    "see what holds a port before i kill it",
+    "identify the server taking a specific port"
+  ],
   "example": "lsof -i :8080",
   "danger": false,
   "related": [

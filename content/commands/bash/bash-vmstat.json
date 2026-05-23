@@ -1,0 +1,19 @@
+{
+  "id": "bash-vmstat",
+  "command": "vmstat",
+  "description": "Report virtual memory, processes, paging, and CPU activity",
+  "tool": "bash",
+  "category": "monitor",
+  "tags": [
+    "memory stats",
+    "swap activity",
+    "vm stats"
+  ],
+  "intents": [
+    "see memory and swap activity over time",
+    "monitor paging and cpu usage"
+  ],
+  "example": "vmstat 2",
+  "danger": false,
+  "related": []
+}

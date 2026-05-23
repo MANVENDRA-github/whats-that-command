@@ -1,0 +1,28 @@
+{
+  "id": "git-archive",
+  "command": "git archive --format=<fmt> --output=<file> <ref>",
+  "description": "Export a tree as a tar or zip archive, without including git history",
+  "tool": "git",
+  "category": "inspect",
+  "tags": [
+    "export to tarball",
+    "make a zip of the repo",
+    "package release",
+    "snapshot without git data",
+    "distribute source"
+  ],
+  "intents": [
+    "package my repo as a tarball without the .git folder",
+    "create a zip of the code at a specific tag",
+    "export a release artifact from git",
+    "make a tar archive of the source code for distribution",
+    "snapshot the repo without all the git history",
+    "produce a downloadable archive of my project"
+  ],
+  "example": "git archive --format=zip --output=release.zip v1.0",
+  "danger": false,
+  "related": [
+    "git-clone-shallow",
+    "git-tag-create"
+  ]
+}

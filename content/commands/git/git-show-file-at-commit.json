@@ -1,0 +1,30 @@
+{
+  "id": "git-show-file-at-commit",
+  "command": "git show <commit>:<file>",
+  "description": "Print the contents of a file as it existed at a specific commit, without checking anything out",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "view old file",
+    "see file at past commit",
+    "print file from history",
+    "read past version",
+    "file content at commit"
+  ],
+  "intents": [
+    "show me what this file looked like at a specific commit",
+    "print the contents of a file as it was in the past",
+    "view a file at an old commit without checking it out",
+    "see how a file used to look at a particular point in history",
+    "dump an old version of a file to stdout",
+    "read a past version of a file without touching my working tree",
+    "what did this file contain three commits ago"
+  ],
+  "example": "git show abc123:src/config.js",
+  "danger": false,
+  "related": [
+    "git-show-commit",
+    "git-restore-from-commit",
+    "git-log-file"
+  ]
+}

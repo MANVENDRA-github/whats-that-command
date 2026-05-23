@@ -1,0 +1,19 @@
+{
+  "id": "bash-hostname",
+  "command": "hostname",
+  "description": "Show or set the system's hostname",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "machine name",
+    "set hostname",
+    "computer name"
+  ],
+  "intents": [
+    "what is the hostname of this machine",
+    "set the system hostname"
+  ],
+  "example": "hostname",
+  "danger": false,
+  "related": []
+}

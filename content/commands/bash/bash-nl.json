@@ -1,0 +1,19 @@
+{
+  "id": "bash-nl",
+  "command": "nl <file>",
+  "description": "Add line numbers to a file's output",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "number lines",
+    "add line numbers",
+    "numbered output"
+  ],
+  "intents": [
+    "print a file with line numbers",
+    "add line numbers to output"
+  ],
+  "example": "nl readme.md",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": "bash-mktemp",
+  "command": "mktemp",
+  "description": "Create a uniquely-named temporary file or directory safely",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "scratch file",
+    "temp file",
+    "unique filename"
+  ],
+  "intents": [
+    "create a temporary file with a unique name",
+    "make a scratch file for a script",
+    "safely create a temp directory"
+  ],
+  "example": "tmp=$(mktemp)",
+  "danger": false,
+  "related": []
+}

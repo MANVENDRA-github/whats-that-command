@@ -1,0 +1,18 @@
+{
+  "id": "bash-egrep",
+  "command": "egrep <pattern> <file>",
+  "description": "grep with extended regular expressions enabled (equivalent to grep -E)",
+  "tool": "bash",
+  "category": "search",
+  "tags": [
+    "extended regex",
+    "grep with regex",
+    "search with eregex"
+  ],
+  "intents": [
+    "grep with extended regex syntax"
+  ],
+  "example": "egrep \"warn|error\" app.log",
+  "danger": false,
+  "related": []
+}

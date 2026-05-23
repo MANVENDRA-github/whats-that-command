@@ -1,0 +1,19 @@
+{
+  "id": "docker-wait",
+  "command": "docker wait <container>",
+  "description": "Block until a container exits, then print its exit code",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "wait for exit",
+    "block on container",
+    "capture exit code"
+  ],
+  "intents": [
+    "wait for a container to finish",
+    "get the exit code of a running container when it ends"
+  ],
+  "example": "docker wait migration",
+  "danger": false,
+  "related": []
+}

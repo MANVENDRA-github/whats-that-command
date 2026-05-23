@@ -1,0 +1,17 @@
+{
+  "id": "docker-stack-services",
+  "command": "docker stack services <stack>",
+  "description": "List the services in a stack",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "stack services",
+    "list services in stack"
+  ],
+  "intents": [
+    "list the services that make up a stack"
+  ],
+  "example": "docker stack services myapp",
+  "danger": false,
+  "related": []
+}

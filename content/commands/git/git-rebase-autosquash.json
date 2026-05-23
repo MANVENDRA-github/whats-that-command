@@ -1,0 +1,28 @@
+{
+  "id": "git-rebase-autosquash",
+  "command": "git rebase -i --autosquash <base>",
+  "description": "Interactive rebase that automatically arranges fixup and squash commits next to their targets",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "fold fixups in",
+    "auto-arrange rebase",
+    "squash fixups into targets",
+    "tidy fixup commits"
+  ],
+  "intents": [
+    "rebase and automatically squash my fixup commits into their targets",
+    "fold all the fixup commits into the right commits",
+    "auto-arrange a rebase using my fixup markers",
+    "tidy up the branch by squashing fixup commits",
+    "let git pre-arrange the rebase based on fixup labels",
+    "interactive rebase that handles fixups for me"
+  ],
+  "example": "git rebase -i --autosquash main",
+  "danger": true,
+  "related": [
+    "git-rebase-interactive",
+    "git-commit-fixup",
+    "git-rebase"
+  ]
+}

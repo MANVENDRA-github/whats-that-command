@@ -10,6 +10,15 @@
     "launch app",
     "spin up"
   ],
+  "intents": [
+    "start my docker compose stack in the background",
+    "bring up all services from my compose file",
+    "spin up the whole multi-container app",
+    "launch my dev stack from docker-compose.yml",
+    "start all the containers defined in compose detached",
+    "fire up the local stack so i can develop against it",
+    "run the whole compose setup without blocking my terminal"
+  ],
   "example": "docker compose up -d",
   "danger": false,
   "related": [

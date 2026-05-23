@@ -1,0 +1,17 @@
+{
+  "id": "bash-times",
+  "command": "times",
+  "description": "Print accumulated user and system times for the shell and its children",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "cpu times",
+    "shell timing"
+  ],
+  "intents": [
+    "print accumulated cpu times for the shell and its child processes"
+  ],
+  "example": "times",
+  "danger": false,
+  "related": []
+}

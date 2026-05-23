@@ -1,0 +1,17 @@
+{
+  "id": "bash-clear-console",
+  "command": "clear_console",
+  "description": "Clear the system console including history",
+  "tool": "bash",
+  "category": "terminal",
+  "tags": [
+    "clear console",
+    "wipe scrollback"
+  ],
+  "intents": [
+    "clear the console including scrollback"
+  ],
+  "example": "clear_console",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-perf",
+  "command": "perf <subcommand>",
+  "description": "Linux performance analysis toolkit (profiling, counters, traces)",
+  "tool": "bash",
+  "category": "monitor",
+  "tags": [
+    "profile cpu",
+    "performance counters",
+    "cpu sampling"
+  ],
+  "intents": [
+    "profile a program's cpu usage",
+    "sample what a process is doing on the cpu"
+  ],
+  "example": "perf stat ./mybin",
+  "danger": false,
+  "related": []
+}

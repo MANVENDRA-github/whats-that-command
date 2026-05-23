@@ -14,7 +14,11 @@
     "show me the history of this one file",
     "who has changed this file over time",
     "see all commits that modified a specific file",
-    "track changes to a file even after it was renamed"
+    "track changes to a file even after it was renamed",
+    "every commit that touched this file",
+    "view the commit history limited to one file",
+    "log of changes for a specific file across renames",
+    "history of a single file even before it was renamed"
   ],
   "example": "git log --follow src/utils.js",
   "danger": false,

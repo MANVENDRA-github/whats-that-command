@@ -6,9 +6,11 @@
   "category": "undo",
   "tags": [
     "cancel merge",
-    "back out",
+    "stop merge",
+    "bail out of merge",
     "merge gone wrong",
-    "exit conflict"
+    "exit conflict",
+    "escape merge"
   ],
   "intents": [
     "cancel a merge that has conflicts",
@@ -17,12 +19,15 @@
     "stop a merge i regret starting",
     "get back to where i was before i ran git merge",
     "exit the merge state and return to my branch",
-    "i started a merge and want to bail out"
+    "i started a merge and want to bail out",
+    "i changed my mind about this merge",
+    "i dont want to deal with these merge conflicts right now"
   ],
   "example": "git merge --abort",
   "danger": false,
   "related": [
-    "git-revert-commit",
-    "git-hard-reset"
+    "git-merge",
+    "git-rebase-abort",
+    "git-cherry-pick-abort"
   ]
 }

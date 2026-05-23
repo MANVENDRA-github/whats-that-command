@@ -6,7 +6,7 @@ import { fuseOptions } from '@/lib/searchConfig';
 import useSearchQuery from '@/hooks/useSearchQuery';
 import SearchInput from './SearchInput';
 import CommandList from './CommandList';
-import CategorizedCommandList from './CategorizedCommandList';
+import CategoryBrowser from './CategoryBrowser';
 import NoMatch from './NoMatch';
 
 export default function ToolBrowser({ tool, commands }) {
@@ -50,7 +50,7 @@ export default function ToolBrowser({ tool, commands }) {
           <CommandList commands={results} />
         )
       ) : (
-        <CategorizedCommandList commands={commands} />
+        <CategoryBrowser commands={commands} />
       )}
     </section>
   );

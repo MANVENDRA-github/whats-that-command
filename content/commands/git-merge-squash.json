@@ -1,0 +1,24 @@
+{
+  "id": "git-merge-squash",
+  "command": "git merge --squash <branch>",
+  "description": "Combine all changes from another branch into a single staged change you then commit yourself",
+  "tool": "git",
+  "category": "merge",
+  "tags": [
+    "squash merge",
+    "single commit merge",
+    "flatten branch"
+  ],
+  "intents": [
+    "merge a branch but keep all changes as one commit",
+    "i dont want all those small commits in main",
+    "squash a feature branch into one commit",
+    "merge cleanly without preserving commit history"
+  ],
+  "example": "git merge --squash feature/login",
+  "danger": false,
+  "related": [
+    "git-merge",
+    "git-rebase-interactive"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "git-rebase-abort",
+  "command": "git rebase --abort",
+  "description": "Cancel an in-progress rebase and return to the state before it started",
+  "tool": "git",
+  "category": "undo",
+  "tags": [
+    "stop rebase",
+    "bail out",
+    "escape rebase",
+    "rewind to pre-rebase",
+    "give up on rebase"
+  ],
+  "intents": [
+    "i am stuck in the middle of a rebase and want out",
+    "cancel the rebase i started",
+    "abort a rebase that is going badly",
+    "get back to before i started this rebase",
+    "stop the current rebase and undo it",
+    "rebase has too many conflicts just take me back",
+    "bail out of a rebase in progress"
+  ],
+  "example": "git rebase --abort",
+  "danger": false,
+  "related": [
+    "git-rebase",
+    "git-rebase-continue",
+    "git-rebase-interactive"
+  ]
+}

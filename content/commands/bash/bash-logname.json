@@ -1,0 +1,17 @@
+{
+  "id": "bash-logname",
+  "command": "logname",
+  "description": "Print the name of the user who originally logged in (not affected by su)",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "original login name",
+    "real user"
+  ],
+  "intents": [
+    "print the user that originally logged in regardless of su"
+  ],
+  "example": "logname",
+  "danger": false,
+  "related": []
+}

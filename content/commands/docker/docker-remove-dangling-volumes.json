@@ -1,0 +1,18 @@
+{
+  "id": "docker-remove-dangling-volumes",
+  "command": "docker volume rm $(docker volume ls -f dangling=true -q)",
+  "description": "Remove all dangling volumes (volumes not attached to any container)",
+  "tool": "docker",
+  "category": "cleanup",
+  "tags": [
+    "cleanup dangling volumes",
+    "remove orphan volumes"
+  ],
+  "intents": [
+    "remove dangling docker volumes",
+    "clean up orphan volumes that no container is using"
+  ],
+  "example": "docker volume rm $(docker volume ls -f dangling=true -q)",
+  "danger": true,
+  "related": []
+}

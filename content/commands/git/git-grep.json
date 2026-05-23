@@ -1,0 +1,29 @@
+{
+  "id": "git-grep",
+  "command": "git grep <pattern>",
+  "description": "Search tracked files for a pattern, much faster than plain grep on a repo",
+  "tool": "git",
+  "category": "inspect",
+  "tags": [
+    "search code",
+    "find string in repo",
+    "find text in tracked files",
+    "where is this used"
+  ],
+  "intents": [
+    "find a string across all tracked files in the repo",
+    "search the codebase for a function name",
+    "where is this variable used in the project",
+    "grep through git tracked files only",
+    "fast search across the whole repo for some text",
+    "find every file that mentions this string",
+    "look for a pattern in the project ignoring gitignored files"
+  ],
+  "example": "git grep \"TODO\"",
+  "danger": false,
+  "related": [
+    "git-log-search",
+    "git-blame",
+    "git-log-file"
+  ]
+}

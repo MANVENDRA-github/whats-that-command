@@ -1,0 +1,18 @@
+{
+  "id": "docker-context-ls",
+  "command": "docker context ls",
+  "description": "List available Docker contexts",
+  "tool": "docker",
+  "category": "context",
+  "tags": [
+    "list contexts",
+    "show docker hosts"
+  ],
+  "intents": [
+    "list docker contexts",
+    "see all configured docker daemons"
+  ],
+  "example": "docker context ls",
+  "danger": false,
+  "related": []
+}

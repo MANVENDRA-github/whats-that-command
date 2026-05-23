@@ -1,0 +1,17 @@
+{
+  "id": "bash-tar-xz",
+  "command": "tar -cJf <out>.tar.xz <files>",
+  "description": "Create an xz-compressed tar archive",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "tar with xz",
+    "tar.xz"
+  ],
+  "intents": [
+    "create an xz compressed tarball for best compression"
+  ],
+  "example": "tar -cJf project.tar.xz project/",
+  "danger": false,
+  "related": []
+}

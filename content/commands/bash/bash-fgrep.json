@@ -1,0 +1,19 @@
+{
+  "id": "bash-fgrep",
+  "command": "fgrep <text> <file>",
+  "description": "grep that treats the pattern as a fixed string, not a regex (equivalent to grep -F)",
+  "tool": "bash",
+  "category": "search",
+  "tags": [
+    "literal string search",
+    "no regex",
+    "fixed string grep"
+  ],
+  "intents": [
+    "search for a literal string without regex",
+    "grep but treat the pattern as plain text"
+  ],
+  "example": "fgrep \"1.2.3\" versions.txt",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,29 @@
+{
+  "id": "git-remote-remove",
+  "command": "git remote remove <name>",
+  "description": "Disconnect a remote from this repository",
+  "tool": "git",
+  "category": "sync",
+  "tags": [
+    "delete remote",
+    "unlink remote",
+    "drop origin",
+    "disconnect server"
+  ],
+  "intents": [
+    "delete a remote i no longer use",
+    "disconnect my repo from a remote server",
+    "remove an old origin url",
+    "unlink a remote from this repository",
+    "drop a remote connection",
+    "get rid of an extra remote i added by mistake",
+    "stop pushing to a certain remote by detaching it"
+  ],
+  "example": "git remote remove upstream",
+  "danger": false,
+  "related": [
+    "git-remote-add",
+    "git-remote-list",
+    "git-remote-rename"
+  ]
+}

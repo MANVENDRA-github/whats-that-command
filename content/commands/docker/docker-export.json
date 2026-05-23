@@ -1,0 +1,19 @@
+{
+  "id": "docker-export",
+  "command": "docker export <container> -o <file>.tar",
+  "description": "Export a container's filesystem as a tar archive",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "export container fs",
+    "container to tarball",
+    "save filesystem"
+  ],
+  "intents": [
+    "export a container's filesystem to a tar archive",
+    "save the contents of a container as a tar file"
+  ],
+  "example": "docker export web -o web.tar",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "docker-container-inspect",
+  "command": "docker container inspect <container>",
+  "description": "Print detailed JSON information about a container (modern form of docker inspect)",
+  "tool": "docker",
+  "category": "debug",
+  "tags": [
+    "inspect container modern",
+    "full container details"
+  ],
+  "intents": [
+    "inspect a container using the modern subcommand"
+  ],
+  "example": "docker container inspect web",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-scp",
+  "command": "scp <src> <user>@<host>:<dest>",
+  "description": "Copy files to or from a remote machine over SSH",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "copy over ssh",
+    "remote copy",
+    "upload file"
+  ],
+  "intents": [
+    "copy a file to a remote server",
+    "download a file from a server via ssh"
+  ],
+  "example": "scp file.tar.gz alice@server:/tmp/",
+  "danger": false,
+  "related": []
+}

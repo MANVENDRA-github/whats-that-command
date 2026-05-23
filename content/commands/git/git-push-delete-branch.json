@@ -1,0 +1,29 @@
+{
+  "id": "git-push-delete-branch",
+  "command": "git push <remote> --delete <branch>",
+  "description": "Delete a branch on the remote repository",
+  "tool": "git",
+  "category": "sync",
+  "tags": [
+    "remove remote branch",
+    "delete branch on github",
+    "clean up remote",
+    "drop server branch"
+  ],
+  "intents": [
+    "delete a branch on the remote",
+    "remove a branch from github",
+    "i merged my feature branch how do i delete it on the server",
+    "clean up an old branch from origin",
+    "drop a branch from the remote repository",
+    "delete a branch i pushed by mistake",
+    "kill a stale remote branch"
+  ],
+  "example": "git push origin --delete feature-old",
+  "danger": true,
+  "related": [
+    "git-delete-branch",
+    "git-force-delete-branch",
+    "git-push"
+  ]
+}

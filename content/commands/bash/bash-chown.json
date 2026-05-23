@@ -1,0 +1,19 @@
+{
+  "id": "bash-chown",
+  "command": "chown <user>:<group> <file>",
+  "description": "Change the owner and/or group of a file",
+  "tool": "bash",
+  "category": "permissions",
+  "tags": [
+    "change owner",
+    "set file owner",
+    "transfer ownership"
+  ],
+  "intents": [
+    "change the owner of a file",
+    "set the user and group of a file"
+  ],
+  "example": "chown alice:staff report.txt",
+  "danger": false,
+  "related": []
+}

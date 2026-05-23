@@ -11,6 +11,15 @@
     "config dump",
     "everything about"
   ],
+  "intents": [
+    "show full details about a container",
+    "what is the ip address of my container",
+    "see every environment variable a container has",
+    "dump everything about a container including mounts, network, env",
+    "get the json config of a running container",
+    "find what volumes are mounted inside this container",
+    "low level details about a docker container"
+  ],
   "example": "docker inspect api-server",
   "danger": false,
   "related": [

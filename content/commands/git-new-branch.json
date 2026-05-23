@@ -10,6 +10,15 @@
     "fork off",
     "begin feature"
   ],
+  "intents": [
+    "start a new feature branch",
+    "create a branch and switch to it",
+    "fork off a new branch from my current one",
+    "begin work on a new branch",
+    "make a new branch and check it out at the same time",
+    "branch off here to start a new feature",
+    "open a new branch for some work"
+  ],
   "example": "git checkout -b feature/login",
   "danger": false,
   "related": [

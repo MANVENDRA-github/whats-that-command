@@ -1,0 +1,19 @@
+{
+  "id": "bash-comm",
+  "command": "comm <file1> <file2>",
+  "description": "Compare two sorted files line by line, showing common and unique lines",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "compare sorted files",
+    "lines in common",
+    "set comparison"
+  ],
+  "intents": [
+    "find lines common to two files",
+    "see which lines are unique to each of two files"
+  ],
+  "example": "comm a.txt b.txt",
+  "danger": false,
+  "related": []
+}

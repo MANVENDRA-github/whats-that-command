@@ -1,0 +1,19 @@
+{
+  "id": "bash-trap",
+  "command": "trap \"<cmd>\" <signal>",
+  "description": "Run a command when the shell receives a given signal",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "signal handler",
+    "cleanup on exit",
+    "catch sigint"
+  ],
+  "intents": [
+    "run cleanup code when a script is interrupted",
+    "catch ctrl-c in a bash script"
+  ],
+  "example": "trap \"rm -f /tmp/lock\" EXIT",
+  "danger": false,
+  "related": []
+}

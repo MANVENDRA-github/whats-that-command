@@ -10,6 +10,15 @@
     "merge gone wrong",
     "exit conflict"
   ],
+  "intents": [
+    "cancel a merge that has conflicts",
+    "back out of a merge i started",
+    "abort a merge thats giving me conflicts",
+    "stop a merge i regret starting",
+    "get back to where i was before i ran git merge",
+    "exit the merge state and return to my branch",
+    "i started a merge and want to bail out"
+  ],
   "example": "git merge --abort",
   "danger": false,
   "related": [

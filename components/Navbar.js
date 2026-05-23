@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <nav
       aria-label="Primary"
-      className="sticky top-0 z-30 border-b border-ink bg-paper"
+      className="sticky top-0 z-30 border-b border-ink bg-paper [will-change:transform]"
     >
       <div className="mx-auto flex h-14 max-w-page items-center justify-between px-5 sm:px-7">
         <Link

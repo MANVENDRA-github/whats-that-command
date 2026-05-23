@@ -1,0 +1,19 @@
+{
+  "id": "bash-lspci",
+  "command": "lspci",
+  "description": "List all PCI devices attached to the system",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "list pci",
+    "show hardware",
+    "pci devices"
+  ],
+  "intents": [
+    "list pci hardware on this machine",
+    "see network and graphics cards"
+  ],
+  "example": "lspci",
+  "danger": false,
+  "related": []
+}

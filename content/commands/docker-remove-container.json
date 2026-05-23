@@ -9,6 +9,15 @@
     "clean up",
     "throw away container"
   ],
+  "intents": [
+    "delete a stopped container",
+    "remove an old container i dont need anymore",
+    "get rid of a specific container by name",
+    "clean up one container by id",
+    "throw away an exited container",
+    "delete a single container thats not running",
+    "drop one container without touching the others"
+  ],
   "example": "docker rm old-build",
   "danger": false,
   "related": [

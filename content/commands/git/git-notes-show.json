@@ -1,0 +1,27 @@
+{
+  "id": "git-notes-show",
+  "command": "git notes show <commit>",
+  "description": "Display any notes attached to a commit",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "read commit notes",
+    "see attached notes",
+    "view annotations",
+    "show extra context"
+  ],
+  "intents": [
+    "show me the notes attached to a commit",
+    "read the side notes on a past commit",
+    "view annotations added to a commit",
+    "see the extra context i attached to this commit",
+    "display git notes for a specific commit",
+    "what notes does this commit have"
+  ],
+  "example": "git notes show abc123",
+  "danger": false,
+  "related": [
+    "git-notes-add",
+    "git-show-commit"
+  ]
+}

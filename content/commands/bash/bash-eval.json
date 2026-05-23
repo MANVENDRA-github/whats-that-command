@@ -1,0 +1,19 @@
+{
+  "id": "bash-eval",
+  "command": "eval <command>",
+  "description": "Parse and execute a string as a shell command",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "execute string",
+    "dynamic command",
+    "reparse"
+  ],
+  "intents": [
+    "execute a command built up as a string",
+    "reparse a string and run it as a shell command"
+  ],
+  "example": "eval \"$cmd\"",
+  "danger": true,
+  "related": []
+}

@@ -11,6 +11,16 @@
     "edit history",
     "tidy before pr"
   ],
+  "intents": [
+    "squash my last several commits into one",
+    "clean up my commits before opening a pr",
+    "reorder some commits before pushing",
+    "edit commit messages in bulk for the last few commits",
+    "drop a commit from my branch history",
+    "fix up my messy local commits before sharing",
+    "combine wip commits into one nice commit",
+    "interactive rebase to tidy commits"
+  ],
   "example": "git rebase -i HEAD~5",
   "danger": true,
   "related": [

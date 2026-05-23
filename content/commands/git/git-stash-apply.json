@@ -1,0 +1,28 @@
+{
+  "id": "git-stash-apply",
+  "command": "git stash apply",
+  "description": "Reapply the most recent stash without removing it from the stash list",
+  "tool": "git",
+  "category": "stash",
+  "tags": [
+    "restore stash but keep it",
+    "reuse stash",
+    "apply without dropping",
+    "keep stash around"
+  ],
+  "intents": [
+    "bring back my stashed changes but keep the stash for later",
+    "apply a stash without removing it from the list",
+    "reuse the same stash twice",
+    "restore stash but dont delete it",
+    "apply stashed work but keep a copy in the stash",
+    "test a stash without committing to using it"
+  ],
+  "example": "git stash apply",
+  "danger": false,
+  "related": [
+    "git-stash",
+    "git-stash-pop",
+    "git-stash-list"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "docker-context-create",
+  "command": "docker context create <name> --docker host=<endpoint>",
+  "description": "Create a new Docker context pointing at a different daemon",
+  "tool": "docker",
+  "category": "context",
+  "tags": [
+    "add docker context",
+    "remote daemon",
+    "new context"
+  ],
+  "intents": [
+    "create a docker context for a remote daemon",
+    "set up a context to talk to docker over ssh"
+  ],
+  "example": "docker context create remote --docker \"host=ssh://user@server\"",
+  "danger": false,
+  "related": []
+}

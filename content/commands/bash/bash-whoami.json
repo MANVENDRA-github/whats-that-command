@@ -1,0 +1,19 @@
+{
+  "id": "bash-whoami",
+  "command": "whoami",
+  "description": "Print the username you are logged in as",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "who am i",
+    "current user",
+    "logged-in user"
+  ],
+  "intents": [
+    "what user am i logged in as",
+    "print my username"
+  ],
+  "example": "whoami",
+  "danger": false,
+  "related": []
+}

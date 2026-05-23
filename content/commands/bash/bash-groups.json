@@ -1,0 +1,19 @@
+{
+  "id": "bash-groups",
+  "command": "groups",
+  "description": "List the groups a user belongs to",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "my groups",
+    "list groups",
+    "group membership"
+  ],
+  "intents": [
+    "what groups am i in",
+    "list the groups for a user"
+  ],
+  "example": "groups alice",
+  "danger": false,
+  "related": []
+}

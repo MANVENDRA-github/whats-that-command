@@ -1,0 +1,28 @@
+{
+  "id": "git-rebase-skip",
+  "command": "git rebase --skip",
+  "description": "Skip the current commit during a rebase and move on to the next one",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "skip a commit in rebase",
+    "drop this commit",
+    "pass over this step",
+    "next rebase step"
+  ],
+  "intents": [
+    "skip this commit during the rebase",
+    "drop the current commit and continue rebasing",
+    "this commit isnt needed anymore, move on",
+    "pass over the current step in a rebase",
+    "the changes here are already in the new base, skip it",
+    "discard this commit and continue with the rest of the rebase"
+  ],
+  "example": "git rebase --skip",
+  "danger": true,
+  "related": [
+    "git-rebase",
+    "git-rebase-continue",
+    "git-rebase-abort"
+  ]
+}

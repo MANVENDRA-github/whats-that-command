@@ -10,6 +10,15 @@
     "stay on top",
     "avoid merge commit"
   ],
+  "intents": [
+    "pull new commits but rebase my work on top",
+    "stay on top of main without a merge commit",
+    "update my branch with remote changes and replay my work",
+    "avoid a merge commit when pulling",
+    "rebase onto the latest remote during pull",
+    "keep linear history when syncing with upstream",
+    "i dont want a merge commit every time i pull"
+  ],
   "example": "git pull --rebase",
   "danger": false,
   "related": [

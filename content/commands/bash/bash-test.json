@@ -1,0 +1,19 @@
+{
+  "id": "bash-test",
+  "command": "test <expression>",
+  "description": "Evaluate a conditional expression and return success or failure",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "condition check",
+    "if test",
+    "file test"
+  ],
+  "intents": [
+    "check if a file exists in a script",
+    "evaluate a conditional in shell"
+  ],
+  "example": "test -f file.txt && echo exists",
+  "danger": false,
+  "related": []
+}

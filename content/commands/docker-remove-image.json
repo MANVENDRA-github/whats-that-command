@@ -10,6 +10,15 @@
     "remove from cache",
     "clean up image"
   ],
+  "intents": [
+    "delete a docker image to free disk space",
+    "remove an old image i no longer need",
+    "drop a specific image from my local cache",
+    "uninstall a docker image",
+    "clean out one image by name and tag",
+    "get rid of an unused image taking up space",
+    "remove an old version of an image after upgrading"
+  ],
   "example": "docker rmi node:18-old",
   "danger": false,
   "related": [

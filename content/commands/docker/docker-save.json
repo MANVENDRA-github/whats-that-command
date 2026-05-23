@@ -1,0 +1,19 @@
+{
+  "id": "docker-save",
+  "command": "docker save <image> -o <file>.tar",
+  "description": "Save one or more images to a tar archive (preserves layers and history)",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "export image",
+    "image to tarball",
+    "offline image transfer"
+  ],
+  "intents": [
+    "save a docker image to a tar file",
+    "export an image so i can move it to another machine without a registry"
+  ],
+  "example": "docker save nginx:latest -o nginx.tar",
+  "danger": false,
+  "related": []
+}

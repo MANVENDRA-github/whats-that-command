@@ -1,0 +1,17 @@
+{
+  "id": "docker-context-inspect",
+  "command": "docker context inspect <name>",
+  "description": "Show detailed info about a Docker context",
+  "tool": "docker",
+  "category": "context",
+  "tags": [
+    "inspect context",
+    "context details"
+  ],
+  "intents": [
+    "inspect a docker context's configuration"
+  ],
+  "example": "docker context inspect default",
+  "danger": false,
+  "related": []
+}

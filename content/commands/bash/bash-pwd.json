@@ -1,0 +1,20 @@
+{
+  "id": "bash-pwd",
+  "command": "pwd",
+  "description": "Print the absolute path of the current working directory",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "where am i",
+    "current directory",
+    "full path"
+  ],
+  "intents": [
+    "what is the current directory",
+    "print the full path of where i am",
+    "show working directory"
+  ],
+  "example": "pwd",
+  "danger": false,
+  "related": []
+}

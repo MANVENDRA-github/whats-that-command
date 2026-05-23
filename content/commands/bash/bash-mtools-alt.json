@@ -1,0 +1,17 @@
+{
+  "id": "bash-mtools-alt",
+  "command": "mdir <drive>",
+  "description": "List files on a DOS-formatted disk without mounting it (mtools)",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "list dos disk",
+    "mtools mdir"
+  ],
+  "intents": [
+    "list files on a dos formatted disk"
+  ],
+  "example": "mdir A:",
+  "danger": false,
+  "related": []
+}

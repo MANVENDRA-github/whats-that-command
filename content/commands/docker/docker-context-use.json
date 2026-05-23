@@ -1,0 +1,19 @@
+{
+  "id": "docker-context-use",
+  "command": "docker context use <name>",
+  "description": "Switch the active Docker context",
+  "tool": "docker",
+  "category": "context",
+  "tags": [
+    "switch context",
+    "select daemon",
+    "change docker host"
+  ],
+  "intents": [
+    "switch to a different docker context",
+    "point the docker cli at another daemon"
+  ],
+  "example": "docker context use remote",
+  "danger": false,
+  "related": []
+}

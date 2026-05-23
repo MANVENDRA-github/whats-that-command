@@ -1,0 +1,20 @@
+{
+  "id": "docker-push",
+  "command": "docker push <image>",
+  "description": "Push a local image to a remote registry",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "upload image",
+    "publish to registry",
+    "send image to docker hub"
+  ],
+  "intents": [
+    "push an image to docker hub",
+    "publish an image to a private registry",
+    "upload my built image"
+  ],
+  "example": "docker push myorg/myapp:1.0",
+  "danger": false,
+  "related": []
+}

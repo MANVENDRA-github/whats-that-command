@@ -1,0 +1,18 @@
+{
+  "id": "docker-pause",
+  "command": "docker pause <container>",
+  "description": "Pause all processes in a container (freeze without stopping)",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "freeze container",
+    "suspend container"
+  ],
+  "intents": [
+    "pause a container without stopping it",
+    "freeze a container temporarily"
+  ],
+  "example": "docker pause myapp",
+  "danger": false,
+  "related": []
+}

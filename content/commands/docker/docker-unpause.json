@@ -1,0 +1,18 @@
+{
+  "id": "docker-unpause",
+  "command": "docker unpause <container>",
+  "description": "Resume processes in a previously paused container",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "unfreeze container",
+    "resume paused"
+  ],
+  "intents": [
+    "unpause a frozen container",
+    "resume a paused container"
+  ],
+  "example": "docker unpause myapp",
+  "danger": false,
+  "related": []
+}

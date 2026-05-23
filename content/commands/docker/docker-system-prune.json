@@ -1,0 +1,20 @@
+{
+  "id": "docker-system-prune",
+  "command": "docker system prune",
+  "description": "Remove stopped containers, dangling images, unused networks, and build cache",
+  "tool": "docker",
+  "category": "cleanup",
+  "tags": [
+    "cleanup docker",
+    "reclaim space",
+    "general prune"
+  ],
+  "intents": [
+    "clean up unused docker resources",
+    "reclaim disk space from docker",
+    "general docker cleanup"
+  ],
+  "example": "docker system prune -f",
+  "danger": true,
+  "related": []
+}

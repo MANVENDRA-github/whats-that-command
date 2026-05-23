@@ -1,0 +1,19 @@
+{
+  "id": "docker-run-mount",
+  "command": "docker run --mount type=<t>,source=<s>,target=<t> <image>",
+  "description": "Mount a volume, bind mount, or tmpfs using the modern --mount syntax",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "mount volume modern",
+    "verbose mount syntax",
+    "explicit mount"
+  ],
+  "intents": [
+    "use the modern --mount syntax to attach storage to a container",
+    "mount a named volume or bind into a container with explicit options"
+  ],
+  "example": "docker run --mount type=volume,source=mydata,target=/data alpine",
+  "danger": false,
+  "related": []
+}

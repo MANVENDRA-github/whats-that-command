@@ -1,0 +1,18 @@
+{
+  "id": "docker-container-ls",
+  "command": "docker container ls",
+  "description": "List running containers (modern form of docker ps)",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "list containers modern",
+    "container ls",
+    "running containers"
+  ],
+  "intents": [
+    "list running containers using the modern syntax"
+  ],
+  "example": "docker container ls -a",
+  "danger": false,
+  "related": []
+}

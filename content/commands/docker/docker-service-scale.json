@@ -1,0 +1,19 @@
+{
+  "id": "docker-service-scale",
+  "command": "docker service scale <service>=<n>",
+  "description": "Scale the number of replicas for a swarm service",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "scale service",
+    "change replicas",
+    "horizontal scale"
+  ],
+  "intents": [
+    "scale a swarm service to N replicas",
+    "increase or decrease replicas for a service"
+  ],
+  "example": "docker service scale web=5",
+  "danger": false,
+  "related": []
+}

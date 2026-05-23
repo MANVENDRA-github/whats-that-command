@@ -1,0 +1,19 @@
+{
+  "id": "docker-compose-config",
+  "command": "docker compose config",
+  "description": "Validate and print the effective compose configuration",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "validate compose",
+    "show effective config",
+    "lint compose file"
+  ],
+  "intents": [
+    "validate my docker-compose file",
+    "see the effective merged compose config after env interpolation"
+  ],
+  "example": "docker compose config",
+  "danger": false,
+  "related": []
+}

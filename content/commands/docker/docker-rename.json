@@ -1,0 +1,18 @@
+{
+  "id": "docker-rename",
+  "command": "docker rename <old> <new>",
+  "description": "Rename an existing container",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "rename container",
+    "change container name"
+  ],
+  "intents": [
+    "rename a docker container",
+    "give a container a new name"
+  ],
+  "example": "docker rename old-name new-name",
+  "danger": false,
+  "related": []
+}

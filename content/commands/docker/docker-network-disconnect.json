@@ -1,0 +1,17 @@
+{
+  "id": "docker-network-disconnect",
+  "command": "docker network disconnect <network> <container>",
+  "description": "Detach a container from a network",
+  "tool": "docker",
+  "category": "networks",
+  "tags": [
+    "detach from network",
+    "remove container from network"
+  ],
+  "intents": [
+    "disconnect a container from a docker network"
+  ],
+  "example": "docker network disconnect mynet web",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "docker-stack-rm",
+  "command": "docker stack rm <stack>",
+  "description": "Remove a deployed stack from the swarm",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "delete stack",
+    "undeploy stack"
+  ],
+  "intents": [
+    "remove a deployed stack and all its services"
+  ],
+  "example": "docker stack rm myapp",
+  "danger": true,
+  "related": []
+}

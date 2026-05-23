@@ -1,0 +1,18 @@
+{
+  "id": "docker-service-ls",
+  "command": "docker service ls",
+  "description": "List services running on the swarm",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "list swarm services",
+    "show services"
+  ],
+  "intents": [
+    "list all services in the swarm",
+    "see what services are running"
+  ],
+  "example": "docker service ls",
+  "danger": false,
+  "related": []
+}

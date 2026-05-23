@@ -1,0 +1,18 @@
+{
+  "id": "docker-system-events",
+  "command": "docker system events",
+  "description": "Stream real-time events from the Docker daemon (same as docker events)",
+  "tool": "docker",
+  "category": "system",
+  "tags": [
+    "daemon events",
+    "system events stream",
+    "live activity"
+  ],
+  "intents": [
+    "stream docker system events live"
+  ],
+  "example": "docker system events",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,18 @@
+{
+  "id": "docker-image-ls",
+  "command": "docker image ls",
+  "description": "List images (modern form of docker images)",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "list images modern",
+    "image ls",
+    "show images"
+  ],
+  "intents": [
+    "list docker images using the modern subcommand syntax"
+  ],
+  "example": "docker image ls",
+  "danger": false,
+  "related": []
+}

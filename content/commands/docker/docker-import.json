@@ -1,0 +1,18 @@
+{
+  "id": "docker-import",
+  "command": "docker import <file>.tar <image>",
+  "description": "Import the contents of a tarball as a new filesystem image",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "import tar as image",
+    "tarball to image"
+  ],
+  "intents": [
+    "import a tarball as a docker image",
+    "create an image from a filesystem tar"
+  ],
+  "example": "docker import web.tar myimage:latest",
+  "danger": false,
+  "related": []
+}

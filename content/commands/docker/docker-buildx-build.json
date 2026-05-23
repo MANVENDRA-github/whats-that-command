@@ -1,0 +1,20 @@
+{
+  "id": "docker-buildx-build",
+  "command": "docker buildx build --platform <list> -t <tag> .",
+  "description": "Build images with the modern buildx, including multi-platform builds",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "multi-platform build",
+    "buildx",
+    "cross-arch image"
+  ],
+  "intents": [
+    "build a docker image for multiple platforms",
+    "use buildx to make arm and amd64 images",
+    "cross-build a docker image"
+  ],
+  "example": "docker buildx build --platform linux/amd64,linux/arm64 -t myorg/app:1.0 --push .",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "docker-stack-ps",
+  "command": "docker stack ps <stack>",
+  "description": "List the tasks in a stack",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "stack tasks",
+    "list stack instances"
+  ],
+  "intents": [
+    "list the tasks running for a stack"
+  ],
+  "example": "docker stack ps myapp",
+  "danger": false,
+  "related": []
+}

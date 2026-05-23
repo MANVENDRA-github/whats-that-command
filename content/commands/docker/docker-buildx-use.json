@@ -1,0 +1,17 @@
+{
+  "id": "docker-buildx-use",
+  "command": "docker buildx use <builder>",
+  "description": "Switch the active buildx builder",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "switch builder",
+    "select buildx instance"
+  ],
+  "intents": [
+    "switch to a different buildx builder"
+  ],
+  "example": "docker buildx use multi",
+  "danger": false,
+  "related": []
+}

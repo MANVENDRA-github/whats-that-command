@@ -1,0 +1,19 @@
+{
+  "id": "docker-build-arg",
+  "command": "docker build --build-arg <K>=<V> .",
+  "description": "Pass build-time variables into the Dockerfile",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "build arg",
+    "pass variable to dockerfile",
+    "parameterize build"
+  ],
+  "intents": [
+    "pass a build-time argument to a Dockerfile",
+    "set an ARG value when building"
+  ],
+  "example": "docker build --build-arg VERSION=1.0 .",
+  "danger": false,
+  "related": []
+}

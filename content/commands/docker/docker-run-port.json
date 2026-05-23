@@ -1,0 +1,20 @@
+{
+  "id": "docker-run-port",
+  "command": "docker run -p <host>:<container> <image>",
+  "description": "Publish a container port to the host",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "expose port",
+    "port forward",
+    "map port to host"
+  ],
+  "intents": [
+    "expose a container port on the host",
+    "map a container port so i can access it from my browser",
+    "publish ports"
+  ],
+  "example": "docker run -p 8080:80 nginx",
+  "danger": false,
+  "related": []
+}

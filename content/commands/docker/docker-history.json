@@ -1,0 +1,19 @@
+{
+  "id": "docker-history",
+  "command": "docker history <image>",
+  "description": "Show the layer-by-layer history of an image",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "image layers",
+    "how was image built",
+    "see layers"
+  ],
+  "intents": [
+    "inspect the layers and build steps of an image",
+    "see how an image was constructed step by step"
+  ],
+  "example": "docker history nginx",
+  "danger": false,
+  "related": []
+}

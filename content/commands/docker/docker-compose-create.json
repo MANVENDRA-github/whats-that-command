@@ -1,0 +1,17 @@
+{
+  "id": "docker-compose-create",
+  "command": "docker compose create",
+  "description": "Create containers for services without starting them",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "prepare compose",
+    "create without start"
+  ],
+  "intents": [
+    "create compose containers but dont start them yet"
+  ],
+  "example": "docker compose create",
+  "danger": false,
+  "related": []
+}

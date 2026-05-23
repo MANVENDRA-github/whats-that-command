@@ -1,0 +1,19 @@
+{
+  "id": "docker-compose-run",
+  "command": "docker compose run <service> <command>",
+  "description": "Run a one-off command in a new container for a compose service",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "one-off compose run",
+    "run task in service",
+    "compose ad-hoc"
+  ],
+  "intents": [
+    "run a one-off command using a compose service's image and config",
+    "spin up a temporary container with my compose configuration"
+  ],
+  "example": "docker compose run --rm web npm test",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "docker-image-prune",
+  "command": "docker image prune",
+  "description": "Remove dangling images (untagged layers from old builds)",
+  "tool": "docker",
+  "category": "cleanup",
+  "tags": [
+    "clean dangling images",
+    "remove untagged",
+    "free disk space"
+  ],
+  "intents": [
+    "clean up untagged docker images",
+    "remove dangling layers to free disk space"
+  ],
+  "example": "docker image prune -f",
+  "danger": true,
+  "related": []
+}

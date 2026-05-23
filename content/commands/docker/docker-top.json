@@ -1,0 +1,19 @@
+{
+  "id": "docker-top",
+  "command": "docker top <container>",
+  "description": "List the running processes inside a container",
+  "tool": "docker",
+  "category": "debug",
+  "tags": [
+    "processes inside container",
+    "container ps",
+    "whats running"
+  ],
+  "intents": [
+    "see what processes are running inside a container",
+    "list pids inside a container"
+  ],
+  "example": "docker top web",
+  "danger": false,
+  "related": []
+}

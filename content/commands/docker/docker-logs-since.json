@@ -1,0 +1,19 @@
+{
+  "id": "docker-logs-since",
+  "command": "docker logs --since <time> <container>",
+  "description": "Show container logs from a given time onward",
+  "tool": "docker",
+  "category": "debug",
+  "tags": [
+    "logs after time",
+    "since timestamp",
+    "filter logs by time"
+  ],
+  "intents": [
+    "show container logs from the last 10 minutes",
+    "filter container logs by start time"
+  ],
+  "example": "docker logs --since 10m web",
+  "danger": false,
+  "related": []
+}

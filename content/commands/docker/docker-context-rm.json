@@ -1,0 +1,17 @@
+{
+  "id": "docker-context-rm",
+  "command": "docker context rm <name>",
+  "description": "Remove a Docker context",
+  "tool": "docker",
+  "category": "context",
+  "tags": [
+    "delete context",
+    "remove daemon endpoint"
+  ],
+  "intents": [
+    "delete a docker context"
+  ],
+  "example": "docker context rm remote",
+  "danger": true,
+  "related": []
+}

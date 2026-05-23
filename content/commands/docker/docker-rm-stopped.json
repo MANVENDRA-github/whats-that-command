@@ -1,0 +1,19 @@
+{
+  "id": "docker-rm-stopped",
+  "command": "docker rm $(docker ps -a -q)",
+  "description": "Remove every container (running and stopped) — be careful",
+  "tool": "docker",
+  "category": "cleanup",
+  "tags": [
+    "delete all containers",
+    "wipe containers",
+    "nuke containers"
+  ],
+  "intents": [
+    "remove every container on this host",
+    "wipe out all containers"
+  ],
+  "example": "docker rm -f $(docker ps -a -q)",
+  "danger": true,
+  "related": []
+}

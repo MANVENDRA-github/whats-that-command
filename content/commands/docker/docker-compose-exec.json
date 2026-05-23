@@ -1,0 +1,18 @@
+{
+  "id": "docker-compose-exec",
+  "command": "docker compose exec <service> <command>",
+  "description": "Run a command inside a running compose service",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "exec in compose",
+    "shell into service"
+  ],
+  "intents": [
+    "shell into a running compose service",
+    "run a command inside a compose service"
+  ],
+  "example": "docker compose exec web bash",
+  "danger": false,
+  "related": []
+}

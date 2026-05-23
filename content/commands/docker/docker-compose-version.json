@@ -1,0 +1,17 @@
+{
+  "id": "docker-compose-version",
+  "command": "docker compose version",
+  "description": "Show the installed docker compose version",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "compose version",
+    "check compose"
+  ],
+  "intents": [
+    "check which version of docker compose is installed"
+  ],
+  "example": "docker compose version",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "docker-plugin-disable",
+  "command": "docker plugin disable <plugin>",
+  "description": "Disable a Docker plugin",
+  "tool": "docker",
+  "category": "plugin",
+  "tags": [
+    "disable plugin",
+    "turn off plugin"
+  ],
+  "intents": [
+    "disable a docker plugin temporarily"
+  ],
+  "example": "docker plugin disable myplugin",
+  "danger": false,
+  "related": []
+}

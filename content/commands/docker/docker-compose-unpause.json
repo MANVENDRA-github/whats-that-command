@@ -1,0 +1,17 @@
+{
+  "id": "docker-compose-unpause",
+  "command": "docker compose unpause",
+  "description": "Unpause services in a compose stack",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "unfreeze compose",
+    "resume stack"
+  ],
+  "intents": [
+    "unpause every paused service in compose"
+  ],
+  "example": "docker compose unpause",
+  "danger": false,
+  "related": []
+}

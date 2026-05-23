@@ -1,0 +1,19 @@
+{
+  "id": "docker-build-no-cache",
+  "command": "docker build --no-cache .",
+  "description": "Build an image without using any cached layers",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "fresh build",
+    "skip cache",
+    "rebuild from scratch"
+  ],
+  "intents": [
+    "build a docker image from scratch without any cache",
+    "force a clean rebuild of an image"
+  ],
+  "example": "docker build --no-cache -t myapp .",
+  "danger": false,
+  "related": []
+}

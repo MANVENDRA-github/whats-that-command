@@ -1,0 +1,19 @@
+{
+  "id": "docker-image-inspect",
+  "command": "docker image inspect <image>",
+  "description": "Print detailed JSON metadata about an image",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "inspect image",
+    "image metadata",
+    "image details"
+  ],
+  "intents": [
+    "inspect an image's metadata",
+    "see config and layer info for an image"
+  ],
+  "example": "docker image inspect nginx",
+  "danger": false,
+  "related": []
+}

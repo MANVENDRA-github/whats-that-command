@@ -1,0 +1,19 @@
+{
+  "id": "docker-run-workdir",
+  "command": "docker run -w <path> <image>",
+  "description": "Set the working directory inside the container",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "set working dir",
+    "change cwd",
+    "pwd inside container"
+  ],
+  "intents": [
+    "set the working directory inside a container",
+    "change cwd for commands in the container"
+  ],
+  "example": "docker run -w /app node npm start",
+  "danger": false,
+  "related": []
+}

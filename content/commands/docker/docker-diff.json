@@ -1,0 +1,19 @@
+{
+  "id": "docker-diff",
+  "command": "docker diff <container>",
+  "description": "Show files that have been changed, added, or deleted in a container vs its image",
+  "tool": "docker",
+  "category": "debug",
+  "tags": [
+    "container changes",
+    "what was modified",
+    "container fs diff"
+  ],
+  "intents": [
+    "see what files a container has changed since it started",
+    "diff a container against its image"
+  ],
+  "example": "docker diff web",
+  "danger": false,
+  "related": []
+}

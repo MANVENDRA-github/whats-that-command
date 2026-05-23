@@ -1,0 +1,19 @@
+{
+  "id": "docker-run-rm",
+  "command": "docker run --rm <image>",
+  "description": "Automatically remove the container when it exits",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "auto cleanup",
+    "remove after exit",
+    "one-shot container"
+  ],
+  "intents": [
+    "remove a container automatically after it stops",
+    "run a one-shot container that cleans itself up"
+  ],
+  "example": "docker run --rm alpine date",
+  "danger": false,
+  "related": []
+}

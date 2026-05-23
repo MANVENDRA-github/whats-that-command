@@ -1,0 +1,19 @@
+{
+  "id": "docker-swarm-init",
+  "command": "docker swarm init",
+  "description": "Initialize the current Docker engine as a swarm manager",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "init swarm",
+    "create swarm",
+    "manager node"
+  ],
+  "intents": [
+    "create a docker swarm",
+    "initialize this host as a swarm manager"
+  ],
+  "example": "docker swarm init",
+  "danger": false,
+  "related": []
+}

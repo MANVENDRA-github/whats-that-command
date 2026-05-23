@@ -1,0 +1,18 @@
+{
+  "id": "docker-buildx-ls",
+  "command": "docker buildx ls",
+  "description": "List buildx builder instances and the platforms they support",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "list builders",
+    "buildx instances"
+  ],
+  "intents": [
+    "list available buildx builders",
+    "see which platforms my buildx setup supports"
+  ],
+  "example": "docker buildx ls",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "docker-compose-ls",
+  "command": "docker compose ls",
+  "description": "List active compose projects on this host",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "list compose projects",
+    "show compose stacks"
+  ],
+  "intents": [
+    "list all running compose projects"
+  ],
+  "example": "docker compose ls",
+  "danger": false,
+  "related": []
+}

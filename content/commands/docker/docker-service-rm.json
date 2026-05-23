@@ -1,0 +1,18 @@
+{
+  "id": "docker-service-rm",
+  "command": "docker service rm <service>",
+  "description": "Remove a service from the swarm",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "delete service",
+    "remove swarm service"
+  ],
+  "intents": [
+    "remove a swarm service",
+    "undeploy a service from the swarm"
+  ],
+  "example": "docker service rm web",
+  "danger": true,
+  "related": []
+}

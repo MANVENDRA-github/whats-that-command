@@ -1,0 +1,16 @@
+{
+  "id": "docker-config-ls",
+  "command": "docker config ls",
+  "description": "List swarm config objects",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "list swarm configs"
+  ],
+  "intents": [
+    "list swarm config objects"
+  ],
+  "example": "docker config ls",
+  "danger": false,
+  "related": []
+}

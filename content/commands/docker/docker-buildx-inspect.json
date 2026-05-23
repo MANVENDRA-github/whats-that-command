@@ -1,0 +1,17 @@
+{
+  "id": "docker-buildx-inspect",
+  "command": "docker buildx inspect <builder>",
+  "description": "Show detailed info about a buildx builder, including supported platforms",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "inspect builder",
+    "buildx details"
+  ],
+  "intents": [
+    "inspect a buildx builder to see its capabilities"
+  ],
+  "example": "docker buildx inspect multi --bootstrap",
+  "danger": false,
+  "related": []
+}

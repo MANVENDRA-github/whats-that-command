@@ -1,0 +1,18 @@
+{
+  "id": "docker-logout",
+  "command": "docker logout <registry>",
+  "description": "Log out of a Docker registry",
+  "tool": "docker",
+  "category": "registry",
+  "tags": [
+    "clear registry creds",
+    "logout docker hub"
+  ],
+  "intents": [
+    "log out of a docker registry",
+    "remove cached credentials for a registry"
+  ],
+  "example": "docker logout ghcr.io",
+  "danger": false,
+  "related": []
+}

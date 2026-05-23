@@ -1,0 +1,18 @@
+{
+  "id": "docker-network-rm",
+  "command": "docker network rm <name>",
+  "description": "Remove a Docker network",
+  "tool": "docker",
+  "category": "networks",
+  "tags": [
+    "delete network",
+    "remove docker network"
+  ],
+  "intents": [
+    "delete a docker network",
+    "remove a custom docker network"
+  ],
+  "example": "docker network rm mynet",
+  "danger": true,
+  "related": []
+}

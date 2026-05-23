@@ -1,0 +1,19 @@
+{
+  "id": "docker-logs-tail",
+  "command": "docker logs --tail <n> <container>",
+  "description": "Show only the last N lines of a container's logs",
+  "tool": "docker",
+  "category": "debug",
+  "tags": [
+    "last n lines",
+    "recent logs",
+    "tail logs"
+  ],
+  "intents": [
+    "show me the last 50 log lines from a container",
+    "tail the most recent container logs"
+  ],
+  "example": "docker logs --tail 100 web",
+  "danger": false,
+  "related": []
+}

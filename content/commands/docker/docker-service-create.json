@@ -1,0 +1,19 @@
+{
+  "id": "docker-service-create",
+  "command": "docker service create --name <name> <image>",
+  "description": "Create a new service running on a swarm",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "create swarm service",
+    "deploy service",
+    "swarm task"
+  ],
+  "intents": [
+    "create a swarm service from an image",
+    "deploy a service to a docker swarm"
+  ],
+  "example": "docker service create --name web --replicas 3 nginx",
+  "danger": false,
+  "related": []
+}

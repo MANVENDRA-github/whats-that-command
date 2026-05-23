@@ -1,0 +1,18 @@
+{
+  "id": "docker-compose-ps",
+  "command": "docker compose ps",
+  "description": "List containers managed by the current compose project",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "list compose containers",
+    "compose status"
+  ],
+  "intents": [
+    "see which compose services are running",
+    "list containers for this compose project"
+  ],
+  "example": "docker compose ps",
+  "danger": false,
+  "related": []
+}

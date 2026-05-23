@@ -1,0 +1,19 @@
+{
+  "id": "docker-swarm-leave",
+  "command": "docker swarm leave",
+  "description": "Leave the swarm (use --force on a manager)",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "leave swarm",
+    "detach node",
+    "exit cluster"
+  ],
+  "intents": [
+    "take this node out of the swarm",
+    "leave a docker swarm cluster"
+  ],
+  "example": "docker swarm leave",
+  "danger": true,
+  "related": []
+}

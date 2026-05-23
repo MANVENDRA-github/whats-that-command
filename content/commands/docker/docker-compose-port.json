@@ -1,0 +1,17 @@
+{
+  "id": "docker-compose-port",
+  "command": "docker compose port <service> <port>",
+  "description": "Print the host port a compose service's container port is mapped to",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "compose port mapping",
+    "host port for service"
+  ],
+  "intents": [
+    "see which host port a compose service is mapped to"
+  ],
+  "example": "docker compose port web 80",
+  "danger": false,
+  "related": []
+}

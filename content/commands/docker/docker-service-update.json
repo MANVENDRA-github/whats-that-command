@@ -1,0 +1,19 @@
+{
+  "id": "docker-service-update",
+  "command": "docker service update <opts> <service>",
+  "description": "Update the configuration of a running service (image, env, replicas, etc.)",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "update swarm service",
+    "change image",
+    "rolling update"
+  ],
+  "intents": [
+    "update a swarm service to a new image",
+    "do a rolling update of a service"
+  ],
+  "example": "docker service update --image nginx:1.25 web",
+  "danger": false,
+  "related": []
+}

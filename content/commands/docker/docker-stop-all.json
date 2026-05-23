@@ -1,0 +1,19 @@
+{
+  "id": "docker-stop-all",
+  "command": "docker stop $(docker ps -q)",
+  "description": "Stop every running container in one command",
+  "tool": "docker",
+  "category": "cleanup",
+  "tags": [
+    "stop all containers",
+    "halt everything",
+    "shutdown all"
+  ],
+  "intents": [
+    "stop every running docker container at once",
+    "halt all containers in one command"
+  ],
+  "example": "docker stop $(docker ps -q)",
+  "danger": true,
+  "related": []
+}

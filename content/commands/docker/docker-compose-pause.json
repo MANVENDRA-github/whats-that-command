@@ -1,0 +1,17 @@
+{
+  "id": "docker-compose-pause",
+  "command": "docker compose pause",
+  "description": "Pause services in a compose stack",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "freeze compose",
+    "pause stack"
+  ],
+  "intents": [
+    "pause every service in compose"
+  ],
+  "example": "docker compose pause",
+  "danger": false,
+  "related": []
+}

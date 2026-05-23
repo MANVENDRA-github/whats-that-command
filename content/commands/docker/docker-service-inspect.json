@@ -1,0 +1,17 @@
+{
+  "id": "docker-service-inspect",
+  "command": "docker service inspect <service>",
+  "description": "Show detailed JSON information about a swarm service",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "inspect service",
+    "service details"
+  ],
+  "intents": [
+    "inspect a swarm service's configuration"
+  ],
+  "example": "docker service inspect web",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "docker-compose-down-volumes",
+  "command": "docker compose down -v",
+  "description": "Tear down the compose stack and also remove named volumes",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "nuke compose",
+    "down with volumes",
+    "wipe stack data"
+  ],
+  "intents": [
+    "stop my compose stack and wipe its data volumes",
+    "tear down compose and delete the database volume"
+  ],
+  "example": "docker compose down -v",
+  "danger": true,
+  "related": []
+}

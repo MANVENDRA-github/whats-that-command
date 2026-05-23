@@ -10,6 +10,15 @@
     "survive restart",
     "keep database files"
   ],
+  "intents": [
+    "create a named volume for persistent data",
+    "make storage that survives container restarts",
+    "set up a postgres data volume",
+    "create a docker volume to mount in a container",
+    "i need storage that outlives the container",
+    "named volume so my database data isnt lost on restart",
+    "make somewhere durable to store container data"
+  ],
   "example": "docker volume create postgres-data",
   "danger": false,
   "related": [

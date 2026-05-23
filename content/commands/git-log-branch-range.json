@@ -1,0 +1,30 @@
+{
+  "id": "git-log-branch-range",
+  "command": "git log <branchB>..<branchA>",
+  "description": "List commits that are on branchA but not on branchB",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "compare branches",
+    "ahead of",
+    "commits not in main",
+    "branch difference",
+    "two dot log"
+  ],
+  "intents": [
+    "what commits are on my branch that arent on main",
+    "see what is in branchA that branchB doesnt have",
+    "list the commits my branch has ahead of main",
+    "show commits unique to one branch compared to another",
+    "i want to know what my pr adds on top of main",
+    "preview the commits in this branch that arent in another",
+    "find commits only on one branch"
+  ],
+  "example": "git log main..feature/login",
+  "danger": false,
+  "related": [
+    "git-log",
+    "git-log-graph",
+    "git-diff-branches"
+  ]
+}

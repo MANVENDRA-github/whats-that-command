@@ -1,0 +1,20 @@
+{
+  "id": "bash-less",
+  "command": "less <file>",
+  "description": "View a file one screen at a time with search and navigation",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "page through file",
+    "view long file",
+    "scrollable viewer"
+  ],
+  "intents": [
+    "scroll through a large file in the terminal",
+    "view a long file page by page",
+    "open a file in a pager"
+  ],
+  "example": "less /var/log/syslog",
+  "danger": false,
+  "related": []
+}

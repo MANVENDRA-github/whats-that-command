@@ -1,0 +1,19 @@
+{
+  "id": "bash-setfacl",
+  "command": "setfacl -m u:<user>:<perms> <file>",
+  "description": "Set or modify the ACL (access control list) on a file",
+  "tool": "bash",
+  "category": "permissions",
+  "tags": [
+    "set acl",
+    "per-user permission",
+    "fine-grained perms"
+  ],
+  "intents": [
+    "grant a specific user permission to a file beyond chmod",
+    "set an acl on a file"
+  ],
+  "example": "setfacl -m u:bob:rw report.txt",
+  "danger": false,
+  "related": []
+}

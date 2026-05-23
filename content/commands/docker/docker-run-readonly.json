@@ -1,0 +1,19 @@
+{
+  "id": "docker-run-readonly",
+  "command": "docker run --read-only <image>",
+  "description": "Run a container with an immutable root filesystem",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "immutable container",
+    "read-only root",
+    "hardened run"
+  ],
+  "intents": [
+    "run a container with a read-only filesystem",
+    "harden a container so its root fs cannot be modified"
+  ],
+  "example": "docker run --read-only nginx",
+  "danger": false,
+  "related": []
+}

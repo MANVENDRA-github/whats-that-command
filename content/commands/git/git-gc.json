@@ -1,0 +1,28 @@
+{
+  "id": "git-gc",
+  "command": "git gc",
+  "description": "Compress and clean up unreachable objects in the repository to reduce its size",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "shrink repo",
+    "compact .git",
+    "clean up loose objects",
+    "optimize storage",
+    "maintenance"
+  ],
+  "intents": [
+    "my .git folder got huge how do i shrink it",
+    "garbage collect unreferenced git objects",
+    "compress the repo to free up disk space",
+    "clean up dangling objects from old branches",
+    "make my repository smaller on disk",
+    "run repo maintenance to optimize storage"
+  ],
+  "example": "git gc",
+  "danger": false,
+  "related": [
+    "git-reflog",
+    "git-clean"
+  ]
+}

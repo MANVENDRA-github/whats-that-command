@@ -1,0 +1,19 @@
+{
+  "id": "bash-tree",
+  "command": "tree <path>",
+  "description": "Display directory contents recursively as an indented tree",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "recursive listing",
+    "tree view",
+    "visualize folders"
+  ],
+  "intents": [
+    "show a folder structure as a tree",
+    "recursive listing with indentation"
+  ],
+  "example": "tree -L 2 src/",
+  "danger": false,
+  "related": []
+}

@@ -10,6 +10,15 @@
     "ship tags",
     "send markers"
   ],
+  "intents": [
+    "push my local tags to the remote",
+    "publish a release i tagged locally",
+    "share version tags with the team",
+    "send my new tags up to github",
+    "upload tags so others can see the release",
+    "my tag isnt on the remote, push it",
+    "make a new tag available to everyone"
+  ],
   "example": "git push origin --tags",
   "danger": false,
   "related": [

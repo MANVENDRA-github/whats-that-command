@@ -1,0 +1,18 @@
+{
+  "id": "bash-base32",
+  "command": "base32 <file>",
+  "description": "Encode or decode data in base32",
+  "tool": "bash",
+  "category": "encoding",
+  "tags": [
+    "base32 encode",
+    "decode base32"
+  ],
+  "intents": [
+    "encode data in base32",
+    "decode a base32 string"
+  ],
+  "example": "base32 file.bin",
+  "danger": false,
+  "related": []
+}

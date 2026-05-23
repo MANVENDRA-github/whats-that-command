@@ -14,7 +14,10 @@
     "merge my feature branch into main",
     "combine two branches together",
     "bring another branchs changes into mine",
-    "integrate work from a teammates branch"
+    "integrate work from a teammates branch",
+    "pull changes from another branch into this one",
+    "join another branch into the current branch",
+    "do a merge from another branch including a merge commit"
   ],
   "example": "git merge feature/login",
   "danger": false,

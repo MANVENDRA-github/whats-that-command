@@ -10,6 +10,15 @@
     "currently up",
     "live"
   ],
+  "intents": [
+    "what containers are running right now",
+    "show me whats up in docker",
+    "check which docker containers are alive",
+    "see currently running docker containers",
+    "list active containers on this host",
+    "is my container actually up",
+    "which containers are still running"
+  ],
   "example": "docker ps",
   "danger": false,
   "related": [

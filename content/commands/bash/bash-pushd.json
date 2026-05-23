@@ -1,0 +1,19 @@
+{
+  "id": "bash-pushd",
+  "command": "pushd",
+  "description": "Change directory and remember the previous one on a stack",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "directory stack",
+    "save current dir",
+    "remember location"
+  ],
+  "intents": [
+    "jump to a directory but remember where i was",
+    "change directory and push the old one on a stack"
+  ],
+  "example": "pushd /var/log",
+  "danger": false,
+  "related": []
+}

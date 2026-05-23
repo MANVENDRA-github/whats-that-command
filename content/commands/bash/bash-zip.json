@@ -1,0 +1,20 @@
+{
+  "id": "bash-zip",
+  "command": "zip <out>.zip <files>",
+  "description": "Create a zip archive of files",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "create zip",
+    "package as zip",
+    "archive into zip"
+  ],
+  "intents": [
+    "create a zip archive",
+    "bundle files into a zip",
+    "package a folder as a zip"
+  ],
+  "example": "zip -r project.zip project/",
+  "danger": false,
+  "related": []
+}

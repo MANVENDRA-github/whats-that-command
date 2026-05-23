@@ -10,6 +10,15 @@
     "kill branch",
     "abandon work"
   ],
+  "intents": [
+    "delete a branch even though it has unmerged commits",
+    "force remove a branch i want to abandon",
+    "drop a branch with work i never merged",
+    "throw away a branch with experimental work i dont want",
+    "kill a branch git refuses to delete normally",
+    "delete a scrapped feature branch with unmerged commits",
+    "force delete a local branch"
+  ],
   "example": "git branch -D feature/scrapped",
   "danger": true,
   "related": [

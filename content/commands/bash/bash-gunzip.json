@@ -1,0 +1,19 @@
+{
+  "id": "bash-gunzip",
+  "command": "gunzip <file>.gz",
+  "description": "Decompress a gzip-compressed file",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "decompress gzip",
+    "unzip gz",
+    "extract gzip"
+  ],
+  "intents": [
+    "decompress a .gz file",
+    "extract a gzip-compressed file"
+  ],
+  "example": "gunzip data.txt.gz",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-install",
+  "command": "install <src> <dest>",
+  "description": "Copy files and set permissions/ownership in one command, often used in Makefiles",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "copy with permissions",
+    "deploy file",
+    "install file"
+  ],
+  "intents": [
+    "copy a file and set its permissions at the same time",
+    "install a binary into a target directory"
+  ],
+  "example": "install -m 755 bin/tool /usr/local/bin/",
+  "danger": false,
+  "related": []
+}

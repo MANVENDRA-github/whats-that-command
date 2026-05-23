@@ -1,0 +1,30 @@
+{
+  "id": "git-diff-branches",
+  "command": "git diff <branchB>...<branchA>",
+  "description": "Show changes that branchA has introduced since it diverged from branchB",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "compare branches",
+    "what pr adds",
+    "three dot diff",
+    "branch diff",
+    "diverged changes"
+  ],
+  "intents": [
+    "diff between two branches showing what one adds",
+    "see what changes a feature branch introduces vs main",
+    "show what my pr will change against main",
+    "compare two branches and see the net difference",
+    "preview the diff between my branch and where it forked off",
+    "what does my branch change relative to main",
+    "three dot diff to see what i added since branching"
+  ],
+  "example": "git diff main...feature/login",
+  "danger": false,
+  "related": [
+    "git-diff-commits",
+    "git-log-branch-range",
+    "git-show-changes"
+  ]
+}

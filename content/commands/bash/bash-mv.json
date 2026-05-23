@@ -1,0 +1,20 @@
+{
+  "id": "bash-mv",
+  "command": "mv <src> <dest>",
+  "description": "Move or rename a file or directory",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "rename",
+    "move file",
+    "relocate"
+  ],
+  "intents": [
+    "rename a file",
+    "move a file to a different folder",
+    "relocate a file"
+  ],
+  "example": "mv old.txt new.txt",
+  "danger": false,
+  "related": []
+}

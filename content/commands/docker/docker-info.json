@@ -1,0 +1,20 @@
+{
+  "id": "docker-info",
+  "command": "docker info",
+  "description": "Show system-wide information about Docker (storage driver, resource limits, containers, images)",
+  "tool": "docker",
+  "category": "system",
+  "tags": [
+    "docker config",
+    "system info",
+    "driver info"
+  ],
+  "intents": [
+    "show docker system configuration",
+    "see how many containers and images i have overall",
+    "show docker storage driver"
+  ],
+  "example": "docker info",
+  "danger": false,
+  "related": []
+}

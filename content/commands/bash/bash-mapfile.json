@@ -1,0 +1,17 @@
+{
+  "id": "bash-mapfile",
+  "command": "mapfile <var>",
+  "description": "Read lines from stdin into an array variable (same as readarray)",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "lines into array",
+    "file to array"
+  ],
+  "intents": [
+    "load a file's lines into a bash array"
+  ],
+  "example": "mapfile -t lines < file.txt",
+  "danger": false,
+  "related": []
+}

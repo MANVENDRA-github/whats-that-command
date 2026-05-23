@@ -22,6 +22,7 @@
   "example": "git clean -fd",
   "danger": true,
   "related": [
+    "git-clean-dry-run",
     "git-discard-all",
     "git-hard-reset"
   ]

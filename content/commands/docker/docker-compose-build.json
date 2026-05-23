@@ -1,0 +1,18 @@
+{
+  "id": "docker-compose-build",
+  "command": "docker compose build",
+  "description": "Build or rebuild the services defined in docker-compose.yml",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "compose build",
+    "build services"
+  ],
+  "intents": [
+    "build the images for my compose stack",
+    "rebuild compose services after changing the dockerfile"
+  ],
+  "example": "docker compose build",
+  "danger": false,
+  "related": []
+}

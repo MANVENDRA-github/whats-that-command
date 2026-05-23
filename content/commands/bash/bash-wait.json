@@ -1,0 +1,19 @@
+{
+  "id": "bash-wait",
+  "command": "wait <pid>",
+  "description": "Wait for background jobs or specific PIDs to finish",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "wait for jobs",
+    "block on background",
+    "join processes"
+  ],
+  "intents": [
+    "wait for background jobs to finish in a script",
+    "block until a child process exits"
+  ],
+  "example": "wait $pid",
+  "danger": false,
+  "related": []
+}

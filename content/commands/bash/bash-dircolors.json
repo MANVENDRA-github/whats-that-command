@@ -1,0 +1,19 @@
+{
+  "id": "bash-dircolors",
+  "command": "dircolors",
+  "description": "Set up color output for ls based on file type",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "ls colors",
+    "color output",
+    "configure ls"
+  ],
+  "intents": [
+    "change colors used by ls",
+    "configure file type colors in the terminal"
+  ],
+  "example": "eval \"$(dircolors -b)\"",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-fuser",
+  "command": "fuser <file>",
+  "description": "Identify which processes are using a file, directory, or socket",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "who has this file open",
+    "process using file",
+    "file in use"
+  ],
+  "intents": [
+    "find which process is using a file",
+    "see which process has a port or file open"
+  ],
+  "example": "fuser -v /var/log/app.log",
+  "danger": false,
+  "related": []
+}

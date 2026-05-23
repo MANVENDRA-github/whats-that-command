@@ -1,0 +1,17 @@
+{
+  "id": "bash-aptitude",
+  "command": "aptitude <subcommand>",
+  "description": "Curses-based interactive package manager for Debian/Ubuntu",
+  "tool": "bash",
+  "category": "package",
+  "tags": [
+    "interactive package manager",
+    "tui apt"
+  ],
+  "intents": [
+    "use an interactive package manager on debian"
+  ],
+  "example": "sudo aptitude",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "bash-wl-copy",
+  "command": "wl-copy",
+  "description": "Copy data into the Wayland clipboard",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "copy to clipboard",
+    "wayland clipboard"
+  ],
+  "intents": [
+    "copy command output into the wayland clipboard"
+  ],
+  "example": "echo \"hello\" | wl-copy",
+  "danger": false,
+  "related": []
+}

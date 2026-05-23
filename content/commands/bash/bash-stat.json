@@ -1,0 +1,20 @@
+{
+  "id": "bash-stat",
+  "command": "stat <file>",
+  "description": "Show detailed metadata for a file (size, perms, timestamps, inode)",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "file metadata",
+    "permissions and times",
+    "inspect file"
+  ],
+  "intents": [
+    "show file size permissions and timestamps",
+    "get detailed file info",
+    "inspect a file's metadata"
+  ],
+  "example": "stat data.txt",
+  "danger": false,
+  "related": []
+}

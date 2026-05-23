@@ -1,0 +1,19 @@
+{
+  "id": "bash-screen",
+  "command": "screen",
+  "description": "Detachable terminal multiplexer — keep sessions alive across disconnects",
+  "tool": "bash",
+  "category": "terminal",
+  "tags": [
+    "terminal multiplexer",
+    "detach session",
+    "persistent terminal"
+  ],
+  "intents": [
+    "keep a terminal session running after i log out",
+    "detach and reattach to a long-running session"
+  ],
+  "example": "screen -S work",
+  "danger": false,
+  "related": []
+}

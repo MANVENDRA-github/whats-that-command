@@ -10,6 +10,15 @@
     "see mounts",
     "storage inventory"
   ],
+  "intents": [
+    "list all docker volumes i have",
+    "see every named volume on this machine",
+    "what persistent storage does docker have",
+    "show all docker managed volumes",
+    "browse volumes before i pick one to use",
+    "list volumes to find a leftover one to clean up",
+    "see what databases or data my docker has"
+  ],
   "example": "docker volume ls",
   "danger": false,
   "related": [

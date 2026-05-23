@@ -1,0 +1,18 @@
+{
+  "id": "bash-pkill",
+  "command": "pkill <pattern>",
+  "description": "Send a signal to processes matching a pattern",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "kill by pattern",
+    "signal matching processes"
+  ],
+  "intents": [
+    "kill processes matching a regex pattern",
+    "send a signal to processes matching a name"
+  ],
+  "example": "pkill -f \"node server.js\"",
+  "danger": true,
+  "related": []
+}

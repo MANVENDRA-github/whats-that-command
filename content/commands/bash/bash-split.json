@@ -1,0 +1,20 @@
+{
+  "id": "bash-split",
+  "command": "split <file> <prefix>",
+  "description": "Split a file into smaller chunks by line count or size",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "chunk file",
+    "split large file",
+    "break up file"
+  ],
+  "intents": [
+    "break a big file into smaller pieces",
+    "split a file by size",
+    "chunk a file into N-line files"
+  ],
+  "example": "split -l 1000 huge.txt chunk_",
+  "danger": false,
+  "related": []
+}

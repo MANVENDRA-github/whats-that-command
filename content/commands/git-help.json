@@ -1,0 +1,28 @@
+{
+  "id": "git-help",
+  "command": "git help <command>",
+  "description": "Open the manual page for a Git subcommand",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "read docs",
+    "open manual",
+    "look up how to",
+    "find options",
+    "see usage"
+  ],
+  "intents": [
+    "show me the manual for this git command",
+    "what are all the options for git rebase",
+    "open the docs for a git subcommand",
+    "i need help understanding what a git command does",
+    "look up the flags and arguments for a git command",
+    "read the official documentation for a git command",
+    "find usage details for a git command from the terminal"
+  ],
+  "example": "git help rebase",
+  "danger": false,
+  "related": [
+    "git-version"
+  ]
+}

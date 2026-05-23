@@ -1,0 +1,18 @@
+{
+  "id": "bash-xclip",
+  "command": "xclip -selection clipboard",
+  "description": "Copy data to or from the X11 clipboard",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "copy to clipboard",
+    "x11 clipboard"
+  ],
+  "intents": [
+    "copy command output to the clipboard on x11",
+    "paste from the x11 clipboard"
+  ],
+  "example": "echo \"hello\" | xclip -selection clipboard",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "docker-stack-ls",
+  "command": "docker stack ls",
+  "description": "List the deployed stacks",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "list stacks",
+    "show deployed stacks"
+  ],
+  "intents": [
+    "list deployed swarm stacks"
+  ],
+  "example": "docker stack ls",
+  "danger": false,
+  "related": []
+}

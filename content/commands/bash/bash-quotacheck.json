@@ -1,0 +1,17 @@
+{
+  "id": "bash-quotacheck",
+  "command": "quotacheck",
+  "description": "Scan filesystems and build the quota database",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "build quota db",
+    "scan quotas"
+  ],
+  "intents": [
+    "build the quota database for a filesystem"
+  ],
+  "example": "sudo quotacheck -avug",
+  "danger": false,
+  "related": []
+}

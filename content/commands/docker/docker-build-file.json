@@ -1,0 +1,19 @@
+{
+  "id": "docker-build-file",
+  "command": "docker build -f <Dockerfile> .",
+  "description": "Build using a Dockerfile at a non-default path",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "custom dockerfile path",
+    "dockerfile location",
+    "build with -f"
+  ],
+  "intents": [
+    "build using a dockerfile that isn't named Dockerfile",
+    "point docker build at a custom dockerfile path"
+  ],
+  "example": "docker build -f docker/Dockerfile.dev .",
+  "danger": false,
+  "related": []
+}

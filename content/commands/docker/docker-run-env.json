@@ -1,0 +1,20 @@
+{
+  "id": "docker-run-env",
+  "command": "docker run -e <KEY>=<value> <image>",
+  "description": "Set environment variables in a container",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "set env var",
+    "configure container",
+    "environment variable"
+  ],
+  "intents": [
+    "pass environment variables to a container",
+    "configure a container with env vars",
+    "set env values when running"
+  ],
+  "example": "docker run -e DB_HOST=db myapp",
+  "danger": false,
+  "related": []
+}

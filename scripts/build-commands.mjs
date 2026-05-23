@@ -51,8 +51,13 @@ async function main() {
   for (const full of fullPaths) {
     const relPath = path.relative(SOURCE_DIR, full).split(path.sep).join('/');
     const basename = path.basename(full);
-    const parentDir = path.basename(path.dirname(full));
-    const inToolFolder = path.dirname(full) !== SOURCE_DIR;
+    const relSegments = relPath.split('/');
+    // Files live under <tool>/[<category>/]<file>.json — the top-level segment
+    // is the tool. Anything deeper (a category subfolder) is organizational
+    // and not enforced by the build, so the layout can evolve without code
+    // changes here.
+    const toolSegment = relSegments.length >= 2 ? relSegments[0] : null;
+    const inToolFolder = toolSegment !== null;
 
     let raw;
     try {
@@ -118,8 +123,8 @@ async function main() {
 
     if (!inToolFolder) {
       errors.push(`${relPath}: must live under a tool subfolder (content/commands/<tool>/)`);
-    } else if (typeof entry.tool === 'string' && entry.tool.trim() !== '' && parentDir !== entry.tool) {
-      errors.push(`${relPath}: parent folder "${parentDir}" must match tool "${entry.tool}"`);
+    } else if (typeof entry.tool === 'string' && entry.tool.trim() !== '' && toolSegment !== entry.tool) {
+      errors.push(`${relPath}: top-level folder "${toolSegment}" must match tool "${entry.tool}"`);
     }
 
     entries.push({ relPath, entry });

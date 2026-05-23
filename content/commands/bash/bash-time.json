@@ -1,0 +1,20 @@
+{
+  "id": "bash-time",
+  "command": "time <command>",
+  "description": "Measure how long a command takes to run",
+  "tool": "bash",
+  "category": "process",
+  "tags": [
+    "benchmark",
+    "measure runtime",
+    "time a command"
+  ],
+  "intents": [
+    "measure how long a command takes",
+    "benchmark a script",
+    "time the execution of a command"
+  ],
+  "example": "time ./script.sh",
+  "danger": false,
+  "related": []
+}

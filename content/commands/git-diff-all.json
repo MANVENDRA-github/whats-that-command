@@ -14,7 +14,10 @@
     "what have i changed since my last commit",
     "show me everything that is not committed yet",
     "see all my unsaved work",
-    "review all pending changes including staged ones"
+    "review all pending changes including staged ones",
+    "see every change i have not committed yet",
+    "diff against HEAD to see all my pending work",
+    "review staged plus unstaged together"
   ],
   "example": "git diff HEAD",
   "danger": false,

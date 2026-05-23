@@ -1,0 +1,20 @@
+{
+  "id": "docker-cp",
+  "command": "docker cp <src> <dest>",
+  "description": "Copy files between a container and the host",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "copy files in container",
+    "copy out of container",
+    "host to container"
+  ],
+  "intents": [
+    "copy a file into a running container",
+    "copy a file out of a container to my host",
+    "move files between host and container"
+  ],
+  "example": "docker cp ./config.json web:/etc/app/",
+  "danger": false,
+  "related": []
+}

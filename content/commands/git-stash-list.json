@@ -9,6 +9,15 @@
     "see saved work",
     "stash inventory"
   ],
+  "intents": [
+    "list everything i have stashed",
+    "show all my stashes",
+    "see my saved work",
+    "what did i stash earlier",
+    "browse my stash entries",
+    "see all shelved changes",
+    "find a stash i made days ago"
+  ],
   "example": "git stash list",
   "danger": false,
   "related": [

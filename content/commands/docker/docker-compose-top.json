@@ -1,0 +1,17 @@
+{
+  "id": "docker-compose-top",
+  "command": "docker compose top",
+  "description": "Display running processes inside each compose service",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "processes in compose",
+    "compose top"
+  ],
+  "intents": [
+    "show processes running in every compose service"
+  ],
+  "example": "docker compose top",
+  "danger": false,
+  "related": []
+}

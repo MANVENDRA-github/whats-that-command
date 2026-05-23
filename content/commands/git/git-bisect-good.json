@@ -1,0 +1,28 @@
+{
+  "id": "git-bisect-good",
+  "command": "git bisect good",
+  "description": "Mark the current commit as working during a bisect session",
+  "tool": "git",
+  "category": "debug",
+  "tags": [
+    "mark working version",
+    "bug not here yet",
+    "this build is fine",
+    "narrow the hunt"
+  ],
+  "intents": [
+    "this commit works fine, move on with the bisect",
+    "mark the current version as known good during bisect",
+    "tell git this commit does not have the bug",
+    "bisect narrows toward newer commits after this",
+    "the bug is not in this version, continue bisecting",
+    "this build is clean, look further forward in time"
+  ],
+  "example": "git bisect good",
+  "danger": false,
+  "related": [
+    "git-bisect-start",
+    "git-bisect-bad",
+    "git-bisect-reset"
+  ]
+}

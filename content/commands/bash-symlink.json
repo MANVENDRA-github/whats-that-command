@@ -10,6 +10,15 @@
     "pointer file",
     "make link"
   ],
+  "intents": [
+    "make a shortcut from one path to another",
+    "create a soft link to a file or folder",
+    "point one path at another without copying",
+    "expose a file under a second path",
+    "i want a folder to act as an alias for another folder",
+    "link a config file from my dotfiles into my home directory",
+    "make a pointer file that follows the original"
+  ],
   "example": "ln -s /usr/local/bin/node ./node",
   "danger": false,
   "related": []

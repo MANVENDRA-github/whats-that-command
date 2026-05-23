@@ -10,6 +10,15 @@
     "not responding",
     "abort container"
   ],
+  "intents": [
+    "force stop a container that wont stop normally",
+    "container is stuck, kill it immediately",
+    "hard kill a docker container",
+    "send sigkill to a container right now",
+    "abort a runaway container without waiting for it",
+    "docker stop is too slow, just kill the container",
+    "container is hung, end it forcibly"
+  ],
   "example": "docker kill stuck-job",
   "danger": true,
   "related": [

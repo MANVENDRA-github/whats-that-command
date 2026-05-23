@@ -1,0 +1,20 @@
+{
+  "id": "bash-cut",
+  "command": "cut -d <delim> -f <fields> <file>",
+  "description": "Extract specific columns or character ranges from each line",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "extract columns",
+    "select fields",
+    "slice columns"
+  ],
+  "intents": [
+    "get column 3 from a csv file",
+    "extract specific fields from each line",
+    "pull out columns by delimiter"
+  ],
+  "example": "cut -d, -f1,3 data.csv",
+  "danger": false,
+  "related": []
+}

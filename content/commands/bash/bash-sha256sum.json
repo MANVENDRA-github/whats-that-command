@@ -1,0 +1,19 @@
+{
+  "id": "bash-sha256sum",
+  "command": "sha256sum <file>",
+  "description": "Compute the SHA-256 checksum of a file",
+  "tool": "bash",
+  "category": "encoding",
+  "tags": [
+    "sha256 hash",
+    "secure checksum",
+    "verify download"
+  ],
+  "intents": [
+    "compute the sha-256 hash of a file",
+    "verify a download against a sha256 checksum"
+  ],
+  "example": "sha256sum release.tar.gz",
+  "danger": false,
+  "related": []
+}

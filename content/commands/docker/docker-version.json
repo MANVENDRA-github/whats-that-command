@@ -1,0 +1,18 @@
+{
+  "id": "docker-version",
+  "command": "docker version",
+  "description": "Show the Docker client and daemon versions",
+  "tool": "docker",
+  "category": "system",
+  "tags": [
+    "docker version",
+    "client and server version"
+  ],
+  "intents": [
+    "check which version of docker i am running",
+    "show docker client and daemon versions"
+  ],
+  "example": "docker version",
+  "danger": false,
+  "related": []
+}

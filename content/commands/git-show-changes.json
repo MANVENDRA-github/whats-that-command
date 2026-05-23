@@ -11,6 +11,15 @@
     "edits",
     "review my work"
   ],
+  "intents": [
+    "see what i've changed but not staged yet",
+    "show my current edits",
+    "what have i modified in tracked files",
+    "review my unstaged changes before adding them",
+    "see the diff of what i edited",
+    "what is different from the last commit",
+    "show me the changes i'm about to lose if i discard"
+  ],
   "example": "git diff",
   "danger": false,
   "related": [

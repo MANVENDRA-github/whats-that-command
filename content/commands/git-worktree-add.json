@@ -10,6 +10,15 @@
     "side checkout",
     "without switching"
   ],
+  "intents": [
+    "work on two branches at the same time",
+    "check out another branch in a separate folder without stashing",
+    "have one branch in this folder and another in a sibling folder",
+    "open a second copy of the repo on a different branch",
+    "work on a hotfix without switching branches in my main checkout",
+    "two parallel working directories from one repo",
+    "i need to look at another branch without disturbing my current one"
+  ],
   "example": "git worktree add ../hotfix release-1.2",
   "danger": false,
   "related": [

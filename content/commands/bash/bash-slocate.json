@@ -1,0 +1,17 @@
+{
+  "id": "bash-slocate",
+  "command": "slocate <pattern>",
+  "description": "Secure version of locate that respects file permissions",
+  "tool": "bash",
+  "category": "search",
+  "tags": [
+    "secure locate",
+    "permission-aware file search"
+  ],
+  "intents": [
+    "secure version of locate that respects permissions"
+  ],
+  "example": "slocate nginx.conf",
+  "danger": false,
+  "related": []
+}

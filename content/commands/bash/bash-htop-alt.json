@@ -1,0 +1,17 @@
+{
+  "id": "bash-htop-alt",
+  "command": "top -o %CPU",
+  "description": "Run top sorted by CPU usage",
+  "tool": "bash",
+  "category": "monitor",
+  "tags": [
+    "top by cpu",
+    "sort processes by cpu"
+  ],
+  "intents": [
+    "run top sorted by cpu usage"
+  ],
+  "example": "top -o %CPU",
+  "danger": false,
+  "related": []
+}

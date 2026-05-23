@@ -1,0 +1,19 @@
+{
+  "id": "docker-run-name",
+  "command": "docker run --name <name> <image>",
+  "description": "Run a container with a specific name instead of an auto-generated one",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "name a container",
+    "specific container name",
+    "avoid random name"
+  ],
+  "intents": [
+    "give a container a specific name",
+    "run a container with a custom name instead of a random one"
+  ],
+  "example": "docker run --name web nginx",
+  "danger": false,
+  "related": []
+}

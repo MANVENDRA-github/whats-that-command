@@ -1,0 +1,19 @@
+{
+  "id": "docker-build",
+  "command": "docker build .",
+  "description": "Build a Docker image from a Dockerfile in the current directory",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "build image",
+    "compile dockerfile",
+    "create image from dockerfile"
+  ],
+  "intents": [
+    "build a docker image from a Dockerfile",
+    "build the image in the current directory"
+  ],
+  "example": "docker build .",
+  "danger": false,
+  "related": []
+}

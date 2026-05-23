@@ -10,6 +10,14 @@
     "reclaim storage",
     "sweep dangling"
   ],
+  "intents": [
+    "delete docker volumes no container is using",
+    "clean up dangling docker volumes to free disk",
+    "remove unused volumes after wiping containers",
+    "reclaim space taken by orphaned volumes",
+    "sweep unused docker volumes in one shot",
+    "drop anonymous volumes left behind by old containers"
+  ],
   "example": "docker volume prune",
   "danger": true,
   "related": [

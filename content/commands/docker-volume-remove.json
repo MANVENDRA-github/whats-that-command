@@ -11,6 +11,15 @@
     "destroy mount",
     "get rid of"
   ],
+  "intents": [
+    "delete a specific docker volume",
+    "wipe a postgres data volume i no longer need",
+    "drop a named volume and all the data inside it",
+    "destroy a docker volume permanently",
+    "get rid of one stored volume by name",
+    "remove the data stored in a named volume",
+    "delete the database storage volume to start fresh"
+  ],
   "example": "docker volume rm postgres-data",
   "danger": true,
   "related": [

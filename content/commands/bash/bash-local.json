@@ -1,0 +1,19 @@
+{
+  "id": "bash-local",
+  "command": "local <var>=<value>",
+  "description": "Declare a variable as local to the current function",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "function-local var",
+    "avoid global",
+    "scoped variable"
+  ],
+  "intents": [
+    "declare a variable local to a bash function",
+    "avoid leaking variables out of a function"
+  ],
+  "example": "local count=0",
+  "danger": false,
+  "related": []
+}

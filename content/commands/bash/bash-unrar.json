@@ -1,0 +1,17 @@
+{
+  "id": "bash-unrar",
+  "command": "unrar x <file>.rar",
+  "description": "Extract files from a RAR archive",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "extract rar",
+    "unpack rar"
+  ],
+  "intents": [
+    "extract a rar archive"
+  ],
+  "example": "unrar x archive.rar",
+  "danger": false,
+  "related": []
+}

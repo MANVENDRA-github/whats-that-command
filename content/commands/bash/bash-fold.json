@@ -1,0 +1,19 @@
+{
+  "id": "bash-fold",
+  "command": "fold -w <width> <file>",
+  "description": "Wrap each input line to a given width",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "wrap lines",
+    "fixed width",
+    "line wrap"
+  ],
+  "intents": [
+    "wrap long lines to a specific width",
+    "force lines to a fixed column width"
+  ],
+  "example": "fold -w 80 long.txt",
+  "danger": false,
+  "related": []
+}

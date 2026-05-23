@@ -1,0 +1,28 @@
+{
+  "id": "git-clone",
+  "command": "git clone <url>",
+  "description": "Copy a remote repository to your machine",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "copy repo",
+    "download project",
+    "get codebase",
+    "checkout repo",
+    "first time setup"
+  ],
+  "intents": [
+    "i want to download this github project",
+    "get a copy of a remote repo onto my computer",
+    "grab the source code from a url",
+    "start working on someone elses project",
+    "pull down a repository to my machine"
+  ],
+  "example": "git clone https://github.com/user/repo.git",
+  "danger": false,
+  "related": [
+    "git-init",
+    "git-remote-add",
+    "git-clone-shallow"
+  ]
+}

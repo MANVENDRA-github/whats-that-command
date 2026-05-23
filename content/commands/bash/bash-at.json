@@ -1,0 +1,19 @@
+{
+  "id": "bash-at",
+  "command": "at <time>",
+  "description": "Schedule a one-off command to run at a specific time",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "one-shot schedule",
+    "run later",
+    "delayed execution"
+  ],
+  "intents": [
+    "schedule a command to run later once",
+    "run a one-off command at a specific time"
+  ],
+  "example": "echo \"reboot\" | at 03:00",
+  "danger": false,
+  "related": []
+}

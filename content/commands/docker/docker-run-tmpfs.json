@@ -1,0 +1,19 @@
+{
+  "id": "docker-run-tmpfs",
+  "command": "docker run --tmpfs <path> <image>",
+  "description": "Mount a tmpfs (in-memory) filesystem inside the container",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "in-memory mount",
+    "tmpfs",
+    "ephemeral mount"
+  ],
+  "intents": [
+    "mount an in-memory filesystem inside a container",
+    "use tmpfs to avoid writing to disk"
+  ],
+  "example": "docker run --tmpfs /tmp alpine",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,27 @@
+{
+  "id": "git-merge",
+  "command": "git merge <branch>",
+  "description": "Merge another branch into the current one, creating a merge commit if needed",
+  "tool": "git",
+  "category": "merge",
+  "tags": [
+    "combine branches",
+    "merge in",
+    "pull in changes",
+    "integrate branch"
+  ],
+  "intents": [
+    "merge my feature branch into main",
+    "combine two branches together",
+    "bring another branchs changes into mine",
+    "integrate work from a teammates branch"
+  ],
+  "example": "git merge feature/login",
+  "danger": false,
+  "related": [
+    "git-rebase",
+    "git-merge-squash",
+    "git-cherry-pick",
+    "git-undo-merge"
+  ]
+}

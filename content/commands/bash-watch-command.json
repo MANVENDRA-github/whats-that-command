@@ -10,6 +10,15 @@
     "keep checking",
     "auto re-run"
   ],
+  "intents": [
+    "re-run a command every few seconds and show changes",
+    "poll a command and see its output update live",
+    "keep refreshing kubectl get pods automatically",
+    "auto-rerun the same command on a timer",
+    "live monitor of a command's output without scripting",
+    "watch a counter or status change in the terminal",
+    "rerun a check periodically until something changes"
+  ],
   "example": "watch -n 1 'kubectl get pods'",
   "danger": false,
   "related": [

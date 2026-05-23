@@ -1,0 +1,20 @@
+{
+  "id": "docker-start",
+  "command": "docker start <container>",
+  "description": "Start one or more stopped containers",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "restart stopped container",
+    "bring container back up",
+    "resume container"
+  ],
+  "intents": [
+    "start a stopped container",
+    "bring an existing container back online",
+    "resume a container i stopped earlier"
+  ],
+  "example": "docker start myapp",
+  "danger": false,
+  "related": []
+}

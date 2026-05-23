@@ -1,0 +1,28 @@
+{
+  "id": "git-rebase-continue",
+  "command": "git rebase --continue",
+  "description": "Resume a rebase after resolving conflicts in the current step",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "carry on rebase",
+    "after conflict resolved",
+    "next rebase step",
+    "resume rebase"
+  ],
+  "intents": [
+    "i fixed the conflicts now what",
+    "continue the rebase after resolving conflicts",
+    "move to the next commit in the rebase",
+    "resume a paused rebase",
+    "carry on with the rebase after fixing files",
+    "i resolved the merge conflicts during rebase how do i proceed"
+  ],
+  "example": "git rebase --continue",
+  "danger": false,
+  "related": [
+    "git-rebase",
+    "git-rebase-abort",
+    "git-rebase-interactive"
+  ]
+}

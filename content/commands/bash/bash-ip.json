@@ -1,0 +1,19 @@
+{
+  "id": "bash-ip",
+  "command": "ip <object> <command>",
+  "description": "Modern replacement for ifconfig/route: configure interfaces, routes, and addresses",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "network config",
+    "show ip",
+    "manage routes"
+  ],
+  "intents": [
+    "show ip addresses and routes",
+    "configure a network interface on modern linux"
+  ],
+  "example": "ip addr show",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": "bash-clear",
+  "command": "clear",
+  "description": "Clear the terminal screen",
+  "tool": "bash",
+  "category": "terminal",
+  "tags": [
+    "clear screen",
+    "wipe terminal",
+    "fresh prompt"
+  ],
+  "intents": [
+    "clear my terminal",
+    "wipe the screen",
+    "get a fresh prompt"
+  ],
+  "example": "clear",
+  "danger": false,
+  "related": []
+}

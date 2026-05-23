@@ -1,0 +1,21 @@
+{
+  "id": "bash-history",
+  "command": "history",
+  "description": "List previously typed shell commands",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "previous commands",
+    "shell history",
+    "recall command"
+  ],
+  "intents": [
+    "see my command history",
+    "find a command i typed earlier"
+  ],
+  "example": "history | tail -20",
+  "danger": false,
+  "related": [
+    "bash-history-search"
+  ]
+}

@@ -11,10 +11,14 @@
     "add specific file"
   ],
   "intents": [
-    "i want to commit just this one file",
+    "stage just this one file before committing",
     "include this file in my next commit",
     "stage a particular file but not others",
-    "prepare a single file to be committed"
+    "prepare a single file for staging",
+    "stage this one file",
+    "include this file in my commit",
+    "git add a single specific file",
+    "stage just one file by path"
   ],
   "example": "git add src/index.js",
   "danger": false,

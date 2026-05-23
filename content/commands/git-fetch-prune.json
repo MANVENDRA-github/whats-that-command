@@ -10,6 +10,15 @@
     "tidy tracking refs",
     "stale branches"
   ],
+  "intents": [
+    "clean up stale remote tracking branches",
+    "remove references to branches that were deleted on the remote",
+    "fetch and tidy up dead remote branches",
+    "i still see branches locally that were deleted on github",
+    "prune branches that no longer exist on the remote",
+    "sync remote refs and drop the ones that are gone",
+    "get rid of stale origin/* refs"
+  ],
   "example": "git fetch --prune",
   "danger": false,
   "related": [

@@ -1,0 +1,19 @@
+{
+  "id": "docker-system-df",
+  "command": "docker system df",
+  "description": "Show Docker disk usage by images, containers, volumes, and build cache",
+  "tool": "docker",
+  "category": "system",
+  "tags": [
+    "docker disk usage",
+    "how much space is docker using",
+    "storage breakdown"
+  ],
+  "intents": [
+    "how much disk space is docker using",
+    "see disk usage by images containers and volumes"
+  ],
+  "example": "docker system df",
+  "danger": false,
+  "related": []
+}

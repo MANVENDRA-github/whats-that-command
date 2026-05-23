@@ -1,0 +1,17 @@
+{
+  "id": "bash-tabs",
+  "command": "tabs <count>",
+  "description": "Set the terminal's tab stops",
+  "tool": "bash",
+  "category": "terminal",
+  "tags": [
+    "set tab stops",
+    "change tab width in tty"
+  ],
+  "intents": [
+    "set how wide tab stops are on the terminal"
+  ],
+  "example": "tabs 4",
+  "danger": false,
+  "related": []
+}

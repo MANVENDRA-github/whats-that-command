@@ -1,0 +1,28 @@
+{
+  "id": "git-stash-clear",
+  "command": "git stash clear",
+  "description": "Delete every stash in the repository",
+  "tool": "git",
+  "category": "stash",
+  "tags": [
+    "delete all stashes",
+    "wipe stash list",
+    "nuke the stash",
+    "empty stash stack"
+  ],
+  "intents": [
+    "delete all my stashes at once",
+    "wipe the entire stash list",
+    "empty the stash stack completely",
+    "remove every stash i ever made",
+    "clean out the stash list",
+    "i have a bunch of old stashes, get rid of them all"
+  ],
+  "example": "git stash clear",
+  "danger": true,
+  "related": [
+    "git-stash-list",
+    "git-stash-drop",
+    "git-stash-pop"
+  ]
+}

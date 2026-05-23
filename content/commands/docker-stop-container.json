@@ -10,6 +10,15 @@
     "graceful stop",
     "turn off"
   ],
+  "intents": [
+    "gracefully stop a running container",
+    "shut down a container properly with sigterm",
+    "turn off a specific container without forcing it",
+    "stop a service container so it can flush and exit",
+    "halt a container cleanly",
+    "send a polite stop signal to a container",
+    "stop one container by name"
+  ],
   "example": "docker stop api-server",
   "danger": false,
   "related": [

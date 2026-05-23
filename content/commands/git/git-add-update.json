@@ -1,0 +1,28 @@
+{
+  "id": "git-add-update",
+  "command": "git add -u",
+  "description": "Stage modifications and deletions to tracked files, but skip new untracked files",
+  "tool": "git",
+  "category": "staging",
+  "tags": [
+    "stage only known files",
+    "ignore new files",
+    "update tracked",
+    "skip untracked"
+  ],
+  "intents": [
+    "stage only files git already knows about",
+    "stage modifications without picking up new files",
+    "add only changes to tracked files",
+    "update what is tracked, skip new untracked files",
+    "i made new files i dont want to commit yet, just stage the rest",
+    "stage edits and deletes but not additions"
+  ],
+  "example": "git add -u",
+  "danger": false,
+  "related": [
+    "git-add-all",
+    "git-add-file",
+    "git-add-patch"
+  ]
+}

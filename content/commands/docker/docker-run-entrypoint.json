@@ -1,0 +1,18 @@
+{
+  "id": "docker-run-entrypoint",
+  "command": "docker run --entrypoint <cmd> <image>",
+  "description": "Override the image's ENTRYPOINT for this run",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "override entrypoint",
+    "replace entry command"
+  ],
+  "intents": [
+    "override the entrypoint of an image at run time",
+    "replace the default startup command of a container"
+  ],
+  "example": "docker run --entrypoint sh -it nginx",
+  "danger": false,
+  "related": []
+}

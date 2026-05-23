@@ -1,6 +1,6 @@
 'use client';
 
-import FadeUp from './FadeUp';
+import FadeUp from '@/components/ui/FadeUp';
 
 function scrollToSearch() {
   const el = document.getElementById('cmd-search');

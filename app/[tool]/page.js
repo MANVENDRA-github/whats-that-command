@@ -2,9 +2,9 @@ import { notFound } from 'next/navigation';
 import commands from '@/commands.json';
 import { TOOLS, TOOL_META, isValidTool } from '@/lib/tools';
 import { getCommandsByTool, countCategories } from '@/lib/commands';
-import Navbar from '@/components/Navbar';
-import ToolHero from '@/components/ToolHero';
-import ToolBrowser from '@/components/ToolBrowser';
+import Navbar from '@/components/nav/Navbar';
+import ToolHero from '@/components/browse/ToolHero';
+import ToolBrowser from '@/components/browse/ToolBrowser';
 
 export function generateStaticParams() {
   return TOOLS.map((tool) => ({ tool }));

@@ -1,6 +1,6 @@
 'use client';
 
-import FadeUp from './FadeUp';
+import FadeUp from '@/components/ui/FadeUp';
 
 const VALUE_PROPS = [
   {

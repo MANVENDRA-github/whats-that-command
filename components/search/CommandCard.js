@@ -1,18 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-
-// Color coding by tool — the folder tab carries the hue.
-const TOOL_TAB = {
-  git: 'bg-git',
-  docker: 'bg-docker',
-  bash: 'bg-bash'
-};
-const TOOL_MARK = {
-  git: 'text-git',
-  docker: 'text-docker',
-  bash: 'text-bash'
-};
+import { toolBgClass, toolTextClass } from '@/lib/tools';
 
 export default function CommandCard({ cmd }) {
   const [copied, setCopied] = useState(false);
@@ -32,7 +21,7 @@ export default function CommandCard({ cmd }) {
       {/* folder tab — tool name, color-coded */}
       <span
         className={`absolute -top-[18px] left-5 flex items-center rounded-t-[3px] border border-b-0 border-ink px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-kicker text-paper ${
-          TOOL_TAB[cmd.tool] ?? 'bg-ink'
+          toolBgClass(cmd.tool)
         }`}
       >
         {cmd.tool}
@@ -42,7 +31,7 @@ export default function CommandCard({ cmd }) {
         {/* catalog number + actions */}
         <div className="flex items-start justify-between gap-3">
           <span className="break-all font-mono text-[11px] text-muted">
-            <span className={TOOL_MARK[cmd.tool] ?? 'text-ink'}>№</span>{' '}
+            <span className={toolTextClass(cmd.tool)}>№</span>{' '}
             {cmd.id}
           </span>
           <div className="flex shrink-0 items-center gap-2">

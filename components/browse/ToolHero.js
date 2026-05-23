@@ -1,7 +1,4 @@
-import { TOOL_META } from '@/lib/tools';
-
-const TOOL_DOT = { git: 'bg-git', docker: 'bg-docker', bash: 'bg-bash' };
-const TOOL_TEXT = { git: 'text-git', docker: 'text-docker', bash: 'text-bash' };
+import { TOOL_META, toolBgClass, toolTextClass } from '@/lib/tools';
 
 export default function ToolHero({ tool, commandCount, categoryCount }) {
   const meta = TOOL_META[tool];
@@ -13,7 +10,7 @@ export default function ToolHero({ tool, commandCount, categoryCount }) {
         <p className="kicker mb-5">
           <span
             aria-hidden="true"
-            className={`h-1.5 w-1.5 ${TOOL_DOT[tool] ?? 'bg-accent'}`}
+            className={`h-1.5 w-1.5 ${toolBgClass(tool, 'bg-accent')}`}
           />
           command catalog
         </p>
@@ -22,7 +19,7 @@ export default function ToolHero({ tool, commandCount, categoryCount }) {
           style={{ fontSize: 'clamp(2.5rem, 5.5vw + 1rem, 5rem)' }}
         >
           {meta.title}
-          <span className={TOOL_TEXT[tool] ?? 'text-accent'}>.</span>
+          <span className={toolTextClass(tool, 'text-accent')}>.</span>
         </h1>
         <p className="mt-4 max-w-xl text-base text-muted sm:text-lg">
           {meta.blurb}

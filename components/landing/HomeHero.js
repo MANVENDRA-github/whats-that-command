@@ -1,6 +1,6 @@
 'use client';
 
-import SearchInput from './SearchInput';
+import SearchInput from '@/components/search/SearchInput';
 import HeroHeadline from './HeroHeadline';
 
 const EXAMPLE_PILLS = [

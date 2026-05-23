@@ -1,0 +1,21 @@
+{
+  "id": "docker-run-volume",
+  "command": "docker run -v <host-path>:<container-path> <image>",
+  "description": "Mount a host directory or volume into a container",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "mount volume",
+    "persist data",
+    "share folder with container",
+    "bind mount"
+  ],
+  "intents": [
+    "mount a host folder into a container",
+    "persist data across container restarts",
+    "bind mount a directory into a container"
+  ],
+  "example": "docker run -v $(pwd):/app node",
+  "danger": false,
+  "related": []
+}

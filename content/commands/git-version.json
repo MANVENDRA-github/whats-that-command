@@ -1,0 +1,28 @@
+{
+  "id": "git-version",
+  "command": "git --version",
+  "description": "Show which version of Git is installed on this machine",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "check install",
+    "verify git is installed",
+    "what version",
+    "is git working"
+  ],
+  "intents": [
+    "check if git is installed on this machine",
+    "what version of git do i have",
+    "verify git is installed and working",
+    "see which git release i am running",
+    "is git available on this computer",
+    "find out which version of git is set up here",
+    "confirm git was installed properly"
+  ],
+  "example": "git --version",
+  "danger": false,
+  "related": [
+    "git-init",
+    "git-help"
+  ]
+}

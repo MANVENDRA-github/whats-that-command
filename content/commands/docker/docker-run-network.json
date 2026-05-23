@@ -1,0 +1,19 @@
+{
+  "id": "docker-run-network",
+  "command": "docker run --network <name> <image>",
+  "description": "Connect a container to a specific Docker network at startup",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "attach to network",
+    "choose network",
+    "custom network"
+  ],
+  "intents": [
+    "run a container on a specific network",
+    "attach a container to a custom network on startup"
+  ],
+  "example": "docker run --network mynet redis",
+  "danger": false,
+  "related": []
+}

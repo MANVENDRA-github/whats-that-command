@@ -1,0 +1,18 @@
+{
+  "id": "docker-buildx-prune",
+  "command": "docker buildx prune",
+  "description": "Clean up buildx build cache",
+  "tool": "docker",
+  "category": "cleanup",
+  "tags": [
+    "clear build cache",
+    "buildx cleanup",
+    "reclaim cache space"
+  ],
+  "intents": [
+    "clear buildx build cache to free disk space"
+  ],
+  "example": "docker buildx prune -f",
+  "danger": true,
+  "related": []
+}

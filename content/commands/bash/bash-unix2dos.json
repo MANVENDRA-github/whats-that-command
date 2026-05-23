@@ -1,0 +1,19 @@
+{
+  "id": "bash-unix2dos",
+  "command": "unix2dos <file>",
+  "description": "Convert text file line endings from Unix (LF) to Windows (CRLF)",
+  "tool": "bash",
+  "category": "encoding",
+  "tags": [
+    "lf to crlf",
+    "convert to dos",
+    "windows line endings"
+  ],
+  "intents": [
+    "convert lf to crlf",
+    "add windows-style line endings to a file"
+  ],
+  "example": "unix2dos notes.txt",
+  "danger": false,
+  "related": []
+}

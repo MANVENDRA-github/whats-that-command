@@ -1,0 +1,19 @@
+{
+  "id": "bash-locate",
+  "command": "locate <pattern>",
+  "description": "Find files anywhere on the system using a pre-built database (much faster than find)",
+  "tool": "bash",
+  "category": "search",
+  "tags": [
+    "fast file search",
+    "find by name",
+    "system-wide search"
+  ],
+  "intents": [
+    "quickly find a file anywhere on the system",
+    "fast search by filename"
+  ],
+  "example": "locate nginx.conf",
+  "danger": false,
+  "related": []
+}

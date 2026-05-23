@@ -1,0 +1,19 @@
+{
+  "id": "docker-search",
+  "command": "docker search <term>",
+  "description": "Search Docker Hub for images matching a term",
+  "tool": "docker",
+  "category": "registry",
+  "tags": [
+    "search docker hub",
+    "find image",
+    "browse registry"
+  ],
+  "intents": [
+    "search docker hub for an image",
+    "find an image by keyword on docker hub"
+  ],
+  "example": "docker search nginx",
+  "danger": false,
+  "related": []
+}

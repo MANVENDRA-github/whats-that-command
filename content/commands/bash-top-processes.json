@@ -10,6 +10,15 @@
     "slow computer",
     "biggest hogs"
   ],
+  "intents": [
+    "what is making my machine slow",
+    "find the process using the most cpu",
+    "my fan is loud, what is hogging cpu",
+    "show me the top cpu consumers right now",
+    "see which process is eating all my cpu",
+    "rank running processes by cpu usage",
+    "something is pegging my cpu, find it"
+  ],
   "example": "ps aux --sort=-%cpu | head",
   "danger": false,
   "related": [

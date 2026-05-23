@@ -1,0 +1,19 @@
+{
+  "id": "docker-node-update",
+  "command": "docker node update <opts> <node>",
+  "description": "Update node attributes such as availability (active/drain/pause) or labels",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "drain node",
+    "update node",
+    "mark node"
+  ],
+  "intents": [
+    "drain a swarm node before maintenance",
+    "change a node's availability or labels"
+  ],
+  "example": "docker node update --availability drain worker-2",
+  "danger": false,
+  "related": []
+}

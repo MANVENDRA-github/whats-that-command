@@ -1,0 +1,19 @@
+{
+  "id": "bash-exec",
+  "command": "exec <command>",
+  "description": "Replace the current shell with another command (no new process)",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "replace shell",
+    "no fork",
+    "redirect descriptors"
+  ],
+  "intents": [
+    "replace the current shell process with another command",
+    "redirect file descriptors for the rest of the script"
+  ],
+  "example": "exec ./longjob.sh",
+  "danger": false,
+  "related": []
+}

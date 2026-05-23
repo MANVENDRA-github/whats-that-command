@@ -1,0 +1,19 @@
+{
+  "id": "bash-ddrescue",
+  "command": "ddrescue <src> <dest> <log>",
+  "description": "Copy data from a failing disk, skipping bad sectors to recover what is readable",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "recover failing disk",
+    "data recovery",
+    "bad sector skip"
+  ],
+  "intents": [
+    "rescue data from a dying disk",
+    "copy a disk while skipping bad sectors"
+  ],
+  "example": "sudo ddrescue /dev/sda disk.img rescue.log",
+  "danger": true,
+  "related": []
+}

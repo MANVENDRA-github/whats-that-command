@@ -1,0 +1,20 @@
+{
+  "id": "bash-source",
+  "command": "source <file>",
+  "description": "Run a script in the current shell so its variables and functions persist (also written as . file)",
+  "tool": "bash",
+  "category": "shell",
+  "tags": [
+    "run in current shell",
+    "load env file",
+    "dot source"
+  ],
+  "intents": [
+    "reload my .bashrc",
+    "load an env file into the current shell",
+    "run a script without spawning a subshell"
+  ],
+  "example": "source ~/.bashrc",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,18 @@
+{
+  "id": "bash-bzip2",
+  "command": "bzip2 <file>",
+  "description": "Compress a file with bzip2 (better ratio than gzip, slower)",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "bzip2 compress",
+    "better than gzip",
+    "bz2"
+  ],
+  "intents": [
+    "compress a file with bzip2 for better compression than gzip"
+  ],
+  "example": "bzip2 archive.tar",
+  "danger": false,
+  "related": []
+}

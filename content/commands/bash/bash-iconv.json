@@ -1,0 +1,19 @@
+{
+  "id": "bash-iconv",
+  "command": "iconv -f <from> -t <to> <file>",
+  "description": "Convert text between character encodings (e.g. UTF-8 to Latin-1)",
+  "tool": "bash",
+  "category": "encoding",
+  "tags": [
+    "character encoding",
+    "change charset",
+    "utf-8 conversion"
+  ],
+  "intents": [
+    "convert a file from one character encoding to another",
+    "change a file from latin-1 to utf-8"
+  ],
+  "example": "iconv -f ISO-8859-1 -t UTF-8 in.txt > out.txt",
+  "danger": false,
+  "related": []
+}

@@ -14,7 +14,11 @@
     "get the latest changes from the remote",
     "update my branch with new commits from upstream",
     "bring my code up to date with what teammates pushed",
-    "sync my branch with the server"
+    "sync my branch with the server",
+    "get the latest from main",
+    "fetch and merge the upstream branch into mine",
+    "i need to download new commits from upstream",
+    "catch up my branch with whatever was pushed remotely"
   ],
   "example": "git pull",
   "danger": false,

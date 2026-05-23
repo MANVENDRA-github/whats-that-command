@@ -10,6 +10,15 @@
     "where is this string used",
     "code search"
   ],
+  "intents": [
+    "find every place a function is used in the codebase",
+    "search all files for a piece of text",
+    "where is this variable referenced",
+    "look for a string in any file under this folder",
+    "grep across the entire project for a term",
+    "find all TODO comments in my code",
+    "case insensitive search inside files"
+  ],
   "example": "grep -rni \"TODO\" .",
   "danger": false,
   "related": [

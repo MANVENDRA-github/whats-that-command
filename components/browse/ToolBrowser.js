@@ -4,10 +4,10 @@ import { useMemo } from 'react';
 import Fuse from 'fuse.js';
 import { fuseOptions } from '@/lib/searchConfig';
 import useSearchQuery from '@/hooks/useSearchQuery';
-import SearchInput from './SearchInput';
-import CommandList from './CommandList';
+import SearchInput from '@/components/search/SearchInput';
+import CommandList from '@/components/search/CommandList';
+import NoMatch from '@/components/search/NoMatch';
 import CategoryBrowser from './CategoryBrowser';
-import NoMatch from './NoMatch';
 
 export default function ToolBrowser({ tool, commands }) {
   const { query, setQuery, inputRef, hasQuery } = useSearchQuery();

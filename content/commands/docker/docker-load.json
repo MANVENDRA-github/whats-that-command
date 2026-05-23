@@ -1,0 +1,19 @@
+{
+  "id": "docker-load",
+  "command": "docker load -i <file>.tar",
+  "description": "Load images from a tar archive created by docker save",
+  "tool": "docker",
+  "category": "images",
+  "tags": [
+    "import image tarball",
+    "load saved image",
+    "offline image load"
+  ],
+  "intents": [
+    "load a docker image from a tar file",
+    "import an image that was saved with docker save"
+  ],
+  "example": "docker load -i nginx.tar",
+  "danger": false,
+  "related": []
+}

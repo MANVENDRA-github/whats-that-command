@@ -1,0 +1,17 @@
+{
+  "id": "docker-compose-images",
+  "command": "docker compose images",
+  "description": "List images used by services in the current compose project",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "compose images",
+    "images per service"
+  ],
+  "intents": [
+    "list the images used by my compose services"
+  ],
+  "example": "docker compose images",
+  "danger": false,
+  "related": []
+}

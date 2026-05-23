@@ -1,0 +1,19 @@
+{
+  "id": "bash-sntp",
+  "command": "sntp <server>",
+  "description": "Simple NTP client that queries a time server",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "time sync",
+    "ntp query",
+    "check clock"
+  ],
+  "intents": [
+    "query an ntp server for the current time",
+    "check clock drift against a time server"
+  ],
+  "example": "sntp pool.ntp.org",
+  "danger": false,
+  "related": []
+}

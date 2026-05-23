@@ -1,0 +1,17 @@
+{
+  "id": "docker-compose-push",
+  "command": "docker compose push",
+  "description": "Push images for compose services to their registries",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "compose push",
+    "publish compose images"
+  ],
+  "intents": [
+    "push compose-built images to the registry"
+  ],
+  "example": "docker compose push",
+  "danger": false,
+  "related": []
+}

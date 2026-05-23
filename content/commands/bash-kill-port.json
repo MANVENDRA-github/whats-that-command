@@ -12,6 +12,16 @@
     "kill process on a port",
     "stop process on port"
   ],
+  "intents": [
+    "something is using my port and i need it gone",
+    "free port 3000 so i can start my server",
+    "address already in use, fix it",
+    "my dev server crashed but the port is still held",
+    "kill whatever is on port 8080",
+    "port is stuck after the app died",
+    "release a port that some zombie process is hogging",
+    "i cant start my app because the port is busy"
+  ],
   "example": "lsof -ti:3000 | xargs kill -9",
   "danger": true,
   "related": [

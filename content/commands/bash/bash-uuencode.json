@@ -1,0 +1,18 @@
+{
+  "id": "bash-uuencode",
+  "command": "uuencode <file> <name>",
+  "description": "Encode a binary file for transmission over text-only channels",
+  "tool": "bash",
+  "category": "encoding",
+  "tags": [
+    "encode binary",
+    "legacy email encoding",
+    "uuencode"
+  ],
+  "intents": [
+    "encode a binary file as uuencoded text for email"
+  ],
+  "example": "uuencode photo.jpg photo.jpg > photo.uu",
+  "danger": false,
+  "related": []
+}

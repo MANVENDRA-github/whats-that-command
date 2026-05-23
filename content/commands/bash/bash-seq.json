@@ -1,0 +1,19 @@
+{
+  "id": "bash-seq",
+  "command": "seq <start> <end>",
+  "description": "Print a sequence of numbers",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "number sequence",
+    "range of numbers",
+    "iterate numbers"
+  ],
+  "intents": [
+    "generate a list of numbers from a to b",
+    "print a numeric range"
+  ],
+  "example": "seq 1 10",
+  "danger": false,
+  "related": []
+}

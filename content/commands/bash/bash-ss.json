@@ -1,0 +1,19 @@
+{
+  "id": "bash-ss",
+  "command": "ss -tulnp",
+  "description": "Modern replacement for netstat: list sockets and connections",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "sockets",
+    "listening ports",
+    "modern netstat"
+  ],
+  "intents": [
+    "list listening tcp and udp sockets",
+    "modern alternative to netstat"
+  ],
+  "example": "ss -tulnp",
+  "danger": false,
+  "related": []
+}

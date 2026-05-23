@@ -1,0 +1,19 @@
+{
+  "id": "docker-stack-deploy",
+  "command": "docker stack deploy -c <file>.yml <stack>",
+  "description": "Deploy a stack to the swarm from a compose file",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "deploy stack",
+    "compose to swarm",
+    "stack deploy"
+  ],
+  "intents": [
+    "deploy a compose file as a swarm stack",
+    "launch a multi-service stack on the swarm"
+  ],
+  "example": "docker stack deploy -c docker-compose.yml myapp",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,20 @@
+{
+  "id": "bash-date",
+  "command": "date",
+  "description": "Display or set the current system date and time",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "current time",
+    "system date",
+    "set clock"
+  ],
+  "intents": [
+    "what time is it",
+    "show the current date and time",
+    "set the system clock"
+  ],
+  "example": "date \"+%Y-%m-%d %H:%M:%S\"",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,17 @@
+{
+  "id": "docker-plugin-rm",
+  "command": "docker plugin rm <plugin>",
+  "description": "Remove an installed plugin",
+  "tool": "docker",
+  "category": "plugin",
+  "tags": [
+    "remove plugin",
+    "uninstall plugin"
+  ],
+  "intents": [
+    "uninstall a docker plugin"
+  ],
+  "example": "docker plugin rm vieux/sshfs",
+  "danger": true,
+  "related": []
+}

@@ -8,6 +8,7 @@ import { fuseOptions } from '@/lib/searchConfig';
 import { mergeResults } from '@/lib/mergeSearch';
 import useSearchQuery from '@/hooks/useSearchQuery';
 import useSemanticSearch from '@/hooks/useSemanticSearch';
+import useDebouncedValue from '@/hooks/useDebouncedValue';
 import Navbar from '@/components/Navbar';
 import HomeHero from '@/components/HomeHero';
 import TerminalDemo from '@/components/TerminalDemo';
@@ -18,19 +19,22 @@ import CallToAction from '@/components/CallToAction';
 
 export default function Home() {
   const { query, setQuery, inputRef, hasQuery } = useSearchQuery();
+  // The input binds to `query` for instant feedback; the actual search runs on
+  // the debounced value so a fast typist triggers one search, not one per key.
+  const debouncedQuery = useDebouncedValue(query, 150);
   const { status: semStatus, search: runSemantic } = useSemanticSearch();
   const [semanticRanked, setSemanticRanked] = useState([]);
 
   const fuse = useMemo(() => new Fuse(commands, fuseOptions), []);
 
   const fuseRanked = useMemo(() => {
-    const q = query.trim();
+    const q = debouncedQuery.trim();
     if (!q) return [];
     return fuse.search(q);
-  }, [query, fuse]);
+  }, [debouncedQuery, fuse]);
 
   useEffect(() => {
-    const q = query.trim();
+    const q = debouncedQuery.trim();
     if (!q || semStatus !== 'ready') {
       setSemanticRanked([]);
       return;
@@ -42,12 +46,15 @@ export default function Home() {
     return () => {
       cancelled = true;
     };
-  }, [query, semStatus, runSemantic]);
+  }, [debouncedQuery, semStatus, runSemantic]);
 
   const results = useMemo(
     () => mergeResults(fuseRanked, semanticRanked, commands),
     [fuseRanked, semanticRanked]
   );
+
+  // True while the debounce hasn't caught up with the latest keystroke.
+  const settling = query.trim() !== debouncedQuery.trim();
 
   const handlePillClick = (text) => {
     setQuery(text);
@@ -67,13 +74,21 @@ export default function Home() {
 
         {hasQuery ? (
           <section className="mx-auto max-w-page px-5 pb-24 sm:px-7">
-            <p className="mb-4 font-mono text-[11px] uppercase tracking-kicker text-muted">
-              {`${results.length} match${results.length === 1 ? '' : 'es'} for "${query.trim()}"`}
-            </p>
-            {results.length === 0 ? (
-              <NoMatch className="text-center" />
+            {settling && results.length === 0 ? (
+              <p className="font-mono text-[11px] uppercase tracking-kicker text-muted">
+                Searching…
+              </p>
             ) : (
-              <CommandList commands={results} />
+              <>
+                <p className="mb-4 font-mono text-[11px] uppercase tracking-kicker text-muted">
+                  {`${results.length} match${results.length === 1 ? '' : 'es'} for "${debouncedQuery.trim()}"`}
+                </p>
+                {results.length === 0 ? (
+                  <NoMatch className="text-center" />
+                ) : (
+                  <CommandList commands={results} />
+                )}
+              </>
             )}
           </section>
         ) : (

@@ -1,0 +1,18 @@
+{
+  "id": "bash-klist",
+  "command": "klist",
+  "description": "List Kerberos tickets in the credential cache",
+  "tool": "bash",
+  "category": "user",
+  "tags": [
+    "kerberos tickets",
+    "kinit cache"
+  ],
+  "intents": [
+    "list my kerberos tickets",
+    "check kerberos credentials"
+  ],
+  "example": "klist",
+  "danger": false,
+  "related": []
+}

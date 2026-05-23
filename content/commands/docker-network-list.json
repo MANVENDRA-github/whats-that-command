@@ -10,6 +10,15 @@
     "wiring overview",
     "available overlays"
   ],
+  "intents": [
+    "list all docker networks on this host",
+    "see what networks exist in docker",
+    "show every bridge and overlay network",
+    "what networks can my containers join",
+    "list networks before i pick one to attach to",
+    "see available docker networks i can use",
+    "what custom networks have i created"
+  ],
   "example": "docker network ls",
   "danger": false,
   "related": [

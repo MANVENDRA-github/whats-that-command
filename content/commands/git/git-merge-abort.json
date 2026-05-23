@@ -1,0 +1,30 @@
+{
+  "id": "git-merge-abort",
+  "command": "git merge --abort",
+  "description": "Cancel an in-progress merge and return to the pre-merge state",
+  "tool": "git",
+  "category": "undo",
+  "tags": [
+    "stop merge",
+    "bail out of merge",
+    "undo merge attempt",
+    "escape merge",
+    "give up on merge"
+  ],
+  "intents": [
+    "cancel a merge that is in progress",
+    "abort the merge i just started",
+    "get out of a merge with too many conflicts",
+    "i changed my mind about this merge",
+    "stop merging and go back to before",
+    "back out of an unfinished merge",
+    "i dont want to deal with these merge conflicts right now"
+  ],
+  "example": "git merge --abort",
+  "danger": false,
+  "related": [
+    "git-merge",
+    "git-undo-merge",
+    "git-merge-squash"
+  ]
+}

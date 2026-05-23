@@ -1,0 +1,20 @@
+{
+  "id": "docker-restart",
+  "command": "docker restart <container>",
+  "description": "Restart a running container (stop then start)",
+  "tool": "docker",
+  "category": "containers",
+  "tags": [
+    "reboot container",
+    "cycle container",
+    "apply config change"
+  ],
+  "intents": [
+    "restart a container to pick up config changes",
+    "reboot a running container",
+    "bounce a container"
+  ],
+  "example": "docker restart myapp",
+  "danger": false,
+  "related": []
+}

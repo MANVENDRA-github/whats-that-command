@@ -10,6 +10,15 @@
     "free space",
     "remaining capacity"
   ],
+  "intents": [
+    "am i running out of disk space",
+    "how much storage do i have left",
+    "is my drive full",
+    "i got no space left on device, check the disk",
+    "see how full each mounted volume is",
+    "show free and used space per partition",
+    "how much room is left on my main disk"
+  ],
   "example": "df -h",
   "danger": false,
   "related": [

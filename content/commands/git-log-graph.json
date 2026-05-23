@@ -11,6 +11,15 @@
     "recent activity",
     "pretty log"
   ],
+  "intents": [
+    "visualize the commit history as a graph",
+    "see all branches and merges as a tree",
+    "pretty branch graph in the terminal",
+    "show me a compact history view of all branches",
+    "graphical log across every branch",
+    "see how branches diverged and merged over time",
+    "ascii graph of commits across branches"
+  ],
   "example": "git log --oneline --graph --all --decorate",
   "danger": false,
   "related": [

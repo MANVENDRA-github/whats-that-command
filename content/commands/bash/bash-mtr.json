@@ -1,0 +1,19 @@
+{
+  "id": "bash-mtr",
+  "command": "mtr <host>",
+  "description": "Combination of traceroute and ping that shows live per-hop loss",
+  "tool": "bash",
+  "category": "network",
+  "tags": [
+    "live traceroute",
+    "network diagnostics",
+    "hop loss"
+  ],
+  "intents": [
+    "live traceroute with per-hop packet loss",
+    "diagnose network problems hop by hop"
+  ],
+  "example": "mtr example.com",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bash-rename",
+  "command": "rename <expr> <files>",
+  "description": "Rename multiple files using a perl-style expression",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "bulk rename",
+    "pattern rename",
+    "rename batch"
+  ],
+  "intents": [
+    "rename many files with a regex",
+    "bulk rename with a pattern"
+  ],
+  "example": "rename \"s/\\.txt$/\\.md/\" *.txt",
+  "danger": false,
+  "related": []
+}

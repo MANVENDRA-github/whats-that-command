@@ -10,6 +10,15 @@
     "path of command",
     "resolve executable"
   ],
+  "intents": [
+    "which version of node is actually being used",
+    "where is python installed on my machine",
+    "find the full path of a binary on my PATH",
+    "is the right node on my PATH",
+    "show me what runs when i type this command",
+    "resolve a command name to its actual executable",
+    "figure out which copy of a tool is being invoked"
+  ],
   "example": "which node",
   "danger": false,
   "related": [

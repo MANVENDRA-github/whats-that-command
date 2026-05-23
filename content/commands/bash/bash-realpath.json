@@ -1,0 +1,19 @@
+{
+  "id": "bash-realpath",
+  "command": "realpath <path>",
+  "description": "Print the absolute canonical path of a file or directory",
+  "tool": "bash",
+  "category": "filesystem",
+  "tags": [
+    "absolute path",
+    "canonical path",
+    "resolve path"
+  ],
+  "intents": [
+    "get the absolute path of a file",
+    "resolve all symlinks in a path"
+  ],
+  "example": "realpath ./project",
+  "danger": false,
+  "related": []
+}

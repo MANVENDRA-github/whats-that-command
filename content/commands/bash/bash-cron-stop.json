@@ -1,0 +1,17 @@
+{
+  "id": "bash-cron-stop",
+  "command": "crontab -r",
+  "description": "Remove the current user's entire crontab",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "delete crontab",
+    "remove cron jobs"
+  ],
+  "intents": [
+    "delete all my cron jobs at once"
+  ],
+  "example": "crontab -r",
+  "danger": true,
+  "related": []
+}

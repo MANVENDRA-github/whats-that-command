@@ -9,6 +9,15 @@
     "fix typo in branch",
     "relabel"
   ],
+  "intents": [
+    "rename my current branch",
+    "fix a typo in the branch name",
+    "change a branch name without losing my work",
+    "give my branch a better name",
+    "rename a branch i just created",
+    "relabel the branch i am on",
+    "i picked a bad branch name, change it"
+  ],
   "example": "git branch -m feature/login-v2",
   "danger": false,
   "related": [

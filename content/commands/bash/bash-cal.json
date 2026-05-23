@@ -1,0 +1,19 @@
+{
+  "id": "bash-cal",
+  "command": "cal",
+  "description": "Display a calendar for a month or year",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "calendar",
+    "month view",
+    "show year"
+  ],
+  "intents": [
+    "show a calendar in the terminal",
+    "print this month's calendar"
+  ],
+  "example": "cal 2026",
+  "danger": false,
+  "related": []
+}

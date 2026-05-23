@@ -1,0 +1,18 @@
+{
+  "id": "docker-plugin-install",
+  "command": "docker plugin install <plugin>",
+  "description": "Install a Docker plugin from a registry",
+  "tool": "docker",
+  "category": "plugin",
+  "tags": [
+    "install plugin",
+    "add docker plugin"
+  ],
+  "intents": [
+    "install a docker plugin",
+    "add a new plugin to the docker engine"
+  ],
+  "example": "docker plugin install vieux/sshfs",
+  "danger": false,
+  "related": []
+}

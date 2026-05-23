@@ -1,0 +1,19 @@
+{
+  "id": "docker-events",
+  "command": "docker events",
+  "description": "Stream real-time events from the Docker daemon",
+  "tool": "docker",
+  "category": "debug",
+  "tags": [
+    "docker events",
+    "daemon events",
+    "live activity"
+  ],
+  "intents": [
+    "watch docker daemon events live",
+    "see when containers start stop or die in real time"
+  ],
+  "example": "docker events",
+  "danger": false,
+  "related": []
+}

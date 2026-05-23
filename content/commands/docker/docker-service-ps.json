@@ -1,0 +1,19 @@
+{
+  "id": "docker-service-ps",
+  "command": "docker service ps <service>",
+  "description": "List the tasks (replicas) of a service",
+  "tool": "docker",
+  "category": "swarm",
+  "tags": [
+    "service tasks",
+    "list replicas",
+    "show service instances"
+  ],
+  "intents": [
+    "see which nodes a service's replicas are running on",
+    "list the tasks for a swarm service"
+  ],
+  "example": "docker service ps web",
+  "danger": false,
+  "related": []
+}

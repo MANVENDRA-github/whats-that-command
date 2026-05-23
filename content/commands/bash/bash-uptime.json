@@ -1,0 +1,19 @@
+{
+  "id": "bash-uptime",
+  "command": "uptime",
+  "description": "Show how long the system has been up and the load averages",
+  "tool": "bash",
+  "category": "system",
+  "tags": [
+    "system uptime",
+    "load average",
+    "how long running"
+  ],
+  "intents": [
+    "how long has this system been up",
+    "show load average and uptime"
+  ],
+  "example": "uptime",
+  "danger": false,
+  "related": []
+}

@@ -1,0 +1,28 @@
+{
+  "id": "git-branch-merged",
+  "command": "git branch --merged",
+  "description": "List local branches whose work is already merged into the current branch",
+  "tool": "git",
+  "category": "branch",
+  "tags": [
+    "branches ready to delete",
+    "what is already merged",
+    "cleanup candidates",
+    "find finished branches"
+  ],
+  "intents": [
+    "which branches are safe to delete",
+    "list branches that have already been merged",
+    "find branches whose work is done",
+    "show me cleanup candidates",
+    "what branches can i delete without losing work",
+    "see which feature branches are already merged into main"
+  ],
+  "example": "git branch --merged main",
+  "danger": false,
+  "related": [
+    "git-list-branches",
+    "git-delete-branch",
+    "git-recent-branches"
+  ]
+}

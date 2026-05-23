@@ -15,7 +15,10 @@
     "find the commit where this string was introduced",
     "search git history for a piece of text",
     "who added or removed this line",
-    "find when something was deleted from the code"
+    "find when something was deleted from the code",
+    "pickaxe search for a string in git history",
+    "find the commit that added or removed a snippet",
+    "search past diffs for a piece of text"
   ],
   "example": "git log -S \"TODO\"",
   "danger": false,

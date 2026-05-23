@@ -1,0 +1,18 @@
+{
+  "id": "docker-compose-stop",
+  "command": "docker compose stop",
+  "description": "Stop services in a compose stack without removing them",
+  "tool": "docker",
+  "category": "compose",
+  "tags": [
+    "stop compose services",
+    "pause stack"
+  ],
+  "intents": [
+    "stop a compose stack without tearing it down",
+    "pause my compose services"
+  ],
+  "example": "docker compose stop",
+  "danger": false,
+  "related": []
+}

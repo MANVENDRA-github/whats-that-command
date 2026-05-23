@@ -1,0 +1,21 @@
+{
+  "id": "bash-tail",
+  "command": "tail <file>",
+  "description": "Show the last lines of a file (default 10)",
+  "tool": "bash",
+  "category": "logs",
+  "tags": [
+    "last lines",
+    "bottom of file",
+    "end of file"
+  ],
+  "intents": [
+    "see the last few lines of a file",
+    "show the end of a log"
+  ],
+  "example": "tail -n 50 app.log",
+  "danger": false,
+  "related": [
+    "bash-tail-follow"
+  ]
+}

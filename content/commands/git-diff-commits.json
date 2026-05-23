@@ -13,7 +13,10 @@
     "compare two commits",
     "what changed between these two revisions",
     "diff between two points in history",
-    "see what is different between this branch tip and that one"
+    "see what is different between this branch tip and that one",
+    "diff between two commit hashes",
+    "show the changes from one commit to another",
+    "see how a tagged version differs from another"
   ],
   "example": "git diff abc123 def456",
   "danger": false,

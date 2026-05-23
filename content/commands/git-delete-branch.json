@@ -10,6 +10,15 @@
     "done with feature",
     "drop branch"
   ],
+  "intents": [
+    "delete a branch i finished and merged",
+    "remove a local branch i dont need anymore",
+    "clean up an old feature branch after merging",
+    "drop a branch i already merged into main",
+    "tidy up by deleting a finished branch",
+    "get rid of a local branch i merged into main",
+    "delete a branch safely without losing unmerged work"
+  ],
   "example": "git branch -d feature/login",
   "danger": false,
   "related": [

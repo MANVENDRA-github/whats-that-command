@@ -79,6 +79,16 @@ async function main() {
       errors.push(`${label}: "danger" must be a boolean when present (got ${typeof entry.danger})`);
     }
 
+    // Optional: extra natural-language phrasings folded into search. Boosts
+    // both lexical (Fuse) and semantic recall — see build-static-embeddings.mjs.
+    if ('intents' in entry) {
+      if (!Array.isArray(entry.intents)) {
+        errors.push(`${label}: "intents" must be an array when present`);
+      } else if (entry.intents.some((t) => typeof t !== 'string' || t.trim() === '')) {
+        errors.push(`${label}: every entry in "intents" must be a non-empty string`);
+      }
+    }
+
     if (typeof entry.id === 'string' && entry.id.trim() !== '') {
       const expectedFile = `${entry.id}.json`;
       if (file !== expectedFile) {

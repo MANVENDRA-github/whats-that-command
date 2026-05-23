@@ -1,0 +1,18 @@
+{
+  "id": "bash-cpio",
+  "command": "cpio",
+  "description": "Copy files to and from archives in the cpio format",
+  "tool": "bash",
+  "category": "archive",
+  "tags": [
+    "cpio archive",
+    "legacy archive",
+    "pipe archive"
+  ],
+  "intents": [
+    "create or extract a cpio archive"
+  ],
+  "example": "find . | cpio -ov > out.cpio",
+  "danger": false,
+  "related": []
+}

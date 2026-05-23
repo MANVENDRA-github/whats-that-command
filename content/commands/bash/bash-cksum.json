@@ -1,0 +1,19 @@
+{
+  "id": "bash-cksum",
+  "command": "cksum <file>",
+  "description": "Compute a CRC checksum and byte count of a file",
+  "tool": "bash",
+  "category": "encoding",
+  "tags": [
+    "crc checksum",
+    "file fingerprint",
+    "cyclic check"
+  ],
+  "intents": [
+    "compute a crc checksum for a file",
+    "simple file fingerprint"
+  ],
+  "example": "cksum data.bin",
+  "danger": false,
+  "related": []
+}

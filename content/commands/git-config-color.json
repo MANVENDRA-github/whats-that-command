@@ -1,0 +1,28 @@
+{
+  "id": "git-config-color",
+  "command": "git config --global color.ui auto",
+  "description": "Enable automatic color output in git commands",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "enable color",
+    "colorize git",
+    "make git pretty",
+    "color terminal output"
+  ],
+  "intents": [
+    "make git output colorful in my terminal",
+    "enable colors in git status and diff",
+    "git output is plain, add colors",
+    "turn on auto coloring for git commands",
+    "configure git to show colors automatically",
+    "i want git diff to show added lines in green",
+    "why is my git output black and white, fix it"
+  ],
+  "example": "git config --global color.ui auto",
+  "danger": false,
+  "related": [
+    "git-config-user",
+    "git-config-alias"
+  ]
+}

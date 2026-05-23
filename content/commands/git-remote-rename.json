@@ -1,0 +1,29 @@
+{
+  "id": "git-remote-rename",
+  "command": "git remote rename <old> <new>",
+  "description": "Rename a remote without changing what it points at",
+  "tool": "git",
+  "category": "sync",
+  "tags": [
+    "rename origin",
+    "change remote name",
+    "relabel remote",
+    "fix remote name"
+  ],
+  "intents": [
+    "rename a remote from one name to another",
+    "change origin to upstream",
+    "relabel a remote without changing its url",
+    "fix a remote name i picked wrongly",
+    "give a remote a different alias",
+    "swap remote names around",
+    "rename origin so a fork can become the upstream"
+  ],
+  "example": "git remote rename origin upstream",
+  "danger": false,
+  "related": [
+    "git-remote-add",
+    "git-remote-list",
+    "git-remote-remove"
+  ]
+}

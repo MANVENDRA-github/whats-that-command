@@ -10,6 +10,15 @@
     "safer force push",
     "rewrite remote"
   ],
+  "intents": [
+    "force push after rebasing without overwriting teammates work",
+    "push a rewritten history to the remote",
+    "update the remote branch after i squashed my commits",
+    "push my rebased branch to github",
+    "safely force push after editing history",
+    "overwrite the remote branch but only if nothing new is there",
+    "force push without clobbering someone elses recent work"
+  ],
   "example": "git push --force-with-lease",
   "danger": true,
   "related": [

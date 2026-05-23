@@ -10,6 +10,15 @@
     "clean slate",
     "delete new files"
   ],
+  "intents": [
+    "delete untracked files from my working tree",
+    "remove new files i created that arent in git",
+    "get rid of build artifacts and other untracked stuff",
+    "wipe everything not tracked by git",
+    "clean up my working directory of untracked junk",
+    "start fresh by removing untracked files and folders",
+    "purge stray files git status keeps showing"
+  ],
   "example": "git clean -fd",
   "danger": true,
   "related": [

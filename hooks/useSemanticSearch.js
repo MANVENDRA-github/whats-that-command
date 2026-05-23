@@ -3,8 +3,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { initSemantic, semanticSearch } from '@/lib/semanticSearch';
 
-// Triggers a background preload of the embeddings file and the embedding
-// model after the page has had a chance to render. Uses requestIdleCallback
+// Triggers a background preload of the embeddings file and the static token
+// table after the page has had a chance to render. Uses requestIdleCallback
 // when available so the work doesn't fight first paint.
 //
 // status: 'idle' (before preload starts) | 'loading' | 'ready' | 'error'

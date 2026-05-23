@@ -1,0 +1,28 @@
+{
+  "id": "git-untrack-file",
+  "command": "git rm --cached <file>",
+  "description": "Stop tracking a file in Git without deleting it from disk",
+  "tool": "git",
+  "category": "staging",
+  "tags": [
+    "stop tracking",
+    "untrack",
+    "remove from git but keep file",
+    "exclude file"
+  ],
+  "intents": [
+    "i accidentally committed a file i shouldnt have",
+    "i accidentally committed my secrets file and want to untrack it",
+    "i committed a .env or credentials file by mistake",
+    "stop git from tracking this file but keep it on disk",
+    "remove a file from version control but not delete it from my machine",
+    "untrack a config file like .env without rewriting history",
+    "i added something to gitignore but it is still being tracked",
+    "i pushed passwords or api keys and need git to forget the file"
+  ],
+  "example": "git rm --cached .env",
+  "danger": false,
+  "related": [
+    "git-rm"
+  ]
+}

@@ -28,7 +28,7 @@ export default function CommandCard({ cmd }) {
   }
 
   return (
-    <article className="relative mt-6 border border-ink bg-paper-2 shadow-stack transition-shadow hover:shadow-[7px_7px_0_var(--hairline)]">
+    <article className="relative mt-6 border border-ink bg-paper-2 shadow-stack hover:shadow-[7px_7px_0_var(--hairline)]">
       {/* folder tab — tool name, color-coded */}
       <span
         className={`absolute -top-[18px] left-5 flex items-center rounded-t-[3px] border border-b-0 border-ink px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-kicker text-paper ${
@@ -49,8 +49,19 @@ export default function CommandCard({ cmd }) {
             {cmd.danger && (
               <span
                 title="This command can destroy data — read the description before running"
-                className="-rotate-3 border border-accent-deep px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-kicker text-accent-deep"
+                className="inline-flex items-center gap-1 border border-accent-deep px-2 py-1 font-mono text-[10px] uppercase tracking-kicker text-accent-deep"
               >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  className="h-2.5 w-2.5"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M8 1.5L15 14.5H1L8 1.5ZM7 5.5h2v4.25H7V5.5Zm0 5.25h2v1.75H7v-1.75Z"
+                  />
+                </svg>
                 danger
               </span>
             )}

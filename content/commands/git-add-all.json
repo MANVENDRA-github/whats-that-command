@@ -1,0 +1,26 @@
+{
+  "id": "git-add-all",
+  "command": "git add .",
+  "description": "Stage every modified and untracked file in the current directory",
+  "tool": "git",
+  "category": "staging",
+  "tags": [
+    "stage everything",
+    "include all changes",
+    "commit all my work"
+  ],
+  "intents": [
+    "i want to commit everything i changed",
+    "stage all my changes at once",
+    "add all the new and modified files",
+    "prepare everything for commit",
+    "include all my work in the next commit"
+  ],
+  "example": "git add .",
+  "danger": false,
+  "related": [
+    "git-add-file",
+    "git-add-patch",
+    "git-unstage-all"
+  ]
+}

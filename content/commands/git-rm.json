@@ -1,0 +1,24 @@
+{
+  "id": "git-rm",
+  "command": "git rm <file>",
+  "description": "Delete a tracked file from the repo and stage the removal",
+  "tool": "git",
+  "category": "staging",
+  "tags": [
+    "delete file",
+    "remove from repo",
+    "drop file"
+  ],
+  "intents": [
+    "delete a file from my repo",
+    "remove a file and tell git about it",
+    "i want to stop committing this file and also delete it",
+    "permanently remove a file from version control"
+  ],
+  "example": "git rm src/old-module.js",
+  "danger": true,
+  "related": [
+    "git-untrack-file",
+    "git-mv"
+  ]
+}

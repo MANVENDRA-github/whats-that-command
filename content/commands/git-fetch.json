@@ -1,0 +1,29 @@
+{
+  "id": "git-fetch",
+  "command": "git fetch <remote>",
+  "description": "Download new commits from a remote without changing any of your local branches",
+  "tool": "git",
+  "category": "sync",
+  "tags": [
+    "fetch updates",
+    "see remote changes",
+    "check for updates",
+    "download but dont merge"
+  ],
+  "intents": [
+    "see if there are new commits on the remote without merging",
+    "check what teammates pushed without changing my code",
+    "see what teammates pushed without changing anything locally",
+    "preview new upstream commits before deciding whether to pull",
+    "update my view of the remote without merging or rebasing",
+    "download new branches and refs but keep my working copy alone",
+    "look at upstream without touching my local branch",
+    "refresh remote tracking branches without altering my files"
+  ],
+  "example": "git fetch origin",
+  "danger": false,
+  "related": [
+    "git-pull",
+    "git-fetch-prune"
+  ]
+}

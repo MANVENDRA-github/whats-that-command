@@ -1,0 +1,26 @@
+{
+  "id": "git-log-file",
+  "command": "git log --follow <file>",
+  "description": "Show every commit that ever touched a file, including before it was renamed",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "file history",
+    "who changed this file",
+    "track file across renames",
+    "follow file"
+  ],
+  "intents": [
+    "show me the history of this one file",
+    "who has changed this file over time",
+    "see all commits that modified a specific file",
+    "track changes to a file even after it was renamed"
+  ],
+  "example": "git log --follow src/utils.js",
+  "danger": false,
+  "related": [
+    "git-log",
+    "git-blame",
+    "git-mv"
+  ]
+}

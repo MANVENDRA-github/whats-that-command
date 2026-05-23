@@ -1,0 +1,26 @@
+{
+  "id": "git-push",
+  "command": "git push",
+  "description": "Push the current branch to its already-configured upstream",
+  "tool": "git",
+  "category": "sync",
+  "tags": [
+    "upload commits",
+    "send to remote",
+    "publish branch",
+    "share commits"
+  ],
+  "intents": [
+    "send my commits to the remote",
+    "push my work up to github",
+    "upload my changes to the server",
+    "share my commits with the team"
+  ],
+  "example": "git push",
+  "danger": false,
+  "related": [
+    "git-push-upstream",
+    "git-pull",
+    "git-force-push-safe"
+  ]
+}

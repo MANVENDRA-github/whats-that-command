@@ -1,0 +1,27 @@
+{
+  "id": "git-init",
+  "command": "git init",
+  "description": "Turn the current directory into a fresh Git repository",
+  "tool": "git",
+  "category": "setup",
+  "tags": [
+    "start",
+    "new repo",
+    "create repository",
+    "fresh project",
+    "first time"
+  ],
+  "intents": [
+    "i want to start tracking this folder with git",
+    "make this directory a git repo",
+    "i just made a project and want git on it",
+    "set up version control here",
+    "begin a new git project from scratch"
+  ],
+  "example": "git init",
+  "danger": false,
+  "related": [
+    "git-clone",
+    "git-remote-add"
+  ]
+}

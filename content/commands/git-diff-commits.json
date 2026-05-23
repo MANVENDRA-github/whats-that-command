@@ -1,0 +1,25 @@
+{
+  "id": "git-diff-commits",
+  "command": "git diff <a> <b>",
+  "description": "Show the differences between two commits",
+  "tool": "git",
+  "category": "history",
+  "tags": [
+    "compare commits",
+    "diff between revisions",
+    "what changed between"
+  ],
+  "intents": [
+    "compare two commits",
+    "what changed between these two revisions",
+    "diff between two points in history",
+    "see what is different between this branch tip and that one"
+  ],
+  "example": "git diff abc123 def456",
+  "danger": false,
+  "related": [
+    "git-show-commit",
+    "git-diff-stat",
+    "git-log"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "git-commit-message",
+  "command": "git commit -m \"<message>\"",
+  "description": "Make a commit with the message provided inline on the command line",
+  "tool": "git",
+  "category": "commit",
+  "tags": [
+    "quick commit",
+    "inline message",
+    "one liner commit",
+    "save changes with message"
+  ],
+  "intents": [
+    "commit my staged changes with a short message",
+    "make a quick commit",
+    "save my work with a one line message",
+    "i want to commit without opening an editor"
+  ],
+  "example": "git commit -m \"Fix login redirect\"",
+  "danger": false,
+  "related": [
+    "git-commit",
+    "git-commit-all",
+    "git-amend-message"
+  ]
+}

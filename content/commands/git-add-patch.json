@@ -1,0 +1,30 @@
+{
+  "id": "git-add-patch",
+  "command": "git add -p",
+  "description": "Interactively pick which hunks of a file to stage",
+  "tool": "git",
+  "category": "staging",
+  "tags": [
+    "interactive staging",
+    "partial commit",
+    "pick changes",
+    "split changes",
+    "stage parts"
+  ],
+  "intents": [
+    "i want to commit only some of my changes in a file",
+    "i want to commit only some of my edits in this file, not all of them",
+    "stage only certain lines or hunks from a single file",
+    "split one file's edits across multiple commits",
+    "pick which lines to stage interactively",
+    "review my changes one by one before staging",
+    "stage hunks line by line",
+    "partial commit of a file where i have multiple unrelated edits"
+  ],
+  "example": "git add -p src/utils.js",
+  "danger": false,
+  "related": [
+    "git-add-file",
+    "git-commit-message"
+  ]
+}

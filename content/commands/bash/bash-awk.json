@@ -1,0 +1,20 @@
+{
+  "id": "bash-awk",
+  "command": "awk '<program>' <file>",
+  "description": "Pattern scanning and column-based text processing language",
+  "tool": "bash",
+  "category": "text",
+  "tags": [
+    "column extraction",
+    "pattern processing",
+    "field processing"
+  ],
+  "intents": [
+    "extract a column from a text file",
+    "sum a column of numbers",
+    "process text line by line with conditions"
+  ],
+  "example": "awk \"{print $1}\" access.log",
+  "danger": false,
+  "related": []
+}

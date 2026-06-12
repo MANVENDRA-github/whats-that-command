@@ -10,25 +10,34 @@ export default function Navbar() {
   return (
     <nav
       aria-label="Primary"
-      className="sticky top-0 z-30 border-b border-ink bg-paper [will-change:transform]"
+      className="sticky top-0 z-30 border-b border-hairline bg-paper/95 backdrop-blur-sm [will-change:transform]"
     >
       <div className="mx-auto flex h-14 max-w-page items-center justify-between px-5 sm:px-7">
         <Link
           href="/"
           aria-label="What's that command — home"
-          className="group flex items-center gap-2.5"
+          className="group flex min-w-0 items-center gap-2.5"
         >
-          <span aria-hidden="true" className="font-mono text-base font-medium text-accent">
+          {/* window dots — terminal chrome */}
+          <span aria-hidden="true" className="hidden items-center gap-1.5 sm:flex">
+            <span className="h-2 w-2 rounded-full bg-accent-deep/80" />
+            <span className="h-2 w-2 rounded-full bg-moss/70" />
+            <span className="h-2 w-2 rounded-full bg-accent/80" />
+          </span>
+          <span
+            aria-hidden="true"
+            className="glow font-mono text-base font-medium text-accent"
+          >
             $
           </span>
-          <span className="whitespace-nowrap font-display text-[15px] font-medium tracking-tight text-ink transition-colors group-hover:text-accent-deep sm:text-lg">
-            What&apos;s{' '}
-            <span className="italic text-accent-deep">that</span>{' '}
-            command?
+          <span className="truncate whitespace-nowrap font-mono text-[13px] font-medium tracking-tight text-ink transition-colors group-hover:text-accent sm:text-[14px]">
+            <span className="sm:hidden">wtc</span>
+            <span className="hidden sm:inline">whats-that-command</span>
+            <span className="hidden text-muted lg:inline"> — tty1</span>
           </span>
         </Link>
 
-        <div className="flex items-center gap-1 sm:gap-2">
+        <div className="flex shrink-0 items-center gap-1 sm:gap-2">
           {TOOLS.map((tool) => {
             const href = toolHref(tool);
             const active = pathname === href || pathname.startsWith(href + '/');
@@ -38,8 +47,8 @@ export default function Navbar() {
                 key={tool}
                 href={href}
                 aria-current={active ? 'page' : undefined}
-                className={`relative flex items-center gap-1.5 px-2 py-1 font-mono text-[12px] uppercase tracking-kicker transition-colors sm:text-[13px] ${
-                  active ? 'text-ink' : 'text-muted hover:text-ink'
+                className={`relative flex items-center gap-1 px-1.5 py-1 font-mono text-[11px] uppercase tracking-[0.08em] transition-colors sm:gap-1.5 sm:px-2 sm:text-[13px] sm:tracking-kicker ${
+                  active ? 'glow text-accent' : 'text-muted hover:text-ink'
                 }`}
               >
                 <span
@@ -50,7 +59,7 @@ export default function Navbar() {
                 {active && (
                   <span
                     aria-hidden="true"
-                    className={`absolute -bottom-[15px] left-2 right-2 h-[2px] ${bg}`}
+                    className={`absolute -bottom-[15px] left-2 right-2 h-[2px] ${bg} shadow-glow-soft`}
                   />
                 )}
               </Link>

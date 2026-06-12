@@ -16,7 +16,7 @@ const VALUE_PROPS = [
   {
     kicker: '03 / safety',
     title: 'Read before you run.',
-    body: 'One click copies the command. Anything destructive is flagged in red — you see it before you paste it.'
+    body: 'One click copies the command. Anything destructive is flagged in amber — you see it before you paste it.'
   }
 ];
 
@@ -33,14 +33,14 @@ export default function ValueProps() {
         {VALUE_PROPS.map((v, i) => (
           <li key={v.kicker}>
             <FadeUp delay={i * 0.08}>
-              <div className="h-full border border-ink bg-paper-2 p-6 shadow-stack">
-                <p className="font-mono text-[11px] uppercase tracking-kicker text-accent-deep">
+              <div className="crt-panel h-full border border-hairline bg-paper-2 p-6 shadow-stack transition-[border-color,box-shadow] duration-200 hover:border-accent/40 hover:shadow-glow-soft">
+                <p className="font-mono text-[11px] uppercase tracking-kicker text-accent">
                   {v.kicker}
                 </p>
-                <h3 className="mt-3 font-display text-2xl font-medium leading-snug tracking-tight text-ink">
+                <h3 className="glow mt-3 font-display text-3xl leading-snug text-ink sm:text-4xl">
                   {v.title}
                 </h3>
-                <p className="mt-3 text-[15px] text-muted">{v.body}</p>
+                <p className="mt-3 text-[14px] text-muted">{v.body}</p>
               </div>
             </FadeUp>
           </li>

@@ -16,6 +16,7 @@ import CommandList from '@/components/search/CommandList';
 import NoMatch from '@/components/search/NoMatch';
 import ValueProps from '@/components/landing/ValueProps';
 import CallToAction from '@/components/landing/CallToAction';
+import StatusBar from '@/components/landing/StatusBar';
 
 export default function Home() {
   const { query, setQuery, inputRef, hasQuery } = useSearchQuery();
@@ -101,6 +102,7 @@ export default function Home() {
           </>
         )}
       </main>
+      <StatusBar commandCount={commands.length} />
     </MotionConfig>
   );
 }

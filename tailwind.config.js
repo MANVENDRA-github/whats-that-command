@@ -22,15 +22,16 @@ module.exports = {
         bash: 'var(--bash)'
       },
       fontFamily: {
-        sans: ['var(--font-spline-sans)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-spline-sans-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
-        display: ['var(--font-fraunces)', 'ui-serif', 'Georgia', 'serif']
+        sans: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
+        mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
+        display: ['var(--font-display)', 'ui-monospace', 'monospace']
       },
       boxShadow: {
-        block: '18px 18px 0 rgba(22, 20, 15, 0.9)',
-        'block-sm': '12px 12px 0 rgba(22, 20, 15, 0.9)',
-        card: '4px 4px 0 rgba(22, 20, 15, 0.9)',
-        stack: '5px 5px 0 var(--hairline)'
+        // Phosphor glows — no hard offset shadows on a CRT
+        stack: '0 0 0 1px rgba(61, 255, 124, 0.04), 0 0 26px rgba(61, 255, 124, 0.07)',
+        glow: '0 0 0 1px var(--accent), 0 0 22px rgba(61, 255, 124, 0.30)',
+        'glow-soft': '0 0 18px rgba(61, 255, 124, 0.18)',
+        'glow-amber': '0 0 18px rgba(255, 176, 0, 0.25)'
       },
       maxWidth: {
         page: 'var(--page-max)'

@@ -8,7 +8,7 @@ export default function CategoryRail({ groups, sectionPrefix, activeId }) {
         className="sticky top-20 max-h-[calc(100vh-96px)] overflow-y-auto pr-2"
       >
         <p className="kicker mb-5">categories</p>
-        <ul className="border border-ink bg-paper shadow-stack">
+        <ul className="border border-hairline bg-paper-2 shadow-stack">
           {groups.map(([cat, items]) => {
             const isActive = activeId === cat;
             return (
@@ -18,8 +18,8 @@ export default function CategoryRail({ groups, sectionPrefix, activeId }) {
                   aria-current={isActive ? 'true' : undefined}
                   className={`-ml-px flex items-baseline justify-between gap-3 border-l-2 py-1.5 pl-4 pr-2 font-mono text-[11px] uppercase tracking-kicker transition-colors ${
                     isActive
-                      ? 'border-accent text-ink'
-                      : 'border-transparent text-ink/70 hover:border-ink hover:text-ink'
+                      ? 'glow border-accent text-accent'
+                      : 'border-transparent text-muted hover:border-hairline hover:text-ink'
                   }`}
                 >
                   <span className="truncate">{cat}</span>

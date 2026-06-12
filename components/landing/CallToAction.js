@@ -13,16 +13,17 @@ export default function CallToAction() {
   return (
     <section className="mx-auto max-w-page px-5 pb-20 sm:px-7 sm:pb-28 lg:pb-32">
       <FadeUp>
-        <div className="border border-ink bg-ink text-paper shadow-stack">
+        {/* inverted phosphor block — the one full-brightness moment on the page */}
+        <div className="border border-accent bg-ink text-paper shadow-glow-soft">
           <div className="flex flex-col gap-7 px-6 py-10 sm:flex-row sm:items-center sm:gap-12 sm:px-14 sm:py-16">
             <div className="flex-1">
               <p className="kicker kicker--invert mb-4">ready?</p>
-              <h3 className="font-display text-3xl font-medium leading-[1.05] tracking-tight sm:text-5xl">
+              <h3 className="font-display text-4xl leading-[1.02] sm:text-6xl">
                 The box is already focused.
               </h3>
-              <p className="mt-4 text-[15px] text-hairline">
+              <p className="mt-4 font-mono text-[14px] text-paper/75">
                 Press{' '}
-                <kbd className="border border-hairline bg-transparent px-1.5 py-0.5 font-mono text-[11px] text-paper">
+                <kbd className="border border-paper/40 bg-transparent px-1.5 py-0.5 font-mono text-[11px] text-paper">
                   /
                 </kbd>{' '}
                 anywhere. Or scroll up.
@@ -31,7 +32,7 @@ export default function CallToAction() {
             <button
               type="button"
               onClick={scrollToSearch}
-              className="self-start border-2 border-accent bg-accent px-6 py-3 font-mono text-sm uppercase tracking-kicker text-paper transition-[transform,background-color,color,border-color] duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:border-paper hover:bg-paper hover:text-accent-deep sm:self-auto"
+              className="self-start border-2 border-paper bg-paper px-6 py-3 font-mono text-sm uppercase tracking-kicker text-accent transition-[transform,background-color,color,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-ink hover:text-paper hover:shadow-none sm:self-auto"
             >
               Try the search ↑
             </button>

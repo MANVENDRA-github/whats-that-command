@@ -15,13 +15,15 @@ export default function ToolHero({ tool, commandCount, categoryCount }) {
           command catalog
         </p>
         <h1
-          className="font-display font-medium leading-[1.04] tracking-tight text-ink"
-          style={{ fontSize: 'clamp(2.5rem, 5.5vw + 1rem, 5rem)' }}
+          className="glow font-display leading-[1.02] text-ink"
+          style={{ fontSize: 'clamp(3rem, 6vw + 1rem, 6rem)' }}
         >
+          <span aria-hidden="true" className="mr-3 select-none text-accent">$</span>
           {meta.title}
-          <span className={toolTextClass(tool, 'text-accent')}>.</span>
+          <span className={toolTextClass(tool, 'text-accent')}>_</span>
         </h1>
-        <p className="mt-4 max-w-xl text-base text-muted sm:text-lg">
+        <p className="mt-4 max-w-xl font-mono text-[14px] text-muted sm:text-base">
+          <span className="select-none text-hairline"># </span>
           {meta.blurb}
         </p>
         <p className="mt-5 font-mono text-[11px] uppercase tracking-kicker text-muted">

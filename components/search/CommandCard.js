@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { toolBgClass, toolTextClass } from '@/lib/tools';
 
-export default function CommandCard({ cmd }) {
+export default function CommandCard({ cmd, style }) {
   const [copied, setCopied] = useState(false);
 
   async function copy() {
@@ -17,10 +17,13 @@ export default function CommandCard({ cmd }) {
   }
 
   return (
-    <article className="relative mt-6 border border-ink bg-paper-2 shadow-stack hover:shadow-[7px_7px_0_var(--hairline)]">
-      {/* folder tab — tool name, color-coded */}
+    <article
+      style={style}
+      className="output-in relative mt-6 border border-hairline bg-paper-2 shadow-stack transition-[border-color,box-shadow] duration-200 hover:border-accent/50 hover:shadow-glow-soft"
+    >
+      {/* pane tab — tool name, color-coded */}
       <span
-        className={`absolute -top-[18px] left-5 flex items-center rounded-t-[3px] border border-b-0 border-ink px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-kicker text-paper ${
+        className={`absolute -top-[18px] left-5 flex items-center px-2.5 py-0.5 font-mono text-[10px] font-medium uppercase tracking-kicker text-paper ${
           toolBgClass(cmd.tool)
         }`}
       >
@@ -38,7 +41,7 @@ export default function CommandCard({ cmd }) {
             {cmd.danger && (
               <span
                 title="This command can destroy data — read the description before running"
-                className="inline-flex items-center gap-1 border border-accent-deep px-2 py-1 font-mono text-[10px] uppercase tracking-kicker text-accent-deep"
+                className="glow-amber inline-flex items-center gap-1 border border-accent-deep/70 px-2 py-1 font-mono text-[10px] uppercase tracking-kicker text-accent-deep"
               >
                 <svg
                   aria-hidden="true"
@@ -59,25 +62,28 @@ export default function CommandCard({ cmd }) {
               aria-label="Copy command"
               className={`border px-2 py-1 font-mono text-[10px] uppercase tracking-kicker transition-colors ${
                 copied
-                  ? 'border-moss text-moss'
-                  : 'border-ink text-ink hover:bg-ink hover:text-paper'
+                  ? 'border-moss text-moss shadow-glow-soft'
+                  : 'border-hairline text-muted hover:border-accent hover:text-accent'
               }`}
             >
-              {copied ? 'copied' : 'copy'}
+              {copied ? 'copied ✓' : 'copy'}
             </button>
           </div>
         </div>
 
-        {/* the command */}
+        {/* the command — rendered as a prompt line */}
         <button
           onClick={copy}
           title="Copy command"
-          className="mt-2 block w-full break-all text-left font-mono text-[15px] text-ink transition-colors hover:text-accent-deep sm:text-base"
+          className="group mt-2 block w-full break-all text-left font-mono text-[15px] text-ink transition-colors hover:text-accent sm:text-base"
         >
+          <span aria-hidden="true" className="glow mr-2 select-none text-accent">
+            $
+          </span>
           {cmd.command}
         </button>
 
-        {/* description on catalog ruling */}
+        {/* description on output ruling */}
         <p className="mt-3 border-y border-dotted border-hairline py-2.5 text-sm text-muted">
           {cmd.description}
         </p>

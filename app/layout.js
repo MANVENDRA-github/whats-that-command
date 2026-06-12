@@ -1,25 +1,18 @@
-import { Fraunces, Spline_Sans, Spline_Sans_Mono } from 'next/font/google';
+import { VT323, IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 
-const fraunces = Fraunces({
+const vt323 = VT323({
   subsets: ['latin'],
-  weight: ['500', '600'],
+  weight: '400',
+  variable: '--font-display',
+  display: 'swap'
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
   style: ['normal', 'italic'],
-  variable: '--font-fraunces',
-  display: 'swap'
-});
-
-const splineSans = Spline_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-spline-sans',
-  display: 'swap'
-});
-
-const splineSansMono = Spline_Sans_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-spline-sans-mono',
+  variable: '--font-mono',
   display: 'swap'
 });
 
@@ -30,10 +23,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${fraunces.variable} ${splineSans.variable} ${splineSansMono.variable}`}
-    >
+    <html lang="en" className={`${vt323.variable} ${plexMono.variable}`}>
       <body>{children}</body>
     </html>
   );

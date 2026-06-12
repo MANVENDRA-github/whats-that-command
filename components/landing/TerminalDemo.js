@@ -41,10 +41,10 @@ const STEP_MS = 4000;
 
 function Frame({ children, activeIndex, dotCount = 3 }) {
   return (
-    <div className="border border-ink bg-paper-2 shadow-stack">
-      <div className="flex items-center justify-between gap-3 border-b border-ink px-4 py-2.5">
-        <span className="font-mono text-[10px] uppercase tracking-kicker text-ink">
-          ~/work · zsh
+    <div className="crt-panel border border-hairline bg-paper-2 shadow-stack">
+      <div className="flex items-center justify-between gap-3 border-b border-hairline px-4 py-2.5">
+        <span className="font-mono text-[10px] uppercase tracking-kicker text-muted">
+          <span className="text-accent">▓</span> ~/work · zsh
         </span>
         <div className="flex gap-1.5" aria-hidden="true">
           {Array.from({ length: dotCount }).map((_, i) => (
@@ -52,9 +52,9 @@ function Frame({ children, activeIndex, dotCount = 3 }) {
               key={i}
               className={`h-2 w-2 transition-colors duration-300 ${
                 activeIndex === undefined
-                  ? 'bg-ink'
+                  ? 'bg-accent'
                   : i === activeIndex
-                    ? 'bg-accent'
+                    ? 'bg-accent shadow-glow-soft'
                     : 'bg-hairline'
               }`}
             />
@@ -105,11 +105,12 @@ function ExampleContent({ example }) {
       }}
     >
       <motion.p variants={beatVariants}>
-        <span className="text-accent">$</span> {example.query}
+        <span className="glow text-accent">$</span>{' '}
+        <span className="text-muted">{example.query}</span>
       </motion.p>
       <motion.p variants={beatVariants} className="mt-3 break-words">
-        <span className="text-accent">→</span>{' '}
-        <span className="font-medium">{example.command}</span>
+        <span className="glow text-accent">→</span>{' '}
+        <span className="glow font-medium text-accent">{example.command}</span>
       </motion.p>
       <motion.p
         variants={beatVariants}
@@ -126,11 +127,12 @@ function StaticDemo() {
     <SectionShell>
       <Frame>
         <p>
-          <span className="text-accent">$</span> {EXAMPLES[0].query}
+          <span className="glow text-accent">$</span>{' '}
+          <span className="text-muted">{EXAMPLES[0].query}</span>
         </p>
         <p className="mt-3 break-words">
-          <span className="text-accent">→</span>{' '}
-          <span className="font-medium">{EXAMPLES[0].command}</span>
+          <span className="glow text-accent">→</span>{' '}
+          <span className="glow font-medium text-accent">{EXAMPLES[0].command}</span>
         </p>
         <p className="mt-4 font-mono text-[10px] uppercase tracking-kicker text-muted">
           {EXAMPLES[0].meta}

@@ -14,8 +14,8 @@ Not a generic cheatsheet dump. Curation quality matters more than coverage.
 
 - **Next.js 16 (App Router)**, JavaScript, no `src/` dir — React 19
 - **Static export** (`output: 'export'`) — no backend, no runtime, ships as HTML/JS/CSS
-- **Tailwind CSS** for UI, theme extended with the design-system palette (`paper`, `paper-2`, `hairline`, `ink`, `accent`, `accent-deep`, `moss`, `muted`) and shadow utilities (`shadow-block`, `shadow-block-sm`, `shadow-card`). Prefer these tokens over hex literals.
-- **next/font/google** for self-hosted Fraunces (display), Spline Sans (body), and Spline Sans Mono (mono/labels). No runtime font requests.
+- **Tailwind CSS** for UI, theme extended with the design-system palette (`paper`, `paper-2`, `hairline`, `ink`, `accent`, `accent-deep`, `moss`, `muted`) and glow shadow utilities (`shadow-stack`, `shadow-glow`, `shadow-glow-soft`, `shadow-glow-amber`). Prefer these tokens over hex literals. The token *names* are legacy ("paper", "ink") but their *values* are the Phosphor CRT palette — see "Design system" below.
+- **next/font/google** for self-hosted VT323 (display) and IBM Plex Mono (body + mono — the whole site is monospace). No runtime font requests.
 - **Hybrid search** — Fuse.js for instant fuzzy/typo-tolerant lexical matching, plus a semantic layer using **static embeddings** (Model2Vec / `potion-base-8M`). There is no neural network or WASM at runtime: a query is embedded by a token-table lookup in well under a millisecond. Both layers run client-side and are combined per query — see "Search architecture" below.
 - **Framer Motion** for the scroll-driven landing demo and scroll-in fade-ups. Wrap the page in `<MotionConfig reducedMotion="user">` so all motion components respect the OS preference automatically; use `useReducedMotion()` for explicit branching when needed (the terminal demo swaps to a static variant).
 - Deployed as a static site (Vercel-friendly)
@@ -98,29 +98,32 @@ const fuse = new Fuse(commands, {
 - **Debounce.** The search input binds to `query` for instant feedback, but Fuse and the semantic layer run on a 150ms-debounced value (`hooks/useDebouncedValue.js`) so a fast typist triggers one search, not one per keystroke.
 - **Fallback.** Until the token table is ready, Fuse alone returns results so the user sees something within ms. When semantic becomes ready, results silently upgrade. If the table fails to load, the page stays fully functional as a Fuse-only experience — log a warning, don't surface an error to the user.
 
-## Design system (Editorial Brutalist / Warm Paper)
+## Design system (Phosphor CRT)
 
-This is the visual language. Don't substitute your own taste for any specified value.
+This is the visual language (full revamp, June 2026 — replaced the original Editorial Brutalist / Warm Paper at the user's request). The whole site reads as a green-phosphor terminal screen. Don't substitute your own taste for any specified value.
 
-- **Palette.** Warm light, never inverted to dark. Exact hex (also exposed as CSS vars and Tailwind colors):
-  - Background `--paper #f4efe4`, secondary surface `--paper-2 #ece5d4`
-  - Hairlines `--hairline #d6cdb5`, ink (text + hard borders) `--ink #16140f`
-  - Primary accent `--accent #d8442b` (oxblood), hover/emphasis `--accent-deep #a82e1c`
-  - Success / "done" `--accent-2 #3a4a36` (moss), muted text `--muted #6b6452`
-- **Typography.** Fraunces (display) 500–600 + italic for emphasis in `--accent-deep`. Spline Sans for body (17px, line-height ~1.5). Spline Sans Mono for kicker/eyebrow labels (11–14px, uppercase, `tracking-kicker` = 0.18em), code, file names, tags. Sentence case in prose; uppercase reserved for mono kickers only.
+- **Palette.** Dark, high-contrast, never washed out — dim text was the failure mode of a previous rejected dark theme, so keep text bright. Token names kept from the old theme (components didn't change); exact hex:
+  - Screen background `--paper #060906` (green-cast black), raised panels `--paper-2 #0a120b`
+  - Rules/borders `--hairline #1d3322` (dim phosphor), primary text `--ink #c5f6cf` (pale phosphor)
+  - Primary accent `--accent #3dff7c` (vivid phosphor green — prompts, focus, kickers, glow)
+  - `--accent-deep #ffb000` (amber phosphor — **danger** + emphasis words)
+  - `--accent-2 #6be8ff` (cyan phosphor — success / "copied"), muted text `--muted #71a57e`
+  - Tool tints stay bright on dark: `--git #ffb86c`, `--docker #7fd4ff`, `--bash #69ff94`
+- **Typography.** VT323 (pixel CRT face, weight 400 only — never ask for other weights) for display headlines, sized generously (it's a half-width mono, ~0.4em advance). IBM Plex Mono for everything else (body 15px / line-height 1.6, kickers 11px uppercase `tracking-kicker`). The entire site is monospace; `font-sans` and `font-mono` both resolve to Plex Mono.
 - **Signature devices** (these make the style recognizable):
-  - Hard offset shadow, no blur — `shadow-block` (18px) on marketing/major blocks, `shadow-block-sm` (12px) on cards inside grids, `shadow-card` (4px) on the search input. Never soft/blurred shadows.
-  - 2px solid `--ink` border on the same major blocks. Borders are structural, not decorative.
-  - Square corners everywhere; the one exception is small mono pill tags (e.g. example queries) which may be fully rounded.
-  - Paper-grain noise applied as a CSS `background-image` on `body` (subtle — felt, not seen).
-  - Kicker labels via `.kicker` (40px solid accent rule + mono uppercase). `.kicker--invert` swaps text color for inverted blocks.
-  - One headline word gets a hand-drawn-looking accent strike-through via `.strike-word` (accent bar, rotated -1.5deg).
-  - Section dividers are 2px hairline rules via `.section-rule`.
-  - Inverted blocks (ink bg, paper text) are used **sparingly** — reserve for the single strongest moment (currently the final CTA).
-- **Utility vs marketing intensity.** The search box and result rows are a utility interface and stay calmer: 1px hairline borders on repeating rows, no shadows on individual results, ink-bordered search field with a 4px ink shadow that becomes a 4px **accent** shadow on focus. Marketing sections (hero copy, terminal demo, value props, CTA) take the full intensity. Same palette and fonts; quieter voice in utility regions.
+  - Phosphor glow: `.glow` / `.glow-amber` text-shadow utilities on display text, prompts, and accents — used selectively, never on body copy. Box glows via `shadow-glow` (focus), `shadow-glow-soft` (hover), `shadow-stack` (resting panels). No offset or blurred drop shadows.
+  - Scanlines + vignette: one fixed, pointer-events-none compositing layer on `body::before` (z-60, above everything). Subtle — felt, not seen. Plus a one-time CRT power-on flicker (`crt-on` keyframes on body opacity).
+  - Blinking block cursor via `.crt-cursor::after` ('▋', steps blink) — the hero headline types itself (typewriter in `HeroHeadline`) and ends in this cursor.
+  - Terminal chrome metaphors everywhere: pane tabs ("stdin", "stderr", tool names), `$`/`❯`/`→` prompt glyphs, `//`-prefixed kickers, `[bracketed]` pills, a tmux-style `StatusBar` footer, window dots in the navbar.
+  - Panels get ASCII corner brackets via `.crt-panel` (`┌` top-left, `┘` bottom-right in accent).
+  - Square corners everywhere. Borders are 1px `--hairline` at rest and light up to `--accent` on hover/focus.
+  - Danger is **amber** (`--accent-deep` + `.glow-amber`), not red. "Copied" is cyan (`moss` token).
+  - Inverted blocks (`bg-ink`, near-black text) are used **sparingly** — the full-brightness pale-phosphor moment is reserved for the final CTA.
+  - Section dividers are 1px hairline rules with a centered dotted mono ornament via `.section-rule`.
+- **Utility vs marketing intensity.** The search box and result rows are a utility interface and stay calmer: hairline borders, glow only on focus/hover, no `.glow` on descriptions. Marketing sections (typewriter hero, terminal demo, value props, CTA) take the full intensity — glow headlines, corner brackets, the inverted CTA block.
 - **Layout.** Centered column, `max-w-page` (responsive via `--page-max` CSS var: 1080px default, 1200px at ≥1280, 1360px at ≥1536, 1560px at ≥1920, 1760px at ≥2400), 28px side padding (`px-7`). Generous vertical rhythm; let blocks breathe.
 - **Tone of any copy.** Direct, slightly blunt, confident. Short declarative sentences. Name the reader's pain in concrete terms. No marketing fluff, no exclamation marks. Confront the obvious objection head-on (e.g. the inverted CTA tells the reader exactly what to do next rather than restating the value prop).
-- **Motion.** Fade-ups on scroll use Framer Motion with `whileInView` and `viewport={{ once: true }}`, ~0.7s ease-out. The terminal demo's scale+opacity is scroll-linked via `useScroll`+`useTransform`. Hover transforms are short and use only `translate`. All motion respects the reduced-motion preference (see the `MotionConfig` and global CSS guard).
+- **Motion.** The hero headline is a custom typewriter (type → hold → backspace → next, paused offscreen via IntersectionObserver). Fade-ups on scroll use Framer Motion with `whileInView` and `viewport={{ once: true }}`, ~0.7s ease-out. The terminal demo's scale+opacity is scroll-linked via `useScroll`+`useTransform`. Search results stagger in via the `.output-in` CSS animation (delay capped at the first ~8 cards). Hover transforms are short and use only `translate`. All motion respects the reduced-motion preference (see the `MotionConfig`, the global CSS guard, and per-component `useReducedMotion()` branches).
 
 ## Conventions
 
@@ -152,6 +155,7 @@ This is the visual language. Don't substitute your own taste for any specified v
 13. Curate `intents` (full-sentence phrasings) per command — the main accuracy lever now that the engine is static — **pending**
 14. Per-command static pages (`/c/[id]`) — **pending**
 15. Tune hybrid scoring weights and `SEM_FLOOR` once dataset is larger — **pending**
+16. Full UI revamp to **Phosphor CRT** theme (user-requested, June 2026): token-level palette swap, VT323 + IBM Plex Mono, scanlines/glow/typewriter hero, StatusBar footer — UI-only, zero search/data/logic changes — **done**
 
 ## Run locally
 

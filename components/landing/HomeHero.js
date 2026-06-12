@@ -21,8 +21,9 @@ export default function HomeHero({ query, setQuery, inputRef, onPillClick }) {
 
           <HeroHeadline />
 
-          <p className="mt-4 max-w-xl text-[15px] text-muted sm:mt-5 sm:text-lg">
-            Search by intent. Not by flag name.
+          <p className="mt-4 max-w-xl font-mono text-[14px] text-muted sm:mt-5 sm:text-base">
+            <span className="select-none text-hairline"># </span>
+            search by intent, not by flag name
           </p>
 
           <div className="mt-7 max-w-2xl sm:mt-9">
@@ -47,14 +48,20 @@ export default function HomeHero({ query, setQuery, inputRef, onPillClick }) {
               <button
                 key={p}
                 onClick={() => onPillClick(p)}
-                className="border border-hairline px-3 py-1 font-mono text-[11px] text-muted transition-colors hover:border-ink hover:text-ink sm:text-[12px]"
+                className="group border border-hairline bg-paper-2 px-3 py-1 font-mono text-[11px] text-muted transition-all hover:border-accent hover:text-accent hover:shadow-glow-soft sm:text-[12px]"
               >
+                <span className="select-none text-hairline transition-colors group-hover:text-accent">
+                  [
+                </span>
                 {p}
+                <span className="select-none text-hairline transition-colors group-hover:text-accent">
+                  ]
+                </span>
               </button>
             ))}
             <span className="hidden font-mono text-[12px] text-muted lg:inline">
               · press{' '}
-              <kbd className="border border-hairline bg-paper-2 px-1.5 py-0.5 font-mono text-[10px] text-ink">
+              <kbd className="border border-hairline bg-paper-2 px-1.5 py-0.5 font-mono text-[10px] text-accent">
                 /
               </kbd>{' '}
               anywhere

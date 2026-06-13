@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { TOOLS, toolHref, toolBgClass } from '@/lib/tools';
+import ScrollProgress from '@/components/ui/ScrollProgress';
 
 export default function Navbar() {
   const pathname = usePathname() ?? '/';
@@ -12,6 +13,7 @@ export default function Navbar() {
       aria-label="Primary"
       className="sticky top-0 z-30 border-b border-hairline bg-paper/95 backdrop-blur-sm [will-change:transform]"
     >
+      <ScrollProgress />
       <div className="mx-auto flex h-14 max-w-page items-center justify-between px-5 sm:px-7">
         <Link
           href="/"

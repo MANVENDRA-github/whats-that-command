@@ -31,20 +31,23 @@
 @media (min-width: 1920px) { :root { --page-max: 1560px; } }
 @media (min-width: 2400px) { :root { --page-max: 1760px; } }
 
-html,
-body {
+/* Background lives on <html>, with a faint phosphor bloom at the top.
+   The body stays transparent so the fixed background canvas
+   (WireframeBackdrop, -z-10) can paint between the page background and
+   the content. */
+html {
   background-color: var(--paper);
-  color: var(--ink);
-}
-
-/* Faint phosphor bloom at the top of the screen */
-body {
   background-image: radial-gradient(
     ellipse 120% 60% at 50% -10%,
     rgba(61, 255, 124, 0.055),
     transparent 65%
   );
   background-repeat: no-repeat;
+  color: var(--ink);
+}
+
+body {
+  color: var(--ink);
   animation: crt-on 0.45s steps(1, end);
 }
 

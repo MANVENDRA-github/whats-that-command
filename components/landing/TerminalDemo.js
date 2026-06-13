@@ -8,6 +8,8 @@ import {
   useTransform,
   useReducedMotion
 } from 'framer-motion';
+import DecodeText from '@/components/ui/DecodeText';
+import Tilt3D from '@/components/ui/Tilt3D';
 
 const EXAMPLES = [
   {
@@ -75,7 +77,9 @@ function SectionShell({ children, sectionRef }) {
       aria-label="Product demo"
       className="relative mx-auto max-w-page px-5 py-16 sm:px-7 sm:py-24 lg:py-28"
     >
-      <p className="kicker mb-6">about the search</p>
+      <p className="kicker mb-6">
+        <DecodeText text="about the search" />
+      </p>
       {children}
     </section>
   );
@@ -153,6 +157,8 @@ function AnimatedDemo() {
   });
   const scale = useTransform(scrollYProgress, [0, 0.35, 0.75, 1], [0.94, 1, 1, 0.97]);
   const opacity = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [0.4, 1, 1, 0.55]);
+  // The monitor tilts upright in 3D as it scrolls into view.
+  const rotateX = useTransform(scrollYProgress, [0, 0.4], [10, 0]);
 
   useEffect(() => {
     const el = ref.current;
@@ -175,14 +181,19 @@ function AnimatedDemo() {
 
   return (
     <SectionShell sectionRef={ref}>
-      <motion.div style={{ scale, opacity }} className="will-change-transform">
-        <Frame activeIndex={index} dotCount={EXAMPLES.length}>
-          <div className="min-h-[9.5rem] sm:min-h-[7rem]" aria-hidden="true">
-            <AnimatePresence mode="wait">
-              <ExampleContent key={index} example={EXAMPLES[index]} />
-            </AnimatePresence>
-          </div>
-        </Frame>
+      <motion.div
+        style={{ scale, opacity, rotateX, transformPerspective: 1200 }}
+        className="will-change-transform"
+      >
+        <Tilt3D max={5}>
+          <Frame activeIndex={index} dotCount={EXAMPLES.length}>
+            <div className="min-h-[9.5rem] sm:min-h-[7rem]" aria-hidden="true">
+              <AnimatePresence mode="wait">
+                <ExampleContent key={index} example={EXAMPLES[index]} />
+              </AnimatePresence>
+            </div>
+          </Frame>
+        </Tilt3D>
       </motion.div>
     </SectionShell>
   );

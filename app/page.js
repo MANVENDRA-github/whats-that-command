@@ -17,6 +17,7 @@ import NoMatch from '@/components/search/NoMatch';
 import ValueProps from '@/components/landing/ValueProps';
 import CallToAction from '@/components/landing/CallToAction';
 import StatusBar from '@/components/landing/StatusBar';
+import WireframeBackdrop from '@/components/landing/WireframeBackdrop';
 
 export default function Home() {
   const { query, setQuery, inputRef, hasQuery } = useSearchQuery();
@@ -64,6 +65,7 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
+      <WireframeBackdrop active={!hasQuery} />
       <Navbar />
       <main>
         <HomeHero
